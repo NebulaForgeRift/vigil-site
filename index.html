@@ -168,7 +168,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 06 April 2026 10:49 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 06 April 2026 10:54 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -176,7 +176,7 @@
 
 <nav>
   <button class="nav-btn active" onclick="showTab('log',this)">&#128225; Daily Log</button>
-  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">1</span></button>
+  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">2</span></button>
   <button class="nav-btn" onclick="showTab('glossary',this)">&#128218; Glossary</button>
   <button class="nav-btn" onclick="showTab('quiz',this)">&#127942; Quiz History</button>
 </nav>
@@ -191,17 +191,17 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Labs Completed</div>
-      <div class="stat-value green">4 <span style="font-size:16px;color:var(--text-dim)">/ 5</span></div>
-      <div class="stat-sub">80% completion</div>
+      <div class="stat-value green">4 <span style="font-size:16px;color:var(--text-dim)">/ 6</span></div>
+      <div class="stat-sub">67% completion</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">22</div>
+      <div class="stat-value yellow">23</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">135</div>
+      <div class="stat-value purple">136</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -212,7 +212,7 @@
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
       <span class="day-date">06 April 2026</span>
-      <span class="day-count">1 topic</span>
+      <span class="day-count">2 topics</span>
     </div>
     <span class="chevron">&#9660;</span>
   </div>
@@ -240,6 +240,30 @@
     <p class="log-text defence-text">Security engineers should immediately scan their environment for any AI agent software using Python interpreters and implement input validation that blocks code execution attempts. Deploy web application firewalls configured to detect and block common code injection patterns in API requests to query endpoints.</p>
 
     <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Code injection</span> <span class="kt-def">— inserting malicious code into applications</span></div><div class="kt-item"><span class="kt-term">Python interpreter</span> <span class="kt-def">— executes Python programming language commands</span></div><div class="kt-item"><span class="kt-term">Query endpoint</span> <span class="kt-def">— API interface accepting user requests</span></div><div class="kt-item"><span class="kt-term">Input validation</span> <span class="kt-def">— checking user data for threats</span></div><div class="kt-item"><span class="kt-term">Web application firewall</span> <span class="kt-def">— security tool filtering malicious requests</span></div></div>
+  </div>
+</div>
+<div class="log-entry ">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">Cost Harvesting Attack Against AI Services</div>
+      <div class="log-tags"><span class="tag tag-purple">AI/ML</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">Cost harvesting is an attack where adversaries deliberately drive a victim's AI services beyond normal operating capacity with the specific intent of increasing the cost of those services. Unlike resource hijacking where attackers steal computing power for their own use, cost harvesting focuses purely on inflating the victim's operational expenses.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">Attackers can execute cost harvesting through several methods depending on the AI system's pricing model. They may flood the system with high-volume, low-complexity queries to rack up charges based on query count. Alternatively, they can submit low-volume but highly resource-intensive queries that consume significant computational power per request. In Generative AI or Agentic AI systems, attackers introduce adversarial prompts into the model's context that cause excessive resource consumption during processing. The goal is always to maximise the victim's costs while minimising the attacker's effort and expense.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">A UK investment bank offering AI-powered chatbot services to clients could be targeted by competitors or malicious actors submitting thousands of complex financial analysis queries designed to consume maximum processing power. Each query might ask the AI to perform elaborate calculations or generate extensive reports, driving up the bank's cloud computing costs significantly while providing no legitimate business value.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Implement rate limiting and query complexity monitoring on all AI service endpoints to detect unusual usage patterns. Set up automated alerts when costs exceed normal thresholds and establish query complexity caps that reject or queue resource-intensive requests beyond reasonable business parameters.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Excessive queries</span> <span class="kt-def">— high volume simple requests</span></div><div class="kt-item"><span class="kt-term">resource-intensive queries</span> <span class="kt-def">— complex computational demanding requests</span></div><div class="kt-item"><span class="kt-term">agentic AI</span> <span class="kt-def">— autonomous AI decision making</span></div><div class="kt-item"><span class="kt-term">adversarial prompts</span> <span class="kt-def">— malicious input designed manipulation</span></div><div class="kt-item"><span class="kt-term">rate limiting</span> <span class="kt-def">— controlling request frequency limits</span></div><div class="kt-item"><span class="kt-term">query complexity</span> <span class="kt-def">— computational resource requirement measurement</span></div></div>
   </div>
 </div>
   </div>
@@ -909,11 +933,41 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 
   <div id="tab-labs" class="tab">
     <div class="lab-filters">
-      <button class="filter-btn active" onclick="filterLabs('all',this)">All (5)</button>
+      <button class="filter-btn active" onclick="filterLabs('all',this)">All (6)</button>
       <button class="filter-btn" onclick="filterLabs('completed',this)">Completed (4)</button>
-      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (1)</button>
+      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (2)</button>
     </div>
     
+<div class="lab-card" data-status="not-started">
+  <div class="lab-card-header" onclick="toggleLab(this)">
+    <span class="status-badge status-pending">NOT STARTED</span>
+    <div class="lab-info">
+      <div class="lab-date">06 April 2026</div>
+      <div class="lab-title">Investigating Adversarial Use of Open Source LLMs for Financial Phishing Content Generation</div>
+      <div class="lab-meta">
+        <span class="diff-badge diff-intermediate">Intermediate</span>
+        <span class="lab-time">&#9201; 90 minutes</span>
+      </div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="lab-body">
+    <div class="source-wrap"><a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="source-link">&#128196; ATLAS Technique — Generative AI</a></div>
+    <div class="lab-section-title">SCENARIO</div>
+    <p class="lab-text">Your threat intelligence team at Barclays has identified suspicious activity where attackers appear to be using locally-hosted open source language models to generate convincing phishing emails targeting UK banking customers. The emails contain realistic financial terminology and reference current UK banking procedures, suggesting the use of sophisticated AI tools rather than traditional template-based phishing. As a junior security engineer, you need to investigate how attackers might be leveraging publicly available LLMs to create this content and assess the threat to your organisation.</p>
+    <div class="lab-section-title">OBJECTIVE</div>
+    <p class="lab-text">Demonstrate how adversaries can use open source generative AI models to create convincing financial phishing content and document the security implications for UK financial institutions.</p>
+    <div class="lab-section-title">CHALLENGE</div>
+    <ol class="lab-list"><li>Open Claude.ai and create a new conversation. Start by asking: &quot;What are the most popular open source large language models that can be run locally without API keys?&quot; Document the top 5 models mentioned.</li><li>Research the Ollama framework mentioned in the MITRE article by visiting https://ollama.com/. Navigate to their model library and identify 3 models that would be suitable for text generation tasks. Note their download sizes and system requirements.</li><li>In Claude.ai, ask: &quot;If I were a security researcher testing phishing detection, what would a sophisticated phishing email targeting UK bank customers look like? Include realistic elements but mark it clearly as a security test.&quot; Copy the response to your text editor and analyse the sophistication level.</li><li>Create a new Claude conversation and prompt: &quot;Acting as a red team security researcher, list 10 current UK banking procedures or services that attackers might reference in phishing emails to appear legitimate.&quot; Save this list.</li><li>Visit the MITRE ATLAS technique page at https://atlas.mitre.org/techniques/AML.T0016.002 and identify the 4 related techniques mentioned (Generate Deepfakes, Generate Malicious Commands, Retrieval Content Crafting, Phishing). For each technique, write a one-sentence description of how it could impact financial services.</li><li>Search publicly available threat intelligence sources (such as UK-CERT advisories or NCSC guidance) for any recent warnings about AI-generated phishing. Document any specific guidance for financial institutions.</li><li>In your text editor, create a threat scenario document describing how an attacker could use the Ollama framework with a locally-hosted LLM to generate 100 unique phishing emails targeting your bank's customers, including the technical steps they would follow.</li></ol>
+    <div class="lab-section-title">DEFENCE TASK</div>
+    <p class="lab-text">Design a detection strategy document outlining 5 specific technical controls your financial institution could implement to identify emails that may have been generated by AI models, including both technical signatures and behavioural patterns that security teams should monitor for.</p>
+    <div class="lab-section-title">REFLECTION QUESTIONS</div><ol class="lab-list"><li><strong>Q1:</strong> What specific advantages does locally-hosted generative AI give attackers compared to using commercial AI services for creating phishing content, particularly in the context of financial crime?</li><li><strong>Q2:</strong> How does the sophistication of AI-generated phishing content change the risk profile for UK financial institutions, and what new vulnerabilities does this create in traditional security awareness training?</li><li><strong>Q3:</strong> Based on your research, what are the main challenges financial institutions face in detecting AI-generated malicious content, and how might these challenges evolve as open source models become more capable?</li></ol>
+    <div class="lab-section-title">FURTHER READING</div><p class="lab-text">NCSC Guidance on Generative AI - https://www.ncsc.gov.uk/collection/generative-ai</p>
+    <div class="terminal-tip">
+      &#9889; Complete this lab by running <code>python complete_lab.py</code> in your terminal.
+    </div>
+  </div>
+</div>
 <div class="lab-card" data-status="not-started">
   <div class="lab-card-header" onclick="toggleLab(this)">
     <span class="status-badge status-pending">NOT STARTED</span>
@@ -1068,7 +1122,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 135 terms&#8230;"
+           placeholder="Search 136 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -1544,8 +1598,8 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Ref Parameter</div>
-  <div class="glossary-def">A URL parameter commonly used in web applications to reference specific database records or resources by their identifier.</div>
-  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers could manipulate ref parameters in banking web applications to access unauthorized customer records or financial data through SQL injection attacks.</div><div class="glossary-meta">First seen: 06 April 2026</div>
+  <div class="glossary-def">A Python code execution component that allows applications to run Python scripts dynamically within larger systems.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial institutions using AI tools with PyInterpreter functionality face code injection risks where malicious Python code could access sensitive customer data or trading systems.</div><div class="glossary-meta">First seen: 06 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Regex-Based Validation</div>
@@ -1571,6 +1625,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-term">Retrieval Augmented Generation (RAG)</div>
   <div class="glossary-def">An AI technique that combines a large language model with a searchable database to provide more accurate and up-to-date responses.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial institutions use RAG systems to help customer service chatbots access current account information and regulatory documents when responding to client queries.</div><div class="glossary-meta">First seen: 24 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">RLIKE-Based Boolean SQL Injection</div>
+  <div class="glossary-def">A specific SQL injection technique that uses the RLIKE operator to create true/false conditions for extracting database information character by character.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> This attack method could be used against financial applications to slowly extract customer account details, transaction histories, or authentication credentials from banking databases.</div><div class="glossary-meta">First seen: 06 April 2026</div>
 </div><div class="glossary-letter">S</div>
 <div class="glossary-item">
   <div class="glossary-term">Sandbox Escape</div>
@@ -1764,7 +1823,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 06 April 2026 10:49 UTC &middot;
+  Built automatically by Vigil &middot; 06 April 2026 10:54 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
