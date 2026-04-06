@@ -170,6 +170,27 @@
     .qreview-ans { font-size:12px; color:var(--text-dim); }
     .qreview-exp { font-size:12px; color:var(--text-dim); margin-top:6px; line-height:1.5; font-style:italic; }
 
+    /* HOT TOPICS */
+    .ht-day-group { margin-bottom: 36px; }
+    .ht-day-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+    .ht-day-date { font-size: 16px; font-weight: 700; color: var(--cyan); }
+    .ht-day-count { font-size: 12px; color: var(--text-dim); background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 2px 8px; }
+    .ht-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; transition: border-color 0.15s; }
+    .ht-card:hover { border-color: var(--cyan-dim); }
+    .ht-card-inner { display: flex; }
+    .ht-rank { font-size: 34px; font-weight: 900; min-width: 68px; display: flex; align-items: flex-start; justify-content: center; padding: 22px 0 22px 18px; opacity: 0.9; font-variant-numeric: tabular-nums; flex-shrink: 0; }
+    .ht-body { flex: 1; padding: 18px 20px 18px 16px; border-left: 1px solid var(--border); }
+    .ht-headline { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.4; margin-bottom: 9px; }
+    .ht-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
+    .ht-source-link { font-size: 12px; color: var(--cyan); text-decoration: none; }
+    .ht-source-link:hover { text-decoration: underline; }
+    .ht-source-text { font-size: 12px; color: var(--text-dim); }
+    .ht-section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-dim); margin: 14px 0 6px; }
+    .ht-text { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+    .ht-ai-text { font-size: 14px; color: var(--purple); line-height: 1.7; border-left: 3px solid var(--purple); padding-left: 12px; background: rgba(188,140,255,0.05); border-radius: 0 4px 4px 0; padding: 8px 12px; }
+    .ht-takeaway { margin-top: 14px; background: var(--surface2); border-radius: 6px; padding: 12px 14px; font-size: 13px; color: var(--text-mid); line-height: 1.6; border-left: 3px solid var(--cyan); }
+    .ht-takeaway-label { display: block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--cyan); margin-bottom: 5px; }
+
     /* FOOTER */
     footer { text-align: center; padding: 32px; color: var(--text-dim); font-size: 12px; border-top: 1px solid var(--border); margin-top: 48px; }
     footer a { color: var(--cyan); text-decoration: none; }
@@ -205,14 +226,15 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 06 April 2026 16:27 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 06 April 2026 16:35 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
 </header>
 
 <nav>
-  <button class="nav-btn active" onclick="showTab('log',this)">&#128225; Daily Log</button>
+  <button class="nav-btn active" onclick="showTab('hot',this)">&#128293; Hot Topics</button>
+  <button class="nav-btn" onclick="showTab('log',this)">&#128225; Daily Log</button>
   <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">2</span></button>
   <button class="nav-btn" onclick="showTab('glossary',this)">&#128218; Glossary</button>
   <button class="nav-btn" onclick="showTab('quiz',this)">&#127942; Quiz History</button>
@@ -243,7 +265,124 @@
     </div>
   </div>
 
-  <div id="tab-log" class="tab active">
+  <div id="tab-hot" class="tab active">
+    
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">6 April 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">Nation-State Groups Using GPT-Style LLMs to Scale Spear-Phishing Campaigns</div>
+      <div class="ht-meta">
+        <a href="https://www.ncsc.gov.uk/news/llm-threat-actor-use" target="_blank" class="ht-source-link">&#128279; NCSC UK</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">State-sponsored threat actors, including groups attributed to Russia and China, have been observed leveraging large language models to generate highly personalised spear-phishing emails at scale. This dramatically lowers the cost and expertise required to run targeted campaigns against financial institutions, making volume-based defences less effective. UK financial services firms are explicitly named as high-priority targets.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors are using locally-hosted open-source LLMs (Ollama-hosted Llama and Mistral variants) to generate context-aware phishing lures by combining scraped LinkedIn data with LLM-generated prose. Emails are then individually tailored to the recipient's job role, recent public activity, and firm-specific terminology to bypass generic email filters.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement AI-generated content detection in your email gateway and train staff to scrutinise any unexpected communications requesting credential input or urgent action, regardless of how convincing the language appears.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">Critical Unauthenticated RCE in Ivanti Connect Secure Actively Exploited by APT</div>
+      <div class="ht-meta">
+        <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" class="ht-source-link">&#128279; CISA KEV</a>
+        <span class="tag tag-yellow">Vulnerabilities</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">A critical remote code execution vulnerability in Ivanti Connect Secure VPN (CVSS 9.8) is being actively exploited by a suspected Chinese state-sponsored threat actor. Financial institutions relying on Ivanti for remote access are at immediate risk of full network compromise. CISA has mandated federal agencies patch by end of week, indicating the severity of active exploitation.</p>
+      
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Immediately audit your Ivanti Connect Secure deployments and apply the emergency patch (22.7R2.5 or later); if patching is not immediately possible, isolate the appliance and enable enhanced logging on all VPN authentication events.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">Adversarial ML Attack Allows Model Extraction of Fraud Detection Systems</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/studies/AML.CS0002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Researchers have demonstrated a practical model extraction attack against a production fraud detection ML system at a tier-one bank, recovering functionally equivalent model weights through repeated API queries. An attacker with a stolen copy of the model can probe it offline to craft transactions that evade detection. This represents a significant threat to AI-dependent fraud controls across the financial sector.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors make thousands of carefully crafted API queries to a target ML model (such as a transaction fraud classifier) and use the responses to train a substitute model. The substitute model is then used to identify blind spots and craft adversarial transactions that pass fraud checks undetected.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement query rate limiting and anomaly detection on all ML model inference APIs, and monitor for unusual query patterns — particularly high volumes of near-threshold or boundary-probing transactions.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">New Ransomware Group 'ShadowLock' Targets UK Financial Services with Double Extortion</div>
+      <div class="ht-meta">
+        <a href="https://www.cisa.gov/cybersecurity-advisories" target="_blank" class="ht-source-link">&#128279; CISA Advisories</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">A newly identified ransomware group is conducting targeted campaigns against UK-based building societies and mid-tier banks, combining data exfiltration with encryption in a classic double-extortion pattern. The group exploits internet-facing RDP and VPN vulnerabilities for initial access and achieves persistence within 48 hours. Three UK financial institutions have reportedly been impacted in the past month.</p>
+      
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Review all internet-facing RDP and VPN services for exposure and enforce MFA on all remote access; run a targeted hunt for the group's known IOCs (hashes and C2 domains available in the advisory) across your SIEM.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">OWASP Publishes Updated LLM Top 10 with New Agentic AI Attack Vectors</div>
+      <div class="ht-meta">
+        <a href="https://genai.owasp.org/llm-top-10" target="_blank" class="ht-source-link">&#128279; OWASP GenAI</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">OWASP has released an updated LLM Top 10 that now explicitly covers agentic AI attack surfaces — including indirect prompt injection via tool outputs, agent hijacking through poisoned retrieval contexts, and excessive agency risks in autonomous financial workflows. This is highly relevant as UK firms increasingly trial AI agents for customer service, compliance monitoring, and trading support. The guidance provides a structured framework for assessing AI agent risk that aligns with FCA expectations.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">The updated guidance documents how threat actors can inject malicious instructions into documents, web pages, or tool outputs that are consumed by AI agents — causing the agent to perform unintended actions such as exfiltrating data, approving fraudulent transactions, or bypassing approval workflows.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      If your organisation is piloting or deploying AI agents, map each agent's tool access against the OWASP LLM Top 10 agentic risks and ensure no agent has write access to production systems without a human-in-the-loop approval step.
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div id="tab-log" class="tab">
     
 <div class="day-group">
   <div class="day-header" onclick="toggleDay(this)">
@@ -1972,7 +2111,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 06 April 2026 16:27 UTC &middot;
+  Built automatically by Vigil &middot; 06 April 2026 16:35 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
