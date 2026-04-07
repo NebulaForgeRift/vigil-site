@@ -226,7 +226,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 07 April 2026 12:44 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 07 April 2026 12:45 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -235,7 +235,7 @@
 <nav>
   <button class="nav-btn active" onclick="showTab('hot',this)">&#128293; Hot Topics</button>
   <button class="nav-btn" onclick="showTab('log',this)">&#128225; Daily Log</button>
-  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">3</span></button>
+  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">4</span></button>
   <button class="nav-btn" onclick="showTab('glossary',this)">&#128218; Glossary</button>
   <button class="nav-btn" onclick="showTab('quiz',this)">&#127942; Quiz History</button>
 </nav>
@@ -250,17 +250,17 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Labs Completed</div>
-      <div class="stat-value green">4 <span style="font-size:16px;color:var(--text-dim)">/ 7</span></div>
-      <div class="stat-sub">57% completion</div>
+      <div class="stat-value green">4 <span style="font-size:16px;color:var(--text-dim)">/ 8</span></div>
+      <div class="stat-sub">50% completion</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">24</div>
+      <div class="stat-value yellow">25</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">141</div>
+      <div class="stat-value purple">146</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -501,7 +501,7 @@
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
       <span class="day-date">07 April 2026</span>
-      <span class="day-count">1 topic</span>
+      <span class="day-count">2 topics</span>
     </div>
     <span class="chevron">&#9660;</span>
   </div>
@@ -529,6 +529,30 @@
     <p class="log-text defence-text">Security teams should monitor network traffic for signs of local AI model hosting, such as unusual GPU usage patterns or downloads of large model files. Implement email filtering that specifically looks for AI-generated content patterns and consider using AI detection tools to identify artificially created phishing attempts or deepfake materials.</p>
 
     <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Large Language Models [AI systems processing human text], Ollama [framework for running AI locally], vLLM [optimised AI model serving system], Deepfakes [AI-generated fake media content], Phishing [fraudulent messages requesting sensitive information], Open Source Models [publicly available AI systems]</span></div></div>
+  </div>
+</div>
+<div class="log-entry ">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">Adversarial Use of Generative AI Models</div>
+      <div class="log-tags"><span class="tag tag-purple">AI/ML</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">Attackers are obtaining and using generative AI tools like large language models to help carry out cyber attacks. These AI models can assist criminals in creating malicious content, generating attack code, and automating various parts of their operations.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">Adversaries first search for and acquire generative AI models, often choosing open source versions they can control locally. They then deploy these models using frameworks like Ollama or vLLM, either hosting them on their own infrastructure or using cloud services. Once operational, they use the AI to generate malware code, create deepfake content, craft phishing emails, produce malicious commands, or develop convincing social engineering content. This allows attackers to scale their operations and create more sophisticated attacks with less manual effort.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">A criminal group could use a locally hosted language model to generate hundreds of personalised phishing emails targeting bank customers, each tailored with realistic financial terminology and urgent scenarios. Alternatively, attackers might use generative AI to create convincing deepfake audio of a CEO's voice to authorise fraudulent wire transfers during a business email compromise attack.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Security teams should monitor network traffic for unusual AI framework communications and implement content analysis tools that can detect AI-generated text patterns in emails and documents. Additionally, establish baseline monitoring for employees accessing or downloading large AI models that could indicate insider threats or compromised accounts.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Large Language Models [AI systems generating human-like text], Ollama [framework for running AI locally], vLLM [optimised system for AI deployment], Deepfakes [AI-generated fake audio/video content], Business Email Compromise [fraudulent email impersonating executives], Social Engineering [psychological manipulation for information theft]</span></div></div>
   </div>
 </div>
   </div>
@@ -1258,11 +1282,41 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 
   <div id="tab-labs" class="tab">
     <div class="lab-filters">
-      <button class="filter-btn active" onclick="filterLabs('all',this)">All (7)</button>
+      <button class="filter-btn active" onclick="filterLabs('all',this)">All (8)</button>
       <button class="filter-btn" onclick="filterLabs('completed',this)">Completed (4)</button>
-      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (3)</button>
+      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (4)</button>
     </div>
     
+<div class="lab-card" data-status="not-started">
+  <div class="lab-card-header" onclick="toggleLab(this)">
+    <span class="status-badge status-pending">NOT STARTED</span>
+    <div class="lab-info">
+      <div class="lab-date">07 April 2026</div>
+      <div class="lab-title">Investigate Adversarial Use of Open Source LLMs for Financial Phishing Campaign Generation</div>
+      <div class="lab-meta">
+        <span class="diff-badge diff-intermediate">Intermediate</span>
+        <span class="lab-time">&#9201; 90 minutes</span>
+      </div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="lab-body">
+    <div class="source-wrap"><a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="source-link">&#128196; ATLAS Technique — Generative AI</a></div>
+    <div class="lab-section-title">SCENARIO</div>
+    <p class="lab-text">Your UK bank's threat intelligence team has detected unusual phishing emails targeting customers that contain sophisticated, contextually-aware content about recent regulatory changes to Open Banking requirements. The emails appear to be machine-generated with variations that bypass traditional email filters. Initial analysis suggests adversaries may be using locally-hosted open source LLMs to craft these campaigns at scale. You've been tasked to investigate how threat actors could weaponise freely available generative AI tools to create financial services phishing content.</p>
+    <div class="lab-section-title">OBJECTIVE</div>
+    <p class="lab-text">You will demonstrate how adversaries can abuse open source generative AI models to create convincing financial phishing content and assess the security implications for your organisation.</p>
+    <div class="lab-section-title">CHALLENGE</div>
+    <ol class="lab-list"><li>Open Claude.ai and create a conversation titled &quot;Financial Phishing Investigation Lab&quot;</li><li>Research the Ollama framework mentioned in the ATLAS technique by visiting https://ollama.com/ - document what models are available and how easily they can be deployed locally</li><li>In Claude, ask: &quot;What are the top 5 open source large language models that could run locally on consumer hardware?&quot; - screenshot the response</li><li>Create a text file called &quot;phishing_analysis.txt&quot; and document your findings from steps 2-3</li><li>In Claude, prompt: &quot;From a red team perspective, explain how threat actors might use locally-hosted LLMs to generate phishing emails targeting UK bank customers. Focus on the operational advantages this provides over traditional methods.&quot;</li><li>Next, test content generation by asking Claude: &quot;Generate 3 different email subject lines that a threat actor might create to target UK banking customers about Open Banking regulations. Make them realistic but mark them clearly as examples for security training.&quot;</li><li>Analyse the generated examples - in your text file, document: what makes them convincing, what red flags exist, and how they might evade email filters</li><li>Research one specific open source model (like Llama 2 or Mistral) - document its capabilities, hardware requirements, and how an adversary could obtain and deploy it</li><li>In Claude, ask: &quot;What are the key indicators that security teams should monitor to detect when adversaries are using generative AI for phishing campaigns against financial institutions?&quot;</li><li>Compile all findings into your text file with timestamps and sources</li></ol>
+    <div class="lab-section-title">DEFENCE TASK</div>
+    <p class="lab-text">Design a detection and prevention strategy document outlining: (1) three specific monitoring techniques to identify AI-generated phishing campaigns targeting your bank, (2) email security controls that could mitigate this threat, and (3) customer awareness measures to help clients identify sophisticated AI-generated phishing attempts.</p>
+    <div class="lab-section-title">REFLECTION QUESTIONS</div><ol class="lab-list"><li><strong>Q1:</strong> How does the use of locally-hosted open source LLMs change the threat landscape compared to adversaries using commercial AI services that have built-in safety controls?</li><li><strong>Q2:</strong> What specific characteristics of AI-generated financial phishing content would be most challenging for traditional email security solutions to detect?</li><li><strong>Q3:</strong> Given the ease of access to these tools, how should financial institutions adapt their security awareness training programmes to address AI-enhanced social engineering attacks?</li></ol>
+    <div class="lab-section-title">FURTHER READING</div><p class="lab-text">MITRE ATLAS Framework - AML.T0052 Phishing Technique (https://atlas.mitre.org/techniques/AML.T0052)</p>
+    <div class="terminal-tip">
+      &#9889; Complete this lab by running <code>python complete_lab.py</code> in your terminal.
+    </div>
+  </div>
+</div>
 <div class="lab-card" data-status="not-started">
   <div class="lab-card-header" onclick="toggleLab(this)">
     <span class="status-badge status-pending">NOT STARTED</span>
@@ -1477,7 +1531,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 141 terms&#8230;"
+           placeholder="Search 146 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -1657,6 +1711,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial institutions face severe regulatory and customer impact when transaction systems or customer databases are encrypted, often forcing rapid ransom payment decisions.</div><div class="glossary-meta">First seen: 24 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">DCMTK</div>
+  <div class="glossary-def">An open-source software toolkit for handling DICOM (medical imaging) data and communications.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms processing healthcare payments or insurance claims may encounter DCMTK vulnerabilities in medical data systems they interface with.</div><div class="glossary-meta">First seen: 07 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Deepfakes</div>
   <div class="glossary-def">AI-generated synthetic media that convincingly replaces a person's appearance or voice with someone else's.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial criminals could use deepfakes to impersonate bank executives in video calls to authorize fraudulent wire transfers or bypass voice authentication systems.</div><div class="glossary-meta">First seen: 06 April 2026</div>
@@ -1795,7 +1854,17 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-term">Internet Key Exchange version 2 (IKEv2)</div>
   <div class="glossary-def">A protocol used to establish secure VPN connections by negotiating encryption keys and authentication methods between network devices.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial institutions rely on IKEv2 for secure site-to-site connections between branches and data centres, making vulnerabilities in this protocol a critical concern for maintaining secure banking networks.</div><div class="glossary-meta">First seen: 25 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">IOCTL</div>
+  <div class="glossary-def">A pattern where a single request triggers multiple simultaneous database or API queries, often exponentially increasing system load.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers could exploit AI-powered financial advisory systems to generate excessive database queries, overwhelming trading platforms or customer data systems.</div><div class="glossary-meta">First seen: 07 April 2026</div>
 </div><div class="glossary-letter">J</div>
+<div class="glossary-item">
+  <div class="glossary-term">JPEG driver</div>
+  <div class="glossary-def">A software component that handles the processing and manipulation of JPEG image files at the system level.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial applications processing customer documents, identity verification photos, or check images rely on JPEG drivers that could be exploited for system compromise.</div><div class="glossary-meta">First seen: 07 April 2026</div>
+</div>
 <div class="glossary-item">
   <div class="glossary-term">Just-in-Time Access</div>
   <div class="glossary-def">A security mechanism that grants users elevated permissions only when needed and for a limited time period, rather than permanent elevated access.</div>
@@ -2012,6 +2081,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Sandbox escape vulnerabilities in financial trading platforms could allow attackers to access real market data or execute unauthorized trades.</div><div class="glossary-meta">First seen: 02 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Satellite data files</div>
+  <div class="glossary-def">Data files containing information transmitted from or to satellite communication systems.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial firms using satellite communications for remote trading offices or disaster recovery sites may process satellite data files that could contain malicious payloads.</div><div class="glossary-meta">First seen: 07 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Scope Validation</div>
   <div class="glossary-def">The security process of checking whether a user or system has the appropriate permissions to access specific resources or perform certain actions.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial systems, insufficient scope validation could allow junior staff to approve high-value transactions or access sensitive customer data beyond their authorization level.</div><div class="glossary-meta">First seen: 01 April 2026</div>
@@ -2075,6 +2149,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-term">stack-based buffer overflow</div>
   <div class="glossary-def">A vulnerability where a program writes more data to a memory buffer than it can hold, potentially allowing attackers to execute malicious code.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Network devices protecting financial institutions could be compromised through buffer overflow attacks, allowing attackers to bypass security controls and access trading systems.</div><div class="glossary-meta">First seen: 31 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">storescp</div>
+  <div class="glossary-def">Apple's inter-process communication mechanism that allows different applications and system services to communicate securely on macOS.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services applications on macOS systems may use XPC services for secure communication between privileged and unprivileged components.</div><div class="glossary-meta">First seen: 07 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Structured Exception Handling (SEH)</div>
@@ -2315,7 +2394,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 07 April 2026 12:44 UTC &middot;
+  Built automatically by Vigil &middot; 07 April 2026 12:45 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
