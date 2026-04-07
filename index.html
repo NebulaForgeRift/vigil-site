@@ -226,7 +226,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 07 April 2026 10:42 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 07 April 2026 11:22 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -267,6 +267,119 @@
 
   <div id="tab-hot" class="tab active">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">07 April 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">Threat Actors Weaponizing Generative AI for Multi-Stage Cyber Operations</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Attackers are actively acquiring and deploying LLMs and generative AI tools to automate malware creation, craft deepfakes, and generate malicious commands at scale. This represents a force multiplier that could dramatically increase the volume and sophistication of attacks against financial services infrastructure.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors are leveraging generative AI models including LLMs to automatically generate malware code, create deepfakes for social engineering, craft malicious commands, and assist with various operational steps throughout their attack campaigns.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement AI-powered detection systems specifically trained to identify AI-generated content in emails, code submissions, and social engineering attempts targeting your organization.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">Critical Memory Corruption Flaw in Satellite Data Processing Could Enable Remote Code Execution</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-47392" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerabilities</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">This CVSS 8.8 vulnerability allows memory corruption through malformed satellite data files, potentially enabling remote code execution in systems processing external data feeds. Financial services firms using satellite communications or third-party data feeds face immediate risk.</p>
+      
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Audit all systems processing external satellite data feeds and implement strict input validation and sandboxing for any satellite data processing components.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">Adversaries Deploy Prompt Infiltration Attacks Against RAG Systems and AI Agents</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0093" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Attackers are embedding malicious prompts in public-facing applications that get ingested by RAG systems and AI agents, creating delayed-execution attacks. As financial services increasingly deploy AI-powered customer service and document processing systems, this technique poses significant operational risk.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors are strategically placing malicious prompts in data sources that will later be indexed by RAG systems or processed by AI agents, allowing them to influence AI behavior and potentially extract sensitive information or manipulate outputs.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement prompt sanitization and content filtering for all data sources feeding into your RAG systems and AI agents, particularly customer-facing applications.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">APT29-Linked PowerDuke Backdoor Targets Financial Sector via Malicious Office Documents</div>
+      <div class="ht-meta">
+        <a href="https://attack.mitre.org/software/S0139" target="_blank" class="ht-source-link">&#128279; MITRE ATT&amp;CK</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">APT29, a sophisticated nation-state actor, actively uses PowerDuke backdoor specifically targeting organizations through weaponized Microsoft Office documents. Given APT29's focus on high-value targets, financial services firms remain prime targets for this campaign.</p>
+      
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Strengthen email security controls to block macro-enabled Office documents from external sources and implement behavioral analysis to detect PowerDuke's specific persistence mechanisms.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">Attackers Target AI Infrastructure Supply Chain Through Framework Poisoning</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0010.001" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Adversaries are targeting AI development frameworks like PyTorch, TensorFlow, and LangChain through supply chain attacks, potentially compromising the entire AI development lifecycle. Financial institutions building or deploying AI models face integrity risks to their ML operations.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors are poisoning AI development frameworks and their dependency chains to compromise AI model development, training, and deployment processes, allowing them to manipulate model behavior or gain persistent access to AI infrastructure.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement software composition analysis and integrity checking for all AI/ML frameworks and dependencies, including continuous monitoring of package repositories for your AI development pipeline.
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">6 April 2026</span>
@@ -2202,7 +2315,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 07 April 2026 10:42 UTC &middot;
+  Built automatically by Vigil &middot; 07 April 2026 11:22 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
