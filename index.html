@@ -226,7 +226,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 08 April 2026 16:58 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 08 April 2026 17:39 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -235,7 +235,7 @@
 <nav>
   <button class="nav-btn active" onclick="showTab('hot',this)">&#128293; Hot Topics</button>
   <button class="nav-btn" onclick="showTab('log',this)">&#128225; Daily Log</button>
-  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">6</span></button>
+  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs </button>
   <button class="nav-btn" onclick="showTab('glossary',this)">&#128218; Glossary</button>
   <button class="nav-btn" onclick="showTab('quiz',this)">&#127942; Quiz History</button>
 </nav>
@@ -250,8 +250,8 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Labs Completed</div>
-      <div class="stat-value green">4 <span style="font-size:16px;color:var(--text-dim)">/ 10</span></div>
-      <div class="stat-sub">40% completion</div>
+      <div class="stat-value green">10 <span style="font-size:16px;color:var(--text-dim)">/ 10</span></div>
+      <div class="stat-sub">100% completion</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
@@ -1458,13 +1458,13 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div id="tab-labs" class="tab">
     <div class="lab-filters">
       <button class="filter-btn active" onclick="filterLabs('all',this)">All (10)</button>
-      <button class="filter-btn" onclick="filterLabs('completed',this)">Completed (4)</button>
-      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (6)</button>
+      <button class="filter-btn" onclick="filterLabs('completed',this)">Completed (10)</button>
+      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (0)</button>
     </div>
     
-<div class="lab-card" data-status="not-started">
+<div class="lab-card" data-status="completed">
   <div class="lab-card-header" onclick="toggleLab(this)">
-    <span class="status-badge status-pending">NOT STARTED</span>
+    <span class="status-badge status-completed">&#10003; COMPLETED</span>
     <div class="lab-info">
       <div class="lab-date">08 April 2026</div>
       <div class="lab-title">EKANS Ransomware Process Kill-List Analysis and Detection Strategy</div>
@@ -1492,9 +1492,9 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
     </div>
   </div>
 </div>
-<div class="lab-card" data-status="not-started">
+<div class="lab-card" data-status="completed">
   <div class="lab-card-header" onclick="toggleLab(this)">
-    <span class="status-badge status-pending">NOT STARTED</span>
+    <span class="status-badge status-completed">&#10003; COMPLETED</span>
     <div class="lab-info">
       <div class="lab-date">08 April 2026</div>
       <div class="lab-title">Analysing EKANS Ransomware Process Kill-Lists for Critical Financial Infrastructure Protection</div>
@@ -1522,9 +1522,9 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
     </div>
   </div>
 </div>
-<div class="lab-card" data-status="not-started">
+<div class="lab-card" data-status="completed">
   <div class="lab-card-header" onclick="toggleLab(this)">
-    <span class="status-badge status-pending">NOT STARTED</span>
+    <span class="status-badge status-completed">&#10003; COMPLETED</span>
     <div class="lab-info">
       <div class="lab-date">07 April 2026</div>
       <div class="lab-title">Investigate Adversarial Use of Open Source LLMs for Financial Phishing Campaign Generation</div>
@@ -1552,9 +1552,9 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
     </div>
   </div>
 </div>
-<div class="lab-card" data-status="not-started">
+<div class="lab-card" data-status="completed">
   <div class="lab-card-header" onclick="toggleLab(this)">
-    <span class="status-badge status-pending">NOT STARTED</span>
+    <span class="status-badge status-completed">&#10003; COMPLETED</span>
     <div class="lab-info">
       <div class="lab-date">07 April 2026</div>
       <div class="lab-title">Investigate Adversarial Use of Open Source LLMs for Financial Phishing Content Generation</div>
@@ -1582,9 +1582,9 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
     </div>
   </div>
 </div>
-<div class="lab-card" data-status="not-started">
+<div class="lab-card" data-status="completed">
   <div class="lab-card-header" onclick="toggleLab(this)">
-    <span class="status-badge status-pending">NOT STARTED</span>
+    <span class="status-badge status-completed">&#10003; COMPLETED</span>
     <div class="lab-info">
       <div class="lab-date">06 April 2026</div>
       <div class="lab-title">Investigating Adversarial Use of Open Source LLMs for Financial Phishing Content Generation</div>
@@ -1612,9 +1612,9 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
     </div>
   </div>
 </div>
-<div class="lab-card" data-status="not-started">
+<div class="lab-card" data-status="completed">
   <div class="lab-card-header" onclick="toggleLab(this)">
-    <span class="status-badge status-pending">NOT STARTED</span>
+    <span class="status-badge status-completed">&#10003; COMPLETED</span>
     <div class="lab-info">
       <div class="lab-date">06 April 2026</div>
       <div class="lab-title">Detecting Adversarial Use of Generative AI for Financial Phishing Content Creation</div>
@@ -2679,7 +2679,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 08 April 2026 16:58 UTC &middot;
+  Built automatically by Vigil &middot; 08 April 2026 17:39 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
