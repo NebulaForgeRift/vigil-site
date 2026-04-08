@@ -226,7 +226,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 07 April 2026 17:09 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 08 April 2026 10:45 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -235,7 +235,7 @@
 <nav>
   <button class="nav-btn active" onclick="showTab('hot',this)">&#128293; Hot Topics</button>
   <button class="nav-btn" onclick="showTab('log',this)">&#128225; Daily Log</button>
-  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">4</span></button>
+  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">5</span></button>
   <button class="nav-btn" onclick="showTab('glossary',this)">&#128218; Glossary</button>
   <button class="nav-btn" onclick="showTab('quiz',this)">&#127942; Quiz History</button>
 </nav>
@@ -245,22 +245,22 @@
   <div class="stats">
     <div class="stat-card">
       <div class="stat-label">Days Active</div>
-      <div class="stat-value cyan">8</div>
+      <div class="stat-value cyan">9</div>
       <div class="stat-sub">and counting</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Labs Completed</div>
-      <div class="stat-value green">4 <span style="font-size:16px;color:var(--text-dim)">/ 8</span></div>
-      <div class="stat-sub">50% completion</div>
+      <div class="stat-value green">4 <span style="font-size:16px;color:var(--text-dim)">/ 9</span></div>
+      <div class="stat-sub">44% completion</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">25</div>
+      <div class="stat-value yellow">26</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">146</div>
+      <div class="stat-value purple">150</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -497,6 +497,42 @@
 
   <div id="tab-log" class="tab">
     
+<div class="day-group">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-header-left">
+      <span class="day-date">08 April 2026</span>
+      <span class="day-count">1 topic</span>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="day-body">
+    
+<div class="log-entry log-entry-first">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">AI Software Supply Chain Attacks</div>
+      <div class="log-tags"><span class="tag tag-purple">AI/ML</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">Adversaries target software packages commonly used in AI-enabled systems to compromise organizations that rely on these tools. This includes attacking the legitimate AI frameworks, tools, and their dependency chains that companies use to build and deploy machine learning systems.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">Attackers identify popular AI software packages like PyTorch, TensorFlow, or LangChain that organizations commonly download and use. They then either compromise existing legitimate packages by injecting malicious code, or create fake malicious packages with similar names to trick users into downloading them. The malicious code gets executed when developers install or use these compromised packages in their AI development workflows. Attackers may also target supporting components like configuration files or Jupyter notebooks that contain example code, as these are often trusted and used without thorough security review.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">A financial services firm's data science team downloads what appears to be a legitimate machine learning library for their fraud detection model development. The compromised package contains hidden malicious code that activates during model training, potentially stealing sensitive customer transaction data or inserting backdoors into the AI system.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Security engineers should implement software composition analysis tools to scan all AI-related packages and dependencies before they are approved for use in development environments. Establish a vetted repository of approved AI frameworks and require all AI software installations to go through this controlled source rather than allowing direct downloads from public repositories.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Supply chain attack [targeting software dependencies and packages], PyTorch [popular deep learning framework library], TensorFlow [Google's machine learning software platform], LangChain [framework for building AI applications], Jupyter notebooks [interactive coding and data analysis tools], Dependency chains [interconnected software package requirements]</span></div></div>
+  </div>
+</div>
+  </div>
+</div>
 <div class="day-group">
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
@@ -1282,11 +1318,41 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 
   <div id="tab-labs" class="tab">
     <div class="lab-filters">
-      <button class="filter-btn active" onclick="filterLabs('all',this)">All (8)</button>
+      <button class="filter-btn active" onclick="filterLabs('all',this)">All (9)</button>
       <button class="filter-btn" onclick="filterLabs('completed',this)">Completed (4)</button>
-      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (4)</button>
+      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (5)</button>
     </div>
     
+<div class="lab-card" data-status="not-started">
+  <div class="lab-card-header" onclick="toggleLab(this)">
+    <span class="status-badge status-pending">NOT STARTED</span>
+    <div class="lab-info">
+      <div class="lab-date">08 April 2026</div>
+      <div class="lab-title">Analysing EKANS Ransomware Process Kill-Lists for Critical Financial Infrastructure Protection</div>
+      <div class="lab-meta">
+        <span class="diff-badge diff-intermediate">Intermediate</span>
+        <span class="lab-time">&#9201; 90 minutes</span>
+      </div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="lab-body">
+    <div class="source-wrap"><a href="https://attack.mitre.org/software/S0605" target="_blank" class="source-link">&#128196; MITRE ATT&amp;CK — EKANS</a></div>
+    <div class="lab-section-title">SCENARIO</div>
+    <p class="lab-text">Your UK investment bank has received threat intelligence indicating EKANS ransomware is targeting financial services firms with critical trading infrastructure. The bank operates several industrial control systems for physical security, HVAC management of data centres, and automated trading floor systems. Security leadership is concerned that EKANS' documented ability to terminate ICS-related processes could disrupt trading operations during market hours, potentially causing significant financial losses and regulatory violations under PRA rules.</p>
+    <div class="lab-section-title">OBJECTIVE</div>
+    <p class="lab-text">You will analyse EKANS ransomware's process termination capabilities and assess the potential impact on your bank's critical infrastructure systems.</p>
+    <div class="lab-section-title">CHALLENGE</div>
+    <ol class="lab-list"><li>Open Claude.ai and ask it to explain the significance of EKANS targeting ICS (Industrial Control Systems) processes specifically in financial services contexts</li><li>Navigate to the MITRE ATT&amp;CK page for EKANS (https://attack.mitre.org/software/S0605) and document all referenced techniques in a text file</li><li>Research the specific ICS software mentioned (GE Proficy, Honeywell HMIWeb) - use Google to find what these systems do and why they might be present in financial institutions</li><li>Create a text file called &quot;ekans_financial_impact.txt&quot; and list 5 specific ways EKANS could disrupt a UK bank's operations beyond just encrypting files</li><li>Using Claude.ai, ask it to generate a hypothetical process list that EKANS might target in a financial services environment (include both ICS processes and financial trading software)</li><li>Research one of the citations mentioned (search for &quot;Dragos EKANS analysis&quot; or &quot;Palo Alto Unit 42 EKANS&quot;) and find additional technical details about the kill-list functionality</li><li>In your text file, document the sequence of events if EKANS successfully executed during London market opening hours (08:00 GMT)</li></ol>
+    <div class="lab-section-title">DEFENCE TASK</div>
+    <p class="lab-text">Design a process monitoring and protection strategy for your bank's critical systems. Create a document outlining: (1) which processes should be monitored for unexpected termination, (2) how to implement process whitelisting/protection, and (3) incident response procedures if critical ICS processes are forcibly terminated during trading hours.</p>
+    <div class="lab-section-title">REFLECTION QUESTIONS</div><ol class="lab-list"><li><strong>Q1:</strong> Why would ransomware specifically target ICS processes rather than just encrypting files, and how does this change the risk profile for financial institutions?</li><li><strong>Q2:</strong> What regulatory implications would a successful EKANS attack have for a UK bank, particularly regarding operational resilience requirements?</li><li><strong>Q3:</strong> How does EKANS' focus on process termination demonstrate the evolution of ransomware from simple encryption-based attacks to more sophisticated operational disruption?</li></ol>
+    <div class="lab-section-title">FURTHER READING</div><p class="lab-text">Dragos EKANS Ransomware Analysis - https://www.dragos.com/blog/industry-news/ekans-ransomware-and-ics-operations/ (comprehensive analysis of EKANS' ICS targeting capabilities)</p>
+    <div class="terminal-tip">
+      &#9889; Complete this lab by running <code>python complete_lab.py</code> in your terminal.
+    </div>
+  </div>
+</div>
 <div class="lab-card" data-status="not-started">
   <div class="lab-card-header" onclick="toggleLab(this)">
     <span class="status-badge status-pending">NOT STARTED</span>
@@ -1531,7 +1597,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 146 terms&#8230;"
+           placeholder="Search 150 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -1701,6 +1767,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services, this attack could be used to intercept and manipulate communications between trading terminals and exchanges or between ATMs and banking servers.</div><div class="glossary-meta">First seen: 26 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Cross-Cluster Privilege Escalation</div>
+  <div class="glossary-def">An attack where an attacker gains elevated permissions across multiple interconnected computer clusters or cloud environments.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services using multi-cloud deployments, this could allow an attacker to move from a development cluster to production systems containing sensitive customer financial data.</div><div class="glossary-meta">First seen: 08 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">cryptographic validation</div>
   <div class="glossary-def">The process of using mathematical algorithms to verify that data hasn't been tampered with and comes from a trusted source.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Payment systems must implement cryptographic validation on all transaction tokens to prevent fraudulent modifications of transfer amounts.</div><div class="glossary-meta">First seen: 31 March 2026</div>
@@ -1756,6 +1827,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial institutions performing DNSSEC validation protect against DNS poisoning attacks that could redirect customers to fraudulent banking websites during online transactions.</div><div class="glossary-meta">First seen: 25 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Dynamic Callable Syntax</div>
+  <div class="glossary-def">A programming feature that allows functions or methods to be called indirectly using variable names or expressions.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers can abuse dynamic callable syntax in financial applications to bypass security filters and execute unauthorized code that manipulates transaction processing.</div><div class="glossary-meta">First seen: 08 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Dynamic Fragment Tags</div>
   <div class="glossary-def">Special HTML comments used by caching plugins to mark sections of web pages that should be processed dynamically rather than served from cache.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Vulnerable dynamic fragment implementations in financial web applications can expose security tokens, potentially allowing attackers to bypass authentication on banking portals.</div><div class="glossary-meta">First seen: 02 April 2026</div>
@@ -1794,6 +1870,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-term">Golang</div>
   <div class="glossary-def">A programming language developed by Google that is known for its simplicity, efficiency, and strong support for concurrent programming.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial malware like EKANS ransomware is increasingly written in Golang because it can easily target multiple operating systems and is harder for traditional security tools to analyse.</div><div class="glossary-meta">First seen: 25 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Groovy Evaluator</div>
+  <div class="glossary-def">A component that executes Groovy programming language code dynamically at runtime, often used for scripting and automation.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Compromised Groovy evaluators in financial workflow systems could allow attackers to inject malicious scripts that alter payment processing rules or extract sensitive customer data.</div><div class="glossary-meta">First seen: 08 April 2026</div>
 </div><div class="glossary-letter">H</div>
 <div class="glossary-item">
   <div class="glossary-term">hard-coded kill-list</div>
@@ -1862,8 +1943,8 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </div><div class="glossary-letter">J</div>
 <div class="glossary-item">
   <div class="glossary-term">JPEG driver</div>
-  <div class="glossary-def">A software component that handles the processing and manipulation of JPEG image files at the system level.</div>
-  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial applications processing customer documents, identity verification photos, or check images rely on JPEG drivers that could be exploited for system compromise.</div><div class="glossary-meta">First seen: 07 April 2026</div>
+  <div class="glossary-def">A situation where a single query triggers multiple additional queries to be executed, often exponentially increasing the computational load.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers may exploit AI agents in financial systems to perform excessive query fan-outs, driving up cloud costs and potentially causing service disruptions during peak trading hours.</div><div class="glossary-meta">First seen: 08 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Just-in-Time Access</div>
@@ -1924,6 +2005,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-term">Model Context Protocol</div>
   <div class="glossary-def">A standardized way for AI agents to access and interact with external tools and data sources.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial AI systems using Model Context Protocol could be compromised to give attackers access to trading systems, customer databases, or risk management tools.</div><div class="glossary-meta">First seen: 25 March 2026</div>
+</div><div class="glossary-letter">N</div>
+<div class="glossary-item">
+  <div class="glossary-term">Nonce Validation</div>
+  <div class="glossary-def">A security mechanism that checks whether a randomly generated number used once (nonce) is valid to prevent replay attacks.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Missing nonce validation in financial web applications can allow attackers to forge requests that trigger unauthorized transactions or modify payment settings.</div><div class="glossary-meta">First seen: 08 April 2026</div>
 </div><div class="glossary-letter">O</div>
 <div class="glossary-item">
   <div class="glossary-term">Ollama</div>
@@ -2394,7 +2480,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 07 April 2026 17:09 UTC &middot;
+  Built automatically by Vigil &middot; 08 April 2026 10:45 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
