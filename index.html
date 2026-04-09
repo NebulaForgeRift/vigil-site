@@ -226,7 +226,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 08 April 2026 17:39 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 09 April 2026 10:21 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -235,7 +235,7 @@
 <nav>
   <button class="nav-btn active" onclick="showTab('hot',this)">&#128293; Hot Topics</button>
   <button class="nav-btn" onclick="showTab('log',this)">&#128225; Daily Log</button>
-  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs </button>
+  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">1</span></button>
   <button class="nav-btn" onclick="showTab('glossary',this)">&#128218; Glossary</button>
   <button class="nav-btn" onclick="showTab('quiz',this)">&#127942; Quiz History</button>
 </nav>
@@ -245,28 +245,139 @@
   <div class="stats">
     <div class="stat-card">
       <div class="stat-label">Days Active</div>
-      <div class="stat-value cyan">9</div>
+      <div class="stat-value cyan">10</div>
       <div class="stat-sub">and counting</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Labs Completed</div>
-      <div class="stat-value green">10 <span style="font-size:16px;color:var(--text-dim)">/ 10</span></div>
-      <div class="stat-sub">100% completion</div>
+      <div class="stat-value green">10 <span style="font-size:16px;color:var(--text-dim)">/ 11</span></div>
+      <div class="stat-sub">91% completion</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">27</div>
+      <div class="stat-value yellow">28</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">156</div>
+      <div class="stat-value purple">159</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
 
   <div id="tab-hot" class="tab active">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">09 April 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">Nation-State APT29 Uses AI-Enhanced PowerDuke Backdoor in Financial Sector Campaigns</div>
+      <div class="ht-meta">
+        <a href="https://attack.mitre.org/software/S0139" target="_blank" class="ht-source-link">&#128279; MITRE ATT&amp;CK</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">APT29 (Cozy Bear) is actively targeting financial institutions using sophisticated backdoors delivered through weaponised Office documents. This Russian state-sponsored group has demonstrated persistent interest in financial sector espionage and credential theft.</p>
+      
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement advanced email security scanning for macro-enabled Office attachments and deploy behaviour-based detection for PowerShell execution patterns associated with PowerDuke.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE Reveals Generative AI Weaponisation by Threat Actors for Malware and Deepfakes</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Threat actors are now systematically acquiring and deploying LLMs to generate malware, create deepfakes for social engineering, and craft malicious commands. This represents a fundamental shift in attack sophistication that could bypass traditional security controls.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries are using large language models to automatically generate malware code, create convincing deepfake content for social engineering attacks, and produce malicious commands that evade detection systems.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Deploy AI-powered content analysis tools to detect AI-generated phishing attempts and establish monitoring for unusual LLM API usage patterns that could indicate malicious automation.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">Critical RCE Vulnerability in WordPress Plugin Exposes Financial Services Websites</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3243" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerabilities</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">CVE-2026-3243 (CVSS 8.8) allows authenticated attackers with minimal privileges to delete arbitrary files leading to remote code execution. Many financial services firms use WordPress for customer-facing websites and portals.</p>
+      
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Immediately audit all WordPress installations for the Advanced Members for ACF plugin versions up to 1.2.5 and update or remove if found - this affects subscriber-level accounts which are often overlooked in privilege reviews.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">AI Agent Tool Poisoning Enables Resource Consumption Attacks on FinServ APIs</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Attackers can manipulate AI agents to perform expensive API calls that drain computing budgets and cause service disruptions. Financial services increasingly rely on AI agents for customer service and trading operations.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries use LLM prompt injection and AI agent tool data poisoning to force AI systems into making excessive, unnecessary API queries that consume resources and disrupt services.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement rate limiting and cost monitoring on AI agent API calls, with automated circuit breakers when usage patterns deviate from normal operational baselines.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">Pikabot Banking Trojan Evolves with Advanced Evasion Techniques</div>
+      <div class="ht-meta">
+        <a href="https://attack.mitre.org/software/S1145" target="_blank" class="ht-source-link">&#128279; MITRE ATT&amp;CK</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Active since 2023, Pikabot uses sophisticated encoding and encryption to evade detection while targeting financial institutions for initial access and payload deployment. Its advanced evasion capabilities make it particularly dangerous for financial services.</p>
+      
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Enhance detection capabilities for multi-stage encoding and encryption patterns typical of Pikabot, focusing on behavioral analysis rather than signature-based detection due to its advanced evasion mechanisms.
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">08 April 2026</span>
@@ -612,6 +723,42 @@
 
   <div id="tab-log" class="tab">
     
+<div class="day-group">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-header-left">
+      <span class="day-date">09 April 2026</span>
+      <span class="day-count">1 topic</span>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="day-body">
+    
+<div class="log-entry log-entry-first">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">Weaponisation of Generative AI Models by Adversaries</div>
+      <div class="log-tags"><span class="tag tag-purple">AI/ML</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">Attackers are now searching for and obtaining generative AI tools like large language models to help them carry out cyber attacks. These AI models can assist criminals in creating malicious content, generating harmful code, and automating various parts of their attack operations.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">Adversaries first identify and acquire generative AI models, often choosing open source versions that are freely available. They then deploy these models locally using frameworks like Ollama or vLLM, or host them on cloud infrastructure to avoid detection. Once operational, attackers use these AI tools to generate malware code, create convincing phishing emails, craft deepfake content, produce malicious commands, or create other attack materials. The AI assistance allows them to scale their operations and create more sophisticated attacks with less manual effort.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">A criminal group could use a locally-hosted large language model to generate thousands of personalised phishing emails targeting bank customers, each containing realistic-sounding urgent messages about account security. In another scenario, attackers might use generative AI to create synthetic voices of senior executives to conduct voice-based social engineering attacks against financial institutions.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Security teams should monitor network traffic for unusual AI framework communications and implement content filtering that can detect AI-generated text patterns in emails and communications. Additionally, establish baseline monitoring for cloud infrastructure usage that might indicate unauthorised AI model hosting.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Large Language Models [AI systems processing human language], Ollama [framework for running AI locally], vLLM [open source AI serving framework], Deepfakes [AI-generated fake audio/video content], Phishing [fraudulent communications seeking sensitive information], Open Source Models [publicly available AI systems]</span></div></div>
+  </div>
+</div>
+  </div>
+</div>
 <div class="day-group">
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
@@ -1457,11 +1604,41 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 
   <div id="tab-labs" class="tab">
     <div class="lab-filters">
-      <button class="filter-btn active" onclick="filterLabs('all',this)">All (10)</button>
+      <button class="filter-btn active" onclick="filterLabs('all',this)">All (11)</button>
       <button class="filter-btn" onclick="filterLabs('completed',this)">Completed (10)</button>
-      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (0)</button>
+      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (1)</button>
     </div>
     
+<div class="lab-card" data-status="not-started">
+  <div class="lab-card-header" onclick="toggleLab(this)">
+    <span class="status-badge status-pending">NOT STARTED</span>
+    <div class="lab-info">
+      <div class="lab-date">09 April 2026</div>
+      <div class="lab-title">Detecting Adversarial Use of Generative AI in Financial Phishing Campaigns</div>
+      <div class="lab-meta">
+        <span class="diff-badge diff-intermediate">Intermediate</span>
+        <span class="lab-time">&#9201; 45 minutes</span>
+      </div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="lab-body">
+    <div class="source-wrap"><a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="source-link">&#128196; ATLAS Technique — Generative AI</a></div>
+    <div class="lab-section-title">SCENARIO</div>
+    <p class="lab-text">Your UK retail bank has noticed an uptick in sophisticated phishing emails targeting customers, with unusually natural language and fewer grammatical errors than typical campaigns. The fraud prevention team suspects attackers may be using generative AI to craft these emails. As a junior security engineer, you've been asked to investigate how threat actors might be leveraging AI tools to create convincing financial phishing content and develop detection strategies for your security operations centre.</p>
+    <div class="lab-section-title">OBJECTIVE</div>
+    <p class="lab-text">You will analyse AI-generated phishing techniques targeting financial services and create a detection framework to identify AI-assisted phishing campaigns.</p>
+    <div class="lab-section-title">CHALLENGE</div>
+    <ol class="lab-list"><li>Open Claude.ai and create a conversation titled &quot;FinServ Phishing Analysis Lab&quot;</li><li>Ask Claude: &quot;What are the linguistic patterns and characteristics that distinguish AI-generated phishing emails from human-written ones, specifically for UK banking contexts?&quot;</li><li>Document the response in a text file named &quot;ai_phishing_indicators.txt&quot;</li><li>Next, ask Claude: &quot;Generate 5 examples of phishing email subject lines that an attacker might create using AI to target UK bank customers. Include both obvious AI-generated patterns and more sophisticated attempts.&quot;</li><li>Copy these examples into your text file under a new section &quot;Sample AI-Generated Subjects&quot;</li><li>Visit haveibeenpwned.com and search for &quot;phishing&quot; in the blog section to find recent phishing campaign examples</li><li>Compare the linguistic complexity and patterns between the AI-generated examples and real-world phishing campaigns documented on the site</li><li>In your text file, create a section called &quot;Detection Patterns&quot; and list 10 specific indicators that could help identify AI-generated phishing content (e.g., unusually perfect grammar, specific phrase structures, consistent formatting patterns)</li><li>Ask Claude: &quot;How would a SOC analyst differentiate between a traditional phishing campaign and one enhanced by generative AI when reviewing email security logs?&quot;</li><li>Add this response to a new section in your file called &quot;SOC Detection Guidelines&quot;</li></ol>
+    <div class="lab-section-title">DEFENCE TASK</div>
+    <p class="lab-text">Design a 3-tier detection strategy document that your bank's email security team could implement to identify AI-generated phishing attempts. Include specific technical indicators, behavioural patterns to monitor, and recommended automated rules for your email security gateway. Format this as a one-page operational procedure.</p>
+    <div class="lab-section-title">REFLECTION QUESTIONS</div><ol class="lab-list"><li><strong>Q1:</strong> What specific linguistic or structural patterns make AI-generated phishing content potentially more dangerous to financial services customers compared to traditional phishing?</li><li><strong>Q2:</strong> How might the detection strategies you've identified need to evolve as generative AI models become more sophisticated?</li><li><strong>Q3:</strong> What additional data sources beyond email content analysis would strengthen your organisation's ability to detect AI-assisted phishing campaigns?</li></ol>
+    <div class="lab-section-title">FURTHER READING</div><p class="lab-text">NCSC Cyber Security Guidance - Using AI Securely: https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development</p>
+    <div class="terminal-tip">
+      &#9889; Complete this lab by running <code>python complete_lab.py</code> in your terminal.
+    </div>
+  </div>
+</div>
 <div class="lab-card" data-status="completed">
   <div class="lab-card-header" onclick="toggleLab(this)">
     <span class="status-badge status-completed">&#10003; COMPLETED</span>
@@ -1766,7 +1943,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 156 terms&#8230;"
+           placeholder="Search 159 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -1812,8 +1989,8 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </div>
 <div class="glossary-item">
   <div class="glossary-term">arbitrary file deletion</div>
-  <div class="glossary-def">A security vulnerability that allows attackers to delete any files on a server system, potentially including critical configuration or data files.</div>
-  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If exploited in banking systems, arbitrary file deletion could destroy audit logs, transaction records, or configuration files required for regulatory compliance.</div><div class="glossary-meta">First seen: 08 April 2026</div>
+  <div class="glossary-def">A single database query that triggers multiple additional queries, creating an exponential increase in database load.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> AI-powered trading systems could be manipulated to perform excessive market data lookups, overwhelming database resources and inflating cloud costs.</div><div class="glossary-meta">First seen: 09 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">arbitrary file uploads</div>
@@ -1921,6 +2098,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banking web applications that don't properly validate user inputs could allow attackers to execute system commands that bypass financial controls or access sensitive customer databases.</div><div class="glossary-meta">First seen: 30 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Command Substitution</div>
+  <div class="glossary-def">A technique where attackers embed executable commands within data that gets processed by shell interpreters.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Log analysis tools used by financial firms could execute malicious commands if transaction logs contain specially crafted command substitution payloads.</div><div class="glossary-meta">First seen: 09 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Context Poisoning</div>
   <div class="glossary-def">The practice of contaminating an AI system's working memory with malicious information to influence its future responses and behavior.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial AI systems, context poisoning could cause investment advisory bots to provide manipulated recommendations or customer service agents to leak confidential account information.</div><div class="glossary-meta">First seen: 26 March 2026</div>
@@ -2009,6 +2191,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-term">Direct Cloud VM Connections</div>
   <div class="glossary-def">Cloud-native methods for logging directly into virtual machines hosted in the cloud without traditional network access.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial institutions using cloud infrastructure need to secure these direct connection methods to prevent unauthorized access to systems processing sensitive financial data.</div><div class="glossary-meta">First seen: 24 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">DLL Hijacking</div>
+  <div class="glossary-def">An attack where malicious code libraries are placed in locations where legitimate applications will accidentally load them instead of the correct files.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial software could be compromised by placing malicious DLL files in application directories, potentially allowing transaction manipulation.</div><div class="glossary-meta">First seen: 09 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">DNSSEC Validation</div>
@@ -2466,6 +2653,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers might use timing delays in financial applications' database responses to slowly extract sensitive customer or transaction data.</div><div class="glossary-meta">First seen: 27 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Time-Based SQL Injection</div>
+  <div class="glossary-def">A specific sequence of network packets that must be received before a backdoor will activate and accept commands.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Advanced persistent threats against financial institutions might use secret knock patterns to avoid detection by network monitoring systems.</div><div class="glossary-meta">First seen: 09 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Traffic Duplication</div>
   <div class="glossary-def">A technique where attackers configure network devices to copy and redirect network traffic to systems they control for monitoring or data theft.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> An attacker could mirror network traffic from payment processing systems to capture credit card transactions, account transfers, or other sensitive financial data flowing through a bank's network.</div><div class="glossary-meta">First seen: 24 March 2026</div>
@@ -2679,7 +2871,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 08 April 2026 17:39 UTC &middot;
+  Built automatically by Vigil &middot; 09 April 2026 10:21 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
