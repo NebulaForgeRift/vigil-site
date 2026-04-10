@@ -226,7 +226,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 09 April 2026 11:16 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 10 April 2026 09:57 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -235,7 +235,7 @@
 <nav>
   <button class="nav-btn active" onclick="showTab('hot',this)">&#128293; Hot Topics</button>
   <button class="nav-btn" onclick="showTab('log',this)">&#128225; Daily Log</button>
-  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">1</span></button>
+  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">2</span></button>
   <button class="nav-btn" onclick="showTab('glossary',this)">&#128218; Glossary</button>
   <button class="nav-btn" onclick="showTab('quiz',this)">&#127942; Quiz History</button>
 </nav>
@@ -245,28 +245,141 @@
   <div class="stats">
     <div class="stat-card">
       <div class="stat-label">Days Active</div>
-      <div class="stat-value cyan">10</div>
+      <div class="stat-value cyan">11</div>
       <div class="stat-sub">and counting</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Labs Completed</div>
-      <div class="stat-value green">10 <span style="font-size:16px;color:var(--text-dim)">/ 11</span></div>
-      <div class="stat-sub">91% completion</div>
+      <div class="stat-value green">10 <span style="font-size:16px;color:var(--text-dim)">/ 12</span></div>
+      <div class="stat-sub">83% completion</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">28</div>
+      <div class="stat-value yellow">29</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">159</div>
+      <div class="stat-value purple">165</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
 
   <div id="tab-hot" class="tab active">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">10 April 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">Critical Command Injection Flaws in MetaGPT AI Framework Allow Remote Code Execution</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5970" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Multiple critical vulnerabilities in the widely-used MetaGPT AI framework enable remote attackers to execute arbitrary commands on systems running AI agents. Financial services firms increasingly deploying AI automation tools face direct system compromise risk, especially given public exploits are available.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors can exploit these vulnerabilities to compromise AI development environments and production AI systems, potentially injecting malicious code into AI model training pipelines or stealing proprietary financial models and customer data.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Immediately audit all MetaGPT deployments for version 0.8.1 or earlier and block external network access to AI development environments until patches are applied.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Reveals AI-Powered Attack Techniques Targeting Generative AI Systems</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">MITRE's updated ATLAS framework documents how threat actors are weaponising generative AI for malware creation, deepfakes, and malicious command generation. This represents a paradigm shift where AI becomes both the attack vector and the target, particularly relevant as financial services adopt LLMs for customer service and fraud detection.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries are using large language models to generate sophisticated malware, create convincing deepfakes for social engineering against financial executives, and craft malicious commands that bypass traditional security controls through natural language processing.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement AI-specific monitoring for unusual LLM API usage patterns and establish baseline behaviour profiles for all generative AI applications in your environment.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">High-Severity SSH Authentication Bypass in Juniper Apstra Enables Device Impersonation</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13914" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerabilities</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">This CVSS 8.7 vulnerability allows attackers to perform man-in-the-middle attacks against network infrastructure management, potentially compromising entire network segments. Financial institutions relying on Juniper networking equipment face risks of lateral movement and credential harvesting across critical network infrastructure.</p>
+      
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Immediately identify all Juniper Apstra deployments and implement network segmentation to isolate management traffic until patches are deployed and SSH host key validation is properly configured.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">AI Agent Resource Exhaustion Attacks Target API Budgets and System Performance</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Attackers can weaponise AI agents against themselves through prompt injection techniques that force expensive API calls and resource consumption. Financial firms deploying AI agents for trading, compliance, or customer service face potential service disruption and significant cost escalation from coordinated attacks.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors use prompt injection and data poisoning techniques to manipulate AI agents into making excessive API queries or computationally expensive operations, effectively creating AI-powered denial-of-service attacks that consume budgets and degrade performance.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement strict rate limiting and cost monitoring on all AI agent API calls, with automatic circuit breakers when usage exceeds normal operational thresholds.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">TrickBot Banking Trojan Continues Targeting Financial Services Infrastructure</div>
+      <div class="ht-meta">
+        <a href="https://attack.mitre.org/software/S0266" target="_blank" class="ht-source-link">&#128279; MITRE ATT&amp;CK</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">TrickBot remains an active threat specifically engineered to target banking infrastructure across North America and Australia. The malware's continued evolution and focus on financial services makes it a persistent risk for credential theft, lateral movement, and potential precursor to ransomware deployment.</p>
+      
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Review and update TrickBot IOCs in your threat detection systems, focusing on monitoring for C++ executables with banking-specific functionality and unusual network communication patterns to known TrickBot infrastructure.
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">09 April 2026</span>
@@ -723,6 +836,42 @@
 
   <div id="tab-log" class="tab">
     
+<div class="day-group">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-header-left">
+      <span class="day-date">10 April 2026</span>
+      <span class="day-count">1 topic</span>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="day-body">
+    
+<div class="log-entry log-entry-first">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">Code Injection Vulnerability in AI Agent Framework</div>
+      <div class="log-tags"><span class="tag tag-purple">AI/ML</span><span class="tag tag-yellow">Vulnerability</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">A security flaw in the MetaGPT AI agent framework that allows attackers to inject malicious code through XML input processing. The vulnerability occurs when the system fails to properly sanitize XML directives before executing them as code.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">An attacker identifies that the MetaGPT framework processes XML input through the ActionNode.xml_fill function without proper validation. They craft malicious XML containing embedded code directives or commands designed to be executed by the system. When the vulnerable XML Handler processes this input, it treats the malicious directives as legitimate code and executes them. This gives the attacker the ability to run arbitrary commands on the system hosting the AI agent. Since the attack can be launched remotely, attackers can exploit this without direct access to the target system.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">A financial institution using MetaGPT to automate trading decisions could be targeted by attackers sending specially crafted XML files containing malicious code. When the AI system processes these files to make trading recommendations, the embedded code could execute commands to access sensitive financial data or manipulate trading algorithms.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Security engineers should immediately audit any systems using MetaGPT versions up to 0.8.1 and implement input validation that sanitizes all XML content before processing. Additionally, establish application sandboxing to limit the potential impact if code injection occurs.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">CVE</span> <span class="kt-def">— Common Vulnerabilities and Exposures identifier</span></div><div class="kt-item"><span class="kt-term">XML Handler</span> <span class="kt-def">— component that processes XML data</span></div><div class="kt-item"><span class="kt-term">Code Injection</span> <span class="kt-def">— inserting malicious executable code illegally</span></div><div class="kt-item"><span class="kt-term">Input Validation</span> <span class="kt-def">— checking data before system processing</span></div><div class="kt-item"><span class="kt-term">ActionNode</span> <span class="kt-def">— specific function processing XML content</span></div><div class="kt-item"><span class="kt-term">CVSS</span> <span class="kt-def">— scoring system for vulnerability severity</span></div></div>
+  </div>
+</div>
+  </div>
+</div>
 <div class="day-group">
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
@@ -1604,11 +1753,41 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 
   <div id="tab-labs" class="tab">
     <div class="lab-filters">
-      <button class="filter-btn active" onclick="filterLabs('all',this)">All (11)</button>
+      <button class="filter-btn active" onclick="filterLabs('all',this)">All (12)</button>
       <button class="filter-btn" onclick="filterLabs('completed',this)">Completed (10)</button>
-      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (1)</button>
+      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (2)</button>
     </div>
     
+<div class="lab-card" data-status="not-started">
+  <div class="lab-card-header" onclick="toggleLab(this)">
+    <span class="status-badge status-pending">NOT STARTED</span>
+    <div class="lab-info">
+      <div class="lab-date">10 April 2026</div>
+      <div class="lab-title">Investigating Password Policy Bypass in Critical Financial Infrastructure</div>
+      <div class="lab-meta">
+        <span class="diff-badge diff-intermediate">Intermediate</span>
+        <span class="lab-time">&#9201; 90 minutes</span>
+      </div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="lab-body">
+    <div class="source-wrap"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33771" target="_blank" class="source-link">&#128196; CVE-2026-33771 (CVSS 7.4)</a></div>
+    <div class="lab-section-title">SCENARIO</div>
+    <p class="lab-text">Your UK investment bank has recently deployed Juniper CTP OS devices to manage critical trading network segments. During a routine security audit, you've discovered that password complexity settings configured by network administrators aren't being enforced, despite appearing correctly in the management interface. With PCI DSS compliance requirements and upcoming regulatory inspections, you need to quickly assess the scope of this vulnerability across your infrastructure and develop an incident response plan for similar configuration management failures.</p>
+    <div class="lab-section-title">OBJECTIVE</div>
+    <p class="lab-text">You will analyze CVE-2026-33771 to understand configuration management vulnerabilities and develop a systematic approach to identify and remediate similar weaknesses in financial infrastructure.</p>
+    <div class="lab-section-title">CHALLENGE</div>
+    <ol class="lab-list"><li>Open Claude.ai and research CVE-2026-33771. Ask Claude to explain the technical details of this vulnerability and its CVSS score components.</li><li>Create a new text file called &quot;password_policy_audit.txt&quot; and document the key technical details Claude provided.</li><li>Using public vulnerability databases (NVD, CVE.org), search for other Juniper Networks vulnerabilities from 2023-2024. List 5 additional CVEs affecting Juniper devices in your text file.</li><li>For each CVE you found, note the CVSS score and whether it relates to authentication, configuration management, or access control.</li><li>Visit the Juniper Security Advisories page (https://supportportal.juniper.net/s/security-advisories) and identify what information is provided for patch management.</li><li>In Claude.ai, ask it to generate a sample PowerShell or Python script that could audit multiple network devices for weak password policies by checking common weak passwords against a device list.</li><li>Copy the generated script into a new file called &quot;weak_password_audit.py&quot; or &quot;weak_password_audit.ps1&quot;.</li><li>Modify the script to include at least 10 passwords commonly used in financial services environments (think trading desk defaults, vendor defaults, etc.).</li><li>Add logging functionality to your script that would create an audit trail suitable for regulatory compliance.</li><li>Test your script logic by running it locally against a mock device list (create a CSV with fake IP addresses and device types).</li></ol>
+    <div class="lab-section-title">DEFENCE TASK</div>
+    <p class="lab-text">Design a comprehensive Configuration Management Database (CMDB) monitoring system specifically for password policy enforcement across your bank's network infrastructure. Document the system architecture, automated checking procedures, alerting mechanisms, and integration points with existing SIEM systems. Include specific compliance reporting features for PCI DSS and FCA requirements.</p>
+    <div class="lab-section-title">REFLECTION QUESTIONS</div><ol class="lab-list"><li><strong>Q1:</strong> How does the persistence aspect of this vulnerability (settings not being saved) change the risk profile compared to a simple weak password implementation, and what does this tell us about testing configuration changes?</li><li><strong>Q2:</strong> What specific challenges would detecting this type of vulnerability present in a large financial services network, and how would you prioritise remediation across different network segments (trading floor, customer-facing, back-office)?</li><li><strong>Q3:</strong> Given that this affects infrastructure devices rather than end-user systems, how would you adapt your bank's existing password policy governance framework to cover network device management?</li></ol>
+    <div class="lab-section-title">FURTHER READING</div><p class="lab-text">NIST Cybersecurity Framework 2.0 - Asset Management and Configuration Management functions (https://www.nist.gov/cyberframework/framework)</p>
+    <div class="terminal-tip">
+      &#9889; Complete this lab by running <code>python complete_lab.py</code> in your terminal.
+    </div>
+  </div>
+</div>
 <div class="lab-card" data-status="not-started">
   <div class="lab-card-header" onclick="toggleLab(this)">
     <span class="status-badge status-pending">NOT STARTED</span>
@@ -1943,7 +2122,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 159 terms&#8230;"
+           placeholder="Search 165 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -2236,6 +2415,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-term">Financial Theft</div>
   <div class="glossary-def">A cyber attack objective where adversaries steal money or monetary resources through various technical or social engineering methods.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms are primary targets for financial theft attacks including ransomware, cryptocurrency exploitation, and unauthorized fund transfers through compromised accounts.</div><div class="glossary-meta">First seen: 24 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Flexible PIC Concentrators (FPCs)</div>
+  <div class="glossary-def">Hardware components in network routers that process and forward data packets at high speeds.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Compromised FPCs in financial networks could allow attackers to intercept or manipulate high-frequency trading communications and payment processing traffic.</div><div class="glossary-meta">First seen: 10 April 2026</div>
 </div><div class="glossary-letter">G</div>
 <div class="glossary-item">
   <div class="glossary-term">Generative AI Models</div>
@@ -2338,6 +2522,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banks implement just-in-time access so that employees only get administrative privileges to payment systems temporarily when required for specific tasks.</div><div class="glossary-meta">First seen: 22 March 2026</div>
 </div><div class="glossary-letter">K</div>
 <div class="glossary-item">
+  <div class="glossary-term">Key Exchange without Entity Authentication</div>
+  <div class="glossary-def">A vulnerability where cryptographic key exchange occurs without properly verifying the identity of the communicating parties.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> This flaw allows attackers to intercept SSH connections between financial network management systems and devices, potentially capturing banking credentials or transaction data.</div><div class="glossary-meta">First seen: 10 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Kill-list</div>
   <div class="glossary-def">A pre-configured list of specific processes or services that malware automatically terminates when it executes on a target system.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banking trojans may use kill-lists to shut down security software or trading applications before deploying their payload.</div><div class="glossary-meta">First seen: 24 March 2026</div>
@@ -2386,6 +2575,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-term">Memory Leak</div>
   <div class="glossary-def">A software bug where a program gradually uses up more and more memory over time without properly releasing it back to the system.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Memory leaks in financial trading systems or payment processors can cause critical services to slow down or crash during peak transaction periods, potentially resulting in significant financial losses.</div><div class="glossary-meta">First seen: 25 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">MITM Attacker</div>
+  <div class="glossary-def">An adversary who positions themselves between two communicating parties to intercept, monitor, or alter their communications.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services, MITM attackers can intercept payment instructions or manipulate trading data flowing between banking applications and servers.</div><div class="glossary-meta">First seen: 10 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Model Context Protocol</div>
@@ -2608,6 +2802,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Memory exhaustion attacks against banking systems could disrupt online banking services during peak trading hours, preventing customers from accessing their accounts.</div><div class="glossary-meta">First seen: 24 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">SSH Host Key Validation</div>
+  <div class="glossary-def">The process of verifying that an SSH server's cryptographic key matches its expected identity before establishing a secure connection.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Weak validation in banking infrastructure can allow attackers to impersonate trading systems or payment gateways during secure communications.</div><div class="glossary-meta">First seen: 10 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Stack Buffer Overflow</div>
   <div class="glossary-def">A vulnerability where an application writes more data to a buffer than it can hold, potentially allowing attackers to execute malicious code.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> These vulnerabilities in financial software could allow attackers to gain unauthorized access to trading systems or customer account databases.</div><div class="glossary-meta">First seen: 28 March 2026</div>
@@ -2656,6 +2855,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-term">Time-Based SQL Injection</div>
   <div class="glossary-def">A specific sequence of network packets that must be received before a backdoor will activate and accept commands.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Advanced persistent threats against financial institutions might use secret knock patterns to avoid detection by network monitoring systems.</div><div class="glossary-meta">First seen: 09 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Tool Data Poisoning</div>
+  <div class="glossary-def">A scenario where a single request triggers multiple subsequent database or API queries, potentially overwhelming system resources.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Malicious prompts could cause AI-powered banking chatbots to generate excessive database queries, disrupting customer service operations and increasing cloud costs.</div><div class="glossary-meta">First seen: 10 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Traffic Duplication</div>
@@ -2736,6 +2940,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-term">X509 Keys</div>
   <div class="glossary-def">Digital certificates that use the X.509 standard format to verify identity and enable secure communications.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In cloud environments, attackers may add malicious x509 certificates to service accounts to maintain persistent access to financial data and systems.</div><div class="glossary-meta">First seen: 23 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">XOR-based Payloads</div>
+  <div class="glossary-def">Malicious code that uses XOR encryption to obfuscate SQL injection attacks and evade security detection.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers use these encrypted payloads to extract customer financial data from banking databases while avoiding fraud detection systems.</div><div class="glossary-meta">First seen: 10 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">XPC Service</div>
@@ -2871,7 +3080,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 09 April 2026 11:16 UTC &middot;
+  Built automatically by Vigil &middot; 10 April 2026 09:57 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
