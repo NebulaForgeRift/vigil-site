@@ -226,7 +226,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 10 April 2026 18:33 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 10 April 2026 18:42 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -255,12 +255,12 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">29</div>
+      <div class="stat-value yellow">30</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">165</div>
+      <div class="stat-value purple">170</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -840,7 +840,7 @@
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
       <span class="day-date">10 April 2026</span>
-      <span class="day-count">1 topic</span>
+      <span class="day-count">2 topics</span>
     </div>
     <span class="chevron">&#9660;</span>
   </div>
@@ -868,6 +868,30 @@
     <p class="log-text defence-text">Security engineers should immediately audit any systems using MetaGPT versions up to 0.8.1 and implement input validation that sanitizes all XML content before processing. Additionally, establish application sandboxing to limit the potential impact if code injection occurs.</p>
 
     <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">CVE</span> <span class="kt-def">— Common Vulnerabilities and Exposures identifier</span></div><div class="kt-item"><span class="kt-term">XML Handler</span> <span class="kt-def">— component that processes XML data</span></div><div class="kt-item"><span class="kt-term">Code Injection</span> <span class="kt-def">— inserting malicious executable code illegally</span></div><div class="kt-item"><span class="kt-term">Input Validation</span> <span class="kt-def">— checking data before system processing</span></div><div class="kt-item"><span class="kt-term">ActionNode</span> <span class="kt-def">— specific function processing XML content</span></div><div class="kt-item"><span class="kt-term">CVSS</span> <span class="kt-def">— scoring system for vulnerability severity</span></div></div>
+  </div>
+</div>
+<div class="log-entry ">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">OS Command Injection in AI Development Frameworks</div>
+      <div class="log-tags"><span class="tag tag-purple">AI/ML</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">A vulnerability where an attacker can inject malicious operating system commands into a software application. In this case, the MetaGPT AI framework allows attackers to execute arbitrary system commands through a flawed terminal function.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">An attacker identifies that the Bash.run function in MetaGPT's terminal library doesn't properly validate user input before passing it to the operating system. They craft malicious input that breaks out of the intended command structure and includes their own commands. When the application processes this input, it unknowingly executes the attacker's commands with the same privileges as the application itself. Since this can be done remotely, attackers don't need physical access to the target system.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">A financial services firm using MetaGPT to automate report generation could be compromised if an attacker sends specially crafted input through the system's API. The malicious commands could extract sensitive customer data, modify financial records, or install persistent backdoors into the bank's AI infrastructure.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Security engineers should immediately audit any applications using MetaGPT version 0.8.1 or earlier and implement input validation that sanitizes all data before it reaches system command functions. Consider upgrading to patched versions when available or temporarily isolating affected systems from network access.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">CVE</span> <span class="kt-def">— Common Vulnerabilities and Exposures identifier</span></div><div class="kt-item"><span class="kt-term">CVSS</span> <span class="kt-def">— vulnerability severity scoring system standard</span></div><div class="kt-item"><span class="kt-term">command injection</span> <span class="kt-def">— malicious commands inserted into applications</span></div><div class="kt-item"><span class="kt-term">input validation</span> <span class="kt-def">— checking data before system processing</span></div><div class="kt-item"><span class="kt-term">remote exploitation</span> <span class="kt-def">— attacking systems over network connections</span></div></div>
   </div>
 </div>
   </div>
@@ -2122,7 +2146,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 165 terms&#8230;"
+           placeholder="Search 170 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -2320,6 +2344,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-term">cryptographic validation</div>
   <div class="glossary-def">The process of using mathematical algorithms to verify that data hasn't been tampered with and comes from a trusted source.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Payment systems must implement cryptographic validation on all transaction tokens to prevent fraudulent modifications of transfer amounts.</div><div class="glossary-meta">First seen: 31 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">CTP OS</div>
+  <div class="glossary-def">Juniper Networks' Carrier Transport Platform Operating System used in telecommunications and service provider equipment.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms rely on carrier-grade transport systems for secure communication links between trading venues and data centres.</div><div class="glossary-meta">First seen: 10 April 2026</div>
 </div><div class="glossary-letter">D</div>
 <div class="glossary-item">
   <div class="glossary-term">Data Encrypted for Impact</div>
@@ -2360,6 +2389,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-term">determine_current_user filter</div>
   <div class="glossary-def">A WordPress function that decides which user account is currently active during a web request.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers could exploit vulnerable plugins that override this filter to impersonate bank employees or customers without proper authentication.</div><div class="glossary-meta">First seen: 31 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Device-Less Allow Path</div>
+  <div class="glossary-def">A SQL injection attack technique where attackers infer database information by measuring how long the database takes to respond to specially crafted queries.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers could use timing attacks against banking databases to slowly extract customer account information or transaction data without triggering obvious error messages.</div><div class="glossary-meta">First seen: 10 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">DHCP Snooping</div>
@@ -2517,6 +2551,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers may exploit AI agents in financial systems to perform excessive query fan-outs, driving up cloud costs and potentially causing service disruptions during peak trading hours.</div><div class="glossary-meta">First seen: 08 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Juniper Networks Apstra</div>
+  <div class="glossary-def">A network attack where an adversary intercepts and potentially alters communications between two parties who believe they are directly communicating with each other.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services, these attacks could intercept trading communications or payment instructions between banks and their partners.</div><div class="glossary-meta">First seen: 10 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Just-in-Time Access</div>
   <div class="glossary-def">A security mechanism that grants users elevated permissions only when needed and for a limited time period, rather than permanent elevated access.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banks implement just-in-time access so that employees only get administrative privileges to payment systems temporarily when required for specific tasks.</div><div class="glossary-meta">First seen: 22 March 2026</div>
@@ -2575,6 +2614,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-term">Memory Leak</div>
   <div class="glossary-def">A software bug where a program gradually uses up more and more memory over time without properly releasing it back to the system.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Memory leaks in financial trading systems or payment processors can cause critical services to slow down or crash during peak transaction periods, potentially resulting in significant financial losses.</div><div class="glossary-meta">First seen: 25 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">MetaGPT</div>
+  <div class="glossary-def">An AI framework that assigns different roles to GPT models to collaborate on complex tasks like software development and project management.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial institutions might use MetaGPT-like tools for automated report generation or regulatory compliance documentation, making command injection vulnerabilities particularly dangerous.</div><div class="glossary-meta">First seen: 10 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">MITM Attacker</div>
@@ -2755,6 +2799,11 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
   <div class="glossary-term">Scope Validation</div>
   <div class="glossary-def">The security process of checking whether a user or system has the appropriate permissions to access specific resources or perform certain actions.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial systems, insufficient scope validation could allow junior staff to approve high-value transactions or access sensitive customer data beyond their authorization level.</div><div class="glossary-meta">First seen: 01 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Scope-Upgrade Requests</div>
+  <div class="glossary-def">Requests to expand the permissions or access level of an authenticated session or device beyond its initially granted privileges.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In banking systems, unauthorized scope upgrades could allow attackers to escalate from read-only access to administrative control over payment processing systems.</div><div class="glossary-meta">First seen: 10 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Secret Knock</div>
@@ -3080,7 +3129,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 10 April 2026 18:33 UTC &middot;
+  Built automatically by Vigil &middot; 10 April 2026 18:42 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
