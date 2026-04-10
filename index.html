@@ -226,7 +226,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 10 April 2026 18:56 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 10 April 2026 18:58 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -255,7 +255,7 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">30</div>
+      <div class="stat-value yellow">31</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
@@ -840,7 +840,7 @@
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
       <span class="day-date">10 April 2026</span>
-      <span class="day-count">2 topics</span>
+      <span class="day-count">3 topics</span>
     </div>
     <span class="chevron">&#9660;</span>
   </div>
@@ -892,6 +892,30 @@
     <p class="log-text defence-text">Security engineers should immediately audit any applications using MetaGPT version 0.8.1 or earlier and implement input validation that sanitizes all data before it reaches system command functions. Consider upgrading to patched versions when available or temporarily isolating affected systems from network access.</p>
 
     <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">CVE</span> <span class="kt-def">— Common Vulnerabilities and Exposures identifier</span></div><div class="kt-item"><span class="kt-term">CVSS</span> <span class="kt-def">— vulnerability severity scoring system standard</span></div><div class="kt-item"><span class="kt-term">command injection</span> <span class="kt-def">— malicious commands inserted into applications</span></div><div class="kt-item"><span class="kt-term">input validation</span> <span class="kt-def">— checking data before system processing</span></div><div class="kt-item"><span class="kt-term">remote exploitation</span> <span class="kt-def">— attacking systems over network connections</span></div></div>
+  </div>
+</div>
+<div class="log-entry ">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">OS Command Injection in AI Development Tools (CVE-2026-5972)</div>
+      <div class="log-tags"><span class="tag tag-purple">AI/ML</span><span class="tag tag-yellow">Vulnerability</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">A vulnerability in the MetaGPT AI development framework that allows attackers to execute unauthorized operating system commands on the host machine. This happens when user input is not properly validated before being passed to system command functions.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">An attacker identifies that the Terminal.run_command function in MetaGPT doesn't properly sanitize user input before executing system commands. They craft malicious input containing special characters or command separators (like semicolons or pipes) that break out of the intended command structure. When this malicious input is processed by the vulnerable function, the system executes the attacker's commands alongside or instead of the legitimate ones. The attacker can then run arbitrary commands with the same privileges as the application, potentially accessing sensitive data, installing malware, or compromising the entire system.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">A UK bank using MetaGPT version 0.8.1 to develop AI-powered customer service chatbots could be at risk if their development environment is exposed to untrusted input. An attacker could exploit this vulnerability to execute commands that extract customer data, access internal systems, or plant backdoors in the AI models before they're deployed to production systems.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Security engineers should immediately inventory all instances of MetaGPT in their organization and apply the security patch identified by commit d04ffc8dc67903e8b327f78ec121df5e190ffc7b. Additionally, implement input validation scanning tools that can detect command injection attempts in development frameworks and AI tools.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">OS command injection</span> <span class="kt-def">— executing unauthorized system commands remotely</span></div><div class="kt-item"><span class="kt-term">Terminal.run_command</span> <span class="kt-def">— vulnerable function processing system commands</span></div><div class="kt-item"><span class="kt-term">input sanitization</span> <span class="kt-def">— cleaning user data before processing</span></div><div class="kt-item"><span class="kt-term">CVSS score</span> <span class="kt-def">— standardized vulnerability severity rating system</span></div><div class="kt-item"><span class="kt-term">patch commit</span> <span class="kt-def">— code update fixing security issue</span></div><div class="kt-item"><span class="kt-term">remote exploitation</span> <span class="kt-def">— attacking systems over network connections</span></div></div>
   </div>
 </div>
   </div>
@@ -2347,8 +2371,8 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </div>
 <div class="glossary-item">
   <div class="glossary-term">CTP OS</div>
-  <div class="glossary-def">Juniper Networks' Carrier Transport Platform Operating System used in telecommunications and service provider equipment.</div>
-  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms rely on carrier-grade transport systems for secure communication links between trading venues and data centres.</div><div class="glossary-meta">First seen: 10 April 2026</div>
+  <div class="glossary-def">Juniper Networks' operating system designed for telecommunications and service provider equipment.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms using CTP OS for network infrastructure could face security risks if weak password requirements aren't properly enforced on devices handling sensitive trading data.</div><div class="glossary-meta">First seen: 10 April 2026</div>
 </div><div class="glossary-letter">D</div>
 <div class="glossary-item">
   <div class="glossary-term">Data Encrypted for Impact</div>
@@ -3129,7 +3153,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 10 April 2026 18:56 UTC &middot;
+  Built automatically by Vigil &middot; 10 April 2026 18:58 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
