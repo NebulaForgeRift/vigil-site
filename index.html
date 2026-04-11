@@ -301,7 +301,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 11 April 2026 06:23 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 11 April 2026 06:26 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -330,12 +330,12 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">32</div>
+      <div class="stat-value yellow">33</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">173</div>
+      <div class="stat-value purple">179</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -1280,7 +1280,7 @@
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 173 terms&#8230;"
+           placeholder="Search 179 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -1590,6 +1590,11 @@
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> EAP vulnerabilities could compromise the security of wireless payment terminals or mobile banking applications that rely on secure wireless authentication.</div><div class="glossary-meta">First seen: 25 March 2026</div>
 </div><div class="glossary-letter">F</div>
 <div class="glossary-item">
+  <div class="glossary-term">F-string Validation</div>
+  <div class="glossary-def">Security checks that ensure user-controlled format strings in Python code cannot execute arbitrary expressions or access sensitive variables.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> AI-powered financial chatbots using LangChain prompt templates need proper f-string validation to prevent attackers from injecting code that could expose customer account information.</div><div class="glossary-meta">First seen: 11 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Financial Theft</div>
   <div class="glossary-def">A cyber attack objective where adversaries steal money or monetary resources through various technical or social engineering methods.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms are primary targets for financial theft attacks including ransomware, cryptocurrency exploitation, and unauthorized fund transfers through compromised accounts.</div><div class="glossary-meta">First seen: 24 March 2026</div>
@@ -1790,6 +1795,11 @@
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banks use OSINT to identify threat actors researching their systems or to discover if their AI models or customer data have been exposed online.</div><div class="glossary-meta">First seen: 30 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">OpenClaw</div>
+  <div class="glossary-def">A cloud-based platform or application framework that manages agents, plugins, and sandboxed environments with scope-based access controls.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms using OpenClaw for automated trading agents or compliance monitoring would need to patch privilege escalation vulnerabilities that could allow unauthorized access to sensitive financial data.</div><div class="glossary-meta">First seen: 11 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">OS Command Injection</div>
   <div class="glossary-def">A vulnerability where an attacker can execute operating system commands on a server by manipulating input that gets passed to system command functions.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services, OS command injection could allow attackers to execute commands on trading systems or payment processors, potentially accessing sensitive financial data or disrupting critical operations.</div><div class="glossary-meta">First seen: 07 April 2026</div>
@@ -1813,6 +1823,11 @@
   <div class="glossary-term">packet-capturing program</div>
   <div class="glossary-def">Software that intercepts and records network traffic passing through a system for monitoring or analysis purposes.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers use packet-capturing backdoors in financial networks to secretly monitor sensitive communications like transaction data or customer information.</div><div class="glossary-meta">First seen: 24 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Pairing Requirements</div>
+  <div class="glossary-def">Authentication mechanisms that require two systems or components to establish a secure connection through a mutual verification process.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Payment processing systems use pairing requirements to ensure only authorized terminals can connect to the backend, preventing rogue devices from processing fraudulent transactions.</div><div class="glossary-meta">First seen: 11 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Path Traversal Sequences</div>
@@ -1940,9 +1955,19 @@
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Sandbox escape vulnerabilities in financial trading platforms could allow attackers to access real market data or execute unauthorized trades.</div><div class="glossary-meta">First seen: 02 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Sandbox Roots</div>
+  <div class="glossary-def">Designated directory boundaries that restrict where sandboxed applications can read, write, or execute files within a contained environment.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial data processing applications use sandbox roots to isolate customer data, preventing one client's analysis tools from accessing another client's confidential trading information.</div><div class="glossary-meta">First seen: 11 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Satellite data files</div>
   <div class="glossary-def">Data files containing information transmitted from or to satellite communication systems.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial firms using satellite communications for remote trading offices or disaster recovery sites may process satellite data files that could contain malicious payloads.</div><div class="glossary-meta">First seen: 07 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Scope Boundary Bypass</div>
+  <div class="glossary-def">A security flaw where an application incorrectly grants higher-level permissions than what was originally authorized to a user or process.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In banking APIs, scope boundary bypass could allow a read-only trading application to execute unauthorized transactions by gaining admin-level API access.</div><div class="glossary-meta">First seen: 11 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Scope Validation</div>
@@ -2140,6 +2165,11 @@
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In cloud environments, attackers may add malicious x509 certificates to service accounts to maintain persistent access to financial data and systems.</div><div class="glossary-meta">First seen: 23 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">xgrammar Cache</div>
+  <div class="glossary-def">A caching mechanism in AI inference systems that stores grammar rules or parsing structures to improve performance.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> High-frequency trading systems using vLLM for market analysis could be disrupted by attackers flooding the xgrammar cache, causing denial of service during critical trading periods.</div><div class="glossary-meta">First seen: 11 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">XOR-based Payloads</div>
   <div class="glossary-def">Malicious code that uses XOR encryption to obfuscate SQL injection attacks and evade security detection.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers use these encrypted payloads to extract customer financial data from banking databases while avoiding fraud detection systems.</div><div class="glossary-meta">First seen: 10 April 2026</div>
@@ -2295,7 +2325,7 @@
   </div>
   <div class="ta-stat ta-stat-purple">
     <div class="ta-stat-label">Total Sightings</div>
-    <div class="ta-stat-value" style="color:var(--purple)">4</div>
+    <div class="ta-stat-value" style="color:var(--purple)">6</div>
     <div class="ta-stat-sub">across all digests</div>
   </div>
 </div>
@@ -2321,7 +2351,7 @@
       <div class="ta-card-meta">
         <span>&#128176; Criminal</span>
         <span>&#127758; Unknown</span>
-        <span class="ta-sighting-count">&#128065; 2 sightings</span>
+        <span class="ta-sighting-count">&#128065; 3 sightings</span>
       </div>
       <div class="ta-card-sectors"><span class="ta-sector-tag">Financial Services</span><span class="ta-sector-tag">Technology</span><span class="ta-sector-tag">Unknown</span></div>
     </div>
@@ -2343,8 +2373,14 @@
         <span class="ta-none">None recorded</span>
       </div>
     </div>
-    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 2 total</div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 3 total</div>
     <div class="ta-timeline">
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">11 April 2026</div>
+  <div class="ta-timeline-summary">Wizard Spider developed and initially used TrickBot for targeting banking sites in North America, Australia, and throughout Europe. The group has since expanded operations against all sectors worldwide as part of 'big game hunting' ransomware campaigns.</div>
+  
+</div>
 <div class="ta-timeline-item">
   <div class="ta-timeline-dot"></div>
   <div class="ta-timeline-date">10 April 2026</div>
@@ -2363,7 +2399,7 @@
       <div class="ta-card-meta">
         <span>&#127988; Nation-State</span>
         <span>&#127758; Unknown</span>
-        <span class="ta-sighting-count">&#128065; 2 sightings</span>
+        <span class="ta-sighting-count">&#128065; 3 sightings</span>
       </div>
       <div class="ta-card-sectors"><span class="ta-sector-tag">Unknown</span></div>
     </div>
@@ -2385,8 +2421,14 @@
         <span class="ta-none">None recorded</span>
       </div>
     </div>
-    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 2 total</div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 3 total</div>
     <div class="ta-timeline">
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">11 April 2026</div>
+  <div class="ta-timeline-summary">APT29 used PowerDuke backdoor in 2016, primarily delivering it through Microsoft Word or Excel attachments containing malicious macros.</div>
+  
+</div>
 <div class="ta-timeline-item">
   <div class="ta-timeline-dot"></div>
   <div class="ta-timeline-date">10 April 2026</div>
@@ -2400,7 +2442,7 @@
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 11 April 2026 06:23 UTC &middot;
+  Built automatically by Vigil &middot; 11 April 2026 06:26 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
