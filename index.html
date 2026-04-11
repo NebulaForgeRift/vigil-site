@@ -301,7 +301,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 11 April 2026 06:51 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 11 April 2026 15:08 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -311,7 +311,7 @@
   <button class="nav-btn active" onclick="showTab('hot',this)">&#128293; Hot Topics</button>
   <button class="nav-btn" onclick="showTab('actors',this)">&#128373; Threat Actors</button>
   <button class="nav-btn" onclick="showTab('log',this)">&#128214; Daily Log</button>
-  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">2</span></button>
+  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs </button>
   <button class="nav-btn" onclick="showTab('glossary',this)">&#128218; Glossary</button>
   <button class="nav-btn" onclick="showTab('quiz',this)">&#127942; Quiz History</button>
 </nav>
@@ -326,8 +326,8 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Labs Completed</div>
-      <div class="stat-value green">10 <span style="font-size:16px;color:var(--text-dim)">/ 12</span></div>
-      <div class="stat-sub">83% completion</div>
+      <div class="stat-value green">12 <span style="font-size:16px;color:var(--text-dim)">/ 12</span></div>
+      <div class="stat-sub">100% completion</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
@@ -913,13 +913,13 @@
   <div id="tab-labs" class="tab">
     <div class="lab-filters">
       <button class="filter-btn active" onclick="filterLabs('all',this)">All (12)</button>
-      <button class="filter-btn" onclick="filterLabs('completed',this)">Completed (10)</button>
-      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (2)</button>
+      <button class="filter-btn" onclick="filterLabs('completed',this)">Completed (12)</button>
+      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (0)</button>
     </div>
     
-<div class="lab-card" data-status="not-started">
+<div class="lab-card" data-status="completed">
   <div class="lab-card-header" onclick="toggleLab(this)">
-    <span class="status-badge status-pending">NOT STARTED</span>
+    <span class="status-badge status-completed">&#10003; COMPLETED</span>
     <div class="lab-info">
       <div class="lab-date">10 April 2026</div>
       <div class="lab-title">Investigating Password Policy Bypass in Critical Financial Infrastructure</div>
@@ -947,9 +947,9 @@
     </div>
   </div>
 </div>
-<div class="lab-card" data-status="not-started">
+<div class="lab-card" data-status="completed">
   <div class="lab-card-header" onclick="toggleLab(this)">
-    <span class="status-badge status-pending">NOT STARTED</span>
+    <span class="status-badge status-completed">&#10003; COMPLETED</span>
     <div class="lab-info">
       <div class="lab-date">09 April 2026</div>
       <div class="lab-title">Detecting Adversarial Use of Generative AI in Financial Phishing Campaigns</div>
@@ -3492,7 +3492,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 11 April 2026 06:51 UTC &middot;
+  Built automatically by Vigil &middot; 11 April 2026 15:08 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
