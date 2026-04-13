@@ -301,7 +301,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 13 April 2026 11:39 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 13 April 2026 11:43 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -331,18 +331,133 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">35</div>
+      <div class="stat-value yellow">36</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">183</div>
+      <div class="stat-value purple">184</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
 
   <div id="tab-hot" class="tab active">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">13 April 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">Financial firms face new AI-driven cost attacks targeting service budgets</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0034" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK financial services firms increasingly rely on AI services for customer support, fraud detection, and trading operations where excessive costs could impact profitability and service availability. Attackers can deliberately trigger expensive AI operations through high-volume queries or resource-intensive prompts, potentially causing significant financial damage beyond traditional DDoS attacks.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries exploit AI systems' computational costs by crafting prompts that force expensive operations like complex translations, excessive API calls, or resource-intensive processing tasks.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement rate limiting and cost monitoring alerts on all AI service endpoints, especially customer-facing chatbots and automated analysis tools.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">Attackers plant malicious prompts in public systems for delayed AI exploitation</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0093" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK banks and financial services use RAG systems to process customer communications, regulatory documents, and market data where malicious prompts could manipulate AI responses affecting customer advice or compliance decisions. These attacks can remain dormant until an AI system processes the poisoned content, making detection challenging.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries inject malicious prompts into public-facing applications knowing they will be indexed by RAG systems or processed by AI agents, creating delayed-action attacks.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement content sanitization and prompt filtering on all data sources feeding into RAG systems and AI agents.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">AI software supply chain becomes prime target for financial sector attacks</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0010.001" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-cyan">Supply Chain</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK financial institutions heavily rely on AI frameworks like TensorFlow and integration tools like LangChain for fraud detection and algorithmic trading systems. Compromised AI packages could inject malicious code directly into critical financial systems, bypassing traditional security controls focused on conventional software.</p>
+      
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Audit and monitor all AI-related dependencies using software composition analysis tools, focusing on packages from PyTorch, TensorFlow, and LangChain ecosystems.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">Threat actors weaponize generative AI for sophisticated financial cyberattacks</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Financial services face increased risk from AI-generated deepfakes for social engineering CEO fraud and AI-crafted phishing targeting bank customers with highly personalized content. These attacks can bypass traditional detection methods designed for human-generated threats.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries use locally-hosted LLMs via frameworks like Ollama to generate malware, create deepfakes for fraud, and craft sophisticated phishing content targeting financial customers.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Update security awareness training to include AI-generated threats and deploy detection tools specifically designed to identify deepfakes and AI-generated malicious content.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">AI agents vulnerable to resource exhaustion through malicious tool calls</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Financial institutions deploying AI agents for customer service and automated trading face risks of deliberate resource exhaustion that could disrupt operations and inflate costs. Attackers can manipulate agents into making excessive API calls or performing unnecessary computations through prompt injection.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries use prompt injection techniques to coerce AI agents into performing computationally expensive operations like excessive translations or unnecessary internet lookups.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Configure strict resource limits and monitoring for AI agents, particularly around API call volumes and computational budget consumption.
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">10 April 2026</span>
@@ -1281,7 +1396,7 @@
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 183 terms&#8230;"
+           placeholder="Search 184 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -1497,8 +1612,8 @@
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Data Execution Prevention (DEP)</div>
-  <div class="glossary-def">A specific sequence or pattern of network traffic that a backdoor listens for before activating or responding to commands.</div>
-  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Advanced persistent threats targeting banks may use secret knock techniques to covertly activate dormant malware on compromised financial networks without triggering security alerts.</div><div class="glossary-meta">First seen: 13 April 2026</div>
+  <div class="glossary-def">A vulnerability where data written to a buffer exceeds its allocated memory space on the program's call stack, potentially allowing code execution.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Trading applications with buffer overflow vulnerabilities could be exploited to manipulate transaction data or gain unauthorized access to financial systems.</div><div class="glossary-meta">First seen: 13 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">DCMTK</div>
@@ -1589,6 +1704,11 @@
   <div class="glossary-term">EKANS</div>
   <div class="glossary-def">A type of ransomware written in the Go programming language that encrypts files and demands payment for decryption.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> EKANS poses particular risk to financial services as it can disrupt critical operational systems and has been used in attacks against multiple business sectors including energy and healthcare infrastructure that banks depend on.</div><div class="glossary-meta">First seen: 24 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Error-Based SQL Injection</div>
+  <div class="glossary-def">A type of SQL injection attack that extracts database information by triggering and analyzing database error messages returned by the application.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers could use error-based SQL injection against banking web applications to extract customer account details or transaction histories through deliberately malformed database queries.</div><div class="glossary-meta">First seen: 13 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Extensible Authentication Protocol (EAP)</div>
@@ -2347,7 +2467,7 @@
   </div>
   <div class="ta-stat ta-stat-purple">
     <div class="ta-stat-label">Total Sightings</div>
-    <div class="ta-stat-value" style="color:var(--purple)">10</div>
+    <div class="ta-stat-value" style="color:var(--purple)">12</div>
     <div class="ta-stat-sub">across all digests</div>
   </div>
 </div>
@@ -2373,7 +2493,7 @@
       <div class="ta-card-meta">
         <span>&#128176; Criminal</span>
         <span>&#127758; Unknown</span>
-        <span class="ta-sighting-count">&#128065; 5 sightings</span>
+        <span class="ta-sighting-count">&#128065; 6 sightings</span>
       </div>
       <div class="ta-card-sectors"><span class="ta-sector-tag">Critical Infrastructure</span><span class="ta-sector-tag">Energy</span><span class="ta-sector-tag">Financial Services</span></div>
     </div>
@@ -2395,7 +2515,7 @@
         <span class="ta-none">None recorded</span>
       </div>
     </div>
-    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 5 total</div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 6 total</div>
     <div class="ta-timeline">
 <div class="ta-timeline-item">
   <div class="ta-timeline-dot"></div>
@@ -2427,9 +2547,9 @@
       <div class="ta-card-meta">
         <span>&#127988; Nation-State</span>
         <span>&#127758; Unknown</span>
-        <span class="ta-sighting-count">&#128065; 5 sightings</span>
+        <span class="ta-sighting-count">&#128065; 6 sightings</span>
       </div>
-      <div class="ta-card-sectors"><span class="ta-sector-tag">Unknown</span></div>
+      <div class="ta-card-sectors"><span class="ta-sector-tag">Government</span><span class="ta-sector-tag">Technology</span><span class="ta-sector-tag">Unknown</span></div>
     </div>
     <div class="ta-card-right">
       <span class="ta-threat-badge badge-medium">Medium</span>
@@ -2449,7 +2569,7 @@
         <span class="ta-none">None recorded</span>
       </div>
     </div>
-    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 5 total</div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 6 total</div>
     <div class="ta-timeline">
 <div class="ta-timeline-item">
   <div class="ta-timeline-dot"></div>
@@ -2479,7 +2599,7 @@
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
       <span class="day-date">13 April 2026</span>
-      <span class="day-count">1 topic</span>
+      <span class="day-count">2 topics</span>
     </div>
     <span class="chevron">&#9660;</span>
   </div>
@@ -2507,6 +2627,30 @@
     <p class="log-text defence-text">Security engineers should immediately audit all administrative endpoints to ensure proper authentication is implemented before allowing access to any management functions. Implement network segmentation to restrict administrative interfaces to internal networks only, and regularly scan for publicly accessible admin endpoints.</p>
 
     <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">HTTP Endpoint</span> <span class="kt-def">— web address for specific function</span></div><div class="kt-item"><span class="kt-term">Administrative Interface</span> <span class="kt-def">— management control panel system</span></div><div class="kt-item"><span class="kt-term">Authentication</span> <span class="kt-def">— verifying user identity process</span></div><div class="kt-item"><span class="kt-term">Remote Attack</span> <span class="kt-def">— accessing system from distance</span></div><div class="kt-item"><span class="kt-term">CVSS Score</span> <span class="kt-def">— vulnerability severity rating system</span></div><div class="kt-item"><span class="kt-term">Public Exploit</span> <span class="kt-def">— available attack code tools</span></div></div>
+  </div>
+</div>
+<div class="log-entry ">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">Stack Buffer Overflow in Application Input Fields</div>
+      <div class="log-tags"><span class="tag tag-cyan">Security</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">A stack buffer overflow occurs when an application receives more data than its allocated memory buffer can hold, causing the excess data to overwrite adjacent memory locations. This can crash the application or allow attackers to inject and execute malicious code by overwriting critical memory addresses like return pointers.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">The attacker first identifies an input field that doesn't properly validate the length of user-supplied data, such as Echo Mirage's Rules action field. They then craft a malicious text file containing a payload that exceeds the expected buffer size for that input field. When the oversized string is pasted into the vulnerable field, it overflows the allocated memory buffer on the stack. The excess data overwrites adjacent memory locations, including the return address that tells the program where to continue execution. By controlling this return address, the attacker can redirect program execution to their malicious code.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">In a financial trading application, an attacker could exploit a similar vulnerability in a trade description field that doesn't validate input length. By pasting an oversized trading instruction containing malicious code, they could potentially execute unauthorized trades or access sensitive financial data when the application processes the input.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Implement strict input validation and length checking on all user input fields, ensuring that data cannot exceed predefined buffer sizes. Use secure coding practices like bounds checking and consider compiler-based protections such as stack canaries to detect buffer overflow attempts before they can overwrite critical memory locations.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Stack buffer overflow [memory corruption from oversized input], Return address [memory location directing program execution], Buffer boundaries [limits of allocated memory space], Arbitrary code execution [running unauthorized malicious programs], Input validation [checking user data before processing], Stack canaries [protection mechanism detecting memory corruption]</span></div></div>
   </div>
 </div>
   </div>
@@ -3561,7 +3705,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 13 April 2026 11:39 UTC &middot;
+  Built automatically by Vigil &middot; 13 April 2026 11:43 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
