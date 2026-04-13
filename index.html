@@ -301,7 +301,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 13 April 2026 12:05 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 13 April 2026 12:12 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -331,7 +331,7 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">36</div>
+      <div class="stat-value yellow">37</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
@@ -1707,8 +1707,8 @@
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Error-Based SQL Injection</div>
-  <div class="glossary-def">A type of SQL injection attack that extracts database information by triggering and analyzing database error messages returned by the application.</div>
-  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers could use error-based SQL injection against banking web applications to extract customer account details or transaction histories through deliberately malformed database queries.</div><div class="glossary-meta">First seen: 13 April 2026</div>
+  <div class="glossary-def">A technique where a single query triggers multiple additional queries, potentially causing excessive resource consumption.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Malicious actors could exploit AI-powered financial advisory systems by crafting prompts that cause excessive database queries, driving up cloud costs and degrading service performance.</div><div class="glossary-meta">First seen: 13 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Extensible Authentication Protocol (EAP)</div>
@@ -2467,7 +2467,7 @@
   </div>
   <div class="ta-stat ta-stat-purple">
     <div class="ta-stat-label">Total Sightings</div>
-    <div class="ta-stat-value" style="color:var(--purple)">12</div>
+    <div class="ta-stat-value" style="color:var(--purple)">14</div>
     <div class="ta-stat-sub">across all digests</div>
   </div>
 </div>
@@ -2493,7 +2493,7 @@
       <div class="ta-card-meta">
         <span>&#128176; Criminal</span>
         <span>&#127758; Unknown</span>
-        <span class="ta-sighting-count">&#128065; 6 sightings</span>
+        <span class="ta-sighting-count">&#128065; 7 sightings</span>
       </div>
       <div class="ta-card-sectors"><span class="ta-sector-tag">Critical Infrastructure</span><span class="ta-sector-tag">Energy</span><span class="ta-sector-tag">Financial Services</span></div>
     </div>
@@ -2515,7 +2515,7 @@
         <span class="ta-none">None recorded</span>
       </div>
     </div>
-    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 6 total</div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 7 total</div>
     <div class="ta-timeline">
 <div class="ta-timeline-item">
   <div class="ta-timeline-dot"></div>
@@ -2547,7 +2547,7 @@
       <div class="ta-card-meta">
         <span>&#127988; Nation-State</span>
         <span>&#127758; Unknown</span>
-        <span class="ta-sighting-count">&#128065; 6 sightings</span>
+        <span class="ta-sighting-count">&#128065; 7 sightings</span>
       </div>
       <div class="ta-card-sectors"><span class="ta-sector-tag">Government</span><span class="ta-sector-tag">Technology</span><span class="ta-sector-tag">Unknown</span></div>
     </div>
@@ -2569,7 +2569,7 @@
         <span class="ta-none">None recorded</span>
       </div>
     </div>
-    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 6 total</div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 7 total</div>
     <div class="ta-timeline">
 <div class="ta-timeline-item">
   <div class="ta-timeline-dot"></div>
@@ -2599,7 +2599,7 @@
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
       <span class="day-date">13 April 2026</span>
-      <span class="day-count">2 topics</span>
+      <span class="day-count">3 topics</span>
     </div>
     <span class="chevron">&#9660;</span>
   </div>
@@ -2651,6 +2651,30 @@
     <p class="log-text defence-text">Implement strict input validation and length checking on all user input fields, ensuring that data cannot exceed predefined buffer sizes. Use secure coding practices like bounds checking and consider compiler-based protections such as stack canaries to detect buffer overflow attempts before they can overwrite critical memory locations.</p>
 
     <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Stack buffer overflow [memory corruption from oversized input], Return address [memory location directing program execution], Buffer boundaries [limits of allocated memory space], Arbitrary code execution [running unauthorized malicious programs], Input validation [checking user data before processing], Stack canaries [protection mechanism detecting memory corruption]</span></div></div>
+  </div>
+</div>
+<div class="log-entry ">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">Missing Authentication in AI Chat Agent Services</div>
+      <div class="log-tags"><span class="tag tag-cyan">Identity</span><span class="tag tag-purple">AI/ML</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">A security vulnerability where an AI chat agent system fails to properly verify who is trying to access its services. This means attackers can potentially use the system's functions without providing valid credentials or proving they have permission.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">An attacker identifies a chat agent service running in &quot;Agent Mode&quot; that has missing authentication controls. They send requests directly to the service's API endpoints or functions without providing any login credentials or authentication tokens. The vulnerable system processes these requests as if they came from a legitimate user, allowing the attacker to execute commands, access data, or manipulate the AI agent's behavior. Since the exploit code is publicly available, attackers can easily find and use ready-made tools to target vulnerable systems.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">A financial services firm deploys an AI chatbot to help customers check account balances and transfer funds via WeChat or similar messaging platforms. If this system has missing authentication, an attacker could send direct API calls to transfer money between accounts or extract sensitive customer information without ever proving they own those accounts.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Implement mandatory authentication checks on all API endpoints and service functions before processing any requests. Configure monitoring to alert on unauthenticated access attempts and regularly audit systems to ensure no functions can be called without proper credential verification.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">CVE [Common Vulnerabilities and Exposures identifier], CVSS [scoring system for vulnerability severity], API endpoint [specific URL accepting service requests], Agent Mode [AI system operational configuration], authentication bypass [skipping required identity verification], remote exploitation [attacking systems over network connections]</span></div></div>
   </div>
 </div>
   </div>
@@ -3705,7 +3729,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 13 April 2026 12:05 UTC &middot;
+  Built automatically by Vigil &middot; 13 April 2026 12:12 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
