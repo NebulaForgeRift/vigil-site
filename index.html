@@ -301,7 +301,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 13 April 2026 12:23 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 14 April 2026 10:48 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -321,7 +321,7 @@
   <div class="stats">
     <div class="stat-card">
       <div class="stat-label">Days Active</div>
-      <div class="stat-value cyan">14</div>
+      <div class="stat-value cyan">15</div>
       <div class="stat-sub">and counting</div>
     </div>
     <div class="stat-card">
@@ -331,18 +331,135 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">37</div>
+      <div class="stat-value yellow">38</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">184</div>
+      <div class="stat-value purple">187</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
 
   <div id="tab-hot" class="tab active">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">14 April 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE Expands ATLAS Framework to Detail Generative AI Attack Techniques</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK financial firms increasingly rely on LLMs for customer service, fraud detection, and document processing, making these new attack vectors highly relevant. Threat actors can now weaponise generative AI to create sophisticated phishing campaigns targeting banking customers and generate polymorphic malware that evades traditional detection.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries are obtaining open-source LLMs and hosting them locally or on cloud infrastructure to generate malware, deepfakes, malicious commands, and convincing phishing content at scale.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement monitoring for unusual generative AI API usage patterns and establish controls around which AI models can access sensitive financial data.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">New Attack Vector Targets AI Agent Systems Through Resource Exhaustion</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Financial institutions deploying AI agents for automated trading, compliance checks, or customer interactions face new DoS risks through prompt injection attacks. Malicious directives can force agents to make excessive API calls, potentially disrupting critical financial operations and inflating cloud costs.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Attackers use prompt injection techniques to coerce AI agents into performing computationally expensive operations like unnecessary internet lookups, excessive translations, or repetitive summarisation tasks.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Set rate limits and cost thresholds on AI agent tool calls, and implement prompt validation to detect resource-wasting injection attempts.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">AI Software Supply Chain Emerges as Critical Attack Surface</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0010.001" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-cyan">Supply Chain</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK banks using frameworks like TensorFlow, PyTorch, or LangChain for AI model development face supply chain risks through compromised packages or malicious dependencies. This could lead to backdoored fraud detection models or compromised customer data processing systems.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable - this technique focuses on adversaries compromising legitimate AI software packages rather than using AI for attacks.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement software composition analysis specifically for AI/ML dependencies and maintain an inventory of all AI frameworks and libraries in production systems.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">Cost Harvesting Attacks Target AI Service Economics Through Malicious Queries</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0034" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Financial institutions offering AI-powered services like chatbots or document analysis face economic warfare through deliberately expensive queries designed to inflate cloud bills. This could impact the viability of customer-facing AI services and strain IT budgets.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries craft either high-volume simple queries or complex resource-intensive prompts to deliberately drive up the computational costs of victim AI systems.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Establish query complexity scoring and implement dynamic rate limiting based on computational cost rather than just request frequency.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">Prompt Infiltration Attacks Enable Persistent AI System Compromise</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0093" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK financial firms using RAG systems for regulatory document analysis or customer query processing could unknowingly index malicious prompts that later compromise AI responses. This creates a persistent backdoor affecting multiple users and AI tools across the organisation.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Attackers inject malicious prompts into public-facing applications that get indexed by RAG systems, creating time-delayed attacks when AI models later process this poisoned content.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement content sanitisation for all text inputs before indexing in RAG systems and regularly audit indexed content for suspicious prompt patterns.
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">13 April 2026</span>
@@ -1396,10 +1513,15 @@
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 184 terms&#8230;"
+           placeholder="Search 187 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
+<div class="glossary-item">
+  <div class="glossary-term">ABAP Report</div>
+  <div class="glossary-def">A technique where a single request triggers multiple database or API queries, potentially overwhelming system resources.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial AI systems, malicious prompts could cause excessive queries to trading databases or pricing APIs, leading to service disruption and increased operational costs.</div><div class="glossary-meta">First seen: 14 April 2026</div>
+</div>
 <div class="glossary-item">
   <div class="glossary-term">Additional Cloud Credentials</div>
   <div class="glossary-def">A persistence technique where attackers add their own login credentials to compromised cloud accounts to maintain ongoing access.</div>
@@ -1906,6 +2028,11 @@
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial AI systems using Model Context Protocol could be compromised to give attackers access to trading systems, customer databases, or risk management tools.</div><div class="glossary-meta">First seen: 25 March 2026</div>
 </div><div class="glossary-letter">N</div>
 <div class="glossary-item">
+  <div class="glossary-term">Non-Recursive String Replace</div>
+  <div class="glossary-def">A sanitization method that only removes dangerous characters once, allowing attackers to bypass security by using nested malicious patterns.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial web applications using non-recursive sanitization could allow attackers to access sensitive customer data or payment information through crafted input sequences.</div><div class="glossary-meta">First seen: 14 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Nonce Validation</div>
   <div class="glossary-def">A security mechanism that checks whether a randomly generated number used once (nonce) is valid to prevent replay attacks.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Missing nonce validation in financial web applications can allow attackers to forge requests that trigger unauthorized transactions or modify payment settings.</div><div class="glossary-meta">First seen: 08 April 2026</div>
@@ -2299,6 +2426,11 @@
   <div class="glossary-term">wp_debug_troubleshoot_simulate_user</div>
   <div class="glossary-def">A WordPress cookie parameter that allows a plugin to simulate being logged in as a different user for debugging purposes.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services WordPress sites using debugging plugins could be compromised if attackers manipulate this cookie to gain administrator access to customer portals or internal systems.</div><div class="glossary-meta">First seen: 31 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">wp_unslash()</div>
+  <div class="glossary-def">A WordPress function that removes backslashes from data, which can inadvertently remove security protections and enable SQL injection attacks.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms using WordPress for customer portals or marketing sites may be vulnerable to data breaches if this function undermines SQL injection protections.</div><div class="glossary-meta">First seen: 14 April 2026</div>
 </div><div class="glossary-letter">X</div>
 <div class="glossary-item">
   <div class="glossary-term">X509 Keys</div>
@@ -2595,6 +2727,42 @@
 
   <div id="tab-log" class="tab">
     
+<div class="day-group">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-header-left">
+      <span class="day-date">14 April 2026</span>
+      <span class="day-count">1 topic</span>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="day-body">
+    
+<div class="log-entry log-entry-first">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">Local File Inclusion vulnerability in WordPress backup plugin</div>
+      <div class="log-tags"><span class="tag tag-yellow">Vulnerability</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">A security flaw that allows attackers to access and read files on a web server that they shouldn't be able to see. This happens when a web application doesn't properly check which files a user is requesting, letting them &quot;include&quot; or load files from anywhere on the server.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">An authenticated attacker with administrator privileges exploits the BackWPup plugin's REST API endpoint by manipulating the `block_name` parameter. They craft special path traversal sequences like `....//` that bypass the plugin's weak sanitization filter, which only removes path traversal patterns once instead of repeatedly. The attacker can then navigate to sensitive files like configuration files containing database passwords. In some server configurations, they might even execute malicious PHP code by including files they've previously uploaded.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">An attacker gains admin access to a financial firm's WordPress-based customer portal that uses BackWPup for data backups. They exploit this vulnerability to read the wp-config.php file, extracting database credentials that contain customer financial data and transaction histories.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Security engineers should immediately audit all WordPress installations for the BackWPup plugin and update to versions newer than 5.6.6 if available. Additionally, implement web application firewalls with rules that detect and block path traversal patterns in API requests.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Local File Inclusion</span> <span class="kt-def">— accessing unauthorized server files remotely</span></div><div class="kt-item"><span class="kt-term">Path Traversal</span> <span class="kt-def">— navigating server directory structure maliciously</span></div><div class="kt-item"><span class="kt-term">REST Endpoint</span> <span class="kt-def">— web service interface point</span></div><div class="kt-item"><span class="kt-term">Sanitization</span> <span class="kt-def">— cleaning user input for security</span></div><div class="kt-item"><span class="kt-term">CVSS Score</span> <span class="kt-def">— vulnerability severity rating system</span></div></div>
+  </div>
+</div>
+  </div>
+</div>
 <div class="day-group">
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
@@ -3729,7 +3897,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 13 April 2026 12:23 UTC &middot;
+  Built automatically by Vigil &middot; 14 April 2026 10:48 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
