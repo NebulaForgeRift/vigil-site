@@ -301,7 +301,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 15 April 2026 11:53 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 15 April 2026 11:58 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -311,7 +311,7 @@
   <button class="nav-btn active" onclick="showTab('hot',this)">&#128293; Hot Topics</button>
   <button class="nav-btn" onclick="showTab('actors',this)">&#128373; Threat Actors</button>
   <button class="nav-btn" onclick="showTab('log',this)">&#128214; Daily Log</button>
-  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">1</span></button>
+  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">2</span></button>
   <button class="nav-btn" onclick="showTab('glossary',this)">&#128218; Glossary</button>
   <button class="nav-btn" onclick="showTab('quiz',this)">&#127942; Quiz History</button>
 </nav>
@@ -326,17 +326,17 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Labs Completed</div>
-      <div class="stat-value green">12 <span style="font-size:16px;color:var(--text-dim)">/ 13</span></div>
-      <div class="stat-sub">92% completion</div>
+      <div class="stat-value green">12 <span style="font-size:16px;color:var(--text-dim)">/ 14</span></div>
+      <div class="stat-sub">86% completion</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">39</div>
+      <div class="stat-value yellow">40</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">192</div>
+      <div class="stat-value purple">201</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -1259,11 +1259,79 @@
 
   <div id="tab-labs" class="tab">
     <div class="lab-filters">
-      <button class="filter-btn active" onclick="filterLabs('all',this)">All (13)</button>
+      <button class="filter-btn active" onclick="filterLabs('all',this)">All (14)</button>
       <button class="filter-btn" onclick="filterLabs('completed',this)">Completed (12)</button>
-      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (1)</button>
+      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (2)</button>
     </div>
     
+<div class="lab-card" data-status="not-started">
+  <div class="lab-card-header" onclick="toggleLab(this)">
+    <span class="status-badge status-pending">NOT STARTED</span>
+    <div class="lab-info">
+      <div class="lab-date">15 April 2026</div>
+      <div class="lab-title">Detecting Port-Knocking Backdoor Traffic Patterns in Financial Network Logs</div>
+      <div class="lab-meta">
+        <span class="diff-badge diff-intermediate">Intermediate</span>
+        <span class="lab-time">&#9201; 75 minutes</span>
+      </div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="lab-body">
+    <div class="source-wrap"><a href="https://attack.mitre.org/software/S1204" target="_blank" class="source-link">&#128196; MITRE ATT&amp;CK — cd00r</a></div>
+    <div class="lab-section-title">SCENARIO</div>
+    <p class="lab-text">The SOC team at Meridian Bank, a mid-sized UK retail bank, has received a threat intelligence alert from the NCSC indicating that a threat actor group has been deploying cd00r-style backdoors on UNIX-based systems within financial sector targets across Europe. Your bank runs several Linux-based payment processing servers and API gateway hosts. A network analyst noticed unusual low-volume packet sequences hitting multiple closed ports on one of the payment gateway servers in sequence — a classic &quot;secret knock&quot; pattern consistent with cd00r's activation mechanism. The incident has been escalated to you to build detection capability before a full threat hunt begins tomorrow morning.</p>
+    <div class="lab-section-title">OBJECTIVE</div>
+    <p class="lab-text">By completing this lab, the engineer will be able to identify the behavioural network indicators of a port-knocking backdoor activation sequence and write detection logic capable of flagging cd00r-style traffic in financial network logs.</p>
+    <div class="lab-section-title">CHALLENGE</div>
+    <ol class="lab-list"><li>Navigate to https://attack.mitre.org/software/S1204 and read the full cd00r entry.</li><li>Open a text editor and create a file called `cd00r_notes.txt`.</li><li>Write down answers to these specific questions in your file:
+   - What OS does cd00r target?
+   - What technique does it use to avoid opening a listening port (and why does this matter for standard port-scanning detection)?
+   - What ATT&amp;CK technique ID covers the &quot;secret knock&quot; / traffic sniffing behaviour? (Hint: look at the techniques listed on the page)
+   - What does cd00r do AFTER receiving the correct knock sequence?
+
+**Step 2 — Map to ATT&amp;CK techniques (10 minutes)**</li><li>From the cd00r page, note every ATT&amp;CK (sub)technique listed.</li><li>In your `cd00r_notes.txt`, create a table with three columns: `Technique ID | Technique Name | Why relevant to a bank's payment server`.</li><li>Fill in at least four rows. Think specifically about what a payment gateway server does and why each technique is dangerous in that context.
+
+**Step 3 — Simulate a port-knock log entry (20 minutes)**</li><li>Open your text editor and create a file called `simulated_firewall_log.txt`.</li><li>You are going to manually craft 20 lines of realistic-looking firewall log entries that represent a mix of normal traffic AND a cd00r-style port-knocking sequence hidden within it. Use this format for each line:
+
+```
+TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
+```</li><li>Use these parameters:
+   - Normal traffic: random source IPs hitting ports 443, 80, 8443 with ACTION: ALLOW
+   - The payment server IP (destination) should be: 10.42.7.15
+   - The &quot;secret knock&quot; sequence: a SINGLE source IP (use 185.220.101.47) hitting ports in this exact sequence across 5 log lines: 1337, 2600, 6667, 31337, 9999 — all with ACTION: DENY (the port knock hits closed ports), PROTOCOL: TCP, low bytes (40–60)
+   - Space the knock sequence entries apart by inserting 3–4 lines of normal traffic between each knock entry
+   - Use realistic timestamps (e.g. 2025-01-14 03:17:xx — note the unusual hour, relevant for after-hours detection)</li><li>Save the file. You now have a synthetic log representing a real detection scenario.
+
+**Step 4 — Write detection logic (20 minutes)**</li><li>Open Claude.ai (https://claude.ai — free account required).</li><li>Paste your `simulated_firewall_log.txt` contents into Claude with this prompt:
+
+&gt; &quot;You are a security detection engineer. I am giving you a firewall log from a financial services payment gateway server. I need you to write a detection rule in plain pseudocode that would identify a port-knocking sequence from a single source IP — specifically where one IP hits five or more distinct closed ports (ACTION: DENY) in sequence within a 60-second window, with low byte counts. Then explain why this pattern is significant and would be missed by a standard open-port scanner. Use the log I have provided as your reference.&quot;</li><li>Copy Claude's pseudocode response into a new file called `detection_rule_pseudocode.txt`.</li><li>Now critically review the rule Claude gave you. In your text editor, add a section called `MY REVIEW` and answer:
+   - Does the rule account for time-windowing? If not, add that condition yourself in plain English.
+   - Does the rule distinguish between protocols? Should it?
+   - What would generate false positives in a busy bank environment using this rule?
+   - Write one improvement to the rule in your own words.
+
+**Step 5 — Test your detection logic against your log (15 minutes)**</li><li>Re-open Claude.ai with a new prompt. Paste both your `simulated_firewall_log.txt` AND your `detection_rule_pseudocode.txt` and ask:
+
+&gt; &quot;Apply this detection rule to this firewall log. List every IP address that triggers the rule, the exact sequence of ports that caused the trigger, and the time window in which it occurred. Then tell me whether any legitimate traffic could have been misidentified.&quot;</li><li>In `cd00r_notes.txt`, record:
+   - Did Claude correctly identify 185.220.101.47?
+   - Did it flag any false positives from your normal traffic entries?
+   - What does this tell you about tuning detection thresholds?
+
+---</li></ol>
+    <div class="lab-section-title">DEFENCE TASK</div>
+    <p class="lab-text">Using your text editor, create a document called `cd00r_mitigation_plan.txt`. Design a one-page defensive control document for Meridian Bank's security architecture team, structured as follows:
+
+1. **Threat Summary** (2–3 sentences): Describe cd00r's mechanism in plain English for a non-technical infrastructure manager.
+2. **Detection Controls** (bullet list): List at least four specific, actionable detection controls your SOC could implement — be specific to the bank's UNIX payment gateway context. Consider: what data sources do you need? What SIEM rules? What alerting thresholds?
+3. **Preventive Controls** (bullet list): List at</p>
+    
+    
+    <div class="terminal-tip">
+      &#9889; Complete this lab by running <code>python complete_lab.py</code> in your terminal.
+    </div>
+  </div>
+</div>
 <div class="lab-card" data-status="not-started">
   <div class="lab-card-header" onclick="toggleLab(this)">
     <span class="status-badge status-pending">NOT STARTED</span>
@@ -1658,7 +1726,7 @@
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 192 terms&#8230;"
+           placeholder="Search 201 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -1711,6 +1779,16 @@
   <div class="glossary-term">API Budget</div>
   <div class="glossary-def">The allocated limit of API calls or computational resources that a system is allowed to consume within a given time period.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms set API budgets to control costs for AI services, but attackers can deliberately exhaust these budgets through resource consumption attacks to disrupt trading systems or customer services.</div><div class="glossary-meta">First seen: 01 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">AppLocker</div>
+  <div class="glossary-def">A Windows security feature that allows administrators to control which applications and scripts are permitted to run on a system.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms use AppLocker as a defence-in-depth control to prevent unauthorised software execution, so a privilege escalation flaw in its filter driver is a high-priority patch target.</div><div class="glossary-meta">First seen: 15 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">APT29</div>
+  <div class="glossary-def">A well-known nation-state threat actor group, widely attributed to Russian intelligence, known for stealthy, long-term intrusion campaigns.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> APT29 has targeted government and financial institutions, meaning UK financial firms should monitor threat intelligence feeds for indicators of compromise associated with this group.</div><div class="glossary-meta">First seen: 15 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">arbitrary file deletion</div>
@@ -1813,6 +1891,11 @@
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial firms rely heavily on cloud APIs for automated trading and customer services, making API security critical to prevent unauthorized transaction execution.</div><div class="glossary-meta">First seen: 24 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Cobalt Strike</div>
+  <div class="glossary-def">A commercial adversary simulation tool that attackers frequently repurpose to maintain persistent access and move laterally through compromised networks.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Cobalt Strike beacons deployed via loaders like Pikabot represent a significant post-compromise threat within financial services infrastructure, enabling attackers to pivot toward payment systems or customer data.</div><div class="glossary-meta">First seen: 15 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Code Injection</div>
   <div class="glossary-def">An attack where malicious code is inserted into a vulnerable application and executed by that application.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Code injection in AI-powered financial applications could allow attackers to manipulate algorithmic trading decisions or bypass fraud detection systems.</div><div class="glossary-meta">First seen: 25 March 2026</div>
@@ -1908,6 +1991,11 @@
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial criminals could use deepfakes to impersonate bank executives in video calls to authorize fraudulent wire transfers or bypass voice authentication systems.</div><div class="glossary-meta">First seen: 06 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Dependency Chain Attack</div>
+  <div class="glossary-def">An attack that targets third-party software libraries or packages that a legitimate application relies on, rather than the application itself.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> AI-enabled systems in financial services that use frameworks like PyTorch or LangChain inherit risk from their entire dependency chain, meaning a compromised open-source package could silently affect a trading model or fraud detection system.</div><div class="glossary-meta">First seen: 15 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Deserialization</div>
   <div class="glossary-def">The process of converting stored data back into its original object format that a program can use.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Payment processing systems often deserialize transaction data, making them vulnerable if malicious data is crafted to execute harmful code during this conversion.</div><div class="glossary-meta">First seen: 30 March 2026</div>
@@ -1986,6 +2074,11 @@
   <div class="glossary-term">Error-Based SQL Injection</div>
   <div class="glossary-def">A technique where a single query triggers multiple additional queries, potentially causing excessive resource consumption.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Malicious actors could exploit AI-powered financial advisory systems by crafting prompts that cause excessive database queries, driving up cloud costs and degrading service performance.</div><div class="glossary-meta">First seen: 13 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Excessive Queries</div>
+  <div class="glossary-def">A denial-of-service technique where an attacker sends an abnormally high volume of requests to an AI service to exhaust its resources or inflate its operating costs.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A UK bank offering AI-powered customer services could face unexpected cost spikes or service outages if an adversary floods the system with excessive queries designed to drain API budgets.</div><div class="glossary-meta">First seen: 15 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Extensible Authentication Protocol (EAP)</div>
@@ -2113,6 +2206,11 @@
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services, these attacks could intercept trading communications or payment instructions between banks and their partners.</div><div class="glossary-meta">First seen: 10 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Jupyter Notebooks</div>
+  <div class="glossary-def">Interactive coding documents widely used by data scientists to write, run, and share code, often containing configuration details and credentials.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services AI teams using Jupyter notebooks for model development may inadvertently expose API keys or model configurations if those notebooks are stored insecurely or published publicly.</div><div class="glossary-meta">First seen: 15 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Just-in-Time Access</div>
   <div class="glossary-def">A security mechanism that grants users elevated permissions only when needed and for a limited time period, rather than permanent elevated access.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banks implement just-in-time access so that employees only get administrative privileges to payment systems temporarily when required for specific tasks.</div><div class="glossary-meta">First seen: 22 March 2026</div>
@@ -2151,6 +2249,11 @@
   <div class="glossary-term">Machine-in-the-Middle Attack</div>
   <div class="glossary-def">Bootstrap Protocol, an older network protocol used by devices to automatically obtain their IP address and other network configuration when they start up.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> BOOTP vulnerabilities in financial network infrastructure could allow attackers to disrupt trading floor systems or branch office connectivity by causing network configuration chaos.</div><div class="glossary-meta">First seen: 25 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Macros (Malicious)</div>
+  <div class="glossary-def">Small automated scripts embedded in documents like Word or Excel files that run code automatically when the file is opened.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Threat groups have used malicious macros in email attachments to deliver backdoors targeting financial sector employees, making macro-enabled documents a key concern for FinServ security teams.</div><div class="glossary-meta">First seen: 15 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">MegaCortex</div>
@@ -2583,6 +2686,16 @@
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Trading platforms use WebSocket sessions for live market data feeds, but if these sessions aren't properly terminated when access is revoked, former employees could continue accessing sensitive financial information.</div><div class="glossary-meta">First seen: 01 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Windows Cryptographic Services</div>
+  <div class="glossary-def">A built-in Windows component that handles encryption, decryption, and secure storage of cryptographic material such as keys and certificates.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A vulnerability here could allow an attacker who has already gained limited access to a UK bank's Windows server to read stored cryptographic secrets and escalate to a higher-privilege account.</div><div class="glossary-meta">First seen: 15 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Windows Management Services</div>
+  <div class="glossary-def">A collection of Windows operating system services that allow administrators to manage and automate system configuration and monitoring tasks.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A race condition vulnerability in Windows Management Services could allow an insider threat or compromised account at a financial firm to escalate privileges on critical infrastructure servers.</div><div class="glossary-meta">First seen: 15 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Wizard Spider</div>
   <div class="glossary-def">A cybercriminal group known for developing and operating banking trojans and ransomware campaigns.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> This threat actor group has specifically targeted financial services firms across multiple continents with sophisticated banking malware.</div><div class="glossary-meta">First seen: 27 March 2026</div>
@@ -2901,7 +3014,7 @@
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
       <span class="day-date">15 April 2026</span>
-      <span class="day-count">1 topic</span>
+      <span class="day-count">2 topics</span>
     </div>
     <span class="chevron">&#9660;</span>
   </div>
@@ -2929,6 +3042,30 @@
     <p class="log-text defence-text">Implement strict input validation and output encoding for all user-supplied data, especially component names and descriptions. Security engineers should also conduct regular code reviews focusing on areas where user input is displayed in dialogs or UI elements.</p>
 
     <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Stored XSS</span> <span class="kt-def">— malicious scripts saved permanently</span></div><div class="kt-item"><span class="kt-term">HTML payload</span> <span class="kt-def">— crafted code for exploitation</span></div><div class="kt-item"><span class="kt-term">Input validation</span> <span class="kt-def">— checking user data safety</span></div><div class="kt-item"><span class="kt-term">Output encoding</span> <span class="kt-def">— making data display safe</span></div><div class="kt-item"><span class="kt-term">Arbitrary code execution</span> <span class="kt-def">— running unauthorized malicious programs</span></div><div class="kt-item"><span class="kt-term">Process context</span> <span class="kt-def">— security permissions level</span></div></div>
+  </div>
+</div>
+<div class="log-entry ">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">Stored Cross-Site Scripting (XSS) via Crafted Input in a Desktop Application</div>
+      <div class="log-tags"><span class="tag tag-cyan">Security</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">Stored Cross-Site Scripting (XSS) is a type of attack where a malicious script is permanently saved within an application and later executed when a user views or interacts with the affected content. Unlike attacks that target web browsers alone, this vulnerability exists in a desktop application — Autodesk Fusion — showing that XSS-style attacks are not limited to websites. The attacker's code runs silently in the background, with the same permissions as the application itself.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">An attacker first crafts a malicious HTML payload — essentially a hidden script disguised as legitimate text — and embeds it into the name of an assembly variant within Autodesk Fusion. This malicious name is then saved within the application, making it a *stored* vulnerability rather than a one-time trick. When a legitimate user attempts to delete that assembly variant, a confirmation dialog box appears on screen displaying the poisoned name. At the moment the user clicks within that dialog, the embedded script is triggered and executes automatically. The script can then read local files on the machine or run arbitrary commands within the context of the running application process.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">Consider a financial services firm using Autodesk Fusion for engineering or infrastructure design work. A threat actor who has gained limited access to a shared project file could embed a malicious payload into an assembly variant name. When a legitimate engineer at the firm clicks the delete confirmation, the script executes and exfiltrates sensitive local files — potentially including credentials, configuration files, or design documents — without the user realising anything has happened.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Security engineers should immediately identify whether Autodesk Fusion is in use across the organisation's estate using asset inventory or endpoint management tooling, and apply any vendor-supplied patches as a priority given the CVSS score of 7.1. In the interim, restrict user permissions so that only approved, vetted project files can be opened, reducing the risk of a poisoned file being introduced into the environment.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Stored XSS [malicious script permanently saved in application], HTML payload [crafted code disguised as content], Arbitrary code execution [attacker runs unauthorised commands on system], CVSS score [numerical rating of vulnerability severity level], Attack surface [all points where attacker can attempt entry], Process context [permissions and environment an application runs within]</span></div></div>
   </div>
 </div>
   </div>
@@ -4103,7 +4240,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 15 April 2026 11:53 UTC &middot;
+  Built automatically by Vigil &middot; 15 April 2026 11:58 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
