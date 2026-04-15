@@ -301,7 +301,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 15 April 2026 06:56 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 15 April 2026 10:43 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -311,7 +311,7 @@
   <button class="nav-btn active" onclick="showTab('hot',this)">&#128293; Hot Topics</button>
   <button class="nav-btn" onclick="showTab('actors',this)">&#128373; Threat Actors</button>
   <button class="nav-btn" onclick="showTab('log',this)">&#128214; Daily Log</button>
-  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs </button>
+  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">1</span></button>
   <button class="nav-btn" onclick="showTab('glossary',this)">&#128218; Glossary</button>
   <button class="nav-btn" onclick="showTab('quiz',this)">&#127942; Quiz History</button>
 </nav>
@@ -326,23 +326,138 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Labs Completed</div>
-      <div class="stat-value green">12 <span style="font-size:16px;color:var(--text-dim)">/ 12</span></div>
-      <div class="stat-sub">100% completion</div>
+      <div class="stat-value green">12 <span style="font-size:16px;color:var(--text-dim)">/ 13</span></div>
+      <div class="stat-sub">92% completion</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">38</div>
+      <div class="stat-value yellow">39</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">187</div>
+      <div class="stat-value purple">192</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
 
   <div id="tab-hot" class="tab active">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">15 April 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Framework Details How Threat Actors Weaponize Generative AI for Cyber Attacks</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Financial services firms increasingly rely on AI/ML systems for fraud detection, customer service, and trading algorithms, making understanding adversarial AI use critical. This MITRE technique catalogues how attackers obtain and weaponize generative AI tools to create sophisticated phishing campaigns, malware, and deepfakes that could bypass traditional security controls.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries actively search for and obtain generative AI models like LLMs to generate malware, create deepfakes, craft malicious commands, and produce convincing phishing content using frameworks like Ollama or cloud infrastructure.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Review your organization's AI model inventory and implement monitoring for unauthorized AI tool usage that could indicate adversarial generative AI deployment.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">New AI Agent Attack Vector Targets API Budgets Through Resource Consumption</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK financial institutions deploying AI agents for customer service or automated trading face new DoS-style attacks targeting operational budgets rather than infrastructure. Attackers can force agents into expensive API calls through prompt injection, potentially disrupting services while inflating cloud costs.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries exploit LLM prompt injection or data poisoning to coerce AI agents into performing unnecessary computationally expensive operations like excessive translations or repeated API queries.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement rate limiting and cost monitoring controls on AI agent API calls, especially for customer-facing agentic systems.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">Supply Chain Attacks Now Target AI Development Frameworks and Dependencies</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0010.001" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-cyan">Supply Chain</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Financial institutions developing in-house AI models face supply chain risks through compromised AI frameworks like PyTorch, TensorFlow, and LangChain. Given the regulatory requirements and sensitive data handling in UK FinServ, compromised AI development tools could lead to model backdoors or data exfiltration.</p>
+      
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Audit and implement security scanning for all AI development dependencies, including deep learning frameworks and generative AI integration tools used in your ML pipeline.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">Cost Harvesting Attacks Target AI Service Budgets Through Resource Manipulation</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0034" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Financial services organizations relying on cloud-based AI services face a new attack vector where adversaries deliberately inflate service costs through high-volume queries or resource-intensive prompts. This could impact budget planning and service availability for critical AI-driven operations.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries craft adversarial prompts and queries designed to maximize computational costs rather than steal resources for their own use.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Establish anomaly detection for unusual AI service usage patterns and implement budget alerts with automatic throttling mechanisms.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">Prompt Infiltration Technique Allows Persistent AI System Compromise</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0093" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Financial institutions using RAG systems for document analysis or AI agents processing public data face persistent compromise risks. Malicious prompts embedded in public-facing applications could remain dormant until processed by AI systems, potentially affecting multiple users and tools.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries inject malicious prompts into public-facing applications that get indexed by RAG systems or trigger AI agent actions, creating persistent threats within the organization's AI infrastructure.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement prompt sanitization and content filtering for all data sources feeding into RAG systems and AI agents, especially public-facing inputs.
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">14 April 2026</span>
@@ -1144,11 +1259,41 @@
 
   <div id="tab-labs" class="tab">
     <div class="lab-filters">
-      <button class="filter-btn active" onclick="filterLabs('all',this)">All (12)</button>
+      <button class="filter-btn active" onclick="filterLabs('all',this)">All (13)</button>
       <button class="filter-btn" onclick="filterLabs('completed',this)">Completed (12)</button>
-      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (0)</button>
+      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (1)</button>
     </div>
     
+<div class="lab-card" data-status="not-started">
+  <div class="lab-card-header" onclick="toggleLab(this)">
+    <span class="status-badge status-pending">NOT STARTED</span>
+    <div class="lab-info">
+      <div class="lab-date">15 April 2026</div>
+      <div class="lab-title"></div>
+      <div class="lab-meta">
+        <span class="diff-badge diff-intermediate"></span>
+        <span class="lab-time">&#9201; </span>
+      </div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="lab-body">
+    
+    <div class="lab-section-title">SCENARIO</div>
+    <p class="lab-text"></p>
+    <div class="lab-section-title">OBJECTIVE</div>
+    <p class="lab-text"></p>
+    <div class="lab-section-title">CHALLENGE</div>
+    <ol class="lab-list"></ol>
+    <div class="lab-section-title">DEFENCE TASK</div>
+    <p class="lab-text"></p>
+    
+    
+    <div class="terminal-tip">
+      &#9889; Complete this lab by running <code>python complete_lab.py</code> in your terminal.
+    </div>
+  </div>
+</div>
 <div class="lab-card" data-status="completed">
   <div class="lab-card-header" onclick="toggleLab(this)">
     <span class="status-badge status-completed">&#10003; COMPLETED</span>
@@ -1513,7 +1658,7 @@
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 187 terms&#8230;"
+           placeholder="Search 192 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -1683,6 +1828,11 @@
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Log analysis tools used by financial firms could execute malicious commands if transaction logs contain specially crafted command substitution payloads.</div><div class="glossary-meta">First seen: 09 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Context of the Current User</div>
+  <div class="glossary-def">The security permissions and access rights that belong to whoever is currently logged into the system when an attack occurs.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If malware executes in a bank employee's context, it inherits their access to customer accounts, trading systems, or sensitive financial data.</div><div class="glossary-meta">First seen: 15 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Context Poisoning</div>
   <div class="glossary-def">The practice of contaminating an AI system's working memory with malicious information to influence its future responses and behavior.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial AI systems, context poisoning could cause investment advisory bots to provide manipulated recommendations or customer service agents to leak confidential account information.</div><div class="glossary-meta">First seen: 26 March 2026</div>
@@ -1701,6 +1851,11 @@
   <div class="glossary-term">cost harvesting</div>
   <div class="glossary-def">An attack strategy focused on deliberately increasing a victim's AI service costs through resource-intensive queries rather than stealing data.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Competitors or malicious actors could target a fintech's AI-powered fraud detection system with complex queries designed to exhaust their cloud computing budget.</div><div class="glossary-meta">First seen: 31 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Crafted File</div>
+  <div class="glossary-def">A deliberately modified file designed to exploit vulnerabilities in software that processes it.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers might send crafted financial documents to banks that trigger vulnerabilities when processed by document management or compliance systems.</div><div class="glossary-meta">First seen: 15 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Crafted Packets</div>
@@ -1881,6 +2036,11 @@
   <div class="glossary-term">Header Block Terminator</div>
   <div class="glossary-def">A specific sequence of characters that signals the end of HTTP headers in web communications.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Manipulating these terminators could allow attackers to smuggle malicious requests past security controls protecting financial web services.</div><div class="glossary-meta">First seen: 28 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Heap-based Buffer Overflow</div>
+  <div class="glossary-def">A vulnerability where a program writes more data to a memory buffer than it can hold, potentially allowing attackers to execute malicious code.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> This could compromise financial document processing systems, allowing attackers to execute code when employees open malicious client files or financial reports.</div><div class="glossary-meta">First seen: 15 April 2026</div>
 </div><div class="glossary-letter">I</div>
 <div class="glossary-item">
   <div class="glossary-term">ICS Software Platforms</div>
@@ -2158,6 +2318,11 @@
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In banking systems, attackers might craft prompts that cause an AI agent to perform excessive database lookups across multiple account systems, overwhelming the infrastructure.</div><div class="glossary-meta">First seen: 01 April 2026</div>
 </div><div class="glossary-letter">R</div>
 <div class="glossary-item">
+  <div class="glossary-term">Race Condition</div>
+  <div class="glossary-def">A security flaw that occurs when multiple processes access shared resources simultaneously without proper coordination, creating unpredictable results.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In banking systems, race conditions could allow attackers to manipulate transaction processing timing to transfer funds multiple times or bypass account balance checks.</div><div class="glossary-meta">First seen: 15 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Range header</div>
   <div class="glossary-def">An HTTP request component that specifies which portion of a file or data the client wants to download.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Malicious Range headers can be used to exhaust memory in financial applications that serve large files like transaction reports or audit logs.</div><div class="glossary-meta">First seen: 24 March 2026</div>
@@ -2301,6 +2466,11 @@
   <div class="glossary-term">stack-based buffer overflow</div>
   <div class="glossary-def">A vulnerability where a program writes more data to a memory buffer than it can hold, potentially allowing attackers to execute malicious code.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Network devices protecting financial institutions could be compromised through buffer overflow attacks, allowing attackers to bypass security controls and access trading systems.</div><div class="glossary-meta">First seen: 31 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Stored Cross-Site Scripting (XSS)</div>
+  <div class="glossary-def">A type of attack where malicious code is permanently stored on a target server and executed when other users access the affected page or content.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial applications, stored XSS could allow attackers to steal customer banking credentials or manipulate transaction displays when users view infected account statements or reports.</div><div class="glossary-meta">First seen: 15 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">storescp</div>
@@ -2727,6 +2897,42 @@
 
   <div id="tab-log" class="tab">
     
+<div class="day-group">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-header-left">
+      <span class="day-date">15 April 2026</span>
+      <span class="day-count">1 topic</span>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="day-body">
+    
+<div class="log-entry log-entry-first">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">Stored Cross-Site Scripting (XSS) in Desktop Applications</div>
+      <div class="log-tags"><span class="tag tag-cyan">Security</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">A vulnerability where malicious HTML code is permanently stored in an application and executed when displayed to users. Unlike web-based XSS, this affects desktop software, allowing attackers to run harmful scripts when users interact with seemingly normal application features.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">An attacker creates a component with a maliciously crafted HTML payload embedded in its name. When a user attempts to delete this component, the application displays a confirmation dialog that renders the HTML payload without proper sanitization. If the user clicks on the dialog, the malicious script executes with the same privileges as the desktop application. This can allow the attacker to read files from the local system or run arbitrary commands on the victim's computer.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">In a financial trading platform, an attacker could create a portfolio component named with malicious HTML code. When a trader tries to delete the portfolio, the confirmation dialog would execute the script, potentially stealing sensitive trading data or installing malware. The attack would run with the trader's system privileges, giving access to confidential financial information.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Implement strict input validation and output encoding for all user-supplied data, especially component names and descriptions. Security engineers should also conduct regular code reviews focusing on areas where user input is displayed in dialogs or UI elements.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Stored XSS</span> <span class="kt-def">— malicious scripts saved permanently</span></div><div class="kt-item"><span class="kt-term">HTML payload</span> <span class="kt-def">— crafted code for exploitation</span></div><div class="kt-item"><span class="kt-term">Input validation</span> <span class="kt-def">— checking user data safety</span></div><div class="kt-item"><span class="kt-term">Output encoding</span> <span class="kt-def">— making data display safe</span></div><div class="kt-item"><span class="kt-term">Arbitrary code execution</span> <span class="kt-def">— running unauthorized malicious programs</span></div><div class="kt-item"><span class="kt-term">Process context</span> <span class="kt-def">— security permissions level</span></div></div>
+  </div>
+</div>
+  </div>
+</div>
 <div class="day-group">
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
@@ -3897,7 +4103,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 15 April 2026 06:56 UTC &middot;
+  Built automatically by Vigil &middot; 15 April 2026 10:43 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
