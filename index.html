@@ -301,7 +301,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 16 April 2026 07:21 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 16 April 2026 10:47 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -311,7 +311,7 @@
   <button class="nav-btn active" onclick="showTab('hot',this)">&#128293; Hot Topics</button>
   <button class="nav-btn" onclick="showTab('actors',this)">&#128373; Threat Actors</button>
   <button class="nav-btn" onclick="showTab('log',this)">&#128214; Daily Log</button>
-  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">2</span></button>
+  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">3</span></button>
   <button class="nav-btn" onclick="showTab('glossary',this)">&#128218; Glossary</button>
   <button class="nav-btn" onclick="showTab('quiz',this)">&#127942; Quiz History</button>
 </nav>
@@ -326,23 +326,140 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Labs Completed</div>
-      <div class="stat-value green">12 <span style="font-size:16px;color:var(--text-dim)">/ 14</span></div>
-      <div class="stat-sub">86% completion</div>
+      <div class="stat-value green">12 <span style="font-size:16px;color:var(--text-dim)">/ 15</span></div>
+      <div class="stat-sub">80% completion</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">40</div>
+      <div class="stat-value yellow">41</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">201</div>
+      <div class="stat-value purple">211</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
 
   <div id="tab-hot" class="tab active">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">16 April 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">Redsys WooCommerce Plugin Flaw Lets Attackers Forge Payment Confirmations Without Paying</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5050" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">This vulnerability directly targets payment processing flows — a core concern for any financial services firm or merchant using WordPress-based payment infrastructure. An unauthenticated attacker who knows a valid order key and amount can spoof payment callbacks across Redsys, Bizum, and Google Pay flows, triggering order fulfilment without actual payment. UK firms with e-commerce or client portal components built on WordPress should treat this as an urgent supply chain and fraud risk.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Immediately audit any WordPress deployments using the Redsys &amp; WooCommerce Lite plugin and patch to version 7.0.1 or later; if patching is not immediately possible, temporarily disable the plugin and validate all recent payment callbacks for signs of forged confirmations.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">Splunk MCP Server Exposes Session and Auth Tokens in Cleartext — AI Integration at Risk</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20205" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The Splunk MCP (Model Context Protocol) Server app is a direct AI/ML integration layer, and this vulnerability exposes session and authorisation tokens in plaintext logs — a critical risk in environments where Splunk is used for security monitoring and AI-assisted threat detection. For UK financial services firms adopting AI-augmented SIEM workflows, compromised tokens could allow lateral movement into security tooling or exfiltration of sensitive log data. The FCA's expectations around operational resilience and data integrity make this particularly relevant.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors with even limited internal access could harvest AI tool session tokens from logs to hijack MCP-connected AI workflows, potentially manipulating or poisoning the outputs of AI-assisted security monitoring pipelines.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Upgrade Splunk MCP Server app to version 1.0.3 or above immediately, and audit current role assignments to ensure only administrator-level roles have access to the `_internal` index — do this before any broader AI/ML tooling expansion in your Splunk environment.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">Splunk RCE Flaw Lets Low-Privileged Users Execute Code via Malicious File Upload</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20204" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerability</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Splunk is widely deployed in UK financial services SOC environments for SIEM and log analytics; a low-privileged user being able to achieve Remote Code Execution by exploiting weak temporary file isolation is a serious privilege escalation risk. Insider threat scenarios — a particular concern under FCA operational resilience guidance — are directly in scope here. Compromise of a Splunk instance could expose the entirety of ingested security telemetry.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Patch Splunk Enterprise to versions 10.2.1, 10.0.5, 9.4.10, or 9.3.11 (as applicable) and Splunk Cloud Platform to the respective minimum fixed versions today; also review `apptemp` directory permissions and audit which low-privileged accounts have file upload capability in your environment.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">Lenovo Software Fix Vulnerability Enables Local Privilege Escalation to Arbitrary Code Execution</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4145" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerability</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Lenovo endpoints are common across enterprise environments including UK financial services firms, and a local privilege escalation vulnerability in a Lenovo software utility raises insider threat and post-compromise risk concerns. Attackers who have already established a foothold on an endpoint — via phishing or supply chain compromise — could leverage this to gain elevated execution rights and move laterally. This is particularly relevant given FCA expectations around endpoint security controls.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Identify all Lenovo devices running the vulnerable version of Lenovo Software Fix across your estate using your asset management or EDR tooling, and apply vendor patches as soon as they are available — in the interim, enforce least-privilege policies to reduce exposure.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">Adobe Photoshop Installer Path Hijacking Flaw Allows Arbitrary Code Execution</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34632" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerability</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">While Adobe Photoshop is not a core financial services application, it is commonly found on creative, marketing, and communications workstations within broader enterprise environments at UK firms. An uncontrolled search path vulnerability exploitable by a low-privileged local user during installation represents a realistic attack vector in a spear-phishing scenario that tricks a user into re-running an installer. User interaction is required, reducing but not eliminating the risk.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Ensure Adobe Photoshop is patched to the latest version across all endpoints in your estate, and consider restricting installer execution to privileged admin accounts via application control policies to remove the user-interaction attack surface entirely.
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">15 April 2026</span>
@@ -1259,11 +1376,96 @@
 
   <div id="tab-labs" class="tab">
     <div class="lab-filters">
-      <button class="filter-btn active" onclick="filterLabs('all',this)">All (14)</button>
+      <button class="filter-btn active" onclick="filterLabs('all',this)">All (15)</button>
       <button class="filter-btn" onclick="filterLabs('completed',this)">Completed (12)</button>
-      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (2)</button>
+      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (3)</button>
     </div>
     
+<div class="lab-card" data-status="not-started">
+  <div class="lab-card-header" onclick="toggleLab(this)">
+    <span class="status-badge status-pending">NOT STARTED</span>
+    <div class="lab-info">
+      <div class="lab-date">16 April 2026</div>
+      <div class="lab-title">Analysing Cache Abuse DoS Vulnerabilities in AI Inference Infrastructure for Financial Services</div>
+      <div class="lab-meta">
+        <span class="diff-badge diff-intermediate">Intermediate</span>
+        <span class="lab-time">&#9201; 75 minutes</span>
+      </div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="lab-body">
+    <div class="source-wrap"><a href="https://osv.dev/vulnerability/GHSA-hf3c-wxg2-49q9" target="_blank" class="source-link">&#128196; GHSA-hf3c-wxg2-49q9 — vLLM vulnerable to Denial of Service by abusing xgrammar cache (CVSS CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H)</a></div>
+    <div class="lab-section-title">SCENARIO</div>
+    <p class="lab-text">Barclays Digital Innovation team has recently deployed an internal AI-powered document summarisation service built on vLLM to assist compliance analysts with reviewing regulatory filings. During a routine log review, the SOC team notices unusual patterns of repeated structured grammar requests arriving from an authenticated internal user account — a pattern consistent with GHSA-hf3c-wxg2-49q9, a known Denial of Service vulnerability in vLLM's xgrammar cache. The service is currently running vLLM 0.7.2, which is within the affected range (&gt;=0.6.5, &lt;0.8.4). If successfully exploited, the inference service becomes unavailable to the 40-person compliance team during a critical FCA reporting window, constituting a significant operational resilience risk under DORA and FCA PS7/8 obligations.</p>
+    <div class="lab-section-title">OBJECTIVE</div>
+    <p class="lab-text">By completing this lab, the engineer will be able to analyse the CVE, model the exploit behaviour, assess the business impact in a financial services context, and produce a structured vulnerability triage report with remediation recommendations.
+
+---</p>
+    <div class="lab-section-title">CHALLENGE</div>
+    <ol class="lab-list"><li>Read the full advisory carefully. Note the affected version range, fix version, and CVSS vector string: AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H.
+
+Step 2: Open a text editor (VS Code, Notepad++, or similar) and create a new file called `vllm_dos_triage.md`. Begin a structured notes document with these headings:
+```
+# GHSA-hf3c-wxg2-49q9 Triage Report
+## Vulnerability Summary
+## CVSS Breakdown
+## Affected Component Analysis
+## Business Impact (FinServ Context)
+## Exploit Conditions
+## Remediation
+```
+
+Step 3: Navigate to the vLLM GitHub repository at https://github.com/vllm-project/vllm and search for &quot;xgrammar&quot; using the repository search bar. Read any relevant code comments or issues you find to understand what xgrammar caching does functionally. Write a two-sentence plain-English explanation of what the xgrammar cache is and why it exists, under your `## Affected Component Analysis` heading.
+
+Step 4: Navigate to https://www.first.org/cvss/calculator/3.1 and manually input each component of the CVSS vector: AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H. For each of the 8 CVSS base metrics, record what the chosen value means in plain English in your triage doc. Pay particular attention to PR:L (Privileges Required: Low) — note what this implies about the attacker's position.
+
+---
+
+**PHASE 2 — Threat Modelling with Claude (25 minutes)**
+
+Step 5: Open Claude.ai (free tier is sufficient). Paste the following prompt exactly:
+
+```
+I am a security engineer at a UK bank. We are running vLLM (an AI inference server) internally for a compliance document summarisation tool. We have identified GHSA-hf3c-wxg2-49q9 — a Denial of Service vulnerability in vLLM's xgrammar cache, affecting versions 0.6.5 through 0.8.3. The CVSS score is 7.1 (High) with vector AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H.
+
+Please help me think through the following without providing any actual exploit code:</li><li>What type of cache abuse behaviour could cause an availability failure in an xgrammar cache?</li><li>What does PR:L mean in practice — what kind of authenticated access might an attacker need in a corporate environment?</li><li>What are the downstream business impacts if an AI inference service used for compliance work becomes unavailable during a regulatory reporting deadline?</li><li>What detection signals might appear in logs or monitoring before full availability failure?
+```
+
+Step 6: Read Claude's response carefully. Copy the key points into the relevant sections of your `vllm_dos_triage.md` file. Critically evaluate each point — mark any that you think are speculative or that you want to verify further with a comment like `[VERIFY]`.
+
+Step 7: Send a follow-up prompt to Claude:
+
+```
+Under DORA (Digital Operational Resilience Act) and FCA operational resilience requirements, how should a UK financial institution classify an unplanned outage of an internal AI inference service used by compliance staff? What documentation or incident reporting obligations might apply? What is the difference between a 'material' and 'non-material' disruption in this context?
+```
+
+Record the key regulatory context points in a new section of your triage doc called `## Regulatory Obligations`.
+
+---
+
+**PHASE 3 — Version Analysis and Patch Verification (15 minutes)**
+
+Step 8: Navigate to the vLLM releases page: https://github.com/vllm-project/vllm/releases. Find the release notes for version 0.8.4 (the fix version). Look for any mention of the xgrammar cache fix or security patch. Copy the relevant excerpt into your triage doc under `## Remediation`.
+
+Step 9: In your text editor, write a short `version_check_procedure.md` file that a junior DevOps engineer could follow to check which version of vLLM is running in a Linux environment. Include these exact commands and annotate what each one does:
+```bash
+pip show vllm
+pip list | grep vllm
+cat requirements.txt | grep vllm   # if checking a repo
+```
+Add a note explaining why checking `pip show vllm` alone may be insufficient if vLLM is running inside a container, and what additional step would be needed (hint: consider `docker exec` and container image inspection).
+
+Step 10: Navigate to https://pypi.org/project/vllm/#history and verify that version 0.8.4 exists as a published release. Record the</li></ol>
+    <div class="lab-section-title">DEFENCE TASK</div>
+    <p class="lab-text"></p>
+    
+    
+    <div class="terminal-tip">
+      &#9889; Complete this lab by running <code>python complete_lab.py</code> in your terminal.
+    </div>
+  </div>
+</div>
 <div class="lab-card" data-status="not-started">
   <div class="lab-card-header" onclick="toggleLab(this)">
     <span class="status-badge status-pending">NOT STARTED</span>
@@ -1726,7 +1928,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 201 terms&#8230;"
+           placeholder="Search 211 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -1774,6 +1976,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">AI DevOps</div>
   <div class="glossary-def">The practice of applying development and operations methodologies specifically to artificial intelligence and machine learning systems.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> UK banks use AI DevOps to manage the continuous deployment and monitoring of fraud detection models while maintaining FCA compliance requirements.</div><div class="glossary-meta">First seen: 10 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">AJAX Handler</div>
+  <div class="glossary-def">A server-side function that processes background requests from a web browser without requiring a full page reload, commonly used in web applications to update content dynamically.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Missing access controls on AJAX handlers in financial services web portals can allow low-privileged authenticated users to invoke administrative functions, such as creating accounts or changing configuration settings.</div><div class="glossary-meta">First seen: 16 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">API Budget</div>
@@ -1829,6 +2036,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Authentication Tokens</div>
   <div class="glossary-def">Digital keys that prove a user's identity and grant access to systems without requiring repeated login credentials.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banking applications use authentication tokens to maintain secure sessions, and if stolen, these tokens could allow attackers to access customer accounts and perform unauthorised transactions.</div><div class="glossary-meta">First seen: 24 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Autologin Feature</div>
+  <div class="glossary-def">A mechanism that allows a user to access a system via a special URL without entering credentials, typically intended for legitimate use cases like email newsletter links.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If an attacker can enable and abuse an autologin feature in a financial services customer portal, they could generate authentication URLs that grant unauthorised access to any account, including administrators.</div><div class="glossary-meta">First seen: 16 April 2026</div>
 </div><div class="glossary-letter">B</div>
 <div class="glossary-item">
   <div class="glossary-term">Backdoor</div>
@@ -1954,6 +2166,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Cross-Site Request Forgery (CSRF)</div>
   <div class="glossary-def">A security mechanism that uses single-use random numbers to verify that web requests are legitimate and prevent replay attacks.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Payment processing systems rely on nonce validation to ensure each transaction request is genuine and hasn't been intercepted and replayed by fraudsters.</div><div class="glossary-meta">First seen: 08 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Cryptographic Signature Verification</div>
+  <div class="glossary-def">A security check that confirms a message or request genuinely came from a trusted source by validating a mathematical signature attached to it.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Payment gateways like Redsys must verify cryptographic signatures on every callback to prevent attackers from injecting false payment status updates into banking or e-commerce flows.</div><div class="glossary-meta">First seen: 16 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">cryptographic validation</div>
@@ -2091,6 +2308,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> AI-powered financial chatbots using LangChain prompt templates need proper f-string validation to prevent attackers from injecting code that could expose customer account information.</div><div class="glossary-meta">First seen: 11 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Filesystem ACL (Access Control List)</div>
+  <div class="glossary-def">A set of rules attached to files or directories that defines which users or system accounts are permitted to read, write, or execute them.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Overly permissive filesystem ACLs on automation directories in financial services infrastructure can allow attackers to plant malicious scripts that execute with SYSTEM-level privileges during scheduled tasks.</div><div class="glossary-meta">First seen: 16 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Financial Theft</div>
   <div class="glossary-def">A cyber attack objective where adversaries steal money or monetary resources through various technical or social engineering methods.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms are primary targets for financial theft attacks including ransomware, cryptocurrency exploitation, and unauthorized fund transfers through compromised accounts.</div><div class="glossary-meta">First seen: 24 March 2026</div>
@@ -2166,6 +2388,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers may target financial firms' information repositories like SharePoint or Confluence to steal sensitive documents containing regulatory reports or customer data.</div><div class="glossary-meta">First seen: 23 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Insecure Default File Permissions</div>
+  <div class="glossary-def">A security weakness where software creates files with access controls that are too permissive, allowing unintended users or processes to read or modify them.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> An AI SDK storing memory or session data with insecure file permissions in a financial services environment could expose sensitive customer interaction logs to other users on the same system.</div><div class="glossary-meta">First seen: 16 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Insecure Deserialization</div>
   <div class="glossary-def">A vulnerability where applications unsafely convert serialized data back into objects, potentially allowing attackers to execute malicious code.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Trading platforms that serialize market data or user sessions are vulnerable to attackers injecting malicious payloads that could manipulate trades or steal credentials.</div><div class="glossary-meta">First seen: 30 March 2026</div>
@@ -2225,6 +2452,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-def">A pre-configured list of specific processes or services that malware automatically terminates when it executes on a target system.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banking trojans may use kill-lists to shut down security software or trading applications before deploying their payload.</div><div class="glossary-meta">First seen: 24 March 2026</div>
 </div><div class="glossary-letter">L</div>
+<div class="glossary-item">
+  <div class="glossary-term">LangChain</div>
+  <div class="glossary-def">An open-source framework used to build applications that connect large language models to external data sources, tools, and workflows.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms using LangChain to build AI-powered document analysis or customer service tools must patch promptly, as vulnerabilities in its prompt templates or file-loading functions can expose sensitive data.</div><div class="glossary-meta">First seen: 16 April 2026</div>
+</div>
 <div class="glossary-item">
   <div class="glossary-term">Langflow</div>
   <div class="glossary-def">A visual programming framework that allows users to build AI applications and workflows through a drag-and-drop interface without writing code.</div>
@@ -2356,6 +2588,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> This could allow fraudsters to process transactions for amounts lower than intended in banking applications or payment processing systems.</div><div class="glossary-meta">First seen: 28 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Payment Callback Forgery</div>
+  <div class="glossary-def">A technique where an attacker sends fake payment confirmation messages to a system, tricking it into believing a transaction was successful without money actually changing hands.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services, a forged payment callback could allow a fraudster to complete a checkout and receive goods or services without making a real payment, directly impacting revenue and fraud loss metrics.</div><div class="glossary-meta">First seen: 16 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">PayPal Transaction Token</div>
   <div class="glossary-def">A unique identifier generated by PayPal to track and validate specific payment transactions between merchants and customers.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial applications must properly validate these tokens to prevent attackers from using a low-value payment token to complete high-value transactions fraudulently.</div><div class="glossary-meta">First seen: 30 March 2026</div>
@@ -2394,6 +2631,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Prompt Injection</div>
   <div class="glossary-def">An attack where malicious instructions are inserted into AI system prompts to manipulate the AI's behavior or extract sensitive information.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers could use prompt injection against a bank's AI customer service bot to trick it into revealing other customers' account details or bypassing security protocols.</div><div class="glossary-meta">First seen: 24 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Prompt Template</div>
+  <div class="glossary-def">A pre-defined text structure used to format instructions or inputs that are passed into an AI language model.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a financial services AI assistant, a poorly validated prompt template could be manipulated by an attacker to extract confidential customer data or bypass intended model behaviour.</div><div class="glossary-meta">First seen: 16 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Proxy Delivery Mode</div>
@@ -2531,6 +2773,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers may create rogue service principals in a bank's Azure environment to maintain persistent access to customer data systems without using stolen employee accounts.</div><div class="glossary-meta">First seen: 22 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Session and Authorisation Token Exposure</div>
+  <div class="glossary-def">A vulnerability where active login tokens or access credentials are written to logs or indexes in plain readable text rather than being masked or encrypted.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a financial services SIEM environment, session tokens visible in Splunk internal indexes could allow an insider threat or compromised admin account to hijack other users' authenticated sessions.</div><div class="glossary-meta">First seen: 16 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">SMS Pumping</div>
   <div class="glossary-def">A fraud technique where attackers use a victim's messaging system to generate high volumes of SMS traffic to premium rate numbers they control to earn revenue.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banks offering SMS-based two-factor authentication may have their messaging infrastructure exploited for SMS pumping attacks that result in unexpected telecom charges.</div><div class="glossary-meta">First seen: 22 March 2026</div>
@@ -2645,6 +2892,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-def">An attack technique where adversaries alter authentication trust relationships between different domains or cloud tenants to gain unauthorized access.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banks using federated identity systems across multiple subsidiaries or cloud tenants could face privilege escalation if trust relationships are maliciously modified.</div><div class="glossary-meta">First seen: 24 March 2026</div>
 </div><div class="glossary-letter">U</div>
+<div class="glossary-item">
+  <div class="glossary-term">Uncontrolled Search Path Element</div>
+  <div class="glossary-def">A vulnerability where an application searches for critical files or libraries in locations that an attacker can influence, allowing malicious code to be loaded instead of the legitimate file.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If a financial services workstation runs installer software vulnerable to uncontrolled search path exploitation, a low-privileged attacker could substitute a malicious library and execute code under the victim's account.</div><div class="glossary-meta">First seen: 16 April 2026</div>
+</div>
 <div class="glossary-item">
   <div class="glossary-term">upsertUser endpoint</div>
   <div class="glossary-def">A software function that either updates an existing user account or creates a new one if it doesn't already exist.</div>
@@ -3010,6 +3262,42 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 
   <div id="tab-log" class="tab">
     
+<div class="day-group">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-header-left">
+      <span class="day-date">16 April 2026</span>
+      <span class="day-count">1 topic</span>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="day-body">
+    
+<div class="log-entry log-entry-first">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">Insecure Default File Permissions in the Claude Python SDK's Local Filesystem Memory Tool (CVE-2026-34450)</div>
+      <div class="log-tags"><span class="tag tag-yellow">Vulnerability</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text"></p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text"></p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text"></p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text"></p>
+
+    
+  </div>
+</div>
+  </div>
+</div>
 <div class="day-group">
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
@@ -4240,7 +4528,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 16 April 2026 07:21 UTC &middot;
+  Built automatically by Vigil &middot; 16 April 2026 10:47 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
