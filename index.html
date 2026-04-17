@@ -301,7 +301,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 16 April 2026 20:26 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 17 April 2026 10:37 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -321,7 +321,7 @@
   <div class="stats">
     <div class="stat-card">
       <div class="stat-label">Days Active</div>
-      <div class="stat-value cyan">17</div>
+      <div class="stat-value cyan">18</div>
       <div class="stat-sub">and counting</div>
     </div>
     <div class="stat-card">
@@ -331,12 +331,12 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">41</div>
+      <div class="stat-value yellow">42</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">211</div>
+      <div class="stat-value purple">216</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -1928,7 +1928,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 211 terms&#8230;"
+           placeholder="Search 216 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -2561,6 +2561,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Out-of-Memory (OOM) Conditions</div>
   <div class="glossary-def">A system state where available memory is exhausted, typically causing applications to crash or become unresponsive.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> High-frequency trading platforms could be targeted with large payload attacks designed to trigger OOM conditions and disrupt market operations.</div><div class="glossary-meta">First seen: 24 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Output Escaping</div>
+  <div class="glossary-def">When a single request triggers multiple additional database or API queries, potentially creating a cascading effect.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> AI-powered trading systems can be manipulated to perform excessive query fan-outs that overwhelm market data APIs and exhaust trading platform budgets.</div><div class="glossary-meta">First seen: 17 April 2026</div>
 </div><div class="glossary-letter">P</div>
 <div class="glossary-item">
   <div class="glossary-term">Packet Sequence Authentication</div>
@@ -2576,6 +2581,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Pairing Requirements</div>
   <div class="glossary-def">Authentication mechanisms that require two systems or components to establish a secure connection through a mutual verification process.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Payment processing systems use pairing requirements to ensure only authorized terminals can connect to the backend, preventing rogue devices from processing fraudulent transactions.</div><div class="glossary-meta">First seen: 11 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Path Traversal Sanitization</div>
+  <div class="glossary-def">The process of cleaning and validating file paths to prevent attackers from accessing files outside of intended directories using sequences like &quot;../&quot;.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banking applications must implement proper path traversal sanitization to prevent attackers from reading sensitive customer data files or configuration files containing database credentials.</div><div class="glossary-meta">First seen: 17 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Path Traversal Sequences</div>
@@ -2681,6 +2691,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Ref Parameter</div>
   <div class="glossary-def">A Python code execution component that allows applications to run Python scripts dynamically within larger systems.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial institutions using AI tools with PyInterpreter functionality face code injection risks where malicious Python code could access sensitive customer data or trading systems.</div><div class="glossary-meta">First seen: 06 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Referral Parser</div>
+  <div class="glossary-def">A software component that processes and analyzes information about where web traffic originated from.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services websites use referral parsers to understand customer acquisition channels, but poorly designed parsers can become injection points for malicious code.</div><div class="glossary-meta">First seen: 17 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Regex-Based Validation</div>
@@ -2863,6 +2878,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Advanced persistent threats against financial institutions might use secret knock patterns to avoid detection by network monitoring systems.</div><div class="glossary-meta">First seen: 09 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Tool Calls</div>
+  <div class="glossary-def">When an AI system invokes external functions, APIs, or services to complete a task beyond text generation.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> AI assistants in banking might make tool calls to check account balances or transfer funds, making them targets for manipulation to trigger unauthorized financial operations.</div><div class="glossary-meta">First seen: 17 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Tool Data Poisoning</div>
   <div class="glossary-def">A scenario where a single request triggers multiple subsequent database or API queries, potentially overwhelming system resources.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Malicious prompts could cause AI-powered banking chatbots to generate excessive database queries, disrupting customer service operations and increasing cloud costs.</div><div class="glossary-meta">First seen: 10 April 2026</div>
@@ -2911,6 +2931,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">user_activation_key</div>
   <div class="glossary-def">A unique code generated by web applications to verify user identity during account creation or password reset processes.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Compromised user activation keys in banking applications could allow attackers to take over customer accounts without knowing the original passwords.</div><div class="glossary-meta">First seen: 24 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">UTM Parameters</div>
+  <div class="glossary-def">Tracking codes added to URLs that help identify where website traffic comes from, such as email campaigns or social media posts.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms use UTM parameters to track marketing effectiveness, but attackers can inject malicious scripts through these parameters to compromise analytics dashboards.</div><div class="glossary-meta">First seen: 17 April 2026</div>
 </div><div class="glossary-letter">V</div>
 <div class="glossary-item">
   <div class="glossary-term">VirtualAlloc</div>
@@ -3262,6 +3287,42 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 
   <div id="tab-log" class="tab">
     
+<div class="day-group">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-header-left">
+      <span class="day-date">17 April 2026</span>
+      <span class="day-count">1 topic</span>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="day-body">
+    
+<div class="log-entry log-entry-first">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">Adversarial Use of Generative AI Models</div>
+      <div class="log-tags"><span class="tag tag-purple">AI/ML</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">Attackers are obtaining and using generative AI tools like large language models to enhance their cyber attacks. Instead of using AI for legitimate purposes, criminals weaponise these powerful tools to create more sophisticated and effective malicious content.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">Adversaries first search for and acquire generative AI models, often choosing open source versions that they can control completely. They then set up these models locally using frameworks like Ollama or vLLM, or host them on cloud infrastructure to avoid detection. Once operational, they use the AI to generate various malicious content such as convincing phishing emails, deepfake media, harmful commands, or even malware code. The AI's ability to create human-like content at scale makes their attacks more believable and harder to detect.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">A criminal group could use a locally-hosted language model to generate thousands of personalised phishing emails targeting bank customers, each one tailored to appear authentic and relevant to the recipient. Alternatively, fraudsters might use generative AI to create deepfake audio of a bank executive's voice to authorise fraudulent wire transfers over the phone.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Security teams should monitor network traffic for unusual patterns that might indicate local AI model hosting, such as high GPU usage or large model downloads. Implement email security tools that specifically scan for AI-generated content patterns and train staff to recognise the telltale signs of AI-generated phishing attempts.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Large Language Models [AI systems that generate human-like text], Ollama [framework for running AI models locally], vLLM [optimised serving framework for models], Deepfakes [AI-generated fake audio or video], Open Source Models [freely available AI model code], Phishing [fraudulent emails designed to steal]</span></div></div>
+  </div>
+</div>
+  </div>
+</div>
 <div class="day-group">
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
@@ -4528,7 +4589,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 16 April 2026 20:26 UTC &middot;
+  Built automatically by Vigil &middot; 17 April 2026 10:37 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
