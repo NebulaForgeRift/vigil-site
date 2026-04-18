@@ -301,7 +301,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 18 April 2026 19:03 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 18 April 2026 19:05 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -331,12 +331,12 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">43</div>
+      <div class="stat-value yellow">44</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">226</div>
+      <div class="stat-value purple">235</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -2045,7 +2045,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 226 terms&#8230;"
+           placeholder="Search 235 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -2058,6 +2058,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Account Takeover (ATO)</div>
   <div class="glossary-def">An attack where a fraudster gains unauthorised access to a legitimate user's account, typically by using stolen credentials or compromised devices.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In mobile-first banking environments, fraudsters in regions like Latin America demonstrate how quickly a compromised device can lead to account takeover and fraudulent funds transfer before detection systems respond.</div><div class="glossary-meta">First seen: 18 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">ACH (Automated Clearing House)</div>
+  <div class="glossary-def">A US electronic payment network used to transfer money between bank accounts, commonly used for payroll, direct debits, and business-to-business payments.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Bottomline's Nacha partnership focuses on ACH experience and fraud prevention, making understanding ACH transaction flows essential for engineers building payment security controls at UK firms with US operations.</div><div class="glossary-meta">First seen: 18 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Additional Cloud Credentials</div>
@@ -2078,6 +2083,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Agentic AI System</div>
   <div class="glossary-def">An AI system that can autonomously make decisions and take actions using tools and APIs to complete tasks.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banks might deploy agentic AI to automatically process loan applications or execute trades, but these systems can be manipulated to waste computational resources and exhaust API budgets.</div><div class="glossary-meta">First seen: 01 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Agentic Commerce</div>
+  <div class="glossary-def">A model of buying and selling where AI agents autonomously initiate and complete commercial transactions on behalf of users without requiring human approval at each step.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services, agentic commerce introduces new liability questions around who is responsible when an AI agent authorises a fraudulent or erroneous payment on a customer's behalf.</div><div class="glossary-meta">First seen: 18 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Agentic resource consumption</div>
@@ -2118,6 +2128,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">APT29</div>
   <div class="glossary-def">A well-known nation-state threat actor group, widely attributed to Russian intelligence, known for stealthy, long-term intrusion campaigns.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> APT29 has targeted government and financial institutions, meaning UK financial firms should monitor threat intelligence feeds for indicators of compromise associated with this group.</div><div class="glossary-meta">First seen: 15 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">APT41</div>
+  <div class="glossary-def">A Chinese state-sponsored threat group known for conducting both espionage and financially motivated cybercrime, often targeting cloud environments and supply chains.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> APT41's targeting of AWS, Azure, and Google Cloud environments means financial institutions using multi-cloud infrastructure should treat cloud credential harvesting as an active, nation-state-level threat.</div><div class="glossary-meta">First seen: 18 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">arbitrary file deletion</div>
@@ -2243,6 +2258,16 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Command Substitution</div>
   <div class="glossary-def">A technique where attackers embed executable commands within data that gets processed by shell interpreters.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Log analysis tools used by financial firms could execute malicious commands if transaction logs contain specially crafted command substitution payloads.</div><div class="glossary-meta">First seen: 09 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Compensatory Interest Rate</div>
+  <div class="glossary-def">A percentage rate applied to a compensation payment to account for the financial loss a customer suffered over time by being denied a fair outcome.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA's motor finance redress scheme mandates a minimum 3% per annum compensatory interest rate, setting a regulatory precedent for how redress calculations must be modelled and audited by firms' systems.</div><div class="glossary-meta">First seen: 18 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Consumer Credit Journey</div>
+  <div class="glossary-def">The full sequence of borrowing events a customer experiences over time, from initial credit application through repayment, default, or product switching, as recorded across financial datasets.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA is using credit file data from Credit Reference Agencies to map consumer credit journeys, allowing regulators to identify systemic risk or harm patterns that individual firm-level data would miss.</div><div class="glossary-meta">First seen: 18 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Context of the Current User</div>
@@ -2655,6 +2680,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial AI systems using Model Context Protocol could be compromised to give attackers access to trading systems, customer databases, or risk management tools.</div><div class="glossary-meta">First seen: 25 March 2026</div>
 </div><div class="glossary-letter">N</div>
 <div class="glossary-item">
+  <div class="glossary-term">n-day Vulnerability</div>
+  <div class="glossary-def">A security flaw that has already been publicly disclosed and has a patch available, but which attackers continue to exploit against systems that have not yet applied the fix.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Storm-1175's ransomware campaigns exploiting n-day vulnerabilities highlight that UK financial institutions with slow patching cycles remain exposed even after a vulnerability is publicly known and fixed.</div><div class="glossary-meta">First seen: 18 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Non-Recursive String Replace</div>
   <div class="glossary-def">A sanitization method that only removes dangerous characters once, allowing attackers to bypass security by using nested malicious patterns.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial web applications using non-recursive sanitization could allow attackers to access sensitive customer data or payment information through crafted input sequences.</div><div class="glossary-meta">First seen: 14 April 2026</div>
@@ -2835,6 +2865,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Represents a critical threat to financial institutions as it can lead to complete system compromise, allowing attackers to manipulate transactions or steal sensitive financial data.</div><div class="glossary-meta">First seen: 03 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Redress Scheme</div>
+  <div class="glossary-def">A formal regulatory programme requiring firms to identify affected customers, calculate fair compensation, and make payments for a specific category of past consumer harm.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Engineers at financial services firms must understand redress schemes because they often require building or auditing data pipelines that identify eligible customers and calculate compensation at scale.</div><div class="glossary-meta">First seen: 18 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Ref Parameter</div>
   <div class="glossary-def">A Python code execution component that allows applications to run Python scripts dynamically within larger systems.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial institutions using AI tools with PyInterpreter functionality face code injection risks where malicious Python code could access sensitive customer data or trading systems.</div><div class="glossary-meta">First seen: 06 April 2026</div>
@@ -2938,6 +2973,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Session and Authorisation Token Exposure</div>
   <div class="glossary-def">A vulnerability where active login tokens or access credentials are written to logs or indexes in plain readable text rather than being masked or encrypted.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a financial services SIEM environment, session tokens visible in Splunk internal indexes could allow an insider threat or compromised admin account to hijack other users' authenticated sessions.</div><div class="glossary-meta">First seen: 16 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">SME (Small and Medium-Sized Enterprise)</div>
+  <div class="glossary-def">A business classified by size, typically by employee count or turnover, that sits below large corporate thresholds and is often underserved by standard financial products.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA is exploring how open finance can give lenders a richer, more accurate picture of SME finances, which has security implications for how SME financial data is shared, consented to, and protected.</div><div class="glossary-meta">First seen: 18 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">SMS Pumping</div>
@@ -3178,6 +3218,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">XPC Service</div>
   <div class="glossary-def">Apple's inter-process communication mechanism that allows different programs to securely exchange data and requests.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Unprotected XPC services in financial applications could allow attackers to escalate privileges and access sensitive trading algorithms or customer financial data.</div><div class="glossary-meta">First seen: 07 April 2026</div>
+</div><div class="glossary-letter">Z</div>
+<div class="glossary-item">
+  <div class="glossary-term">Zero-Day Vulnerability</div>
+  <div class="glossary-def">A security flaw in software that is unknown to the vendor and has no available patch, meaning attackers can exploit it before any defence is possible.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Storm-1175 combined zero-day exploitation with high operational speed, meaning financial institutions cannot rely solely on patching cycles and must have detection controls that identify exploitation behaviour in real time.</div><div class="glossary-meta">First seen: 18 April 2026</div>
 </div>
     </div>
   </div>
@@ -3321,12 +3366,12 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   </div>
   <div class="ta-stat ta-stat-cyan">
     <div class="ta-stat-label">Actors Tracked</div>
-    <div class="ta-stat-value" style="color:var(--cyan)">2</div>
+    <div class="ta-stat-value" style="color:var(--cyan)">3</div>
     <div class="ta-stat-sub">since first sighting</div>
   </div>
   <div class="ta-stat ta-stat-purple">
     <div class="ta-stat-label">Total Sightings</div>
-    <div class="ta-stat-value" style="color:var(--purple)">14</div>
+    <div class="ta-stat-value" style="color:var(--purple)">15</div>
     <div class="ta-stat-sub">across all digests</div>
   </div>
 </div>
@@ -3449,6 +3494,48 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   
 </div></div>
   </div>
+</div>
+<div class="ta-card" data-level="Medium"
+     data-search="apt41">
+  <div class="ta-card-accent" style="background:var(--cyan)"></div>
+  <div class="ta-card-summary" onclick="taToggle(this)">
+    <div class="ta-card-left">
+      <div class="ta-card-name">APT41</div>
+      <div class="ta-card-alias">No known aliases</div>
+      <div class="ta-card-meta">
+        <span>&#10067; Unknown</span>
+        <span>&#127758; China</span>
+        <span class="ta-sighting-count">&#128065; 1 sighting</span>
+      </div>
+      <div class="ta-card-sectors"></div>
+    </div>
+    <div class="ta-card-right">
+      <span class="ta-threat-badge badge-medium">Medium</span>
+      <span class="ta-chevron">&#9660;</span>
+    </div>
+  </div>
+  <div class="ta-card-detail">
+    <div class="ta-detail-grid">
+      <div>
+        <div class="ta-detail-title">MITRE ATT&amp;CK TTPs</div>
+        <span class="ta-none">None recorded</span>
+      </div>
+      <div>
+        <div class="ta-detail-title">Tools &amp; Malware</div>
+        <span class="ta-none">None recorded</span>
+        <div class="ta-detail-title" style="margin-top:14px">CVEs</div>
+        <span class="ta-none">None recorded</span>
+      </div>
+    </div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 1 total</div>
+    <div class="ta-timeline">
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">18 April 2026</div>
+  <div class="ta-timeline-summary">Deploying a reportedly 'zero-detection' backdoor designed to harvest cloud credentials from major cloud providers; Using typosquatting techniques to disguise command-and-control (C2) communications, likely to evade domain-based detection controls; Targeting multi-cloud environments, suggesting broad reconnaissance capability across platforms UK financial services firms with workloads hosted on AWS, Azure, or Google Cloud are directly in scope for this campaign, and compromised cloud credentials could grant APT41 access to sensitive financial data, customer records, or critical infrastructure without triggering conventional on-premise detection tooling.</div>
+  
+</div></div>
+  </div>
 </div></div>
   </div>
 
@@ -3458,7 +3545,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
       <span class="day-date">18 April 2026</span>
-      <span class="day-count">1 topic</span>
+      <span class="day-count">2 topics</span>
     </div>
     <span class="chevron">&#9660;</span>
   </div>
@@ -3486,6 +3573,30 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
     <p class="log-text defence-text">Implement real-time behavioural analytics on account activity so that sudden, high-value transfers immediately following a new device login or unusual location trigger an automatic temporary freeze and step-up authentication challenge, buying time for fraud review before funds leave the institution.</p>
 
     <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Account takeover [criminal hijacking of legitimate user account], Compromised device [attacker-controlled phone or computer], Funds transfer fraud [unauthorised movement of victim money], Mobile-first [primary internet access via smartphone], Step-up authentication [extra identity check on suspicious actions], Behavioural analytics [detecting threats via unusual user patterns]</span></div></div>
+  </div>
+</div>
+<div class="log-entry ">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">APT41 Using Typosquatting and Backdoors to Steal Cloud Credentials</div>
+      <div class="log-tags"><span class="tag tag-cyan">Identity</span><span class="tag tag-cyan">Cloud</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">APT41 is a well-resourced, China-backed threat group known for conducting both state-sponsored espionage and financially motivated attacks. They have developed a backdoor described as achieving &quot;zero detection,&quot; meaning it is designed to evade antivirus and security tooling entirely. The goal of this campaign is to harvest credentials for major cloud platforms including AWS, Google Cloud, Azure, and Alibaba Cloud.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">APT41 deploys a backdoor onto a target's systems, likely through phishing or supply chain compromise, which then runs silently without triggering security alerts. Once installed, the backdoor communicates with its command-and-control (C2) infrastructure — the attacker's remote control servers. To hide this communication, the group uses typosquatting, registering domain names that look almost identical to legitimate cloud provider domains (for example, &quot;amaz0n.com&quot; instead of &quot;amazon.com&quot;). This tricks both users and automated security tools into treating the traffic as normal. The backdoor then exfiltrates cloud credentials, giving the attacker access to the victim's cloud environment.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">A financial services firm using AWS for core banking infrastructure could have an employee's workstation silently compromised by this backdoor. The malware would then steal AWS access keys and send them to an attacker-controlled server disguised as a legitimate Amazon domain. The attacker could subsequently log into the firm's cloud environment, access sensitive customer data, or move funds — all using valid credentials that would not immediately raise alarms.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Security engineers should implement DNS monitoring and filtering to flag or block newly registered domains that closely resemble known cloud provider domains, which would disrupt the typosquatting-based C2 channel. Additionally, enforce short-lived, role-based cloud credentials using tools like AWS IAM roles or Azure Managed Identities, so that even if credentials are stolen they expire quickly and limit the attacker's window of opportunity.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">APT41 [China-backed advanced persistent threat group], Backdoor [hidden malware enabling remote attacker access], Command-and-Control</span> <span class="kt-def">— C2) [server attackers use to remotely control malware], Typosquatting [registering domains mimicking legitimate trusted sites], Credential Harvesting [stealing login keys for unauthorised system access], Zero-Detection [malware designed to evade all security tools]</span></div></div>
   </div>
 </div>
   </div>
@@ -4792,7 +4903,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 18 April 2026 19:03 UTC &middot;
+  Built automatically by Vigil &middot; 18 April 2026 19:05 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
