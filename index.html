@@ -301,7 +301,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 18 April 2026 17:10 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 18 April 2026 18:22 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -331,18 +331,135 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">42</div>
+      <div class="stat-value yellow">43</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">216</div>
+      <div class="stat-value purple">226</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
 
   <div id="tab-hot" class="tab active">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">18 April 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Documents Generative AI as a Formal Adversarial Technique (AML.T0016.002)</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">MITRE's formal cataloguing of GenAI-assisted adversarial techniques under ATLAS provides a structured threat taxonomy that UK FinServ security teams should be mapping to their existing controls — particularly given the sector's heavy reliance on LLM-based tooling for customer-facing services and internal workflows. The technique explicitly covers malware generation, deepfakes, malicious command generation, and phishing content creation, all of which directly threaten financial services institutions. Having this as a named, versioned technique means it should now appear in your threat models and red team briefs.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors are actively obtaining open-source LLMs (e.g., via Ollama or vLLM) and running them locally or on cloud infrastructure to generate phishing lures, malware, and deepfake content — removing previous skill barriers to sophisticated attacks. This lowers the entry threshold for fraud campaigns specifically targeting financial services customers and staff.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Add AML.T0016.002 to your internal threat model today and assess whether your email/phishing controls, deepfake detection capabilities, and SOC playbooks are calibrated to detect AI-generated attack artefacts — particularly AI-written spear-phishing targeting finance staff.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Publishes Open Finance Vision — New Data Sharing Frameworks Expand the Attack Surface for UK FinServ</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/fca-sets-out-vision-open-finance" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's open finance vision will require firms to build or extend data-sharing APIs and consent management infrastructure, significantly expanding the technical attack surface for financial institutions — a pattern already observed with Open Banking's introduction. UK FinServ firms will need to assess third-party API security, OAuth/token management, and data minimisation controls well ahead of any regulatory implementation. SME financial data being drawn into scope adds another sensitive data category requiring protection under UK GDPR and FCA Consumer Duty obligations.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Begin a preliminary API security review now, mapping any planned open finance data-sharing endpoints against OWASP API Top 10 risks, and flag this to your architecture team as a security-by-design requirement before implementation begins.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Uses Data Science and Credit Reference Data to Build Predictive Risk Models in Consumer Finance</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/blogs/spotting-risk-earlier-tracking-consumer-credit-journeys" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA is demonstrating its own capability to apply data science and analytics to credit file data from major Credit Reference Agencies — signalling that the regulator will increasingly expect firms to match this analytical sophistication in their own risk and compliance functions. For FinServ firms building or operating ML-based credit risk models, this raises the bar for model explainability, auditability, and evidence of good consumer outcomes under Consumer Duty. It also signals that FCA supervisory scrutiny of data-driven decisions is maturing rapidly.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Review your firm's ML model governance documentation to ensure credit or risk models can produce explainable outputs and audit trails sufficient to satisfy an increasingly data-literate FCA supervisor.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Confirms UK Crypto Regulatory Regime Live from October 2027 — Security Obligations Incoming</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/fca-consults-guidance-uk-future-crypto-regime" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">With the UK crypto regime confirmed for October 2027 and the FCA consulting on regulated activities including stablecoin issuance, trading platforms, and cryptoasset safeguarding, any UK FinServ firm with crypto exposure needs to begin mapping forthcoming security and operational resilience obligations now. Safeguarding of cryptoassets in particular carries significant infrastructure security requirements around key management, custody controls, and wallet security. Firms that delay security architecture planning risk non-compliance at go-live.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      If your firm touches any of the five regulated cryptoasset activities listed, assign an owner to track the FCA's forthcoming rules publication this summer and begin a gap assessment against your current cryptoasset security controls.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Launches Industry-Wide Motor Finance Redress Scheme Following Court Findings of Unlawful Conduct</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/statements/fca-confirms-motor-finance-redress-scheme" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The confirmed motor finance redress scheme will require affected firms to process high volumes of customer complaints and compensation payments, creating a period of operational pressure that threat actors — particularly ransomware groups — historically exploit to target distracted or resource-stretched financial institutions. Large-scale redress exercises also involve significant data processing of customer financial records, increasing data breach risk if not carefully governed. UK FinServ security teams at lenders with motor finance exposure should treat this as a heightened-risk operational period.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      If your firm is in scope for the motor finance redress scheme, brief your SOC and incident response team now to maintain vigilance during the scheme's implementation period, and ensure any third-party redress processing partners are subject to appropriate security due diligence.
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">16 April 2026</span>
@@ -1928,7 +2045,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 216 terms&#8230;"
+           placeholder="Search 226 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -1936,6 +2053,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">ABAP Report</div>
   <div class="glossary-def">A technique where a single request triggers multiple database or API queries, potentially overwhelming system resources.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial AI systems, malicious prompts could cause excessive queries to trading databases or pricing APIs, leading to service disruption and increased operational costs.</div><div class="glossary-meta">First seen: 14 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Account Takeover (ATO)</div>
+  <div class="glossary-def">An attack where a fraudster gains unauthorised access to a legitimate user's account, typically by using stolen credentials or compromised devices.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In mobile-first banking environments, fraudsters in regions like Latin America demonstrate how quickly a compromised device can lead to account takeover and fraudulent funds transfer before detection systems respond.</div><div class="glossary-meta">First seen: 18 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Additional Cloud Credentials</div>
@@ -2158,6 +2280,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services, this attack could be used to intercept and manipulate communications between trading terminals and exchanges or between ATMs and banking servers.</div><div class="glossary-meta">First seen: 26 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Credit Reference Agency (CRA)</div>
+  <div class="glossary-def">An organisation that collects and holds financial history data on individuals and businesses, which lenders use to assess creditworthiness.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA uses data from CRAs to build analytical models that track consumer credit journeys and identify early signs of financial distress across the market.</div><div class="glossary-meta">First seen: 18 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Cross-Cluster Privilege Escalation</div>
   <div class="glossary-def">An attack where an attacker gains elevated permissions across multiple interconnected computer clusters or cloud environments.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services using multi-cloud deployments, this could allow an attacker to move from a development cluster to production systems containing sensitive customer financial data.</div><div class="glossary-meta">First seen: 08 April 2026</div>
@@ -2191,6 +2318,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Data Execution Prevention (DEP)</div>
   <div class="glossary-def">A vulnerability where data written to a buffer exceeds its allocated memory space on the program's call stack, potentially allowing code execution.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Trading applications with buffer overflow vulnerabilities could be exploited to manipulate transaction data or gain unauthorized access to financial systems.</div><div class="glossary-meta">First seen: 13 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Data Silo</div>
+  <div class="glossary-def">A situation where data is held and used by one part of an organisation but is not accessible to or integrated with other parts, limiting the overall picture available for decision-making.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial institutions, data silos between fraud, identity, and transaction teams prevent a complete customer risk view, weakening both fraud detection and regulatory compliance.</div><div class="glossary-meta">First seen: 18 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">DCMTK</div>
@@ -2538,6 +2670,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms may need to monitor for unauthorized local AI model deployments that could bypass corporate AI governance policies.</div><div class="glossary-meta">First seen: 27 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Open Finance</div>
+  <div class="glossary-def">A system that allows consumers and businesses to securely share their financial data with authorised third-party providers across a wide range of financial products.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> UK financial services firms must prepare for FCA-regulated open finance frameworks that will require secure data-sharing APIs covering mortgages, pensions, savings, and investments.</div><div class="glossary-meta">First seen: 18 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Open Source Intelligence (OSINT)</div>
   <div class="glossary-def">The practice of collecting and analyzing publicly available information from sources like websites, social media, and databases for security purposes.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banks use OSINT to identify threat actors researching their systems or to discover if their AI models or customer data have been exposed online.</div><div class="glossary-meta">First seen: 30 March 2026</div>
@@ -2667,6 +2804,16 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-def">A software component that executes Python code dynamically at runtime, often used in applications that need to run user-provided scripts.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Vulnerabilities in PyInterpreter components within financial AI systems could allow attackers to execute malicious code and manipulate trading algorithms or customer data processing.</div><div class="glossary-meta">First seen: 06 April 2026</div>
 </div><div class="glossary-letter">Q</div>
+<div class="glossary-item">
+  <div class="glossary-term">Qualifying Stablecoin</div>
+  <div class="glossary-def">A type of cryptocurrency whose value is pegged to a stable asset (such as a fiat currency) and which falls within a specific legal definition that brings it under regulatory oversight.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> From October 2027, UK firms issuing or dealing in qualifying stablecoins will need FCA authorisation, creating new compliance and security obligations around cryptoasset custody and issuance.</div><div class="glossary-meta">First seen: 18 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Quantum-Resilience-as-a-Service (QRaaS)</div>
+  <div class="glossary-def">A cloud-delivered security service that upgrades a financial institution's encryption to withstand attacks from quantum computers without requiring a full replacement of existing systems.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> UK banks and payment networks face a future threat from quantum computing that could break current encryption standards, making QRaaS a practical option for strengthening cryptographic defences incrementally.</div><div class="glossary-meta">First seen: 18 April 2026</div>
+</div>
 <div class="glossary-item">
   <div class="glossary-term">Query Fan-out</div>
   <div class="glossary-def">When a single request triggers multiple additional queries or API calls to different services or databases.</div>
@@ -2833,6 +2980,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Network devices protecting financial institutions could be compromised through buffer overflow attacks, allowing attackers to bypass security controls and access trading systems.</div><div class="glossary-meta">First seen: 31 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Staking</div>
+  <div class="glossary-def">The process of locking up cryptocurrency holdings to support the operation of a blockchain network, in return for rewards.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA is consulting on whether firms offering cryptoasset staking services to UK customers will require authorisation, meaning security teams at FinServ firms need to understand the operational risks of staking infrastructure.</div><div class="glossary-meta">First seen: 18 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Stored Cross-Site Scripting (XSS)</div>
   <div class="glossary-def">A type of attack where malicious code is permanently stored on a target server and executed when other users access the affected page or content.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial applications, stored XSS could allow attackers to steal customer banking credentials or manipulate transaction displays when users view infected account statements or reports.</div><div class="glossary-meta">First seen: 15 April 2026</div>
@@ -2841,6 +2993,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">storescp</div>
   <div class="glossary-def">Apple's inter-process communication mechanism that allows different applications and system services to communicate securely on macOS.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services applications on macOS systems may use XPC services for secure communication between privileged and unprivileged components.</div><div class="glossary-meta">First seen: 07 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Straight-Through Processing (STP)</div>
+  <div class="glossary-def">The automated handling of a financial transaction from initiation to completion without any manual intervention.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Higher STP rates in payments and onboarding indicate that identity and risk decisioning systems are functioning efficiently, reducing operational cost and human error at UK financial firms.</div><div class="glossary-meta">First seen: 18 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Structured Exception Handling (SEH)</div>
@@ -2911,11 +3068,21 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Trust Modification</div>
   <div class="glossary-def">An attack technique where adversaries alter authentication trust relationships between different domains or cloud tenants to gain unauthorized access.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banks using federated identity systems across multiple subsidiaries or cloud tenants could face privilege escalation if trust relationships are maliciously modified.</div><div class="glossary-meta">First seen: 24 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Typosquatting</div>
+  <div class="glossary-def">A technique where an attacker registers a domain name or package name that is a deliberate misspelling or close variation of a legitimate one, to trick users or systems into connecting to it.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> APT41 used typosquatting to disguise command-and-control communications, a tactic that could similarly be used to intercept credentials or data from financial services cloud environments.</div><div class="glossary-meta">First seen: 18 April 2026</div>
 </div><div class="glossary-letter">U</div>
 <div class="glossary-item">
   <div class="glossary-term">Uncontrolled Search Path Element</div>
   <div class="glossary-def">A vulnerability where an application searches for critical files or libraries in locations that an attacker can influence, allowing malicious code to be loaded instead of the legitimate file.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If a financial services workstation runs installer software vulnerable to uncontrolled search path exploitation, a low-privileged attacker could substitute a malicious library and execute code under the victim's account.</div><div class="glossary-meta">First seen: 16 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Unified Trust Layer</div>
+  <div class="glossary-def">An industry framework that establishes shared rules for verifying identity, authorisation, and liability when automated software agents initiate financial transactions on behalf of users.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> As AI agents begin to execute payments autonomously, UK payment firms need a unified trust layer to ensure accountability and fraud controls apply to agent-initiated transactions just as they do to human ones.</div><div class="glossary-meta">First seen: 18 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">upsertUser endpoint</div>
@@ -3287,6 +3454,42 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 
   <div id="tab-log" class="tab">
     
+<div class="day-group">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-header-left">
+      <span class="day-date">18 April 2026</span>
+      <span class="day-count">1 topic</span>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="day-body">
+    
+<div class="log-entry log-entry-first">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">Mobile-First Account Takeover Fraud and Rapid Funds Transfer</div>
+      <div class="log-tags"><span class="tag tag-purple">FinServ</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">Account takeover fraud occurs when a cyber-criminal gains control of a victim's financial account, typically by first compromising their mobile device. In mobile-first regions, where banking is conducted almost entirely through smartphones, this attack surface is particularly wide. The speed of the attack is what makes it especially dangerous — criminals move from device compromise to stolen funds before banks can intervene.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">First, an attacker compromises a victim's mobile device, likely through malware, phishing, or credential theft. Once on the device, they harvest the login credentials needed to access the victim's financial accounts. They then log in and take over the account, locking out the legitimate user where possible. Finally, they initiate fund transfers as quickly as possible, moving money before the financial institution's fraud detection systems can flag and block the transaction.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">In Latin America, where a large proportion of the population relies solely on mobile banking apps, an attacker could compromise a customer's smartphone, access their digital wallet or bank account, and transfer their entire balance within minutes. By the time the bank's fraud team reviews an alert, the funds may already have moved through multiple accounts.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Implement real-time behavioural analytics on account activity so that sudden, high-value transfers immediately following a new device login or unusual location trigger an automatic temporary freeze and step-up authentication challenge, buying time for fraud review before funds leave the institution.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Account takeover [criminal hijacking of legitimate user account], Compromised device [attacker-controlled phone or computer], Funds transfer fraud [unauthorised movement of victim money], Mobile-first [primary internet access via smartphone], Step-up authentication [extra identity check on suspicious actions], Behavioural analytics [detecting threats via unusual user patterns]</span></div></div>
+  </div>
+</div>
+  </div>
+</div>
 <div class="day-group">
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
@@ -4589,7 +4792,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 18 April 2026 17:10 UTC &middot;
+  Built automatically by Vigil &middot; 18 April 2026 18:22 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
