@@ -301,7 +301,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 20 April 2026 11:10 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 20 April 2026 17:54 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -331,12 +331,12 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">45</div>
+      <div class="stat-value yellow">46</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">245</div>
+      <div class="stat-value purple">255</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -2162,7 +2162,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 245 terms&#8230;"
+           placeholder="Search 255 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -2347,6 +2347,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial malware like TrickBot is often written in C++ to evade detection and efficiently target banking systems across multiple platforms.</div><div class="glossary-meta">First seen: 02 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">C2 (Command and Control)</div>
+  <div class="glossary-def">A server or channel that an attacker uses to send instructions to malware already installed on compromised machines and to receive stolen data back from them.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> APT41's use of typosquatting to disguise C2 communications means a financial institution's DNS monitoring tools may not flag the traffic as malicious without careful threat-intelligence tuning.</div><div class="glossary-meta">First seen: 20 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Ccache Files</div>
   <div class="glossary-def">Temporary files that store Kerberos authentication tickets, allowing users to access multiple services without re-entering credentials.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers targeting bank systems may steal ccache files from compromised servers to gain access to financial databases without knowing employee passwords.</div><div class="glossary-meta">First seen: 22 March 2026</div>
@@ -2442,6 +2447,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Payment processing systems rely on nonce validation to ensure each transaction request is genuine and hasn't been intercepted and replayed by fraudsters.</div><div class="glossary-meta">First seen: 08 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Cryptoasset Safeguarding</div>
+  <div class="glossary-def">The regulatory requirement for firms holding customers' cryptoassets to keep those assets separate from the firm's own assets so customers can recover them if the firm fails.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Under the FCA's forthcoming UK crypto regime, a fintech offering custody of Bitcoin or stablecoins must implement cryptoasset safeguarding controls, including segregated wallets and reconciliation processes, analogous to client money rules in traditional finance.</div><div class="glossary-meta">First seen: 20 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Cryptographic Signature Verification</div>
   <div class="glossary-def">A security check that confirms a message or request genuinely came from a trusted source by validating a mathematical signature attached to it.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Payment gateways like Redsys must verify cryptographic signatures on every callback to prevent attackers from injecting false payment status updates into banking or e-commerce flows.</div><div class="glossary-meta">First seen: 16 April 2026</div>
@@ -2470,6 +2480,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Data Execution Prevention (DEP)</div>
   <div class="glossary-def">A vulnerability where data written to a buffer exceeds its allocated memory space on the program's call stack, potentially allowing code execution.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Trading applications with buffer overflow vulnerabilities could be exploited to manipulate transaction data or gain unauthorized access to financial systems.</div><div class="glossary-meta">First seen: 13 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Data Exfiltration</div>
+  <div class="glossary-def">The unauthorised copying or transfer of</div>
+  
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Data Silo</div>
@@ -2667,6 +2682,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A common cause of vulnerabilities in fintech applications where customer input data isn't properly cleaned before being processed by payment systems or database queries.</div><div class="glossary-meta">First seen: 03 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Indirect Prompt Injection</div>
+  <div class="glossary-def">An attack where malicious instructions are hidden inside external content (such as a webpage or document) that an AI agent is asked to read, causing the agent to follow the attacker's instructions rather than the user's.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> An AI assistant used by a wealth management firm to summarise client emails could be hijacked via indirect prompt injection embedded in a malicious attachment, causing it to silently exfiltrate account details.</div><div class="glossary-meta">First seen: 20 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Inference Engines</div>
   <div class="glossary-def">Software components that process AI models to generate predictions or responses from input data.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Compromised inference engines in financial AI systems could manipulate credit scoring, fraud detection, or algorithmic trading decisions.</div><div class="glossary-meta">First seen: 28 March 2026</div>
@@ -2825,6 +2845,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Model Context Protocol</div>
   <div class="glossary-def">A standardized way for AI agents to access and interact with external tools and data sources.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial AI systems using Model Context Protocol could be compromised to give attackers access to trading systems, customer databases, or risk management tools.</div><div class="glossary-meta">First seen: 25 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Multipart Upload Handler</div>
+  <div class="glossary-def">A server-side component that receives files sent in multiple separate chunks over HTTP, reassembling them into a complete file on the server.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Poorly validated multipart upload handlers in financial portals (for example, document submission for mortgage applications) are a common entry point for path traversal and remote code execution attacks.</div><div class="glossary-meta">First seen: 20 April 2026</div>
 </div><div class="glossary-letter">N</div>
 <div class="glossary-item">
   <div class="glossary-term">n-day Vulnerability</div>
@@ -2937,6 +2962,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Pikabot is frequently used as an initial access method in financial services attacks, allowing criminals to establish a foothold before deploying tools like Cobalt Strike for lateral movement through banking networks.</div><div class="glossary-meta">First seen: 24 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Post-Quantum Cryptography (PQC)</div>
+  <div class="glossary-def">Encryption algorithms designed to remain secure against attacks from quantum computers, which can break most encryption methods in widespread use today.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> UK financial institutions processing long-lived data such as pension records or mortgage contracts need to begin migrating to post-quantum cryptography now, because data harvested today by adversaries could be decrypted once quantum computers mature — a threat sometimes called &quot;harvest now, decrypt later.&quot;</div><div class="glossary-meta">First seen: 20 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">PowerDuke</div>
   <div class="glossary-def">A backdoor malware that is typically delivered through malicious Microsoft Office documents containing embedded macros.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> PowerDuke represents a common attack vector against financial services employees who regularly receive and open Office documents from clients, suppliers, and business partners.</div><div class="glossary-meta">First seen: 24 March 2026</div>
@@ -2985,6 +3015,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">PyInterpreter</div>
   <div class="glossary-def">A software component that executes Python code dynamically at runtime, often used in applications that need to run user-provided scripts.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Vulnerabilities in PyInterpreter components within financial AI systems could allow attackers to execute malicious code and manipulate trading algorithms or customer data processing.</div><div class="glossary-meta">First seen: 06 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">PyTorch / TensorFlow / JAX</div>
+  <div class="glossary-def">Open-source software libraries (frameworks) used by developers to build and train machine learning models, providing pre-built mathematical building blocks so engineers do not have to write everything from scratch.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A bank using these frameworks to build fraud-detection models must patch them promptly, since a compromised deep learning framework could corrupt model outputs or exfiltrate training data containing customer transactions.</div><div class="glossary-meta">First seen: 20 April 2026</div>
 </div><div class="glossary-letter">Q</div>
 <div class="glossary-item">
   <div class="glossary-term">Qualifying Stablecoin</div>
@@ -3040,6 +3075,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Request Smuggling</div>
   <div class="glossary-def">An attack technique where differences in how web servers and proxies parse HTTP requests allow attackers to bypass security controls.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> This could enable attackers to bypass fraud detection systems or access controls protecting financial APIs and services.</div><div class="glossary-meta">First seen: 28 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Resource Hijacking</div>
+  <div class="glossary-def">An attack where a threat actor secretly uses a victim organisation's computing infrastructure — such as cloud servers or GPUs — for the attacker's own purposes, typically cryptocurrency mining or running AI workloads.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A bank running large AI inference workloads in the cloud is an attractive target for resource hijacking, as the high baseline of compute usage can mask unauthorised usage and inflate cloud bills before detection.</div><div class="glossary-meta">First seen: 20 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Resource-Intensive Queries</div>
@@ -3117,6 +3157,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banking APIs receiving serialized transaction data could be exploited if the payload contains code designed to manipulate account balances or transfer funds.</div><div class="glossary-meta">First seen: 30 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Server-Side Request Forgery (SSRF)</div>
+  <div class="glossary-def">A vulnerability that tricks a server into making HTTP requests to internal systems or external URLs that the attacker specifies, rather than the server choosing what to connect to itself.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a financial services API or picture-upload service, an SSRF flaw could allow an attacker to reach internal payment systems or cloud metadata endpoints that should never be publicly accessible.</div><div class="glossary-meta">First seen: 20 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Serverless Computing</div>
   <div class="glossary-def">A cloud computing model where code runs in managed containers without the user needing to provision or manage servers.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial institutions using serverless functions for transaction processing must secure these environments as attackers can abuse them to run cryptocurrency mining or data theft operations.</div><div class="glossary-meta">First seen: 22 March 2026</div>
@@ -3135,6 +3180,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Session and Authorisation Token Exposure</div>
   <div class="glossary-def">A vulnerability where active login tokens or access credentials are written to logs or indexes in plain readable text rather than being masked or encrypted.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a financial services SIEM environment, session tokens visible in Splunk internal indexes could allow an insider threat or compromised admin account to hijack other users' authenticated sessions.</div><div class="glossary-meta">First seen: 16 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Shell Access</div>
+  <div class="glossary-def">The ability to interact directly with an operating system's command-line interface, allowing a user to run any program or system command on that machine.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The ThreatSonar vulnerability (CVE-2026-5967) shows that if an authenticated attacker gains shell access to an anti-ransomware appliance deployed in a financial institution, they can escalate to root and disable the very controls designed to protect the environment.</div><div class="glossary-meta">First seen: 20 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">SME (Small and Medium-Sized Enterprise)</div>
@@ -3529,7 +3579,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   </div>
   <div class="ta-stat ta-stat-yellow">
     <div class="ta-stat-label">High Severity</div>
-    <div class="ta-stat-value" style="color:var(--yellow)">0</div>
+    <div class="ta-stat-value" style="color:var(--yellow)">4</div>
     <div class="ta-stat-sub">confirmed activity</div>
   </div>
   <div class="ta-stat ta-stat-cyan">
@@ -3555,9 +3605,9 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
     <button class="ta-filter-btn"        data-level="Low"      onclick="taSetLevel('Low',this)">&#11044; Low</button>
   </div>
 </div><div class="ta-grid" id="ta-grid">
-<div class="ta-card" data-level="Medium"
+<div class="ta-card" data-level="High"
      data-search="wizard spider trickbot">
-  <div class="ta-card-accent" style="background:var(--cyan)"></div>
+  <div class="ta-card-accent" style="background:var(--yellow)"></div>
   <div class="ta-card-summary" onclick="taToggle(this)">
     <div class="ta-card-left">
       <div class="ta-card-name">Wizard Spider</div>
@@ -3570,7 +3620,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
       <div class="ta-card-sectors"><span class="ta-sector-tag">Critical Infrastructure</span><span class="ta-sector-tag">Energy</span><span class="ta-sector-tag">Financial Services</span></div>
     </div>
     <div class="ta-card-right">
-      <span class="ta-threat-badge badge-medium">Medium</span>
+      <span class="ta-threat-badge badge-high">High</span>
       <span class="ta-chevron">&#9660;</span>
     </div>
   </div>
@@ -3615,22 +3665,22 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 </div></div>
   </div>
 </div>
-<div class="ta-card" data-level="Medium"
-     data-search="cozy bear powerduke">
-  <div class="ta-card-accent" style="background:var(--cyan)"></div>
+<div class="ta-card" data-level="High"
+     data-search="cozy bear apt29 midnight blizzard powerduke">
+  <div class="ta-card-accent" style="background:var(--yellow)"></div>
   <div class="ta-card-summary" onclick="taToggle(this)">
     <div class="ta-card-left">
       <div class="ta-card-name">Cozy Bear</div>
-      <div class="ta-card-alias">No known aliases</div>
+      <div class="ta-card-alias">APT29, Midnight Blizzard</div>
       <div class="ta-card-meta">
         <span>&#127988; Nation-State</span>
-        <span>&#127758; Unknown</span>
+        <span>&#127758; Russia</span>
         <span class="ta-sighting-count">&#128065; 7 sightings</span>
       </div>
       <div class="ta-card-sectors"><span class="ta-sector-tag">Government</span><span class="ta-sector-tag">Technology</span><span class="ta-sector-tag">Unknown</span></div>
     </div>
     <div class="ta-card-right">
-      <span class="ta-threat-badge badge-medium">Medium</span>
+      <span class="ta-threat-badge badge-high">High</span>
       <span class="ta-chevron">&#9660;</span>
     </div>
   </div>
@@ -3669,22 +3719,22 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 </div></div>
   </div>
 </div>
-<div class="ta-card" data-level="Medium"
-     data-search="apt41">
-  <div class="ta-card-accent" style="background:var(--cyan)"></div>
+<div class="ta-card" data-level="High"
+     data-search="apt41 winnti barium n/a *(no aliases mentioned in the articles)*">
+  <div class="ta-card-accent" style="background:var(--yellow)"></div>
   <div class="ta-card-summary" onclick="taToggle(this)">
     <div class="ta-card-left">
       <div class="ta-card-name">APT41</div>
-      <div class="ta-card-alias">No known aliases</div>
+      <div class="ta-card-alias">Winnti, Barium, N/A *(no aliases mentioned in the articles)*</div>
       <div class="ta-card-meta">
-        <span>&#10067; Unknown</span>
+        <span>&#127988; Nation-State</span>
         <span>&#127758; China</span>
         <span class="ta-sighting-count">&#128065; 2 sightings</span>
       </div>
       <div class="ta-card-sectors"></div>
     </div>
     <div class="ta-card-right">
-      <span class="ta-threat-badge badge-medium">Medium</span>
+      <span class="ta-threat-badge badge-high">High</span>
       <span class="ta-chevron">&#9660;</span>
     </div>
   </div>
@@ -3717,22 +3767,22 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 </div></div>
   </div>
 </div>
-<div class="ta-card" data-level="Medium"
+<div class="ta-card" data-level="High"
      data-search="apt28 fancy bear">
-  <div class="ta-card-accent" style="background:var(--cyan)"></div>
+  <div class="ta-card-accent" style="background:var(--yellow)"></div>
   <div class="ta-card-summary" onclick="taToggle(this)">
     <div class="ta-card-left">
       <div class="ta-card-name">APT28</div>
       <div class="ta-card-alias">Fancy Bear</div>
       <div class="ta-card-meta">
-        <span>&#10067; Unknown</span>
+        <span>&#127988; Nation-State</span>
         <span>&#127758; Russia</span>
         <span class="ta-sighting-count">&#128065; 1 sighting</span>
       </div>
       <div class="ta-card-sectors"></div>
     </div>
     <div class="ta-card-right">
-      <span class="ta-threat-badge badge-medium">Medium</span>
+      <span class="ta-threat-badge badge-high">High</span>
       <span class="ta-chevron">&#9660;</span>
     </div>
   </div>
@@ -3767,7 +3817,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
       <span class="day-date">20 April 2026</span>
-      <span class="day-count">1 topic</span>
+      <span class="day-count">2 topics</span>
     </div>
     <span class="chevron">&#9660;</span>
   </div>
@@ -3795,6 +3845,30 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
     <p class="log-text defence-text">Prioritise and accelerate your patching process for internet-facing systems, particularly when new vulnerabilities are disclosed publicly, as the gap between disclosure and exploitation is shrinking. Implement continuous vulnerability scanning and set internal SLAs (e.g. 24–48 hours) for critical patch deployment to reduce the window Storm-1175-style actors can exploit.</p>
 
     <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">Storm-1175 [financially motivated cybercrime threat group], Medusa ransomware [malware that encrypts victim's systems for ransom], n-day vulnerability [known flaw with existing patch available], zero-day vulnerability [unknown flaw with no patch yet], high-velocity attack [rapid attack minimising defender response time], financially motivated threat actor [attacker primarily seeking financial gain]</span></div></div>
+  </div>
+</div>
+<div class="log-entry ">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">Indirect Prompt Injection via a Malicious MCP Server Leading to Data Exfiltration</div>
+      <div class="log-tags"><span class="tag tag-cyan">Security</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text"></p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text"></p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text"></p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text"></p>
+
+    
   </div>
 </div>
   </div>
@@ -5161,7 +5235,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 20 April 2026 11:10 UTC &middot;
+  Built automatically by Vigil &middot; 20 April 2026 17:54 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
