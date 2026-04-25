@@ -339,7 +339,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 25 April 2026 07:06 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 25 April 2026 07:46 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -349,7 +349,7 @@
   <button class="nav-btn active" onclick="showTab('hot',this)">&#128293; Hot Topics</button>
   <button class="nav-btn" onclick="showTab('actors',this)">&#128373; Threat Actors</button>
   <button class="nav-btn" onclick="showTab('log',this)">&#128214; Daily Log</button>
-  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs </button>
+  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">1</span></button>
   <button class="nav-btn" onclick="showTab('glossary',this)">&#128218; Glossary</button>
   <button class="nav-btn" onclick="showTab('quiz',this)">&#127942; Quiz History</button>
   <button class="nav-btn" onclick="showTab('redteam',this)">&#128308; Red Team</button>
@@ -365,17 +365,17 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Labs Completed</div>
-      <div class="stat-value green">15 <span style="font-size:16px;color:var(--text-dim)">/ 15</span></div>
-      <div class="stat-sub">100% completion</div>
+      <div class="stat-value green">15 <span style="font-size:16px;color:var(--text-dim)">/ 16</span></div>
+      <div class="stat-sub">94% completion</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">49</div>
+      <div class="stat-value yellow">50</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">291</div>
+      <div class="stat-value purple">300</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -2117,11 +2117,83 @@
 
   <div id="tab-labs" class="tab">
     <div class="lab-filters">
-      <button class="filter-btn active" onclick="filterLabs('all',this)">All (15)</button>
+      <button class="filter-btn active" onclick="filterLabs('all',this)">All (16)</button>
       <button class="filter-btn" onclick="filterLabs('completed',this)">Completed (15)</button>
-      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (0)</button>
+      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (1)</button>
     </div>
     
+<div class="lab-card" data-status="not-started">
+  <div class="lab-card-header" onclick="toggleLab(this)">
+    <span class="status-badge status-pending">NOT STARTED</span>
+    <div class="lab-info">
+      <div class="lab-date">25 April 2026</div>
+      <div class="lab-title">Mapping Regulatory Data Flows — Identifying Privacy and Security Risks in FCA Credit Reference Agency Data Sharing</div>
+      <div class="lab-meta">
+        <span class="diff-badge diff-intermediate">Intermediate</span>
+        <span class="lab-time">&#9201; 75 minutes</span>
+      </div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="lab-body">
+    <div class="source-wrap"><a href="https://www.fca.org.uk/news/blogs/spotting-risk-earlier-tracking-consumer-credit-journeys" target="_blank" class="source-link">&#128196; Spotting risk earlier by tracking consumer credit journeys</a></div>
+    <div class="lab-section-title">SCENARIO</div>
+    <p class="lab-text">Barclaystone Bank (fictional) has received a formal data request from the FCA as part of a supervisory review into consumer credit affordability practices. The FCA's analytics team is using Credit Reference Agency (CRA) data to track consumer credit journeys across multiple lenders. Your security team has been asked to urgently assess what sensitive data fields are being shared, whether the data sharing arrangement meets UK GDPR and FCA data security expectations, and what attack surface is created when bulk consumer financial data moves between a CRA, multiple lenders, and a regulator. A junior analyst has flagged that the firm's data sharing agreement with the CRA may not explicitly cover onward transmission to third-party regulators — and nobody is certain whether the pseudonymisation controls are adequate.</p>
+    <div class="lab-section-title">OBJECTIVE</div>
+    <p class="lab-text">By completing this lab, the engineer will be able to identify concrete privacy and security risks in a multi-party financial data sharing arrangement and produce a structured threat model for a CRA-to-regulator data pipeline.
+
+---</p>
+    <div class="lab-section-title">CHALLENGE</div>
+    <ol class="lab-list"><li>Open your text editor and create a new file called `cra_data_threat_model.md`.</li><li>Open your browser and read the FCA Technical Annex linked from the blog post: https://www.fca.org.uk/news/blogs/spotting-risk-earlier-tracking-consumer-credit-journeys — scroll to find and download the Technical Annex PDF. Skim it specifically for:
+   - What categories of consumer credit data are included (e.g. account types, balances, payment history)
+   - How individuals are identified or pseudonymised in the dataset
+   - How many records or individuals the dataset covers
+   - Which organisations handle the data (CRA → FCA at minimum)</li><li>In your markdown file, write a section called `## Data Asset Inventory` and list every data category you identified, noting next to each one whether it is: **directly identifying**, **indirectly identifying (pseudonymous)**, or **aggregate/anonymised**. Be specific — don't just write &quot;financial data&quot;.
+
+---
+
+**Part 2 — Map the Data Flow (15 minutes)**</li><li>In your markdown file, create a section called `## Data Flow Diagram (Text)`. Using plain text or ASCII, draw the pipeline. It must include at minimum:
+
+```
+[Consumer] → [Lender(s)] → [CRA] → [FCA Analytics Team] → [Published findings]
+```</li><li>For each arrow (data transfer), annotate:
+   - What data is transmitted at that stage
+   - Whether encryption in transit is specified or assumed
+   - Whether a Data Processing Agreement (DPA) or data sharing agreement is documented at that stage
+   - Who the Data Controller and Data Processor are at each stage under UK GDPR</li><li>Identify and mark with ⚠️ any stage where you found a gap — no explicit control documented, assumed rather than verified, or ambiguous controller/processor responsibility.
+
+---
+
+**Part 3 — Threat Modelling with STRIDE (25 minutes)**</li><li>Open Claude.ai (free, no account required for basic use, or use your existing account). Paste the following prompt — do not modify it, so you can see a consistent output to critique:
+
+&gt; &quot;I am threat modelling a data pipeline where a UK Credit Reference Agency shares pseudonymised consumer credit data with the FCA for regulatory analytics. The data covers millions of UK consumers including account balances, payment history, credit limits, and loan types. Individuals are identified by a pseudonymous ID, not name or address. Apply the STRIDE threat model framework to this pipeline and for each threat category give me one specific, realistic attack scenario relevant to a financial regulatory data sharing context. Format your response as a table with columns: Threat Category | Attack Scenario | Affected Pipeline Stage | Example Control.&quot;</li><li>Copy Claude's response into your markdown file under a section called `## STRIDE Analysis`.</li><li>Now critically review Claude's output. In a sub-section called `## My Assessment of the AI Output`, answer these three questions in writing:
+   - Which of Claude's scenarios do you think is the most realistic and why?
+   - Did Claude identify any threat you had not thought of yourself? What was it?
+   - Is there any scenario Claude suggested that you think is inaccurate or doesn't apply to this specific FCA context? Explain why.
+
+---
+
+**Part 4 — Re-identification Risk Deep Dive (20 minutes)**</li><li>Open this free resource on re-identification risk in financial data: https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/anonymisation/anonymisation-guidance/ — specifically read the section on &quot;Motivated intruder test&quot; and &quot;Singling out&quot;.</li><li>Return to your markdown file. Create a section called `## Re-identification Risk Assessment`. Answer the following in writing:
+    - The FCA dataset uses pseudonymous IDs. List three specific data attributes in the dataset (from Part 1) that, if combined, could allow a motivated intruder to re-identify an individual without knowing their pseudonymous ID. Explain the combination attack.
+    - Would this dataset pass the ICO's &quot;motivated intruder test&quot;? Justify your answer with reference to what you read.
+    - What is the difference between anonymisation and pseudonymisation under UK GDPR, and why does it matter for this dataset's legal basis?
+
+---</li></ol>
+    <div class="lab-section-title">DEFENCE TASK</div>
+    <p class="lab-text">Design a **Data Sharing Security Standard** for your fictional bank's next CRA data submission to the FCA. Write it as a one-page policy section (in your markdown file, under `## Defence — Data Sharing Security Standard`) covering:
+
+- **Minimum pseudonymisation requirements** before data leaves the bank (specify: which fields must be suppressed, hashed, or generalised, and what hashing standard to use)
+- **Transmission security controls** (specify protocols, certificate requirements, and whether a dedicated channel such as a secure FCA portal or SFTP with mutual TLS is required)
+- **Data minimisation checklist** — a five-item checklist the data owner must sign off before submission, confirming only necessary fields are included
+- **Re-identification risk sign-off** — specify who must approve the submission (job title), what risk assessment they must complete, and reference the ICO anonymisation guidance as the standard
+- **Incident response trigger** — one paragraph describing what the bank</p>
+    
+    
+    <div class="terminal-tip">
+      &#9889; Complete this lab by running <code>python complete_lab.py</code> in your terminal.
+    </div>
+  </div>
+</div>
 <div class="lab-card" data-status="completed">
   <div class="lab-card-header" onclick="toggleLab(this)">
     <span class="status-badge status-completed">&#10003; COMPLETED</span>
@@ -2669,7 +2741,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 291 terms&#8230;"
+           placeholder="Search 300 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -2907,6 +2979,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">cd00r</div>
   <div class="glossary-def">A network-based backdoor that uses packet sniffing to listen for specific network traffic patterns before activating.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> cd00r could be particularly dangerous in financial environments as it can remain dormant on trading systems or payment networks until activated by a specific network signal from attackers.</div><div class="glossary-meta">First seen: 24 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">ClickFix</div>
+  <div class="glossary-def">A social engineering technique where victims are tricked into manually running malicious commands on their own machine, often by being shown a fake error message with instructions to &quot;fix&quot; a problem.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The Lazarus Group used ClickFix to target high-value individuals at organisations, a tactic that could be used against executives or developers at financial institutions to gain initial access to sensitive systems.</div><div class="glossary-meta">First seen: 25 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Client Money Safeguarding</div>
@@ -3189,6 +3266,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> AI-powered financial chatbots using LangChain prompt templates need proper f-string validation to prevent attackers from injecting code that could expose customer account information.</div><div class="glossary-meta">First seen: 11 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">FACT (Framework for Agentic Commerce Trust)</div>
+  <div class="glossary-def">An industry framework designed to establish rules and controls for verifying and securing financial transactions that are initiated automatically by AI agents rather than human beings.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> As AI agents increasingly initiate payments on behalf of customers in financial services, frameworks like FACT are needed to ensure those transactions are properly authorised and auditable.</div><div class="glossary-meta">First seen: 25 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Filesystem ACL (Access Control List)</div>
   <div class="glossary-def">A set of rules attached to files or directories that defines which users or system accounts are permitted to read, write, or execute them.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Overly permissive filesystem ACLs on automation directories in financial services infrastructure can allow attackers to plant malicious scripts that execute with SYSTEM-level privileges during scheduled tasks.</div><div class="glossary-meta">First seen: 16 April 2026</div>
@@ -3362,6 +3444,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Lateral Movement</div>
   <div class="glossary-def">A technique used by attackers to progressively move through a network or set of connected systems after initial access, seeking higher privileges or more valuable data.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Stolen OAuth tokens are particularly dangerous in financial services cloud environments because they enable lateral movement between connected systems such as data platforms, AI tools and customer databases without triggering password-based alerts.</div><div class="glossary-meta">First seen: 21 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Lazarus Group</div>
+  <div class="glossary-def">A highly sophisticated, North Korea state-sponsored threat actor known for conducting financially motivated cyberattacks, including bank heists and cryptocurrency theft, as well as espionage operations.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Lazarus has a long history of targeting financial institutions and cryptocurrency platforms, making it a direct threat to UK financial services firms and their supply chains.</div><div class="glossary-meta">First seen: 25 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Lifecycle Policies</div>
@@ -3609,6 +3696,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> PowerDuke represents a common attack vector against financial services employees who regularly receive and open Office documents from clients, suppliers, and business partners.</div><div class="glossary-meta">First seen: 24 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Privacy-Enhancing Technologies (PETs)</div>
+  <div class="glossary-def">A group of tools and methods that allow organisations to process or share data while protecting personal information, for example by anonymising or encrypting it so individuals cannot be identified.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Ant International's Alipay+ upgrade uses PETs to protect customer payment data during transactions, a model increasingly relevant to UK financial firms handling sensitive customer data under GDPR.</div><div class="glossary-meta">First seen: 25 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Privilege Escalation</div>
   <div class="glossary-def">A security vulnerability that allows a user to gain higher access rights or permissions than they should normally have.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services, privilege escalation could allow a regular banking application user to gain administrative access to customer accounts or sensitive financial data.</div><div class="glossary-meta">First seen: 24 March 2026</div>
@@ -3749,6 +3841,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial institutions use RAG systems to help customer service chatbots access current account information and regulatory documents when responding to client queries.</div><div class="glossary-meta">First seen: 24 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Retrieval Content Crafting</div>
+  <div class="glossary-def">A Chinese state-sponsored advanced persistent threat group known for conducting both espionage and financially motivated attacks, targeting cloud infrastructure and software supply chains globally.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> APT41's targeting of major cloud platforms such as AWS and Azure using typosquatting to hide command-and-control traffic poses a direct risk to financial firms relying on cloud infrastructure for core banking and data services.</div><div class="glossary-meta">First seen: 25 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">RLIKE-Based Boolean SQL Injection</div>
   <div class="glossary-def">A specific SQL injection technique that uses the RLIKE operator to create true/false conditions for extracting database information character by character.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> This attack method could be used against financial applications to slowly extract customer account details, transaction histories, or authentication credentials from banking databases.</div><div class="glossary-meta">First seen: 06 April 2026</div>
@@ -3777,6 +3874,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Sandbox Roots</div>
   <div class="glossary-def">A programming error where data written to a memory buffer exceeds the buffer's boundaries and overwrites adjacent memory locations on the program's call stack.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Stack buffer overflows in financial trading applications could allow attackers to manipulate transaction data or bypass authentication controls by overwriting return addresses.</div><div class="glossary-meta">First seen: 13 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Sanitization Issue</div>
+  <div class="glossary-def">A software vulnerability where input or output data is not properly cleaned or validated, allowing an attacker to sneak in malicious content that the application then processes as legitimate instructions.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A sanitization issue in an AI-based filesystem tool allowed prompt injection to escape the sandbox, illustrating how poor input validation in AI products can lead to full system compromise in a financial services environment.</div><div class="glossary-meta">First seen: 25 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Satellite data files</div>
@@ -3814,6 +3916,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA's censure of Sapia highlights that allowing the same staff to authorise and audit client money payments violates segregation of duties, a fundamental control required under FCA CASS rules.</div><div class="glossary-meta">First seen: 24 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Senior Managers and Certification Regime (SM&amp;CR)</div>
+  <div class="glossary-def">A UK regulatory framework that assigns clear personal accountability to senior individuals at financial services firms for the areas of the business they manage.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> UK financial firms must ensure that senior managers are formally approved and that their responsibilities are documented, meaning a security incident could result in personal regulatory liability for named individuals.</div><div class="glossary-meta">First seen: 25 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Serialized Payload</div>
   <div class="glossary-def">Malicious data that has been converted into a format for storage or transmission but contains hidden code that executes when processed.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banking APIs receiving serialized transaction data could be exploited if the payload contains code designed to manipulate account balances or transfer funds.</div><div class="glossary-meta">First seen: 30 March 2026</div>
@@ -3847,6 +3954,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Shell Access</div>
   <div class="glossary-def">The ability to interact directly with an operating system's command-line interface, allowing a user to run any program or system command on that machine.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The ThreatSonar vulnerability (CVE-2026-5967) shows that if an authenticated attacker gains shell access to an anti-ransomware appliance deployed in a financial institution, they can escalate to root and disable the very controls designed to protect the environment.</div><div class="glossary-meta">First seen: 20 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">ShinyHunters</div>
+  <div class="glossary-def">A well-known cybercriminal extortion group that steals large volumes of data from organisations and threatens to publish it publicly unless a ransom is paid.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms should be aware of groups like ShinyHunters as they increasingly target customer databases, which in a FinServ context could contain account details, identity documents, and transaction records.</div><div class="glossary-meta">First seen: 25 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Smart Contract</div>
@@ -3937,6 +4049,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">Supply Chain Risk (in software context)</div>
   <div class="glossary-def">The risk that a weakness or compromise in a third-party software tool, library, or service provider can be used as a pathway to attack the organisations that depend on it.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The Bomgar RMM exploitation and the ATLAS AI Software technique both demonstrate how financial firms can be compromised not through their own code but through trusted third-party tools such as remote management software or AI</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Synthetic Dataset</div>
+  <div class="glossary-def">A dataset made up of artificially generated data that mimics the statistical properties of real data, without containing any actual personal or sensitive records.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA and Turing Institute developed a synthetic dataset to let firms test and improve money laundering detection models without exposing real customer financial data.</div><div class="glossary-meta">First seen: 25 April 2026</div>
 </div><div class="glossary-letter">T</div>
 <div class="glossary-item">
   <div class="glossary-term">Template Tag</div>
@@ -4704,6 +4821,42 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 
   <div id="tab-log" class="tab">
     
+<div class="day-group">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-header-left">
+      <span class="day-date">25 April 2026</span>
+      <span class="day-count">1 topic</span>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="day-body">
+    
+<div class="log-entry log-entry-first">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">Remote Code Execution Vulnerability in RMM Tools as a Supply Chain Attack Vector</div>
+      <div class="log-tags"><span class="tag tag-purple">AI/ML</span><span class="tag tag-yellow">Vulnerability</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text">A critical security flaw (CVE-2026-1731) has been discovered in Bomgar, a remote monitoring and management (RMM) tool widely used by IT teams to access and manage systems remotely. This type of vulnerability allows an attacker to run their own malicious code on a target system without needing legitimate access. Because RMM tools are trusted software used across many organisations, a single flaw can have cascading effects across multiple businesses.</p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text">An attacker identifies that a target organisation is running a vulnerable version of the Bomgar RMM tool. They exploit the remote code execution flaw (CVE-2026-1731) to gain unauthorised access to the system without needing valid credentials. Once inside, they can move laterally across the network, escalating privileges and accessing sensitive systems. From this position, they can deploy ransomware or establish persistent backdoors. Because RMM tools are often used by third-party IT suppliers to manage client environments, a single compromised provider can be used as a stepping stone to attack multiple downstream organisations simultaneously.</p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text">A third-party IT managed service provider supporting several UK financial services firms runs an unpatched version of Bomgar. An attacker exploits CVE-2026-1731 to gain access to the provider's management console, then pivots into the networks of multiple banking clients. Ransomware is deployed across those client environments, disrupting operations and potentially exposing customer financial data.</p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text">Security engineers should immediately audit all RMM tools in use across your organisation and your third-party suppliers, confirming whether Bomgar is deployed and checking version numbers against the CVE-2026-1731 advisory. Where patching cannot happen immediately, consider restricting Bomgar's network access using firewall rules to limit exposure while remediation is prioritised.</p>
+
+    <div class='log-section-title'>KEY TERMS</div><div class='kt-list'><div class="kt-item"><span class="kt-term">CVE [Common Vulnerabilities and Exposures identifier], RMM Tool [Remote software managing systems externally], Remote Code Execution [Running attacker code on victim system], Supply Chain Attack [Compromising target via trusted third-party], Lateral Movement [Attacker spreading across internal network], Ransomware [Malware encrypting files for ransom]</span></div></div>
+  </div>
+</div>
+  </div>
+</div>
 <div class="day-group">
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
@@ -6436,7 +6589,7 @@ KEY TERMS: Agentic AI system [AI that autonomously uses tools], LLM Prompt Injec
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 25 April 2026 07:06 UTC &middot;
+  Built automatically by Vigil &middot; 25 April 2026 07:46 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
