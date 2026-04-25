@@ -356,7 +356,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 25 April 2026 14:36 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 25 April 2026 14:45 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -399,6 +399,123 @@
 
   <div id="tab-hot" class="tab active">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">25 April 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Names Barclays, Lloyds and UBS in Second AI Live Testing Cohort</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/fca-announces-second-cohort-ai-live-testing" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's AI Live Testing programme directly shapes the regulatory baseline for AI deployment across UK financial services — being outside this framework while peers like Barclays and Lloyds participate creates compliance and reputational risk. The involvement of Advai for automated AI assurance signals the FCA's expectation that firms adopt structured, tooled approaches to AI risk management and live monitoring. Security engineers should treat this as a leading indicator of incoming supervisory expectations around AI governance and model risk.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable — this article concerns regulatory safe deployment, not threat actor activity.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Review your firm's AI risk management framework today against the FCA's stated focus areas of risk management and live monitoring; document gaps before supervisory scrutiny intensifies given the named cohort sets a visible industry benchmark.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Flags AI Supply Chain Attacks Targeting PyTorch, LangChain and Jupyter Notebooks</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0010.001" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-cyan">Supply Chain</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK financial services firms increasingly embed AI frameworks such as PyTorch, TensorFlow, and LangChain into production pipelines and research environments; compromised packages in these dependency chains could silently corrupt models, exfiltrate training data, or provide persistent access. Jupyter notebooks — widely used in quant and data science teams — are specifically called out as a distribution vector for malicious code, making them a high-risk artefact in regulated environments. A supply chain compromise at this layer could undermine model integrity in ways that are difficult to detect through standard security tooling.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors compromise or publish malicious versions of legitimate AI software packages, poisoning the AI DevOps lifecycle to gain footholds or manipulate model behaviour without direct network intrusion.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Audit your AI/ML software bill of materials (SBOM) today — specifically verify the integrity of PyTorch, TensorFlow, LangChain, and LangFlow packages using cryptographic hashes, and restrict Jupyter notebook execution environments from accessing production data or credentials.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Documents Prompt Injection Attacks That Drain Agentic AI API Budgets</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Financial services firms deploying AI agents for tasks such as customer service, fraud analysis, or automated reporting are exposed to resource-consumption attacks that could generate significant unexpected cloud API costs and degrade service availability — both operational and financial risks in a regulated context. The technique exploits the autonomous tool-calling behaviour of agentic systems, meaning standard perimeter controls offer little protection; the attack surface lives inside the model's instruction-following logic. In a worst case, excessive fan-out queries to external APIs could also trigger data leakage or violate data residency obligations.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries use prompt injection or tool data poisoning to embed directives within agentic AI systems, coercing them into performing thousands of unnecessary, costly, or data-exposing tool calls without direct system access.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement rate limits and cost-ceiling guardrails on all agentic AI tool calls today, and add anomaly alerting for API call volume spikes originating from AI agent workflows in your cloud environment.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Catalogues Adversarial Use of LLMs for Malware, Deepfakes and Phishing at Scale</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK financial services firms face a materially elevated phishing and social engineering threat as adversaries leverage open-source LLMs hosted locally via Ollama or vLLM to generate high-volume, high-quality lure content without leaving a trail through commercial AI providers. Deepfake generation capability — explicitly referenced in this technique — poses a direct risk to voice and video-based authentication controls used in UK retail banking and wealth management. The lowered barrier to generating functional malware also increases the likelihood of targeted intrusion attempts against financial sector infrastructure.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors obtain and locally self-host open-source LLMs to generate phishing content, deepfakes, malicious commands, and malware, deliberately avoiding commercial API providers that log usage or enforce content policies.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Review the effectiveness of your email security and voice authentication controls against AI-generated content specifically — engage your vendor today to confirm whether deepfake audio detection is included in your current contract scope.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Open Finance Vision Expands Financial Data Sharing — and the Attack Surface With It</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/fca-sets-out-vision-open-finance" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's open finance vision proposes extending data sharing well beyond Open Banking to cover mortgages, pensions, investments and savings — each a high-value target for fraud and credential theft — which will introduce new third-party API integrations that security teams must assess and monitor. The emphasis on SME financial data sharing creates additional exposure, as SMEs typically have weaker security postures and could become entry points into financial data ecosystems. Security engineers should anticipate that expanded open finance APIs will attract increased adversarial probing, particularly through authorised but malicious third-party applications.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable — the article concerns regulatory policy, though AI-driven fraud exploitation of open finance APIs is an emerging downstream risk not covered in this piece.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Begin mapping which new data categories and third-party integration points your firm will expose under an open finance framework and initiate a threat model for those API surfaces before regulatory timelines force rushed implementation.
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">24 April 2026</span>
@@ -7037,7 +7154,7 @@ If it sounds like you have been flagged for a reason ot</div>
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 25 April 2026 14:36 UTC &middot;
+  Built automatically by Vigil &middot; 25 April 2026 14:45 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
