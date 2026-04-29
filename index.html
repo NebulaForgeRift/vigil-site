@@ -388,7 +388,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 28 April 2026 08:32 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 29 April 2026 08:27 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>8 sources active</span>
   </div>
@@ -398,7 +398,7 @@
   <button class="nav-btn active" onclick="showTab('hot',this)">&#128293; Hot Topics</button>
   <button class="nav-btn" onclick="showTab('actors',this)">&#128373; Threat Actors</button>
   <button class="nav-btn" onclick="showTab('log',this)">&#128214; Daily Log</button>
-  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">3</span></button>
+  <button class="nav-btn" onclick="showTab('labs',this)">&#129514; Labs <span class="badge">4</span></button>
   <button class="nav-btn" onclick="showTab('glossary',this)">&#128218; Glossary</button>
   <button class="nav-btn" onclick="showTab('quiz',this)">&#127942; Quiz History</button>
   <button class="nav-btn" onclick="showTab('redteam',this)">&#128308; Red Team</button>
@@ -409,28 +409,145 @@
   <div class="stats">
     <div class="stat-card">
       <div class="stat-label">Days Active</div>
-      <div class="stat-value cyan">29</div>
+      <div class="stat-value cyan">30</div>
       <div class="stat-sub">and counting</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Labs Completed</div>
-      <div class="stat-value green">15 <span style="font-size:16px;color:var(--text-dim)">/ 18</span></div>
-      <div class="stat-sub">83% completion</div>
+      <div class="stat-value green">15 <span style="font-size:16px;color:var(--text-dim)">/ 19</span></div>
+      <div class="stat-sub">79% completion</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">52</div>
+      <div class="stat-value yellow">53</div>
       <div class="stat-sub">auto-built from 8 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">318</div>
+      <div class="stat-value purple">328</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
 
   <div id="tab-hot" class="tab active">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">29 April 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Selects Barclays, Lloyds &amp; UBS for Second AI Live Testing Cohort</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/fca-announces-second-cohort-ai-live-testing" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's AI Live Testing programme is shaping the regulatory baseline for how UK financial institutions deploy AI — being outside this conversation means your firm may be caught off-guard by emerging compliance expectations. With major peers including Barclays and Lloyds now participating, the risk management and live monitoring frameworks being developed will likely become de facto industry standards. Security engineers should pay close attention as AI assurance requirements (via partner Advai) will intersect directly with your AI/ML risk and governance obligations.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable — this is a regulatory initiative focused on safe AI deployment, not a threat actor activity.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Review your firm's current AI risk management framework against the FCA's AI Live Testing criteria and identify gaps before these expectations harden into enforceable rules — treat this as early signal of where regulation is heading.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Warns of Supply Chain Attacks Targeting AI Frameworks Like PyTorch and LangChain</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0010.001" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-cyan">Supply Chain</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Financial services firms increasingly depend on AI/ML frameworks such as PyTorch, TensorFlow, and LangChain for fraud detection, risk modelling, and GenAI tooling — all of which are explicitly called out as targets in this ATLAS technique. A compromised dependency in your AI DevOps pipeline could silently corrupt model behaviour or exfiltrate sensitive training data, including customer financial records. The inclusion of Jupyter notebooks and configuration files as attack vectors is particularly relevant given their widespread use in data science teams within FinServ.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors compromise legitimate AI software packages or publish malicious lookalike packages to infiltrate AI development pipelines, potentially poisoning models or establishing persistent access within ML infrastructure.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Audit your AI/ML dependency chains today — enforce package integrity checks (e.g., hash pinning, private PyPI mirrors), review Jupyter notebook sharing practices, and ensure your software composition analysis (SCA) tooling explicitly covers AI frameworks.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Documents Agentic AI Resource Exhaustion via Prompt Injection</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">As UK financial services firms adopt agentic AI systems for tasks like customer service automation, research, and workflow orchestration, this technique highlights a credible and underappreciated risk — adversaries forcing agents into runaway API calls that exhaust budgets and degrade service availability. In a FinServ context, this could translate to operational disruption, unexpected third-party API costs, or DoS conditions affecting customer-facing services. The use of prompt injection as the delivery mechanism means this threat can arrive via untrusted user input or poisoned data sources with no malware involved.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors leverage prompt injection or tool data poisoning to direct agentic AI systems into performing excessive, unnecessary computations — effectively weaponising the agent's autonomy against the organisation's own infrastructure and API budgets.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Implement rate limiting, cost caps, and anomaly detection on all tool calls made by agentic AI systems, and ensure prompt injection mitigations (input validation, sandboxed execution) are in place before any agent is exposed to untrusted input.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">Sapia Fined £19m Over WealthTek Client Money Failures — Segregation of Duties at the Core</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/sapia-agrees-pay-more-than-19m-to-wealthtek-clients" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's censure of Sapia is a direct reminder that the principle of segregation of duties in client money handling remains a live enforcement priority — firms where the same individuals can both initiate and authorise payments are exposed to significant regulatory and financial risk. For security engineers, this case underscores the importance of enforcing access controls and privilege separation in systems handling client funds, not just as a technical control but as a regulatory requirement. Appointed representative relationships create inherited risk that your firm's security and compliance posture must account for.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable — this case involves governance and control failures rather than a cyber or AI threat actor.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Review access control configurations in your client money systems to confirm that payment initiation and reconciliation/approval functions are held by distinct roles with no shared accounts — document this separation as evidence for FCA oversight purposes.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">CVSS 8.2 Authentication Bypass in OpenClaw Grants Unauthenticated Operator-Level Write Access</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41394" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerability</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">An authentication bypass scoring 8.2 on CVSS that grants unauthenticated access to privileged runtime write operations is a high-severity risk for any environment running OpenClaw before version 2026.3.31. If this software is present in your technology estate — including via third-party or vendor-managed components — an attacker could perform operator-level actions without any credentials, potentially manipulating runtime configurations or processes. UK FinServ firms should treat unauthenticated privilege escalation paths as critical given regulatory expectations around access control under DORA and FCA operational resilience rules.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable based on the information available, though unauthenticated runtime write access could be exploited to tamper with AI/ML inference infrastructure if OpenClaw is used in that context.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Check immediately whether OpenClaw is present anywhere in your environment or vendor supply chain, prioritise patching to version 2026.3.31 or later, and block the affected HTTP routes at the network perimeter as a temporary mitigation if patching cannot be done immediately.
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">28 April 2026</span>
@@ -2517,11 +2634,78 @@
 
   <div id="tab-labs" class="tab">
     <div class="lab-filters">
-      <button class="filter-btn active" onclick="filterLabs('all',this)">All (18)</button>
+      <button class="filter-btn active" onclick="filterLabs('all',this)">All (19)</button>
       <button class="filter-btn" onclick="filterLabs('completed',this)">Completed (15)</button>
-      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (3)</button>
+      <button class="filter-btn" onclick="filterLabs('not-started',this)">Not Started (4)</button>
     </div>
     
+<div class="lab-card" data-status="not-started">
+  <div class="lab-card-header" onclick="toggleLab(this)">
+    <span class="status-badge status-pending">NOT STARTED</span>
+    <div class="lab-info">
+      <div class="lab-date">29 April 2026</div>
+      <div class="lab-title">Mapping Open Finance API Data Flows to Identify Unauthorised Access and Data Exfiltration Risks</div>
+      <div class="lab-meta">
+        <span class="diff-badge diff-intermediate">Intermediate</span>
+        <span class="lab-time">&#9201; 75 minutes</span>
+      </div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="lab-body">
+    <div class="source-wrap"><a href="https://www.fca.org.uk/news/blogs/promise-practice-shaping-open-finance-policy-our-smart-data-accelerator" target="_blank" class="source-link">&#128196; From promise to practice: shaping open finance policy with our Smart Data Accelerator</a></div>
+    <div class="lab-section-title">SCENARIO</div>
+    <p class="lab-text">Barclayfield Bank has joined the FCA's Smart Data Accelerator programme, integrating its mortgage affordability APIs with third-party open finance platforms. Your SOC team has been alerted by the Data Protection Officer that one of the approved third-party data recipients appears to be pulling customer financial data at unusual volumes and frequencies — well beyond what the consent agreements permit. The CISO suspects the API credentials of a legitimate open finance partner may have been compromised or abused, potentially exposing mortgage applicant income, debt, and credit data to an unauthorised party. You have been tasked with modelling the attack surface before an emergency Incident Review Board meeting at 14:00.</p>
+    <div class="lab-section-title">OBJECTIVE</div>
+    <p class="lab-text">By completing this lab, the engineer will be able to identify and document the key data exfiltration risks present in an open finance API architecture, map them to recognised security controls, and produce a structured threat model that could inform a real incident response.
+
+---</p>
+    <div class="lab-section-title">CHALLENGE</div>
+    <ol class="lab-list"><li>Open your browser and navigate to the FCA's Open Finance page: https://www.fca.org.uk/innovation/open-finance</li><li>Also read the Open Banking Limited security profile reference here: https://openbanking.atlassian.net/wiki/spaces/DZ/pages/83919096/Open+Banking+Security+Profile+Implementer+s+Draft+v1.1.2</li><li>Open a plain text file or markdown file in your text editor. Title it `open_finance_threat_model.md`</li><li>Write a brief architecture summary (4–6 bullet points) describing the typical components in an open finance data-sharing flow. Include: Customer, Data Holder (bank), Authorisation Server, Third-Party Provider (TPP), and the consent/token mechanism. You are describing the environment you are defending.
+
+---
+
+**Step 2 — Identify the Threat: Enumerate Exfiltration Vectors (20 minutes)**</li><li>Navigate to the MITRE ATT&amp;CK for Enterprise matrix: https://attack.mitre.org/tactics/TA0010/</li><li>This is the **Exfiltration** tactic. Review the techniques listed.</li><li>In your markdown file, create a section called `## Relevant Exfiltration Techniques`.</li><li>Identify and document **at least 3 techniques** that could apply to a compromised open finance API scenario. For each technique write:
+   - The technique ID and name
+   - One sentence explaining how it applies specifically to an open finance API context (think: OAuth tokens, consent payloads, bulk data pulls)
+   - A realistic attacker action at Barclayfield Bank (e.g. &quot;Attacker uses a stolen OAuth bearer token to call the `/accounts` endpoint repeatedly, pulling transaction history for 4,000 mortgage applicants over 72 hours&quot;)</li><li>Now open Claude.ai (free account) and paste in the following prompt — **copy it exactly**:
+
+```
+I am a security analyst at a UK bank participating in an open finance data-sharing programme. A third-party provider appears to be pulling customer mortgage and income data far beyond their consent scope using what appear to be valid API credentials. Acting as a threat modelling assistant, list the top 5 indicators of compromise (IOCs) or behavioural anomalies I should look for in API gateway logs to detect this kind of over-collection or credential abuse. Format as a numbered list with one specific log field or metric per item.
+```</li><li>Copy Claude's response into your markdown file under a new section: `## API Log Indicators of Compromise`. Review each item — annotate any that would NOT be available in a standard API gateway log (mark these with `[VERIFY]`).
+
+---
+
+**Step 3 — Build a Simple Threat Matrix (20 minutes)**</li><li>In your markdown file, create a table with these columns:
+
+```
+| Attack Stage | Actor Action | Asset at Risk | Existing Control | Control Gap |
+```</li><li>Complete the table with **at least 4 rows**, covering these stages of the attack chain:
+   - Initial access (credential compromise of TPP)
+   - Discovery (attacker enumerates available API endpoints)
+   - Collection (bulk data pull beyond consent scope)
+   - Exfiltration (data leaves the bank's environment to attacker-controlled infrastructure)</li><li>For each row, think carefully about what a UK financial institution would realistically have in place (e.g. OAuth 2.0, FAPI security profile, FCA-mandated consent dashboards) and where the gaps genuinely lie.</li><li>Return to Claude.ai and use this prompt:
+
+```
+In an open finance API environment using OAuth 2.0 and the FAPI security profile, what rate-limiting or anomaly detection controls are typically missing or poorly implemented that would allow a malicious or compromised third-party provider to exfiltrate bulk customer financial data without triggering alerts? Give me 3 specific technical gaps with brief explanations.
+```</li><li>Add Claude's response as a new section `## Identified Control Gaps` and critically evaluate each point — mark any that you think are incorrect or overstated with a note explaining why.
+
+---
+
+**Step 4 — Simulate a Log Review Scenario (10 minutes)**</li><li>In your text editor, create a new file called `mock_api_log.txt`</li><li>Manually write 10 lines of fake but realistic API gateway log entries. Model them on a standard format — include fields for: timestamp, TPP client ID, endpoint called, HTTP status code, response size in bytes, and request frequency.</li><li>Make 3 of the 10 entries look suspicious based on the IOCs you documented in Step 2. For example: unusually large response sizes, endpoint calls outside normal business hours, or repeated calls to a bulk data endpoint within seconds.</li><li>Write a short paragraph beneath the log (in your notes file) explaining which 3 entries are suspicious and exactly why, referencing the specific IOC from your earlier list.
+
+---</li></ol>
+    <div class="lab-section-title">DEFENCE TASK</div>
+    <p class="lab-text">Using your completed threat model and IOC list, write a one-page **API Monitoring Policy** (in your markdown file, under `## Defence: API Monitoring Policy`) that Barclayfield Bank could implement to detect and respond to open finance data over-collection. Your policy must include:
+
+- A definition of &quot;normal&quot; TPP data access</p>
+    
+    
+    <div class="terminal-tip">
+      &#9889; Complete this lab by running <code>python complete_lab.py</code> in your terminal.
+    </div>
+  </div>
+</div>
 <div class="lab-card" data-status="not-started">
   <div class="lab-card-header" onclick="toggleLab(this)">
     <span class="status-badge status-pending">NOT STARTED</span>
@@ -3294,7 +3478,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 318 terms&#8230;"
+           placeholder="Search 328 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">A</div>
@@ -3332,6 +3516,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-term">AES-CBC</div>
   <div class="glossary-def">An encryption mode that can be vulnerable to certain attacks when implemented incorrectly, allowing attackers to potentially recover encryption keys.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial institutions using this encryption mode for secure communications need to ensure proper implementation to prevent key recovery attacks on sensitive transaction data.</div><div class="glossary-meta">First seen: 28 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Agent Configuration Files</div>
+  <div class="glossary-def">Files stored locally or in a workspace that define how an AI agent is set up, including credentials, tool permissions, endpoint URLs, and other sensitive operational parameters.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The Backslash proof-of-concept attack against Cursor demonstrated that a malicious prompt injected via an MCP server could instruct the agent to exfiltrate these configuration files, potentially exposing API keys or internal system credentials used by a financial firm's AI tooling.</div><div class="glossary-meta">First seen: 29 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Agentic AI System</div>
@@ -3554,6 +3743,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA issued cease and desist letters during its first illegal crypto trading operation, signalling that peer-to-peer crypto trading without FCA registration is treated as a criminal matter, not just a compliance breach.</div><div class="glossary-meta">First seen: 28 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Certification Regime</div>
+  <div class="glossary-def">A regulatory framework requiring financial firms to assess and formally certify that certain employees are fit and proper to perform their roles, on at least an annual basis.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Under SM&amp;CR reforms, the FCA removed the need to certify individuals holding multiple overlapping functions, reducing the total number of certification roles a UK financial firm must maintain.</div><div class="glossary-meta">First seen: 29 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">ClickFix</div>
   <div class="glossary-def">A social engineering technique where victims are tricked into manually running malicious commands on their own machine, often by being shown a fake error message with instructions to &quot;fix&quot; a problem.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The Lazarus Group used ClickFix to target high-value individuals at organisations, a tactic that could be used against executives or developers at financial institutions to gain initial access to sensitive systems.</div><div class="glossary-meta">First seen: 25 April 2026</div>
@@ -3711,6 +3905,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 <div class="glossary-item">
   <div class="glossary-term">Data Exfiltration</div>
   <div class="glossary-def">The unauthorised copying or transfer of</div>
+  
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Data Leak (AI Context)</div>
+  <div class="glossary-def">The unintended exposure of sensitive information caused by an AI agent or model being manip</div>
   
 </div>
 <div class="glossary-item">
@@ -3888,6 +4087,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-def">Hardware components in network routers that process and forward data packets at high speeds.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Compromised FPCs in financial networks could allow attackers to intercept or manipulate high-frequency trading communications and payment processing traffic.</div><div class="glossary-meta">First seen: 10 April 2026</div>
 </div><div class="glossary-letter">G</div>
+<div class="glossary-item">
+  <div class="glossary-term">Gateway-Side Tool Access</div>
+  <div class="glossary-def">The ability to invoke tools or execute functions on the central gateway component of a networked system, rather than being restricted to actions on the local or paired node.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In CVE-2026-41378, nodes with the role of &quot;node&quot; were incorrectly granted unrestricted gateway-side tool access, meaning a compromised credential at a peripheral node could give an attacker full control of the central gateway in a financial services platform.</div><div class="glossary-meta">First seen: 29 April 2026</div>
+</div>
 <div class="glossary-item">
   <div class="glossary-term">Generative AI Models</div>
   <div class="glossary-def">AI systems that can create new content like text, images, or code based on prompts and training data.</div>
@@ -4074,6 +4278,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Threat groups have used malicious macros in email attachments to deliver backdoors targeting financial sector employees, making macro-enabled documents a key concern for FinServ security teams.</div><div class="glossary-meta">First seen: 15 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">matlab-mcp-server</div>
+  <div class="glossary-def">An open-source Model Context Protocol server that exposes MATLAB code generation and execution capabilities as tools that AI agents can call remotely.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> CVE-2026-7272 demonstrated that a path traversal flaw in this MCP server's script execution function could be exploited remotely, posing a risk to any financial firm using AI-assisted data analysis workflows built on MATLAB.</div><div class="glossary-meta">First seen: 29 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">MCP Server (Model Context Protocol Server)</div>
   <div class="glossary-def">A server that provides tools and data sources to an AI agent, extending what the agent can do by giving it the ability to call external services or read external content.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If a financial services AI assistant connects to an MCP server that scrapes external content, an attacker could embed malicious instructions in that content to hijack the agent's actions and exfiltrate credentials.</div><div class="glossary-meta">First seen: 20 April 2026</div>
@@ -4234,6 +4443,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers use packet-capturing backdoors in financial networks to secretly monitor sensitive communications like transaction data or customer information.</div><div class="glossary-meta">First seen: 24 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Paired Node Credentials</div>
+  <div class="glossary-def">Authentication credentials issued to a specific networked node that has been formally registered and trusted by a gateway or central system, allowing it to send authorised requests.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> CVE-2026-41378 showed that attackers holding paired node credentials in OpenClaw could abuse unrestricted agent request dispatch to escalate privileges and achieve remote code execution on the gateway — a serious risk in any financial platform using distributed agent architectures.</div><div class="glossary-meta">First seen: 29 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Pairing Requirements</div>
   <div class="glossary-def">Authentication mechanisms that require two systems or components to establish a secure connection through a mutual verification process.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Payment processing systems use pairing requirements to ensure only authorized terminals can connect to the backend, preventing rogue devices from processing fraudulent transactions.</div><div class="glossary-meta">First seen: 11 April 2026</div>
@@ -4339,9 +4553,19 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a financial services AI assistant, a poorly validated prompt template could be manipulated by an attacker to extract confidential customer data or bypass intended model behaviour.</div><div class="glossary-meta">First seen: 16 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Proof-of-Concept (PoC) Exploit</div>
+  <div class="glossary-def">A working demonstration, usually created by a researcher, that shows a vulnerability is real and exploitable, without necessarily causing harm, in order to prove the risk exists.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The Backslash team published a PoC showing how an MCP server could be weaponised for indirect prompt injection against Cursor, giving financial security teams concrete evidence of the attack path to assess in their own AI development environments.</div><div class="glossary-meta">First seen: 29 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Proxy Delivery Mode</div>
   <div class="glossary-def">A file serving method where a server acts as an intermediary, loading requested content into memory before forwarding it to the client.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial document management systems using proxy delivery could be vulnerable to memory exhaustion attacks if attackers request large files with unbounded range headers.</div><div class="glossary-meta">First seen: 24 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Prudential Regulation Authority (PRA)</div>
+  <div class="glossary-def">The UK regulatory body, part of the Bank of England, responsible for the prudential supervision of banks, insurers, and major investment firms to ensure their financial safety and soundness.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The PRA worked alongside the FCA to reform the SM&amp;CR, aiming to reduce compliance costs for regulated financial services firms while maintaining senior manager accountability.</div><div class="glossary-meta">First seen: 29 April 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">public-facing application</div>
@@ -4599,6 +4823,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Vulnerabilities in smart contracts used by DeFi platforms can be exploited to redirect funds, as regulators in the UK consider how existing financial services law applies to smart contract-based products.</div><div class="glossary-meta">First seen: 21 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Smart Data Accelerator</div>
+  <div class="glossary-def">A regulatory testing environment where financial firms can build and demonstrate technical prototypes using customer data sharing, without operating in a live production environment.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA uses its Smart Data Accelerator to let firms test open finance solutions for real-world problems like mortgages and SME lending, helping shape future policy before rules are finalised.</div><div class="glossary-meta">First seen: 29 April 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">SME (Small and Medium-Sized Enterprise)</div>
   <div class="glossary-def">A business classified by size, typically by employee count or turnover, that sits below large corporate thresholds and is often underserved by standard financial products.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA is exploring how open finance can give lenders a richer, more accurate picture of SME finances, which has security implications for how SME financial data is shared, consented to, and protected.</div><div class="glossary-meta">First seen: 18 April 2026</div>
@@ -4698,6 +4927,11 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="glossary-def">A dataset made up of artificially generated data that mimics the statistical properties of real data, without containing any actual personal or sensitive records.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA and Turing Institute developed a synthetic dataset to let firms test and improve money laundering detection models without exposing real customer financial data.</div><div class="glossary-meta">First seen: 25 April 2026</div>
 </div><div class="glossary-letter">T</div>
+<div class="glossary-item">
+  <div class="glossary-term">TechSprint</div>
+  <div class="glossary-def">A time-limited collaborative event where technologists, regulators, and industry participants work together intensively to build prototype solutions to a defined problem.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA ran two TechSprints between November 2025 and February 2026, working with 17 firms to prototype open finance solutions as part of its Smart Data Accelerator programme.</div><div class="glossary-meta">First seen: 29 April 2026</div>
+</div>
 <div class="glossary-item">
   <div class="glossary-term">Template Tag</div>
   <div class="glossary-def">A placeholder in web applications that gets replaced with dynamic content when pages are rendered.</div>
@@ -5037,7 +5271,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   </div>
   <div class="ta-stat ta-stat-purple">
     <div class="ta-stat-label">Total Sightings</div>
-    <div class="ta-stat-value" style="color:var(--purple)">34</div>
+    <div class="ta-stat-value" style="color:var(--purple)">38</div>
     <div class="ta-stat-sub">across all digests</div>
   </div>
 </div>
@@ -5063,7 +5297,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
       <div class="ta-card-meta">
         <span>&#128176; Criminal</span>
         <span>&#127758; United Kingdom (leader identified as British national)</span>
-        <span class="ta-sighting-count">&#128065; 2 sightings</span>
+        <span class="ta-sighting-count">&#128065; 3 sightings</span>
       </div>
       <div class="ta-card-sectors"></div>
     </div>
@@ -5085,8 +5319,14 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
         <span class="ta-none">None recorded</span>
       </div>
     </div>
-    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 2 total</div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 3 total</div>
     <div class="ta-timeline">
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">29 April 2026</div>
+  <div class="ta-timeline-summary">Member arrested in Finland faces US federal charges, indicating law enforcement action following intrusion activity attributed to the collective; Group operates as a hacking collective with multiple members, suggesting distributed, organised criminal structure; No specific TTPs detailed in today's article beyond general characterisation as a &quot;prolific&quot; threat group Scattered Spider has a documented history of targeting large enterprises including financial and insurance sector organisations, making any active law enforcement developments directly relevant to understanding the group's current operational posture.</div>
+  
+</div>
 <div class="ta-timeline-item">
   <div class="ta-timeline-dot"></div>
   <div class="ta-timeline-date">22 April 2026</div>
@@ -5111,7 +5351,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
       <div class="ta-card-meta">
         <span>&#127988; Nation-State</span>
         <span>&#127758; North Korea</span>
-        <span class="ta-sighting-count">&#128065; 2 sightings</span>
+        <span class="ta-sighting-count">&#128065; 3 sightings</span>
       </div>
       <div class="ta-card-sectors"></div>
     </div>
@@ -5133,8 +5373,14 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
         <span class="ta-none">None recorded</span>
       </div>
     </div>
-    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 2 total</div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 3 total</div>
     <div class="ta-timeline">
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">29 April 2026</div>
+  <div class="ta-timeline-summary">Leveraging ClickFix technique for initial access, representing adoption of a contemporary social-engineering lure method; Targeting macOS users specifically, indicating active development of cross-platform capabilities beyond traditional Windows-focused tooling; Focused on data theft from high-value individuals (e.g., executives), suggesting intelligence collection and/or financial theft motivation Lazarus has a well-established history of targeting financial institutions for theft and is now actively expanding macOS capabilities and executive-targeting techniques, which is directly relevant to UK financial firms whose senior leadership may use Apple devices.</div>
+  
+</div>
 <div class="ta-timeline-item">
   <div class="ta-timeline-dot"></div>
   <div class="ta-timeline-date">27 April 2026</div>
@@ -5159,7 +5405,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
       <div class="ta-card-meta">
         <span>&#128176; Criminal</span>
         <span>&#127758; Unknown (not specified in articles)</span>
-        <span class="ta-sighting-count">&#128065; 13 sightings</span>
+        <span class="ta-sighting-count">&#128065; 14 sightings</span>
       </div>
       <div class="ta-card-sectors"><span class="ta-sector-tag">Critical Infrastructure</span><span class="ta-sector-tag">Energy</span><span class="ta-sector-tag">Financial Services</span></div>
     </div>
@@ -5181,8 +5427,14 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
         <span class="ta-none">None recorded</span>
       </div>
     </div>
-    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 13 total</div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 14 total</div>
     <div class="ta-timeline">
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">29 April 2026</div>
+  <div class="ta-timeline-summary">Developed and deployed TrickBot, a C++ Trojan spyware first observed September 2016; Used TrickBot to target banking sites specifically, indicating financially motivated, sector-focused operations; Pivoted to &quot;big game hunting&quot; ransomware campaigns across all sectors, suggesting escalation from credential theft to high-impact extortion Wizard Spider directly targeted banking institutions across Europe using TrickBot for credential harvesting and has since expanded to destructive ransomware operations, posing a dual financial and operational risk to UK financial services firms.</div>
+  
+</div>
 <div class="ta-timeline-item">
   <div class="ta-timeline-dot"></div>
   <div class="ta-timeline-date">28 April 2026</div>
@@ -5360,6 +5612,54 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   </div>
 </div>
 <div class="ta-card" data-level="High"
+     data-search="apt29 cozy bear midnight blizzard">
+  <div class="ta-card-accent" style="background:var(--yellow)"></div>
+  <div class="ta-card-summary" onclick="taToggle(this)">
+    <div class="ta-card-left">
+      <div class="ta-card-name">APT29</div>
+      <div class="ta-card-alias">Cozy Bear, Midnight Blizzard</div>
+      <div class="ta-card-meta">
+        <span>&#127988; Nation-State</span>
+        <span>&#127758; Unknown (no country attribution stated in the articles)</span>
+        <span class="ta-sighting-count">&#128065; 2 sightings</span>
+      </div>
+      <div class="ta-card-sectors"></div>
+    </div>
+    <div class="ta-card-right">
+      <span class="ta-threat-badge badge-high">High</span>
+      <span class="ta-chevron">&#9660;</span>
+    </div>
+  </div>
+  <div class="ta-card-detail">
+    <div class="ta-detail-grid">
+      <div>
+        <div class="ta-detail-title">MITRE ATT&amp;CK TTPs</div>
+        <span class="ta-none">None recorded</span>
+      </div>
+      <div>
+        <div class="ta-detail-title">Tools &amp; Malware</div>
+        <span class="ta-none">None recorded</span>
+        <div class="ta-detail-title" style="margin-top:14px">CVEs</div>
+        <span class="ta-none">None recorded</span>
+      </div>
+    </div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 2 total</div>
+    <div class="ta-timeline">
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">29 April 2026</div>
+  <div class="ta-timeline-summary">Deployed PowerDuke backdoor malware in 2016 operations; Used spearphishing via Microsoft Word or Excel attachments containing malicious macros for initial access; Relied on document-based delivery mechanisms to establish persistent backdoor access APT29's use of macro-laced Office document lures is a persistent and widely applicable technique that UK financial firms must defend against, particularly given the sector's heavy reliance on Office-format document workflows.</div>
+  
+</div>
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">27 April 2026</div>
+  <div class="ta-timeline-summary">Deployed PowerDuke, a backdoor tool, for persistent access to compromised environments; Delivered malware via malicious macros embedded in Microsoft Word or Excel email attachments (spearphishing); Operated the PowerDuke campaign at least as far back as 2016 APT29's use of macro-laced Office document lures is a delivery technique commonly deployed against financial sector targets, meaning UK firms receiving such attachments remain exposed to this tradecraft.</div>
+  
+</div></div>
+  </div>
+</div>
+<div class="ta-card" data-level="High"
      data-search="apt28 fancy bear">
   <div class="ta-card-accent" style="background:var(--yellow)"></div>
   <div class="ta-card-summary" onclick="taToggle(this)">
@@ -5439,48 +5739,6 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
   <div class="ta-timeline-dot"></div>
   <div class="ta-timeline-date">22 April 2026</div>
   <div class="ta-timeline-summary">Ransomware operations involving structured ransom payment processes; Exploitation of insider proximity — today's reporting highlights abuse of the negotiation and payment process itself as an attack vector BlackCat's ransomware operations, and the demonstrated risk of insider compromise within ransom-response workflows, are directly relevant to UK financial firms who may engage third-party negotiators during an incident.</div>
-  
-</div></div>
-  </div>
-</div>
-<div class="ta-card" data-level="High"
-     data-search="apt29 cozy bear midnight blizzard">
-  <div class="ta-card-accent" style="background:var(--yellow)"></div>
-  <div class="ta-card-summary" onclick="taToggle(this)">
-    <div class="ta-card-left">
-      <div class="ta-card-name">APT29</div>
-      <div class="ta-card-alias">Cozy Bear, Midnight Blizzard</div>
-      <div class="ta-card-meta">
-        <span>&#127988; Nation-State</span>
-        <span>&#127758; Unknown (no country attribution stated in the articles)</span>
-        <span class="ta-sighting-count">&#128065; 1 sighting</span>
-      </div>
-      <div class="ta-card-sectors"></div>
-    </div>
-    <div class="ta-card-right">
-      <span class="ta-threat-badge badge-high">High</span>
-      <span class="ta-chevron">&#9660;</span>
-    </div>
-  </div>
-  <div class="ta-card-detail">
-    <div class="ta-detail-grid">
-      <div>
-        <div class="ta-detail-title">MITRE ATT&amp;CK TTPs</div>
-        <span class="ta-none">None recorded</span>
-      </div>
-      <div>
-        <div class="ta-detail-title">Tools &amp; Malware</div>
-        <span class="ta-none">None recorded</span>
-        <div class="ta-detail-title" style="margin-top:14px">CVEs</div>
-        <span class="ta-none">None recorded</span>
-      </div>
-    </div>
-    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 1 total</div>
-    <div class="ta-timeline">
-<div class="ta-timeline-item">
-  <div class="ta-timeline-dot"></div>
-  <div class="ta-timeline-date">27 April 2026</div>
-  <div class="ta-timeline-summary">Deployed PowerDuke, a backdoor tool, for persistent access to compromised environments; Delivered malware via malicious macros embedded in Microsoft Word or Excel email attachments (spearphishing); Operated the PowerDuke campaign at least as far back as 2016 APT29's use of macro-laced Office document lures is a delivery technique commonly deployed against financial sector targets, meaning UK firms receiving such attachments remain exposed to this tradecraft.</div>
   
 </div></div>
   </div>
@@ -5573,6 +5831,42 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 
   <div id="tab-log" class="tab">
     
+<div class="day-group">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-header-left">
+      <span class="day-date">29 April 2026</span>
+      <span class="day-count">1 topic</span>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="day-body">
+    
+<div class="log-entry log-entry-first">
+  <div class="log-entry-header" onclick="toggleEntry(this)">
+    <div class="log-entry-left">
+      <div class="log-topic">Path Traversal Vulnerability in a MATLAB Model Context Protocol (MCP) Server</div>
+      <div class="log-tags"><span class="tag tag-purple">AI/ML</span><span class="tag tag-yellow">Vulnerability</span></div>
+    </div>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="log-entry-body">
+    <div class="log-section-title">WHAT IT IS</div>
+    <p class="log-text"></p>
+
+    <div class="log-section-title">HOW IT WORKS</div>
+    <p class="log-text"></p>
+
+    <div class="log-section-title">REAL WORLD EXAMPLE</div>
+    <p class="log-text example-text"></p>
+
+    <div class="log-section-title">DEFENSIVE ACTION</div>
+    <p class="log-text defence-text"></p>
+
+    
+  </div>
+</div>
+  </div>
+</div>
 <div class="day-group">
   <div class="day-header" onclick="toggleDay(this)">
     <div class="day-header-left">
@@ -9183,7 +9477,7 @@ Please provide the actual code or file paths where the patterns you mentioned ar
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 28 April 2026 08:32 UTC &middot;
+  Built automatically by Vigil &middot; 29 April 2026 08:27 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
