@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vigil — My Progress</title>
+  <style>
+    :root {
+      --bg:        #0d1117;
+      --surface:   #161b22;
+      --surface2:  #1c2128;
+      --border:    #30363d;
+      --cyan:      #39d0d8;
+      --cyan-dim:  #1a4a4d;
+      --green:     #3fb950;
+      --yellow:    #d29922;
+      --red:       #f85149;
+      --purple:    #bc8cff;
+      --orange:    #f0883e;
+      --text:      #e6edf3;
+      --text-dim:  #7d8590;
+      --text-mid:  #adbac7;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-name { font-size: 20px; font-weight: 700; color: var(--cyan); letter-spacing: 3px; text-transform: uppercase; }
+    .logo-sub  { font-size: 11px; color: var(--text-dim); letter-spacing: 1px; }
+    .header-right { font-size: 12px; color: var(--text-dim); }
+
+    /* ── MAIN LAYOUT ── */
+    main { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }
+
+    .page-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--cyan);
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .page-sub { font-size: 13px; color: var(--text-dim); margin-bottom: 32px; }
+
+    /* ── STAT CARDS (top row) ── */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .stat-label { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+    .stat-value { font-size: 28px; font-weight: 700; line-height: 1.1; }
+    .stat-sub   { font-size: 12px; color: var(--text-dim); }
+    .cyan   { color: var(--cyan);   }
+    .green  { color: var(--green);  }
+    .yellow { color: var(--yellow); }
+    .purple { color: var(--purple); }
+    .orange { color: var(--orange); }
+
+    /* ── SECTION HEADINGS ── */
+    .section {
+      margin-bottom: 32px;
+    }
+    .section-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--cyan);
+      border-bottom: 1px solid var(--cyan-dim);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    /* ── TWO-COLUMN LAYOUT ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 700px) {
+      .two-col { grid-template-columns: 1fr; }
+    }
+
+    /* ── STREAK CALENDAR ── */
+    .streak-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .streak-count {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--orange);
+    }
+    .streak-label { font-size: 12px; color: var(--text-dim); }
+    .streak-best  { font-size: 13px; color: var(--text-dim); }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 3px;
+    }
+    .cal-day-label {
+      font-size: 10px;
+      color: var(--text-dim);
+      text-align: center;
+      padding-bottom: 4px;
+    }
+    .cal-day {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 3px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+    }
+    .cal-day.active   { background: var(--orange); border-color: var(--orange); }
+    .cal-day.today    { border-color: var(--cyan); }
+    .cal-day.inactive { background: var(--surface2); opacity: 0.4; }
+
+    /* ── WEEKLY QUIZ SCORES ── */
+    .quiz-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .quiz-row:last-child { border-bottom: none; }
+    .quiz-week  { font-size: 12px; color: var(--text-dim); width: 110px; flex-shrink: 0; }
+    .quiz-topic { font-size: 13px; color: var(--text-mid); flex: 1; }
+    .quiz-bar-wrap { width: 80px; background: var(--surface2); border-radius: 3px; height: 6px; flex-shrink: 0; }
+    .quiz-bar { height: 6px; border-radius: 3px; }
+    .quiz-pct { font-size: 13px; font-weight: 600; width: 38px; text-align: right; flex-shrink: 0; }
+
+    /* ── SKILLS RADAR (canvas) ── */
+    #radarCanvas {
+      display: block;
+      margin: 0 auto;
+      max-width: 340px;
+      width: 100%;
+    }
+
+    /* ── TOPIC PROGRESS LIST ── */
+    .topic-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .topic-row:last-child { border-bottom: none; }
+    .topic-name { font-size: 13px; color: var(--text-mid); flex: 1; }
+    .topic-levels { display: flex; gap: 4px; }
+    .level-pip {
+      width: 20px; height: 8px; border-radius: 2px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+    }
+    .level-pip.done-beginner     { background: var(--green);  border-color: var(--green); }
+    .level-pip.done-intermediate { background: var(--yellow); border-color: var(--yellow); }
+    .level-pip.done-advanced     { background: var(--cyan);   border-color: var(--cyan); }
+
+    /* ── BADGES ── */
+    .badge-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .badge-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      width: 72px;
+    }
+    .badge-circle {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      border: 2px solid var(--border);
+    }
+    .badge-circle.gold   { background: rgba(210,153,34,0.2); border-color: var(--yellow); }
+    .badge-circle.silver { background: rgba(173,186,199,0.2); border-color: #adbac7; }
+    .badge-circle.bronze { background: rgba(240,136,62,0.2); border-color: var(--orange); }
+    .badge-circle.locked { background: var(--surface2); opacity: 0.3; }
+    .badge-name { font-size: 10px; color: var(--text-dim); text-align: center; line-height: 1.3; }
+
+    /* ── NEXT FOCUS PANEL ── */
+    .focus-panel {
+      background: linear-gradient(135deg, rgba(57,208,216,0.06) 0%, rgba(188,140,255,0.06) 100%);
+      border: 1px solid var(--cyan-dim);
+      border-radius: 10px;
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .focus-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--cyan);
+    }
+    .focus-topic {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .focus-reason { font-size: 13px; color: var(--text-mid); line-height: 1.6; }
+    .focus-btn {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 8px 18px;
+      background: var(--cyan);
+      color: #0d1117;
+      font-weight: 700;
+      font-size: 13px;
+      border-radius: 6px;
+      text-decoration: none;
+      width: fit-content;
+      cursor: pointer;
+      border: none;
+    }
+    .focus-btn:hover { background: #2ab8c0; }
+
+    /* ── EMPTY STATE ── */
+    .empty { color: var(--text-dim); font-size: 13px; padding: 16px 0; }
+
+    /* ── POINTS TOTAL ── */
+    .points-ring {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .ring-wrap { position: relative; width: 90px; height: 90px; flex-shrink: 0; }
+    .ring-wrap svg { transform: rotate(-90deg); }
+    .ring-center {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .ring-pts { font-size: 18px; font-weight: 700; color: var(--purple); }
+    .ring-lbl { font-size: 9px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .header-nav { display: flex; gap: 8px; }
+    .nav-link {
+      font-size: 13px;
+      color: var(--text-dim);
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .nav-link:hover {
+      color: var(--cyan);
+      border-color: var(--cyan-dim);
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: var(--text-dim);
+      border-top: 1px solid var(--border);
+      margin-top: 32px;
+    }
+    footer a { color: var(--cyan); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">
+    <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+      <circle cx="20" cy="20" r="19" stroke="#39d0d8" stroke-width="1.5" stroke-dasharray="3 2"/>
+      <circle cx="20" cy="20" r="13" stroke="#39d0d8" stroke-width="1" opacity="0.4"/>
+      <circle cx="20" cy="20" r="3" fill="#39d0d8"/>
+      <circle cx="20" cy="20" r="1.5" fill="#0d1117"/>
+      <path d="M20 1 L20 20" stroke="#39d0d8" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="29" cy="11" r="2" fill="#39d0d8" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.2;0.9" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    <div>
+      <div class="logo-name">Vigil</div>
+      <div class="logo-sub">My Progress</div>
+    </div>
+  </a>
+  <nav class="header-nav">
+    <a class="nav-link" href="index.html">⬡ Dashboard</a>
+    <a class="nav-link" href="learner.html">📚 Learner</a>
+    <a class="nav-link" href="weekly.html">🏆 Weekly Quiz</a>
+  </nav>
+</header>
+
+<main>
+  <div class="page-title">My Progress</div>
+  <div class="page-sub" id="pageSubtitle">Loading your learning data...</div>
+
+  <!-- ── TOP STAT CARDS ── -->
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-label">Topics completed</div>
+      <div class="stat-value cyan" id="statTopics">—</div>
+      <div class="stat-sub" id="statTopicsSub">across all levels</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Total points</div>
+      <div class="stat-value purple" id="statPoints">—</div>
+      <div class="stat-sub" id="statPointsSub">from quizzes &amp; completion</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Avg quiz score</div>
+      <div class="stat-value yellow" id="statQuizAvg">—</div>
+      <div class="stat-sub" id="statQuizSub">weekly quizzes</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Current streak</div>
+      <div class="stat-value orange" id="statStreak">—</div>
+      <div class="stat-sub" id="statStreakSub">days in a row</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Badges earned</div>
+      <div class="stat-value green" id="statBadges">—</div>
+      <div class="stat-sub">bronze / silver / gold</div>
+    </div>
+  </div>
+
+  <!-- ── NEXT FOCUS ── -->
+  <div class="section">
+    <div class="section-title">Suggested next focus</div>
+    <div class="focus-panel" id="focusPanel">
+      <div class="focus-title">Recommended topic</div>
+      <div class="focus-topic" id="focusTopic">Loading...</div>
+      <div class="focus-reason" id="focusReason"></div>
+      <a class="focus-btn" href="learner.html">Go to learner →</a>
+    </div>
+  </div>
+
+  <!-- ── STREAK + QUIZ ROW ── -->
+  <div class="two-col">
+
+    <!-- Streak calendar -->
+    <div class="section" style="margin-bottom:0">
+      <div class="section-title">Streak — last 28 days</div>
+      <div class="streak-header">
+        <div>
+          <div class="streak-count" id="streakCurrent">0</div>
+          <div class="streak-label">day streak</div>
+        </div>
+        <div class="streak-best" id="streakBest">Best: 0 days</div>
+      </div>
+      <div style="margin-bottom:6px; display:grid; grid-template-columns:repeat(7,1fr); gap:3px;">
+        <div class="cal-day-label">M</div>
+        <div class="cal-day-label">T</div>
+        <div class="cal-day-label">W</div>
+        <div class="cal-day-label">T</div>
+        <div class="cal-day-label">F</div>
+        <div class="cal-day-label">S</div>
+        <div class="cal-day-label">S</div>
+      </div>
+      <div class="calendar-grid" id="calendarGrid"></div>
+    </div>
+
+    <!-- Weekly quiz scores -->
+    <div class="section" style="margin-bottom:0">
+      <div class="section-title">Weekly quiz scores</div>
+      <div id="quizScoreList"><div class="empty">No quiz scores yet.</div></div>
+    </div>
+
+  </div>
+
+  <!-- ── SKILLS RADAR + TOPIC PROGRESS ROW ── -->
+  <div class="two-col">
+
+    <!-- Skills radar -->
+    <div class="section" style="margin-bottom:0">
+      <div class="section-title">Skills coverage</div>
+      <canvas id="radarCanvas" width="340" height="300"></canvas>
+    </div>
+
+    <!-- Topic progress list -->
+    <div class="section" style="margin-bottom:0">
+      <div class="section-title">Topic progress</div>
+      <div id="topicList"><div class="empty">No topics started yet.</div></div>
+    </div>
+
+  </div>
+
+  <!-- ── BADGES ── -->
+  <div class="section">
+    <div class="section-title">Badges</div>
+    <div class="badge-grid" id="badgeGrid">
+      <div class="empty">No badges earned yet — complete topics to earn them.</div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  Built automatically by Vigil &middot; 30 Apr 2026 20:16 UTC &middot;
+  <a href="index.html">Dashboard</a> &middot;
+  <a href="learner.html">Learner</a> &middot;
+  <a href="weekly.html">Weekly Quiz</a>
+</footer>
+
+<script>
+(function() {
+  // ── helpers ──────────────────────────────────────────────────────────────
+
+  function safeGet(key) {
+    try { return JSON.parse(localStorage.getItem(key) || 'null'); }
+    catch(e) { return null; }
+  }
+
+  function safeSet(key, val) {
+    try { localStorage.setItem(key, JSON.stringify(val)); } catch(e) {}
+  }
+
+  function isoDate(d) {
+    return d.toISOString().slice(0,10);
+  }
+
+  // ── load data from localStorage ──────────────────────────────────────────
+
+  const learnerProgress = safeGet('vigil_learner_progress') || {};   // topicKey → {level, completed, points, badge}
+  const totalPoints     = safeGet('vigil_learner_points')   || 0;
+  const weeklyScores    = safeGet('vigil_weekly_scores')    || {};   // "YYYY-MM-DD" → {score, total, pct, topic, attempts}
+  const weeklyStreak    = safeGet('vigil_weekly_streak')    || { current: 0, best: 0, lastDate: null };
+
+  // ── track today's visit for streak ──────────────────────────────────────
+
+  const today    = isoDate(new Date());
+  let visited    = safeGet('vigil_progress_visited') || [];
+  if (!visited.includes(today)) {
+    visited.push(today);
+    safeSet('vigil_progress_visited', visited);
+  }
+
+  // compute progress streak (consecutive days ending today)
+  function computeStreak(visitedArr) {
+    const set = new Set(visitedArr);
+    let streak = 0;
+    let d = new Date();
+    while (true) {
+      const s = isoDate(d);
+      if (!set.has(s)) break;
+      streak++;
+      d.setDate(d.getDate() - 1);
+    }
+    let best = safeGet('vigil_progress_best_streak') || 0;
+    if (streak > best) {
+      best = streak;
+      safeSet('vigil_progress_best_streak', best);
+    }
+    return { current: streak, best };
+  }
+
+  const progressStreak = computeStreak(visited);
+
+  // use whichever streak source is higher (weekly or daily)
+  const streakCurrent = Math.max(progressStreak.current, weeklyStreak.current || 0);
+  const streakBest    = Math.max(progressStreak.best,    weeklyStreak.best    || 0);
+
+  // ── topic categories for radar ───────────────────────────────────────────
+
+  const CATEGORIES = {
+  "Prompt Injection & LLMs": [
+    "prompt injection",
+    "llm",
+    "jailbreak",
+    "ai agent",
+    "agentic",
+    "chatgpt",
+    "gpt",
+    "claude",
+    "generative"
+  ],
+  "Ransomware & Malware": [
+    "ransomware",
+    "malware",
+    "ekans",
+    "lockbit",
+    "blackcat",
+    "wiper",
+    "trojan",
+    "backdoor"
+  ],
+  "Threat Actors": [
+    "apt",
+    "nation state",
+    "cozy bear",
+    "fancy bear",
+    "lazarus",
+    "threat actor",
+    "attribution"
+  ],
+  "Vulnerabilities & CVEs": [
+    "cve",
+    "zero-day",
+    "rce",
+    "exploit",
+    "patch",
+    "nvd",
+    "cisa kev",
+    "vulnerability"
+  ],
+  "Supply Chain & Cloud": [
+    "supply chain",
+    "cloud",
+    "s3",
+    "kubernetes",
+    "docker",
+    "ci/cd",
+    "github actions",
+    "npm"
+  ],
+  "FinServ & Regulation": [
+    "pci dss",
+    "fca",
+    "pra",
+    "swift",
+    "open banking",
+    "bacs",
+    "faster payments",
+    "gdpr",
+    "dora"
+  ],
+  "Email & Phishing": [
+    "phishing",
+    "spear phishing",
+    "spf",
+    "dkim",
+    "dmarc",
+    "bec",
+    "email"
+  ],
+  "Network & Infrastructure": [
+    "firewall",
+    "vpn",
+    "dns",
+    "network",
+    "siem",
+    "log",
+    "ids",
+    "ips",
+    "lateral movement"
+  ]
+};
+
+  // ── compute stats ────────────────────────────────────────────────────────
+
+  const topicKeys     = Object.keys(learnerProgress);
+  const completedAll  = topicKeys.filter(k => learnerProgress[k].completed);
+  const badgesEarned  = topicKeys.map(k => learnerProgress[k].badge).filter(Boolean);
+  const goldCount     = badgesEarned.filter(b => b === 'gold').length;
+  const silverCount   = badgesEarned.filter(b => b === 'silver').length;
+  const bronzeCount   = badgesEarned.filter(b => b === 'bronze').length;
+  const badgeTotal    = badgesEarned.length;
+
+  const quizEntries   = Object.entries(weeklyScores).sort((a,b) => b[0].localeCompare(a[0]));
+  const quizPcts      = quizEntries.map(([,v]) => v.pct || 0);
+  const quizAvg       = quizPcts.length ? Math.round(quizPcts.reduce((a,b)=>a+b,0)/quizPcts.length) : null;
+
+  // ── render stat cards ────────────────────────────────────────────────────
+
+  document.getElementById('statTopics').textContent    = completedAll.length;
+  document.getElementById('statTopicsSub').textContent = completedAll.length === 1
+    ? '1 topic fully completed' : completedAll.length + ' topics fully completed';
+  document.getElementById('statPoints').textContent    = totalPoints.toLocaleString();
+  document.getElementById('statPointsSub').textContent = totalPoints === 1 ? '1 point earned' : totalPoints.toLocaleString() + ' points earned';
+  document.getElementById('statQuizAvg').textContent   = quizAvg !== null ? quizAvg + '%' : '—';
+  document.getElementById('statQuizSub').textContent   = quizPcts.length
+    ? 'across ' + quizPcts.length + ' week' + (quizPcts.length===1?'':'s') : 'no quizzes yet';
+  document.getElementById('statStreak').textContent    = streakCurrent;
+  document.getElementById('statStreakSub').textContent = streakCurrent === 1 ? '1 day in a row' : streakCurrent + ' days in a row';
+  document.getElementById('statBadges').textContent    = badgeTotal;
+
+  // subtitle
+  const sinceDate = visited.length > 1
+    ? ' · active since ' + new Date(Math.min(...visited.map(s=>new Date(s)))).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})
+    : '';
+  document.getElementById('pageSubtitle').textContent =
+    'Your personal learning summary' + sinceDate;
+
+  // ── streak calendar (last 28 days) ───────────────────────────────────────
+
+  const visitedSet = new Set(visited);
+  const calGrid    = document.getElementById('calendarGrid');
+  const cells      = [];
+
+  // Find the most recent Monday at or before 28 days ago
+  const startDate = new Date();
+  startDate.setDate(startDate.getDate() - 27);
+  // Shift back to Monday
+  const dow = startDate.getDay(); // 0=Sun
+  const shift = dow === 0 ? 6 : dow - 1;
+  startDate.setDate(startDate.getDate() - shift);
+
+  for (let i = 0; i < 35; i++) {
+    const d   = new Date(startDate);
+    d.setDate(startDate.getDate() + i);
+    const s   = isoDate(d);
+    const div = document.createElement('div');
+    div.className = 'cal-day';
+    if (s === today) div.classList.add('today');
+    if (visitedSet.has(s)) div.classList.add('active');
+    if (d > new Date()) div.classList.add('inactive');
+    div.title = d.toLocaleDateString('en-GB', {day:'numeric',month:'short'});
+    calGrid.appendChild(div);
+  }
+
+  document.getElementById('streakCurrent').textContent = streakCurrent;
+  document.getElementById('streakBest').textContent    = 'Best: ' + streakBest + ' day' + (streakBest===1?'':'s');
+
+  // ── weekly quiz score list ────────────────────────────────────────────────
+
+  const quizList = document.getElementById('quizScoreList');
+  if (quizEntries.length === 0) {
+    quizList.innerHTML = '<div class="empty">No quiz scores yet — complete a weekly quiz to see scores here.</div>';
+  } else {
+    quizList.innerHTML = quizEntries.slice(0,8).map(([dateKey, v]) => {
+      const pct   = v.pct || 0;
+      const color = pct >= 80 ? 'var(--green)' : pct >= 60 ? 'var(--yellow)' : 'var(--red)';
+      const label = v.topic || dateKey;
+      const dateLabel = new Date(dateKey).toLocaleDateString('en-GB',{day:'numeric',month:'short'});
+      return `<div class="quiz-row">
+        <div class="quiz-week">${dateLabel}</div>
+        <div class="quiz-topic">${label}</div>
+        <div class="quiz-bar-wrap"><div class="quiz-bar" style="width:${pct}%;background:${color}"></div></div>
+        <div class="quiz-pct" style="color:${color}">${pct}%</div>
+      </div>`;
+    }).join('');
+  }
+
+  // ── skills radar chart ────────────────────────────────────────────────────
+
+  function computeRadarScores() {
+    // For each category, count how many completed topics match its keywords
+    const catNames  = Object.keys(CATEGORIES);
+    const scores    = {};
+    catNames.forEach(cat => { scores[cat] = 0; });
+
+    topicKeys.forEach(key => {
+      const prog  = learnerProgress[key];
+      const lv    = (prog.level || 'beginner').toLowerCase();
+      const pts   = lv === 'advanced' ? 3 : lv === 'intermediate' ? 2 : 1;
+      const kLow  = key.toLowerCase();
+      catNames.forEach(cat => {
+        const keywords = CATEGORIES[cat];
+        if (keywords.some(kw => kLow.includes(kw))) {
+          scores[cat] += pts;
+        }
+      });
+    });
+
+    // Normalise to 0–100
+    const maxPossible = 9; // rough ceiling per category
+    catNames.forEach(cat => {
+      scores[cat] = Math.min(100, Math.round((scores[cat] / maxPossible) * 100));
+    });
+    return { catNames, scores };
+  }
+
+  function drawRadar() {
+    const canvas  = document.getElementById('radarCanvas');
+    const ctx     = canvas.getContext('2d');
+    const { catNames, scores } = computeRadarScores();
+    const N       = catNames.length;
+    const cx      = canvas.width  / 2;
+    const cy      = canvas.height / 2;
+    const radius  = Math.min(cx, cy) - 50;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw grid rings
+    [0.25, 0.5, 0.75, 1].forEach(frac => {
+      ctx.beginPath();
+      for (let i = 0; i < N; i++) {
+        const angle = (i / N) * 2 * Math.PI - Math.PI / 2;
+        const x = cx + radius * frac * Math.cos(angle);
+        const y = cy + radius * frac * Math.sin(angle);
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+      ctx.closePath();
+      ctx.strokeStyle = 'rgba(48,54,61,0.8)';
+      ctx.lineWidth   = 1;
+      ctx.stroke();
+    });
+
+    // Draw spokes
+    for (let i = 0; i < N; i++) {
+      const angle = (i / N) * 2 * Math.PI - Math.PI / 2;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(cx + radius * Math.cos(angle), cy + radius * Math.sin(angle));
+      ctx.strokeStyle = 'rgba(48,54,61,0.8)';
+      ctx.lineWidth   = 1;
+      ctx.stroke();
+    }
+
+    // Draw filled radar area
+    ctx.beginPath();
+    for (let i = 0; i < N; i++) {
+      const angle = (i / N) * 2 * Math.PI - Math.PI / 2;
+      const frac  = (scores[catNames[i]] || 0) / 100;
+      const x = cx + radius * frac * Math.cos(angle);
+      const y = cy + radius * frac * Math.sin(angle);
+      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.fillStyle   = 'rgba(57,208,216,0.15)';
+    ctx.fill();
+    ctx.strokeStyle = '#39d0d8';
+    ctx.lineWidth   = 2;
+    ctx.stroke();
+
+    // Draw data points
+    for (let i = 0; i < N; i++) {
+      const angle = (i / N) * 2 * Math.PI - Math.PI / 2;
+      const frac  = (scores[catNames[i]] || 0) / 100;
+      const x = cx + radius * frac * Math.cos(angle);
+      const y = cy + radius * frac * Math.sin(angle);
+      ctx.beginPath();
+      ctx.arc(x, y, 4, 0, 2 * Math.PI);
+      ctx.fillStyle = '#39d0d8';
+      ctx.fill();
+    }
+
+    // Draw category labels
+    ctx.font      = '10px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+    ctx.fillStyle = '#7d8590';
+    ctx.textAlign = 'center';
+    for (let i = 0; i < N; i++) {
+      const angle  = (i / N) * 2 * Math.PI - Math.PI / 2;
+      const labelR = radius + 36;
+      const lx     = cx + labelR * Math.cos(angle);
+      const ly     = cy + labelR * Math.sin(angle);
+      // Wrap long labels
+      const words = catNames[i].split(' ');
+      const line1 = words.slice(0, 2).join(' ');
+      const line2 = words.slice(2).join(' ');
+      ctx.fillText(line1, lx, ly + (line2 ? -5 : 4));
+      if (line2) ctx.fillText(line2, lx, ly + 9);
+    }
+  }
+
+  drawRadar();
+
+  // ── topic progress list ──────────────────────────────────────────────────
+
+  const topicListEl = document.getElementById('topicList');
+  if (topicKeys.length === 0) {
+    topicListEl.innerHTML = '<div class="empty">No topics started yet — visit the learner page to begin.</div>';
+  } else {
+    // Sort: completed first, then by key
+    const sorted = [...topicKeys].sort((a,b) => {
+      const pa = learnerProgress[a];
+      const pb = learnerProgress[b];
+      if (pa.completed && !pb.completed) return -1;
+      if (!pa.completed && pb.completed) return  1;
+      return a.localeCompare(b);
+    });
+
+    topicListEl.innerHTML = sorted.slice(0,18).map(key => {
+      const prog   = learnerProgress[key];
+      const lv     = (prog.level || 'beginner').toLowerCase();
+      const label  = key.replace(/-/g,' ').replace(/[-_](\w)/g, (_,c) => ' '+c.toUpperCase()).replace(/^\w/, c => c.toUpperCase());
+      const begDone = prog.completed || lv === 'intermediate' || lv === 'advanced';
+      const intDone = lv === 'intermediate' || lv === 'advanced';
+      const advDone = lv === 'advanced' && prog.completed;
+      return `<div class="topic-row">
+        <div class="topic-name">${label}</div>
+        <div class="topic-levels">
+          <div class="level-pip ${begDone ? 'done-beginner' : ''}" title="Beginner"></div>
+          <div class="level-pip ${intDone ? 'done-intermediate' : ''}" title="Intermediate"></div>
+          <div class="level-pip ${advDone ? 'done-advanced' : ''}" title="Advanced"></div>
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  // ── badges ───────────────────────────────────────────────────────────────
+
+  const badgeEl   = document.getElementById('badgeGrid');
+  const badgeMap  = {};
+  topicKeys.forEach(k => {
+    const b = learnerProgress[k].badge;
+    if (b) badgeMap[k] = b;
+  });
+
+  if (Object.keys(badgeMap).length === 0) {
+    badgeEl.innerHTML = '<div class="empty">No badges earned yet — complete topics to earn Bronze, Silver, and Gold badges.</div>';
+  } else {
+    const EMOJI = { gold: '🥇', silver: '🥈', bronze: '🥉' };
+    badgeEl.innerHTML = Object.entries(badgeMap).map(([key, tier]) => {
+      const label = key.replace(/-/g,' ').replace(/^\w|[-_ ]\w/g, c=>c.toUpperCase()).slice(0,16);
+      return `<div class="badge-item">
+        <div class="badge-circle ${tier}">${EMOJI[tier] || '🏅'}</div>
+        <div class="badge-name">${label}</div>
+      </div>`;
+    }).join('');
+  }
+
+  // ── next focus suggestion ────────────────────────────────────────────────
+
+  function suggestNextFocus() {
+    const catNames = Object.keys(CATEGORIES);
+
+    // Find which categories have zero coverage
+    const { scores } = computeRadarScores();
+    const zeroCats = catNames.filter(c => scores[c] === 0);
+
+    // Find topics not yet started
+    const notStarted = Object.keys(CATEGORIES)
+      .flatMap(cat => CATEGORIES[cat])
+      .filter((kw, i, arr) => arr.indexOf(kw) === i) // unique
+      .filter(kw => !topicKeys.some(k => k.toLowerCase().includes(kw)));
+
+    // Priority: zero-coverage category → lowest-scoring category → lowest quiz score topic
+    let focusCat, focusTopic, reason;
+
+    if (zeroCats.length > 0) {
+      focusCat   = zeroCats[0];
+      focusTopic = focusCat;
+      reason     = "You haven't explored this area yet — starting here will give you the broadest coverage of the FinServ threat landscape.";
+    } else {
+      // Find lowest scoring category
+      const sorted = catNames.sort((a,b) => scores[a] - scores[b]);
+      focusCat   = sorted[0];
+      focusTopic = focusCat;
+      const pct  = scores[focusCat];
+      reason     = `Your skills radar shows this is your weakest area right now (coverage: ${pct}%). Strengthening it will round out your knowledge.`;
+    }
+
+    // If we have quiz data, check if any week had a low score to refine suggestion
+    if (quizEntries.length > 0) {
+      const lowestQuiz = quizEntries.sort((a,b) => (a[1].pct||0) - (b[1].pct||0))[0];
+      if ((lowestQuiz[1].pct || 100) < 60 && lowestQuiz[1].topic) {
+        focusTopic = lowestQuiz[1].topic;
+        reason = `Your quiz score on "${lowestQuiz[1].topic}" (${lowestQuiz[1].pct}%) suggests this area needs more attention. Revisiting it in the learner will help.`;
+      }
+    }
+
+    document.getElementById('focusTopic').textContent = focusTopic;
+    document.getElementById('focusReason').textContent = reason;
+  }
+
+  suggestNextFocus();
+
+})();
+</script>
+
+</body>
+</html>
