@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vigil — Threat Graph</title>
+  <style>
+    :root {
+      --bg:#0d1117;--surface:#161b22;--surface2:#1c2128;--border:#30363d;
+      --cyan:#39d0d8;--cyan-dim:#1a4a4d;--green:#3fb950;--yellow:#d29922;
+      --red:#f85149;--purple:#bc8cff;--orange:#e8834a;
+      --text:#e6edf3;--text-dim:#7d8590;--text-mid:#adbac7;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,monospace;height:100vh;display:flex;flex-direction:column;overflow:hidden;}
+
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px;flex-shrink:0;z-index:10;}
+    .logo-name{font-size:18px;font-weight:700;color:var(--cyan);letter-spacing:3px;text-transform:uppercase;}
+    .logo-sub{font-size:9px;color:var(--text-dim);letter-spacing:2px;text-transform:uppercase;margin-top:2px;}
+    .header-right{display:flex;align-items:center;gap:20px;}
+    .back-link{font-size:13px;color:var(--text-dim);text-decoration:none;transition:color 0.15s;}
+    .back-link:hover{color:var(--cyan);}
+    .header-stats{display:flex;gap:16px;}
+    .hstat{font-size:12px;color:var(--text-dim);}
+    .hstat span{color:var(--cyan);font-weight:700;}
+
+    .graph-wrap{display:flex;flex:1;overflow:hidden;}
+
+    /* ── SIDEBAR ── */
+    .sidebar{width:280px;flex-shrink:0;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;}
+    .sidebar-section{padding:14px 16px;border-bottom:1px solid var(--border);}
+    .sidebar-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-dim);margin-bottom:10px;}
+
+    /* Search */
+    .search-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 12px;color:var(--text);font-size:13px;outline:none;transition:border-color 0.15s;font-family:inherit;}
+    .search-input:focus{border-color:var(--cyan);}
+    .search-input::placeholder{color:var(--text-dim);}
+
+    /* Filters */
+    .filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+    .filter-btn{padding:5px 8px;border-radius:4px;border:1px solid var(--border);background:none;color:var(--text-dim);font-size:11px;cursor:pointer;transition:all 0.15s;text-align:left;display:flex;align-items:center;gap:5px;}
+    .filter-btn.active{border-color:var(--cyan);color:var(--cyan);background:var(--cyan-dim);}
+    .filter-btn:hover{border-color:var(--cyan);color:var(--cyan);}
+
+    /* Legend */
+    .legend-items{display:flex;flex-direction:column;gap:6px;}
+    .legend-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-mid);}
+    .legend-shape{width:16px;height:16px;flex-shrink:0;}
+
+    /* Node detail panel */
+    .detail-panel{flex:1;overflow-y:auto;padding:14px 16px;}
+    .detail-placeholder{color:var(--text-dim);font-size:13px;line-height:1.6;}
+    .detail-header{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;}
+    .detail-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+    .detail-badges-row{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap;}
+    .detail-info-box{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:10px 12px;margin-bottom:12px;}
+    .detail-info-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-dim);margin-bottom:4px;}
+    .detail-conn-dot{display:inline-block;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+    .detail-conn-body{flex:1;min-width:0;}
+    .detail-conn-name{font-size:13px;color:var(--text-mid);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .detail-conn-meta{font-size:11px;color:var(--text-dim);margin-top:1px;}
+    .detail-type{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;}
+    .detail-name{font-size:16px;font-weight:700;margin-bottom:8px;}
+    .detail-badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 10px;border-radius:10px;margin-bottom:10px;}
+    .detail-info{font-size:12px;color:var(--text-mid);line-height:1.7;}
+    .detail-connections{margin-top:12px;}
+    .detail-conn-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-dim);margin-bottom:6px;}
+    .detail-conn-item{font-size:12px;color:var(--text-mid);padding:3px 0;display:flex;align-items:center;gap:6px;cursor:pointer;transition:color 0.15s;}
+    .detail-conn-item:hover{color:var(--cyan);}
+    .detail-conn-rel{font-size:10px;color:var(--text-dim);font-style:italic;}
+
+    /* Canvas area */
+    .canvas-wrap{flex:1;position:relative;overflow:hidden;}
+    #graph-svg{width:100%;height:100%;cursor:grab;}
+    #graph-svg:active{cursor:grabbing;}
+
+    /* Tooltip */
+    .tooltip{position:absolute;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:12px;color:var(--text);pointer-events:none;opacity:0;transition:opacity 0.15s;max-width:220px;z-index:20;}
+    .tooltip.visible{opacity:1;}
+    .tooltip-name{font-weight:700;margin-bottom:2px;}
+    .tooltip-type{font-size:10px;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px;}
+
+    /* Controls */
+    .controls{position:absolute;bottom:16px;right:16px;display:flex;flex-direction:column;gap:6px;}
+    .ctrl-btn{width:32px;height:32px;background:var(--surface);border:1px solid var(--border);border-radius:6px;color:var(--text-mid);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.15s;}
+    .ctrl-btn:hover{border-color:var(--cyan);color:var(--cyan);}
+
+    /* Node count badge */
+    .node-count{position:absolute;top:12px;right:12px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:11px;color:var(--text-dim);}
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="logo-name">Vigil</div>
+    <div class="logo-sub">Threat Graph</div>
+  </div>
+  <div class="header-right">
+    <div class="header-stats">
+      <div class="hstat"><span>24</span> nodes</div>
+      <div class="hstat"><span>13</span> connections</div>
+      <div class="hstat"><span>2</span> actors</div>
+      <div class="hstat"><span>14</span> topics</div>
+    </div>
+    <a href="index.html" class="back-link">← Dashboard</a>
+  </div>
+</header>
+
+<div class="graph-wrap">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Search</div>
+      <input class="search-input" id="search" placeholder="Search nodes..." oninput="searchNodes(this.value)"/>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Filter by Type</div>
+      <div class="filter-grid">
+        <button class="filter-btn active" data-type="actor"   onclick="toggleFilter('actor',this)">&#9679; Actor</button>
+        <button class="filter-btn active" data-type="ttp"     onclick="toggleFilter('ttp',this)">&#9670; TTP</button>
+        <button class="filter-btn active" data-type="cve"     onclick="toggleFilter('cve',this)">&#9632; CVE</button>
+        <button class="filter-btn active" data-type="tool"    onclick="toggleFilter('tool',this)">&#11088; Tool</button>
+        <button class="filter-btn active" data-type="sector"  onclick="toggleFilter('sector',this)">&#9645; Sector</button>
+        <button class="filter-btn active" data-type="topic"   onclick="toggleFilter('topic',this)">&#9650; Topic</button>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Legend</div>
+      <div class="legend-items">
+        <div class="legend-item">
+          <svg class="legend-shape" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="#bc8cff" opacity="0.8"/></svg>
+          Actor (circle) — purple
+        </div>
+        <div class="legend-item">
+          <svg class="legend-shape" viewBox="0 0 16 16"><polygon points="8,1 15,8 8,15 1,8" fill="#39d0d8" opacity="0.8"/></svg>
+          TTP (diamond) — cyan
+        </div>
+        <div class="legend-item">
+          <svg class="legend-shape" viewBox="0 0 16 16"><rect x="2" y="4" width="12" height="8" rx="2" fill="#adb9c7" opacity="0.8"/></svg>
+          CVE (square) — silver
+        </div>
+        <div class="legend-item">
+          <svg class="legend-shape" viewBox="0 0 16 16"><polygon points="8,0 10,6 16,6 11,10 13,16 8,12 3,16 5,10 0,6 6,6" fill="#58a6ff" opacity="0.8"/></svg>
+          Tool (star) — blue
+        </div>
+        <div class="legend-item">
+          <svg class="legend-shape" viewBox="0 0 16 16"><rect x="1" y="4" width="14" height="8" rx="4" fill="#3fb950" opacity="0.8"/></svg>
+          Sector (pill) — green
+        </div>
+        <div class="legend-item">
+          <svg class="legend-shape" viewBox="0 0 16 16"><polygon points="8,1 15,15 1,15" fill="#d29922" opacity="0.8"/></svg>
+          Topic (triangle) — yellow
+        </div>
+      </div>
+      <div style="margin-top:10px;border-top:1px solid var(--border);padding-top:10px;">
+        <div style="font-size:11px;color:var(--text-dim);margin-bottom:6px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Border = Threat Level</div>
+        <div class="legend-item"><svg class="legend-shape" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="#aaaaaa" stroke="#f85149" stroke-width="3"/></svg> Critical</div>
+        <div class="legend-item"><svg class="legend-shape" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="#aaaaaa" stroke="#e8834a" stroke-width="3"/></svg> High</div>
+        <div class="legend-item"><svg class="legend-shape" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="#aaaaaa" stroke="#d29922" stroke-width="3"/></svg> Medium</div>
+        <div class="legend-item"><svg class="legend-shape" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="#aaaaaa" stroke="#3fb950" stroke-width="3"/></svg> Low</div>
+        <div class="legend-item"><svg class="legend-shape" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="#aaaaaa" stroke="#30363d" stroke-width="3"/></svg> Info</div>
+      </div>
+    </div>
+
+    <div class="detail-panel" id="detail-panel">
+      <p class="detail-placeholder">&#9654; Click any node to see details and connections</p>
+    </div>
+  </div>
+
+  <!-- Graph canvas -->
+  <div class="canvas-wrap">
+    <svg id="graph-svg"></svg>
+    <div class="tooltip" id="tooltip">
+      <div class="tooltip-name" id="tt-name"></div>
+      <div class="tooltip-type" id="tt-type"></div>
+    </div>
+    <div class="node-count" id="node-count">24 nodes visible</div>
+    <div class="controls">
+      <button class="ctrl-btn" onclick="zoomIn()" title="Zoom in">+</button>
+      <button class="ctrl-btn" onclick="zoomOut()" title="Zoom out">-</button>
+      <button class="ctrl-btn" onclick="resetZoom()" title="Reset view">&#8635;</button>
+      <button class="ctrl-btn" onclick="togglePhysics()" id="physics-btn" title="Pause physics">&#9646;&#9646;</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script>
+
+const GRAPH = {"nodes": [{"id": "wizard-spider", "label": "Wizard Spider", "type": "actor", "level": "Medium", "colour": "#d29922", "detail": "Type: Criminal | Origin: Unknown | Sightings in digest: 7 | Also known as: None known | First seen: 10 April 2026 | Last seen: 13 April 2026. Wizard Spider developed and initially used TrickBot malware for targeting banking sites in North America, Australia, and throughout Europe. The group has since expanded operations to target all sectors worldwide as part of big game hunting ransomware campaigns."}, {"id": "tool_trickbot", "label": "TrickBot", "type": "tool", "level": "Info", "colour": "#39d0d8", "detail": "Used by: Wizard Spider. Banking trojan turned modular malware. Originally targeted financial institutions via web injection to steal credentials. Later evolved into a malware delivery platform used to deploy ransomware."}, {"id": "sector_critical_infrastructure", "label": "Critical Infrastructure", "type": "sector", "level": "Info", "colour": "#39d0d8", "detail": "Targeted by: Wizard Spider. Power grids, water systems and transport networks. Targeted for maximum disruption by nation-state and hacktivist groups."}, {"id": "sector_energy", "label": "Energy", "type": "sector", "level": "Info", "colour": "#39d0d8", "detail": "Targeted by: Wizard Spider. Oil, gas and electricity providers. Targeted for disruption and espionage, particularly by nation-state actors seeking geopolitical leverage."}, {"id": "sector_financial_services", "label": "Financial Services", "type": "sector", "level": "Info", "colour": "#39d0d8", "detail": "Targeted by: Wizard Spider. Banks, insurers, payment processors and investment firms. High-value target due to direct access to funds, sensitive customer data and critical payment infrastructure."}, {"id": "sector_government", "label": "Government", "type": "sector", "level": "Info", "colour": "#39d0d8", "detail": "Targeted by: Wizard Spider. National and local government departments. Targeted for espionage, intelligence gathering and disruption of public services by nation-state actors."}, {"id": "sector_healthcare", "label": "Healthcare", "type": "sector", "level": "Info", "colour": "#39d0d8", "detail": "Targeted by: Wizard Spider. Hospitals, health records systems and medical devices. Targeted for patient data theft and ransomware due to critical need for uptime."}, {"id": "sector_technology", "label": "Technology", "type": "sector", "level": "Info", "colour": "#39d0d8", "detail": "Targeted by: Wizard Spider. Software companies, cloud providers and IT vendors. Targeted to compromise downstream customers via supply chain attacks."}, {"id": "cozy-bear", "label": "Cozy Bear", "type": "actor", "level": "Medium", "colour": "#d29922", "detail": "Type: Nation-State | Origin: Unknown | Sightings in digest: 7 | Also known as: None known | First seen: 10 April 2026 | Last seen: 13 April 2026. APT29 used PowerDuke backdoor in 2016, primarily delivering it through Microsoft Word or Excel attachments containing malicious macros. This represents historical activity from the group's operations."}, {"id": "tool_powerduke", "label": "PowerDuke", "type": "tool", "level": "Info", "colour": "#39d0d8", "detail": "Used by: Cozy Bear. Backdoor malware used by APT29 (Cozy Bear). Delivered via malicious Office document macros. Used for stealthy persistent access and espionage against government and political targets."}, {"id": "topic_adversarial_ai", "label": "Adversarial AI", "type": "topic", "level": "Info", "colour": "#39d0d8", "detail": "Techniques that exploit weaknesses in AI and machine learning systems, including crafted inputs that fool models, extraction of model weights via API queries, and use of AI tools to enhance attacks such as deepfake fraud."}, {"id": "topic_cve_vulnerability", "label": "CVE / Vulnerability", "type": "topic", "level": "Info", "colour": "#39d0d8", "detail": "Publicly disclosed security flaws in software with assigned CVE identifiers. Critical and High severity CVEs in financial technology stacks require rapid patching as proof-of-concept exploits often appear within days of disclosure."}, {"id": "topic_certificate_attacks", "label": "Certificate Attacks", "type": "topic", "level": "Info", "colour": "#39d0d8", "detail": "Theft or forgery of digital certificates used for authentication. Stolen certificates allow attackers to impersonate legitimate users and bypass multi-factor authentication controls silently."}, {"id": "topic_cost_harvesting_attack_against_ai_services", "label": "Cost Harvesting Attack Against AI Services", "type": "topic", "level": "Info", "colour": "#39d0d8", "detail": "Security topic tracked in the Vigil daily digest. See the Daily Log and Labs tabs for detailed learning content."}, {"id": "topic_cost_harvesting_attacks_on_ai_services", "label": "Cost Harvesting Attacks on AI Services", "type": "topic", "level": "Info", "colour": "#39d0d8", "detail": "Security topic tracked in the Vigil daily digest. See the Daily Log and Labs tabs for detailed learning content."}, {"id": "topic_data_exfiltration_via_agent_tools_in_ai_customer_s", "label": "Data Exfiltration via Agent Tools in AI Customer S", "type": "topic", "level": "Info", "colour": "#39d0d8", "detail": "Security topic tracked in the Vigil daily digest. See the Daily Log and Labs tabs for detailed learning content."}, {"id": "topic_missing_authentication_in_ai_chat_agent_services", "label": "Missing Authentication in AI Chat Agent Services", "type": "topic", "level": "Info", "colour": "#39d0d8", "detail": "Security topic tracked in the Vigil daily digest. See the Daily Log and Labs tabs for detailed learning content."}, {"id": "topic_missing_authentication_in_administrative_http_endp", "label": "Missing Authentication in Administrative HTTP Endp", "type": "topic", "level": "Info", "colour": "#39d0d8", "detail": "Security topic tracked in the Vigil daily digest. See the Daily Log and Labs tabs for detailed learning content."}, {"id": "topic_os_command_injection_in_ai_development_frameworks", "label": "OS Command Injection in AI Development Frameworks", "type": "topic", "level": "Info", "colour": "#39d0d8", "detail": "Security topic tracked in the Vigil daily digest. See the Daily Log and Labs tabs for detailed learning content."}, {"id": "topic_prompt_injection", "label": "Prompt Injection", "type": "topic", "level": "Info", "colour": "#39d0d8", "detail": "Attackers craft malicious text inputs that trick AI systems into ignoring their instructions and performing unintended actions. A critical risk for any AI system that processes untrusted user input, such as customer service chatbots or document analysis tools."}, {"id": "topic_stored_cross_site_scripting_xss_in_desktop_appli", "label": "Stored Cross-Site Scripting (XSS) in Desktop Appli", "type": "topic", "level": "Info", "colour": "#39d0d8", "detail": "Security topic tracked in the Vigil daily digest. See the Daily Log and Labs tabs for detailed learning content."}, {"id": "topic_stored_cross_site_scripting_xss_via_crafted_inpu", "label": "Stored Cross-Site Scripting (XSS) via Crafted Inpu", "type": "topic", "level": "Info", "colour": "#39d0d8", "detail": "Security topic tracked in the Vigil daily digest. See the Daily Log and Labs tabs for detailed learning content."}, {"id": "topic_supply_chain", "label": "Supply Chain", "type": "topic", "level": "Info", "colour": "#39d0d8", "detail": "Attacks that compromise software dependencies, AI frameworks or third-party vendors to reach the ultimate target. Particularly dangerous because a single compromised package can affect thousands of organisations simultaneously."}, {"id": "topic_wordpress_plugin_information_exposure_via_user_age", "label": "WordPress Plugin Information Exposure via User-Age", "type": "topic", "level": "Info", "colour": "#39d0d8", "detail": "Security topic tracked in the Vigil daily digest. See the Daily Log and Labs tabs for detailed learning content."}], "edges": [{"source": "wizard-spider", "target": "tool_trickbot", "relation": "uses"}, {"source": "wizard-spider", "target": "sector_critical_infrastructure", "relation": "targets"}, {"source": "wizard-spider", "target": "sector_energy", "relation": "targets"}, {"source": "wizard-spider", "target": "sector_financial_services", "relation": "targets"}, {"source": "wizard-spider", "target": "sector_government", "relation": "targets"}, {"source": "wizard-spider", "target": "sector_healthcare", "relation": "targets"}, {"source": "wizard-spider", "target": "sector_technology", "relation": "targets"}, {"source": "cozy-bear", "target": "tool_powerduke", "relation": "uses"}, {"source": "cozy-bear", "target": "sector_government", "relation": "targets"}, {"source": "cozy-bear", "target": "sector_technology", "relation": "targets"}, {"source": "wizard-spider", "target": "topic_adversarial_ai", "relation": "related to"}, {"source": "cozy-bear", "target": "topic_adversarial_ai", "relation": "related to"}, {"source": "topic_prompt_injection", "target": "topic_adversarial_ai", "relation": "subset of"}]};
+
+// ── State ──
+let activeFilters = new Set(['actor','ttp','cve','tool','sector','topic']);
+let searchQuery   = '';
+let selectedNode  = null;
+let simulation    = null;
+let physicsActive = true;
+let svgZoom       = null;
+
+// ── Colours and shapes ──
+// Fill  = node type  (what kind of thing it is)
+// Stroke = threat level (how dangerous)
+const LEVEL_BORDER = {
+  Critical:'#f85149', High:'#e8834a', Medium:'#d29922', Low:'#3fb950', Info:'#30363d'
+};
+const TYPE_FILL = {
+  actor:'#bc8cff', ttp:'#39d0d8', cve:'#adb9c7', tool:'#58a6ff', sector:'#3fb950', topic:'#d29922'
+};
+const TYPE_ICONS = {
+  actor:'&#9679;', ttp:'&#9670;', cve:'&#9632;', tool:'&#11088;', sector:'&#9645;', topic:'&#9650;'
+};
+function nodeFill(d){ return TYPE_FILL[d.type] || '#39d0d8'; }
+function nodeBorder(d){ return LEVEL_BORDER[d.level] || '#30363d'; }
+function nodeColour(d){ return TYPE_FILL[d.type] || '#39d0d8'; }
+
+function nodeSize(d){
+  const base = {actor:14, ttp:10, cve:10, tool:11, sector:12, topic:13};
+  return base[d.type] || 10;
+}
+
+// Draw node path by type
+function nodePath(d){
+  const r = nodeSize(d);
+  switch(d.type){
+    case 'actor':  return d3.symbol().type(d3.symbolCircle).size(r*r*3)();
+    case 'ttp':    return d3.symbol().type(d3.symbolDiamond).size(r*r*3)();
+    case 'cve':    return d3.symbol().type(d3.symbolSquare).size(r*r*3)();
+    case 'tool':   return d3.symbol().type(d3.symbolStar).size(r*r*3)();
+    case 'sector': return d3.symbol().type(d3.symbolCircle).size(r*r*2)();
+    case 'topic':  return d3.symbol().type(d3.symbolTriangle).size(r*r*3)();
+    default:       return d3.symbol().type(d3.symbolCircle).size(r*r*2)();
+  }
+}
+
+// ── Build graph ──
+function getVisibleNodes(){
+  const q = searchQuery.toLowerCase();
+  return GRAPH.nodes.filter(n =>
+    activeFilters.has(n.type) &&
+    (!q || n.label.toLowerCase().includes(q) || n.type.includes(q))
+  );
+}
+
+function getVisibleEdges(visibleIds){
+  return GRAPH.edges.filter(e =>
+    visibleIds.has(e.source.id || e.source) &&
+    visibleIds.has(e.target.id || e.target)
+  );
+}
+
+function buildGraph(){
+  const svg    = d3.select('#graph-svg');
+  const width  = svg.node().clientWidth  || 800;
+  const height = svg.node().clientHeight || 600;
+
+  svg.selectAll('*').remove();
+
+  // Zoom
+  svgZoom = d3.zoom().scaleExtent([0.1, 4]).on('zoom', e => {
+    g.attr('transform', e.transform);
+  });
+  svg.call(svgZoom);
+
+  const g = svg.append('g');
+
+  // Arrow marker
+  svg.append('defs').append('marker')
+    .attr('id','arrow')
+    .attr('viewBox','0 -4 8 8')
+    .attr('refX', 16).attr('refY', 0)
+    .attr('markerWidth', 6).attr('markerHeight', 6)
+    .attr('orient','auto')
+    .append('path')
+    .attr('d','M0,-4L8,0L0,4')
+    .attr('fill','#30363d');
+
+  const visNodes = getVisibleNodes();
+  const visIds   = new Set(visNodes.map(n => n.id));
+  const visEdges = getVisibleEdges(visIds);
+
+  document.getElementById('node-count').textContent = visNodes.length + ' nodes visible';
+
+  // Clone nodes/edges for simulation
+  const simNodes = visNodes.map(n => ({...n}));
+  const nodeMap  = {};
+  simNodes.forEach(n => nodeMap[n.id] = n);
+  const simEdges = visEdges.map(e => ({
+    source: nodeMap[e.source.id || e.source],
+    target: nodeMap[e.target.id || e.target],
+    relation: e.relation
+  })).filter(e => e.source && e.target);
+
+  // Simulation
+  simulation = d3.forceSimulation(simNodes)
+    .force('link',   d3.forceLink(simEdges).id(d => d.id).distance(80).strength(0.4))
+    .force('charge', d3.forceManyBody().strength(-200))
+    .force('center', d3.forceCenter(width/2, height/2))
+    .force('collide', d3.forceCollide(28));
+
+  // Edges
+  const link = g.append('g').selectAll('line')
+    .data(simEdges).enter().append('line')
+    .attr('stroke','#30363d')
+    .attr('stroke-width', 1.2)
+    .attr('stroke-opacity', 0.6)
+    .attr('marker-end','url(#arrow)');
+
+  // Edge labels (hidden until hover)
+  const edgeLabel = g.append('g').selectAll('text')
+    .data(simEdges).enter().append('text')
+    .attr('fill','#7d8590')
+    .attr('font-size', '9px')
+    .attr('text-anchor','middle')
+    .attr('opacity', 0)
+    .text(d => d.relation);
+
+  // Nodes
+  const node = g.append('g').selectAll('path')
+    .data(simNodes).enter().append('path')
+    .attr('d', nodePath)
+    .attr('fill', d => nodeFill(d))
+    .attr('fill-opacity', 0.75)
+    .attr('stroke', d => nodeBorder(d))
+    .attr('stroke-width', 3)
+    .attr('stroke-opacity', 0.9)
+    .attr('cursor','pointer')
+    .call(d3.drag()
+      .on('start', (e,d) => { if(!e.active) simulation.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y; })
+      .on('drag',  (e,d) => { d.fx=e.x; d.fy=e.y; })
+      .on('end',   (e,d) => { if(!e.active) simulation.alphaTarget(0); d.fx=null; d.fy=null; })
+    )
+    .on('mouseover', (e,d) => showTooltip(e,d))
+    .on('mousemove', (e,d) => moveTooltip(e))
+    .on('mouseout',  ()    => hideTooltip())
+    .on('click',     (e,d) => selectNode(d, simEdges));
+
+  // Node labels
+  const label = g.append('g').selectAll('text')
+    .data(simNodes).enter().append('text')
+    .attr('fill','#e6edf3')
+    .attr('font-size', '10px')
+    .attr('text-anchor','middle')
+    .attr('dy', d => nodeSize(d) + 12)
+    .attr('pointer-events','none')
+    .text(d => d.label.length > 18 ? d.label.slice(0,16)+'...' : d.label);
+
+  simulation.on('tick', () => {
+    link
+      .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+      .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+
+    edgeLabel
+      .attr('x', d => (d.source.x + d.target.x)/2)
+      .attr('y', d => (d.source.y + d.target.y)/2);
+
+    node.attr('transform', d => `translate(${d.x},${d.y})`);
+    label.attr('x', d => d.x).attr('y', d => d.y);
+  });
+
+  // Store refs for interaction
+  window._graphRefs = { node, link, edgeLabel, label, nodeMap: nodeMap };
+}
+
+// ── Tooltip ──
+function showTooltip(e, d){
+  const tt = document.getElementById('tooltip');
+  document.getElementById('tt-name').textContent = d.label;
+  document.getElementById('tt-type').textContent = d.type.toUpperCase() + ' · ' + d.level;
+  tt.classList.add('visible');
+  moveTooltip(e);
+}
+function moveTooltip(e){
+  const tt  = document.getElementById('tooltip');
+  const wrap = document.querySelector('.canvas-wrap').getBoundingClientRect();
+  tt.style.left = (e.clientX - wrap.left + 12) + 'px';
+  tt.style.top  = (e.clientY - wrap.top  - 10) + 'px';
+}
+function hideTooltip(){
+  document.getElementById('tooltip').classList.remove('visible');
+}
+
+// ── Node selection / detail panel ──
+function selectNode(d, simEdges){
+  selectedNode = d;
+  const panel  = document.getElementById('detail-panel');
+  const colour = nodeColour(d);
+  const col    = LEVEL_BORDER[d.level] || '#39d0d8';
+
+  // Find connections
+  const connected = simEdges.filter(e =>
+    (e.source.id||e.source) === d.id || (e.target.id||e.target) === d.id
+  ).map(e => {
+    const isSource = (e.source.id||e.source) === d.id;
+    const other    = isSource ? e.target : e.source;
+    return { node: other, relation: e.relation, direction: isSource ? 'out' : 'in' };
+  });
+
+  const connHtml = connected.length ? connected.map(c => {
+    const cn = c.node;
+    const fill = nodeFill(cn);
+    const border = nodeBorder(cn);
+    return `<div class="detail-conn-item" onclick="selectNodeById('${cn.id||cn}')">`
+      +`<span class="detail-conn-dot" style="background:${fill};border:2px solid ${border}"></span>`
+      +`<div class="detail-conn-body">`
+      +`<div class="detail-conn-name">${(cn.label||cn.id||'').slice(0,32)}</div>`
+      +`<div class="detail-conn-meta"><span class="detail-conn-rel">${c.direction==='out'?'&rarr;':'&larr;'} ${c.relation}</span>`
+      +` &middot; <span style="color:${fill};font-size:10px">${(cn.type||'').toUpperCase()}</span></div>`
+      +`</div></div>`;
+  }).join('') : '<div style="color:var(--text-dim);font-size:13px;padding:8px 0">No connections visible with current filters.</div>';
+
+  const typeFill   = nodeFill(d);
+  const typeBorder = nodeBorder(d);
+
+  panel.innerHTML = `
+    <div class="detail-header">
+      <div class="detail-icon" style="background:${typeFill}22;border:3px solid ${typeBorder}">
+        ${TYPE_ICONS[d.type]||'?'}
+      </div>
+      <div>
+        <div class="detail-type" style="color:${typeFill}">${d.type.toUpperCase()}</div>
+        <div class="detail-name">${d.label}</div>
+      </div>
+    </div>
+    <div class="detail-badges-row">
+      <span class="detail-badge" style="background:${typeBorder}22;color:${typeBorder};border:1px solid ${typeBorder}55">
+        ${d.level}
+      </span>
+      <span class="detail-badge" style="background:${typeFill}22;color:${typeFill};border:1px solid ${typeFill}55">
+        ${d.type}
+      </span>
+    </div>
+    <div class="detail-info-box">
+      <div class="detail-info-label">Details</div>
+      <div class="detail-info">${d.detail || 'No additional detail available.'}</div>
+    </div>
+    <div class="detail-connections">
+      <div class="detail-conn-title">Connections (${connected.length})</div>
+      ${connHtml}
+    </div>`;
+
+  // Highlight in graph
+  if(window._graphRefs){
+    const connIds = new Set(connected.map(c => c.node.id||c.node));
+    window._graphRefs.node
+      .attr('fill-opacity', n => n.id===d.id ? 1 : connIds.has(n.id) ? 0.8 : 0.2)
+      .attr('stroke-width', n => n.id===d.id ? 4 : connIds.has(n.id) ? 3 : 1)
+      .attr('stroke-opacity', n => n.id===d.id ? 1 : connIds.has(n.id) ? 0.9 : 0.15);
+    window._graphRefs.link
+      .attr('stroke', e => (e.source.id||e.source)===d.id||(e.target.id||e.target)===d.id ? '#39d0d8' : '#30363d')
+      .attr('stroke-opacity', e => (e.source.id||e.source)===d.id||(e.target.id||e.target)===d.id ? 1 : 0.08)
+      .attr('stroke-width', e => (e.source.id||e.source)===d.id||(e.target.id||e.target)===d.id ? 2 : 1.2);
+    window._graphRefs.edgeLabel
+      .attr('opacity', e => (e.source.id||e.source)===d.id||(e.target.id||e.target)===d.id ? 1 : 0);
+  }
+}
+
+function highlightNode(nodeId){
+  if(!window._graphRefs) return;
+  const n = window._graphRefs.nodeMap[nodeId];
+  if(n) selectNode(n, simulation.force('link').links());
+}
+function selectNodeById(nodeId){
+  if(!window._graphRefs) return;
+  const n = window._graphRefs.nodeMap[nodeId];
+  if(n) selectNode(n, simulation.force('link').links());
+}
+
+// ── Filters ──
+function toggleFilter(type, btn){
+  if(activeFilters.has(type)){
+    activeFilters.delete(type);
+    btn.classList.remove('active');
+  } else {
+    activeFilters.add(type);
+    btn.classList.add('active');
+  }
+  buildGraph();
+}
+
+function searchNodes(q){
+  searchQuery = q;
+  buildGraph();
+}
+
+// ── Zoom controls ──
+function zoomIn(){  d3.select('#graph-svg').transition().call(svgZoom.scaleBy, 1.4); }
+function zoomOut(){ d3.select('#graph-svg').transition().call(svgZoom.scaleBy, 0.7); }
+function resetZoom(){ d3.select('#graph-svg').transition().call(svgZoom.transform, d3.zoomIdentity.translate(0,0).scale(1)); }
+
+function togglePhysics(){
+  const btn = document.getElementById('physics-btn');
+  if(physicsActive){
+    simulation.stop();
+    btn.innerHTML = '&#9654;';
+    btn.title = 'Resume physics';
+  } else {
+    simulation.restart();
+    btn.innerHTML = '&#9646;&#9646;';
+    btn.title = 'Pause physics';
+  }
+  physicsActive = !physicsActive;
+}
+
+// ── Init ──
+window.addEventListener('load', buildGraph);
+window.addEventListener('resize', buildGraph);
+
+</script>
+</body>
+</html>
