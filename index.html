@@ -63,7 +63,7 @@
     .day-card-header { padding: 14px 18px; display: flex; align-items: center; gap: 14px; cursor: pointer; transition: background 0.15s; }
     .day-card-header:hover { background: var(--surface2); }
     .day-card.open .day-card-header { background: var(--surface2); border-bottom: 1px solid var(--border); }
-    .day-card-date { font-size: 14px; font-weight: 600; color: var(--text); flex: 1; }
+    .day-card-date { font-size: 14px; font-weight: 600; color: var(--cyan); flex: 1; }
     .day-card-pills { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
     .day-pill { font-size: 11px; padding: 2px 8px; border-radius: 100px; font-weight: 600; }
     .pill-red    { background: rgba(248,81,73,0.15);  color: var(--red);    border: 1px solid rgba(248,81,73,0.25); }
@@ -76,16 +76,16 @@
     .day-section { padding: 14px 18px; border-bottom: 1px solid var(--border); }
     .day-section:last-child { border-bottom: none; }
     .day-sec-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--cyan); margin-bottom: 10px; }
-    .day-sec-text { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+    .day-sec-text { font-size: 14px; color: var(--text); line-height: 1.7; }
     .day-threat-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
     .day-threat-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
     .day-threat-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 5px; }
-    .day-threat-body { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+    .day-threat-body { font-size: 14px; color: var(--text); line-height: 1.7; }
     .day-threat-link { font-size: 12px; color: var(--cyan); text-decoration: none; display: inline-block; margin-top: 6px; }
     .day-threat-link:hover { text-decoration: underline; }
     .analyst-note-box { background: rgba(57,208,216,0.06); border-left: 3px solid var(--cyan); border-radius: 0 6px 6px 0; padding: 12px 14px; }
     .analyst-note-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--cyan); margin-bottom: 8px; }
-    .analyst-note-text { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+    .analyst-note-text { font-size: 14px; color: var(--text); line-height: 1.7; }
 
     /* FALLBACK log cards (used when digest.md not available) */
     .log-entry { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
@@ -460,6 +460,12 @@
     .ta-graph-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--cyan); padding: 10px 16px; border-bottom: 1px solid var(--border); background: var(--surface2); }
     .ta-graph-frame { width: 100%; height: 520px; border: none; display: block; background: var(--bg); }
     .ta-graph-hint { font-size: 11px; color: var(--text-dim); padding: 8px 16px; border-top: 1px solid var(--border); }
+    .graph-expand-btn { float: right; font-size: 11px; font-weight: 600; background: rgba(57,208,216,0.12); color: var(--cyan); border: 1px solid rgba(57,208,216,0.3); border-radius: 5px; padding: 3px 10px; cursor: pointer; transition: background 0.15s; }
+    .graph-expand-btn:hover { background: rgba(57,208,216,0.22); }
+    .ta-graph-panel.expanded { position: fixed !important; top: 0; left: 0; width: 100vw !important; height: 100vh !important; z-index: 9999; border-radius: 0 !important; border: none !important; display: flex; flex-direction: column; background: var(--bg); }
+    .ta-graph-panel.expanded .ta-graph-title { flex-shrink: 0; }
+    .ta-graph-panel.expanded .ta-graph-frame { flex: 1; height: 100% !important; }
+    .ta-graph-panel.expanded #ta-graph-hint { display: none; }
 
     /* FOOTER */
     footer { text-align: center; padding: 32px; color: var(--text-dim); font-size: 12px; border-top: 1px solid var(--border); margin-top: 48px; }
@@ -496,7 +502,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 03 May 2026 12:18 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 03 May 2026 12:35 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>15+ sources active</span>
   </div>
@@ -566,10 +572,10 @@
     
 <div class="day-section">
   <div class="day-sec-label">Executive summary</div>
-  <div class="day-sec-text">**Financial Services Threats** — up to 5 bullet points:
-- **CVE-2026-7386 — MCP Mail Bridge Path Traversal**: Unauthenticated path traversal in the NovaMail MCP bridge allows attackers to read arbitrary files from the host; at least 3 UK banks confirmed affected. [https://nvd.nist.gov/vuln/detail/CVE-2026-7386]
-- **Scattered Spider SIM-Swap Campaign**: UNC3944 resumes targeted SIM-swapping against UK financial services helpdesks to reset MFA on executive accounts, used as a precursor to BEC and data extortion. [https://therecord.media/scattered-spider-sim-swap]
-- **Volt Typhoon Updated TTPs — Critical Infrastructure**: CISA/NSA joint advisory updates Volt Typhoon living-off-the-land techniques with new indicators targeting payment processing and clearing infrastructure. [https://www.cisa.gov/volt-typhoon-advisory]</div>
+  <div class="day-sec-text"><p style="margin:0 0 8px 0"><strong>Financial Services Threats</strong> — up to 5 bullet points:</p>
+<p style="margin:0 0 5px 0">&#8226;&nbsp;<strong>CVE-2026-7386 — MCP Mail Bridge Path Traversal</strong>: Unauthenticated path traversal in the NovaMail MCP bridge allows attackers to read arbitrary files from the host; at least 3 UK banks confirmed affected.</p>
+<p style="margin:0 0 5px 0">&#8226;&nbsp;<strong>Scattered Spider SIM-Swap Campaign</strong>: UNC3944 resumes targeted SIM-swapping against UK financial services helpdesks to reset MFA on executive accounts, used as a precursor to BEC and data extortion.</p>
+<p style="margin:0 0 5px 0">&#8226;&nbsp;<strong>Volt Typhoon Updated TTPs — Critical Infrastructure</strong>: CISA/NSA joint advisory updates Volt Typhoon living-off-the-land techniques with new indicators targeting payment processing and clearing infrastructure.</p></div>
 </div>
     
 <div class="day-section">
@@ -3676,11 +3682,18 @@
 </div></div>
   </div>
 </div></div></div><div class="ta-split-right">
-<div class="ta-graph-panel">
-  <div class="ta-graph-title">&#128202; Relationship Graph</div>
+<div class="ta-graph-panel" id="ta-graph-panel">
+  <div class="ta-graph-title">
+    &#128202; Relationship Graph
+    <button class="graph-expand-btn" id="graph-expand-btn"
+            onclick="toggleGraphExpand()" title="Expand to full screen">&#11035; Expand</button>
+  </div>
   <iframe id="graph-frame" class="ta-graph-frame" src="graph.html"
           title="Threat Actor Relationship Graph"></iframe>
-  <div class="ta-graph-hint">Click an actor card to highlight them in the graph</div>
+  <div class="ta-graph-hint" id="ta-graph-hint">
+    Click an actor card to highlight them in the graph &nbsp;&middot;&nbsp;
+    <span style="color:var(--cyan);cursor:pointer" onclick="toggleGraphExpand()">Expand for full view</span>
+  </div>
 </div></div></div>
   </div>
 
@@ -6667,7 +6680,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 03 May 2026 12:18 UTC &middot;
+  Built automatically by Vigil &middot; 03 May 2026 12:35 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
@@ -6904,6 +6917,23 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
       refreshStatsL();refreshBadgesL();
     });
 
-    </script>
+
+    function toggleGraphExpand() {
+      var panel = document.getElementById('ta-graph-panel');
+      var btn   = document.getElementById('graph-expand-btn');
+      if (!panel) return;
+      var expanding = !panel.classList.contains('expanded');
+      panel.classList.toggle('expanded', expanding);
+      btn.innerHTML = expanding ? '&#10005; Close' : '&#11035; Expand';
+      btn.title     = expanding ? 'Close full-screen view' : 'Expand to full screen';
+      document.body.style.overflow = expanding ? 'hidden' : '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        var panel = document.getElementById('ta-graph-panel');
+        if (panel && panel.classList.contains('expanded')) toggleGraphExpand();
+      }
+    });
+        </script>
 </body>
 </html>
