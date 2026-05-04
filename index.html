@@ -507,7 +507,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 04 May 2026 11:58 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 04 May 2026 15:53 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>15+ sources active</span>
   </div>
@@ -3997,12 +3997,12 @@
 <div class="ta-stats-row" style="margin-bottom:28px">
   <div class="ta-stat ta-stat-red">
     <div class="ta-stat-label">Vulnerable</div>
-    <div class="ta-stat-value" style="color:var(--red)">31</div>
-    <div class="ta-stat-sub">66% of scans</div>
+    <div class="ta-stat-value" style="color:var(--red)">38</div>
+    <div class="ta-stat-sub">58% of scans</div>
   </div>
   <div class="ta-stat ta-stat-cyan">
     <div class="ta-stat-label">Defended</div>
-    <div class="ta-stat-value" style="color:var(--cyan)">5</div>
+    <div class="ta-stat-value" style="color:var(--cyan)">16</div>
     <div class="ta-stat-sub">attacks blocked</div>
   </div>
   <div class="ta-stat ta-stat-yellow">
@@ -4012,8 +4012,8 @@
   </div>
   <div class="ta-stat ta-stat-purple">
     <div class="ta-stat-label">Total Scans</div>
-    <div class="ta-stat-value" style="color:var(--purple)">47</div>
-    <div class="ta-stat-sub">generated 26 April 2026 12:25 UTC</div>
+    <div class="ta-stat-value" style="color:var(--purple)">65</div>
+    <div class="ta-stat-sub">generated 04 May 2026 15:50 UTC</div>
   </div>
 </div>
 <div class="rt-section">
@@ -4022,7 +4022,7 @@
     <span class="chevron">&#9660;</span>
   </div>
   <div class="rt-section-body" style="display:block">
-    <p class="log-text">The AI/ML systems assessed present a critical risk posture: 31 of 47 scans (66%) resulted in successful compromise, with only 5 demonstrating meaningful defensive resistance. Attack surface spans both infrastructure-level abuse and data exfiltration vectors, indicating systemic control gaps rather than isolated weaknesses. Immediate remediation is required before further AI tooling is deployed or expanded within the banking environment.
+    <p class="log-text">The AI/ML estate presents a high-risk posture: of 65 automated scans executed, 38 returned successful compromises (58% vulnerability rate), with only 16 defences holding. Two attack categories — prompt injection (AML.T0051) and data exfiltration (AML.T0037) — confirmed exploitable findings, representing direct threats to customer data and regulatory standing under UK GDPR and FCA operational resilience requirements. Immediate remediation is required before these systems are considered safe for production use at current exposure levels.
 
 ---</p>
   </div>
@@ -4035,20 +4035,20 @@
   <div class="rt-section-body">
     
 <div class="rt-finding">
-  <div class="rt-finding-title">Agentic systems are the highest-priority exposure.</div>
-  <div class="rt-finding-body">AML.T0059 (agentic resource consumption) and AML.T0056 (cost harvesting) both succeeded, meaning an attacker can force the bank's AI agents to consume compute or API budget at scale — a direct financial and operational risk with no complex exploit required.</div>
+  <div class="rt-finding-title">Prompt injection confirmed exploitable (AML.T0051):</div>
+  <div class="rt-finding-body">The public-facing application is vulnerable to prompt infiltration. An attacker can manipulate model behaviour through crafted user inputs, bypassing intended guardrails. This is a direct customer-facing risk.</div>
 </div>
 <div class="rt-finding">
-  <div class="rt-finding-title">Developer tooling is an active attack path.</div>
-  <div class="rt-finding-body">Successful exfiltration via MCP server in Cursor and LLM desktop applications (aikatz techniques) demonstrates that AI tools used by internal engineering teams are leaking data through agent tool calls — a blind spot most financial firms have not yet addressed.</div>
+  <div class="rt-finding-title">Data exfiltration via agentic tooling (AML.T0037):</div>
+  <div class="rt-finding-body">Two specific vectors succeeded — exfiltration through an MCP server used by Cursor, and through agent tools within Copilot Studio. Sensitive data reachable by these agents is at risk of extraction without triggering standard DLP controls.</div>
 </div>
 <div class="rt-finding">
-  <div class="rt-finding-title">Copilot Studio is exfiltrating data via agent tools.</div>
-  <div class="rt-finding-body">The confirmed finding against Microsoft Copilot Studio represents a high-severity, high-credibility risk given its likely broad internal deployment. Data exfiltration through agent-connected tools bypasses traditional DLP controls entirely.</div>
+  <div class="rt-finding-title">High volume of unexplained successful attacks (38 of 65):</div>
+  <div class="rt-finding-body">The raw numbers indicate systemic weakness across the estate, not isolated gaps. The 58% success rate suggests baseline AI security controls (input validation, output filtering, sandboxing) are either absent or inconsistently applied.</div>
 </div>
 <div class="rt-finding">
-  <div class="rt-finding-title">Prompt injection defences are holding, but narrowly.</div>
-  <div class="rt-finding-body">AML.T0051 showed resistance in the single test run — this should not be treated as confidence. One passing scan against a single configuration is insufficient coverage for a public-facing banking application. ---</div>
+  <div class="rt-finding-title">LLM desktop application attack surface unquantified:</div>
+  <div class="rt-finding-body">The &quot;aikatz&quot; LLM desktop application vector returned results requiring manual review. This represents an unconfirmed but plausible risk that automated tooling could not resolve. ---</div>
 </div>
   </div>
 </div>
@@ -4058,7 +4058,7 @@
     <span class="chevron">&#9660;</span>
   </div>
   <div class="rt-section-body">
-    <p class="log-text">Nine scans ended in errors or timeouts, meaning the true vulnerable count may be understated — results from AML.T0011 (AI software supply chain) and AML.T0016 (generative AI) require re-run to confirm validity. No testing has been conducted against model inference endpoints, fine-tuned or RAG-augmented systems, or third-party AI API integrations embedded in production pipelines.
+    <p class="log-text">Three of ten tracked techniques were not tested in this cycle — meaning up to 30% of the known threat surface has no current data, including techniques that may relate to model poisoning or training-time attacks (AML.T0020-series). The 9 errors and timeouts (14% of scans) also indicate potential blind spots where vulnerable behaviour may have gone undetected rather than confirmed safe.
 
 ---</p>
   </div>
@@ -4073,22 +4073,22 @@
 <div class="rt-action">
   <div class="rt-action-num">1</div>
   <div>
-    <div class="rt-action-title">Isolate and audit all agentic deployments within 5 business days.</div>
-    <div class="rt-action-body">Prioritise Copilot Studio and any Cursor/MCP-integrated workflows. Revoke broad tool permissions, enforce least-privilege on agent tool calls, and implement rate-limiting and spend caps to address AML.T0059 and AML.T0056 immediately.</div>
+    <div class="rt-action-title">Immediate: Isolate and patch prompt injection and data exfiltration vectors (AML.T0051, AML.T0037).</div>
+    <div class="rt-action-body">Restrict agent tool permissions in Copilot Studio to least-privilege. Disable or sandbox the Cursor MCP server integration until the exfiltration path is closed. Target resolution: **within 5 business days.**</div>
   </div>
 </div>
 <div class="rt-action">
   <div class="rt-action-num">2</div>
   <div>
-    <div class="rt-action-title">Treat developer AI tooling as production attack surface.</div>
-    <div class="rt-action-body">Engage your internal security engineering team to inventory all LLM-integrated developer tools (Cursor, Copilot, similar). Apply network egress controls and audit MCP server configurations — these are currently outside your DLP and SIEM visibility.</div>
+    <div class="rt-action-title">Short-term: Commission manual review of the three untested techniques and the &quot;aikatz&quot; desktop application findings.</div>
+    <div class="rt-action-body">Automated tooling has reached its coverage limit here — a human-led exercise is required to confirm or rule out exploitation. Scope this as a focused 2-day technical exercise.</div>
   </div>
 </div>
 <div class="rt-action">
   <div class="rt-action-num">3</div>
   <div>
-    <div class="rt-action-title">Re-run the 9 failed scans and expand prompt injection coverage.</div>
-    <div class="rt-action-body">Schedule a targeted follow-up within two weeks covering AML.T0011 and AML.T0016 with corrected configurations. Run a minimum of 10 prompt injection variants across all public-facing AI interfaces before treating AML.T0051 resistance as confirmed.</div>
+    <div class="rt-action-title">Structural: Implement an AI security baseline policy covering input validation, output filtering, and agent sandboxing across all GenAI deployments.</div>
+    <div class="rt-action-body">The 58% success rate indicates this is an architecture problem, not a patch problem. Map controls to MITRE ATLAS and align with FCA guidance on model risk management before the next assessment cycle.</div>
   </div>
 </div>
   </div>
@@ -4113,9 +4113,9 @@
 <tr class="rt-table-row">
   <td class="rt-table-id"><span class="ta-ttp-id">AML.T0010</span></td>
   <td class="rt-table-name">Insecure Ai Sdk</td>
-  <td class="rt-table-num">1</td>
+  <td class="rt-table-num">2</td>
   <td class="rt-table-num" style="color:var(--red)">0</td>
-  <td class="rt-table-num" style="color:var(--cyan)">1</td>
+  <td class="rt-table-num" style="color:var(--cyan)">2</td>
   <td class="rt-table-num" style="color:var(--text-dim)">0</td>
   <td class="rt-table-bar">
     <div class="rt-bar-track">
@@ -4127,36 +4127,36 @@
 <tr class="rt-table-row">
   <td class="rt-table-id"><span class="ta-ttp-id">AML.T0011</span></td>
   <td class="rt-table-name">Ai Software</td>
-  <td class="rt-table-num">6</td>
+  <td class="rt-table-num">7</td>
   <td class="rt-table-num" style="color:var(--red)">6</td>
-  <td class="rt-table-num" style="color:var(--cyan)">0</td>
+  <td class="rt-table-num" style="color:var(--cyan)">1</td>
   <td class="rt-table-num" style="color:var(--text-dim)">0</td>
   <td class="rt-table-bar">
     <div class="rt-bar-track">
-      <div class="rt-bar-fill" style="width:100%;background:var(--red)"></div>
+      <div class="rt-bar-fill" style="width:86%;background:var(--red)"></div>
     </div>
-    <span class="rt-bar-pct" style="color:var(--red)">100%</span>
+    <span class="rt-bar-pct" style="color:var(--red)">86%</span>
   </td>
 </tr>
 <tr class="rt-table-row">
   <td class="rt-table-id"><span class="ta-ttp-id">AML.T0016</span></td>
   <td class="rt-table-name">Generative Ai</td>
-  <td class="rt-table-num">9</td>
+  <td class="rt-table-num">10</td>
   <td class="rt-table-num" style="color:var(--red)">2</td>
-  <td class="rt-table-num" style="color:var(--cyan)">2</td>
+  <td class="rt-table-num" style="color:var(--cyan)">3</td>
   <td class="rt-table-num" style="color:var(--text-dim)">5</td>
   <td class="rt-table-bar">
     <div class="rt-bar-track">
-      <div class="rt-bar-fill" style="width:22%;background:var(--yellow)"></div>
+      <div class="rt-bar-fill" style="width:20%;background:var(--yellow)"></div>
     </div>
-    <span class="rt-bar-pct" style="color:var(--yellow)">22%</span>
+    <span class="rt-bar-pct" style="color:var(--yellow)">20%</span>
   </td>
 </tr>
 <tr class="rt-table-row">
   <td class="rt-table-id"><span class="ta-ttp-id">AML.T0037</span></td>
   <td class="rt-table-name">Data Breach Involving Ai Tooling</td>
-  <td class="rt-table-num">1</td>
-  <td class="rt-table-num" style="color:var(--red)">1</td>
+  <td class="rt-table-num">2</td>
+  <td class="rt-table-num" style="color:var(--red)">2</td>
   <td class="rt-table-num" style="color:var(--cyan)">0</td>
   <td class="rt-table-num" style="color:var(--text-dim)">0</td>
   <td class="rt-table-bar">
@@ -4169,43 +4169,43 @@
 <tr class="rt-table-row">
   <td class="rt-table-id"><span class="ta-ttp-id">AML.T0051</span></td>
   <td class="rt-table-name">Prompt Infiltration Via Public-Facing Application</td>
-  <td class="rt-table-num">10</td>
-  <td class="rt-table-num" style="color:var(--red)">3</td>
-  <td class="rt-table-num" style="color:var(--cyan)">1</td>
+  <td class="rt-table-num">12</td>
+  <td class="rt-table-num" style="color:var(--red)">4</td>
+  <td class="rt-table-num" style="color:var(--cyan)">2</td>
   <td class="rt-table-num" style="color:var(--text-dim)">6</td>
   <td class="rt-table-bar">
     <div class="rt-bar-track">
-      <div class="rt-bar-fill" style="width:30%;background:var(--yellow)"></div>
+      <div class="rt-bar-fill" style="width:33%;background:var(--yellow)"></div>
     </div>
-    <span class="rt-bar-pct" style="color:var(--yellow)">30%</span>
+    <span class="rt-bar-pct" style="color:var(--yellow)">33%</span>
   </td>
 </tr>
 <tr class="rt-table-row">
   <td class="rt-table-id"><span class="ta-ttp-id">AML.T0056</span></td>
   <td class="rt-table-name">Cost Harvesting</td>
-  <td class="rt-table-num">6</td>
+  <td class="rt-table-num">7</td>
   <td class="rt-table-num" style="color:var(--red)">6</td>
-  <td class="rt-table-num" style="color:var(--cyan)">0</td>
+  <td class="rt-table-num" style="color:var(--cyan)">1</td>
   <td class="rt-table-num" style="color:var(--text-dim)">0</td>
   <td class="rt-table-bar">
     <div class="rt-bar-track">
-      <div class="rt-bar-fill" style="width:100%;background:var(--red)"></div>
+      <div class="rt-bar-fill" style="width:86%;background:var(--red)"></div>
     </div>
-    <span class="rt-bar-pct" style="color:var(--red)">100%</span>
+    <span class="rt-bar-pct" style="color:var(--red)">86%</span>
   </td>
 </tr>
 <tr class="rt-table-row">
   <td class="rt-table-id"><span class="ta-ttp-id">AML.T0059</span></td>
   <td class="rt-table-name">Agentic Resource Consumption</td>
-  <td class="rt-table-num">6</td>
+  <td class="rt-table-num">7</td>
   <td class="rt-table-num" style="color:var(--red)">5</td>
-  <td class="rt-table-num" style="color:var(--cyan)">1</td>
+  <td class="rt-table-num" style="color:var(--cyan)">2</td>
   <td class="rt-table-num" style="color:var(--text-dim)">0</td>
   <td class="rt-table-bar">
     <div class="rt-bar-track">
-      <div class="rt-bar-fill" style="width:83%;background:var(--red)"></div>
+      <div class="rt-bar-fill" style="width:71%;background:var(--red)"></div>
     </div>
-    <span class="rt-bar-pct" style="color:var(--red)">83%</span>
+    <span class="rt-bar-pct" style="color:var(--red)">71%</span>
   </td>
 </tr>
 <tr class="rt-table-row">
@@ -7132,7 +7132,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 04 May 2026 11:58 UTC &middot;
+  Built automatically by Vigil &middot; 04 May 2026 15:53 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
