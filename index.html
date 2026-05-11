@@ -559,7 +559,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 11 May 2026 09:47 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 11 May 2026 11:44 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>15+ sources active</span>
   </div>
@@ -620,6 +620,119 @@
   </div>
 </div>
 <div class="day-card open">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">11 May 2026</div>
+    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    
+<div class="day-section">
+  <div class="day-sec-label">Executive summary</div>
+  <div class="day-sec-text"><p style="margin:0 0 8px 0">The most pressing operational threat today is the active exploitation of a critical cPanel authentication-bypass vulnerability, with proof-of-concept exploits publicly available and reported zero-day activity predating disclosure. On the AI/ML front, a newly demonstrated attack chain shows that malicious MCP servers can silently exfiltrate AI agent credentials via prompt injection in coding tools like Cursor — a direct risk for any team using AI-assisted development. The FCA has also confirmed Competition Act investigations into Mastercard, Visa, and PayPal over suspected anti-competitive conduct, signalling heightened regulatory scrutiny across payment infrastructure.
+
+---</p></div>
+</div>
+    
+<div class="day-section">
+  <div class="day-sec-label">&#127981; FinServ threats</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA Competition Act Investigations (Mastercard, Visa, PayPal):</div>
+  <div class="day-threat-body">The FCA is formally investigating the three payment giants for suspected anti-competitive conduct linked to PayPal's digital wallet funding, which could affect payment processing arrangements relied upon by UK financial firms</div>
+  <a href="https://www.fca.org.uk/news/press-releases/competition-act-1998-investigations" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">TrickBot (MITRE S0266):</div>
+  <div class="day-threat-body">This banking trojan, originally designed to target financial institutions across North America and Europe, continues to underpin &quot;big game hunting&quot; ransomware campaigns that remain a direct threat to FinServ sector targets</div>
+  <a href="https://attack.mitre.org/software/S0266" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">BLINDINGCAN RAT (MITRE S0520):</div>
+  <div class="day-threat-body">This North Korean government-linked remote access trojan has been used against Western financial and government organisations since 2020, and remains a relevant nation-state threat to UK financial services infrastructure</div>
+  <a href="https://attack.mitre.org/software/S0520" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Lazarus Group ClickFix macOS Campaign:</div>
+  <div class="day-threat-body">North Korea's Lazarus group is using ClickFix social engineering for initial access against Mac-centric organisations and their senior leaders, a profile that matches many UK financial services executives and developers</div>
+  <a href="https://www.darkreading.com/threat-intelligence/north-koreas-lazarus-targets-macos-users-clickfix" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA Motor Finance Scheme Legal Challenges:</div>
+  <div class="day-threat-body">Ongoing legal uncertainty around the motor finance compensation scheme may affect capital planning for lenders still holding provisions, with a tribunal hearing unlikely before October</div>
+  <a href="https://www.fca.org.uk/news/statements/legal-challenges-motor-finance-compensation-scheme-update-firms-consumers" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#129302; AI / ML security</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">MCP Server Data Exfiltration via Prompt Injection (MITRE ATLAS AML.CS0045):</div>
+  <div class="day-threat-body">A proof-of-concept demonstrates that a malicious MCP server can inject prompts into Cursor, causing it to execute shell commands that exfiltrate AI agent configuration files containing credentials — directly relevant to any developer using AI coding assistants</div>
+  <a href="https://atlas.mitre.org/studies/AML.CS0045" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">AI Agent Configuration File Exposure (MITRE ATLAS AML.T0002.002):</div>
+  <div class="day-threat-body">Publicly accessible AI agent configuration files can expose credentials, tool access, and system prompts to attackers, creating a persistent secrets-management risk in any AI agent deployment</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0002.002" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">LLM Jailbreak (MITRE ATLAS AML.T0054):</div>
+  <div class="day-threat-body">Adversaries can override LLM safety guardrails via adversarial prompting or weight modification, enabling data leakage or generation of malicious content from models deployed in financial services workflows</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">'TrustFall' — CLI AI Tool Code Execution Risk:</div>
+  <div class="day-threat-body">Malicious repositories can trigger code execution in Claude Code, Cursor CLI, Gemini CLI, and GitHub Copilot CLI with minimal user interaction due to inadequate warning dialogs, posing a supply-chain risk for developer toolchains</div>
+  <a href="https://www.darkreading.com/application-security/trustfall-exposes-claude-code-execution-risk" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Agentic Resource Consumption (MITRE ATLAS AML.T0034.002):</div>
+  <div class="day-threat-body">Attackers can coerce AI agents into making excessive API calls via prompt injection, wasting API budgets and potentially causing service degradation in automated financial workflows</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#128275; Vulnerabilities</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2021-47941 (CVSS 8.2):</div>
+  <div class="day-threat-body">WordPress plugin Survey &amp; Poll 1.5.7.3 allows unauthenticated SQL injection via a cookie parameter, enabling extraction of credentials from the WordPress database</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-47941" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2021-47935 (CVSS 8.8):</div>
+  <div class="day-threat-body">Sentry 8.2.0 allows authenticated superusers to achieve remote code execution by injecting malicious pickle-serialised objects via the audit log endpoint — relevant to any firm using older self-hosted Sentry instances for error monitoring</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-47935" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2021-47949 (CVSS 8.8):</div>
+  <div class="day-threat-body">CyberPanel 2.1 allows authenticated attackers to read arbitrary files and execute remote commands via symlink manipulation in the file manager, risking full server compromise</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-47949" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2021-47939 (CVSS 8.8):</div>
+  <div class="day-threat-body">Evolution CMS 3.1.6 allows authenticated users to execute arbitrary system commands by injecting PHP code through module creation parameters</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-47939" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2021-47945 (CVSS 7.8):</div>
+  <div class="day-threat-body">Argus Surveillance DVR 4.0 contains an unquoted service path vulnerability allowing local privilege escalation to SYSTEM — a risk for any physical security or CCTV systems integrated with corporate networks</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-47945" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+    
+<div class="day-section">
+  <div class="analyst-note-box">
+    <div class="analyst-note-label">&#9889; Analyst note</div>
+    <div class="analyst-note-text"><p style="margin:0 0 8px 0">The MCP server prompt injection case (AML.CS0045) is immediately actionable: audit any AI coding assistant tools (
+
+---</p></div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">08 May 2026</div>
     <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
@@ -718,6 +831,101 @@
 <div class="day-threat-item">
   <div class="day-threat-title">CVE-2026-41105 (CVSS 8.1)</div>
   <div class="day-threat-body">— Server-side request forgery in Azure Notification Service allows an authenticated attacker to elevate</div>
+  
+</div>
+</div>
+    
+  </div>
+</div>
+<div class="day-card">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">07 May 2026</div>
+    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">3 Vuln</span></div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    
+<div class="day-section">
+  <div class="day-sec-label">Executive summary</div>
+  <div class="day-sec-text"><p style="margin:0 0 8px 0">The most pressing threat today is an actively exploited zero-day in Palo Alto Networks PAN-OS (CVE-2026-0300) with no patch yet available, posing immediate risk to financial institutions using these firewalls as perimeter controls. On the AI/ML front, MITRE ATLAS has published new technique entries covering LLM jailbreaks, agentic resource exhaustion, and AI agent configuration harvesting, reflecting a maturing adversarial playbook against AI systems. The FCA has also taken enforcement action in multiple areas this week — including a £19m client money failure and competition investigations into Mastercard, Visa, and PayPal — signalling heightened regulatory scrutiny across the sector.
+
+---</p></div>
+</div>
+    
+<div class="day-section">
+  <div class="day-sec-label">&#127981; FinServ threats</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">Palo Alto Networks PAN-OS Zero-Day (CVE-2026-0300)</div>
+  <div class="day-threat-body">— Unpatched critical RCE in PAN-OS User-ID Authentication Portal is actively being exploited; any UK FinServ firm using Palo Alto firewalls for network segmentation or internet-facing access control is at immediate risk</div>
+  <a href="https://therecord.media/palo-alto-warns-of-critical-software-bug-firewalls" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA: Sapia/WealthTek Client Money Failure (£19m)</div>
+  <div class="day-threat-body">— Sapia failed to segregate client money roles, allowing payment authorisers to also conduct oversight checks; this is a direct reminder that inadequate CASS controls carry both financial and reputational consequences</div>
+  <a href="https://www.fca.org.uk/news/press-releases/sapia-agrees-pay-more-than-19m-to-wealthtek-clients" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA: Competition Investigations into Mastercard, Visa, and PayPal</div>
+  <div class="day-threat-body">— The FCA has confirmed active Competition Act investigations into suspected anti-competitive conduct linked to PayPal's digital wallet funding arrangements; firms with payment processing dependencies on these networks should monitor developments closely</div>
+  <a href="https://www.fca.org.uk/news/press-releases/competition-act-1998-investigations" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA: Global Crackdown on Illegal Finfluencers</div>
+  <div class="day-threat-body">— The FCA secured a criminal guilty plea and issued 34 warning alerts against unauthorised financial promoters; firms must ensure their social media monitoring programmes flag third-party promotional activity that could create unauthorised association risks</div>
+  <a href="https://www.fca.org.uk/news/press-releases/fca-spearheads-global-action-stop-illegal-finfluencers" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-20188 — Cisco Crosswork/NSO DoS (CVSS 7.5)</div>
+  <div class="day-threat-body">— A missing rate-limit on incoming connections allows an unauthenticated attacker to exhaust resources and take down network orchestration infrastructure; FinServ firms using Cisco NSO for network automation face availability risk</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20188" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#129302; AI / ML security</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS: LLM Jailbreak (AML.T0054)</div>
+  <div class="day-threat-body">— Adversaries can override LLM safety guardrails via adversarial prompting or model weight manipulation to extract sensitive data or generate harmful outputs; any FinServ-deployed LLM handling customer data or internal tooling is a viable target</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS: Agentic Resource Consumption (AML.T0034.002)</div>
+  <div class="day-threat-body">— Attackers can use prompt injection to force AI agents into excessive, costly tool calls, draining API budgets and degrading service availability; this is particularly relevant for firms running LLM-powered automation against rate-limited or metered APIs</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS: AI Agent Configuration Harvesting (AML.T0002.002)</div>
+  <div class="day-threat-body">— Publicly accessible AI agent config files can expose tool credentials, system prompts, and external service tokens to adversaries; firms deploying AI agents should treat config files with the same sensitivity as secrets vaults</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0002.002" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS Case Study: MCP Server Data Exfiltration via Cursor (AML.CS0045)</div>
+  <div class="day-threat-body">— A proof-of-concept showed that a malicious MCP server can inject prompts into an AI coding assistant, causing it to exfiltrate agent configuration files and credentials via shell commands; developer tooling integrations represent a real supply chain attack surface</div>
+  <a href="https://atlas.mitre.org/studies/AML.CS0045" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-44118 — OpenClaw MCP Bearer Token Spoofing (CVSS 7.8)</div>
+  <div class="day-threat-body">— Non-owner loopback clients can impersonate the owner of an MCP server by manipulating bearer token headers, bypassing owner-gated operations; any internal deployment of OpenClaw before 2026.4.22 should be patched immediately</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44118" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#128275; Vulnerabilities</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-41934 (CVSS 8.8)</div>
+  <div class="day-threat-body">— Authenticated low-privilege users in Vvveb CMS (before 1.0.8.2) can achieve remote code execution by uploading a malicious .htaccess file and bypassing file extension restrictions; any web-facing CMS running Vvveb should be patched or isolated immediately</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41934" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-43584 (CVSS 8.8)</div>
+  <div class="day-threat-body">— OpenClaw before 2026.4.10 allows manipulation of interpreter startup environment variables (e.g. LUA_INIT, VIMINIT), enabling attackers to influence downstream execution and network behaviour in AI agent exec environments</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43584" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-44110 (CVSS 8.8)</div>
+  <div class="day-threat-body">— OpenClaw before 2026.4.15</div>
   
 </div>
 </div>
@@ -10003,7 +10211,7 @@ TIMESTAMP | SRC_IP | DST_IP | DST_PORT | PROTOCOL | ACTION | BYTES
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 11 May 2026 09:47 UTC &middot;
+  Built automatically by Vigil &middot; 11 May 2026 11:44 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
