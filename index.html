@@ -262,8 +262,8 @@
     .rt-trend-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
     .rt-trend-row:last-child { border-bottom: none; }
     .rt-trend-id { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-    .rt-trend-dots { display: flex; align-items: center; gap: 4px; font-size: 13px; letter-spacing: 1px; }
-    .rt-trend-dot { line-height: 1; cursor: default; }
+    .rt-trend-dots { display: flex; align-items: center; gap: 6px; }
+    .rt-trend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; cursor: default; flex-shrink: 0; }
 
     /* TURN-BY-TURN */
     .rt-turn { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); }
@@ -355,7 +355,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 30 August 2026 13:58 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 30 August 2026 14:12 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>11 sources active</span>
   </div>
@@ -24954,7 +24954,7 @@ This is asking me to show *how*</div>
     <span class="rt-table-name">aikatz: attacking llm desktop applications</span>
     <span class="tag tag-red" style="margin-left:8px">REGRESSION</span>
   </div>
-  <div class="rt-trend-dots"><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-24: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-25: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-26: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--cyan)" title="2026-05-01: defended">&#128994;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-05-16: vulnerable">&#128308;</span></div>
+  <div class="rt-trend-dots"><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-24: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-25: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-26: vulnerable"></span><span class="rt-trend-dot" style="background:var(--cyan)" title="2026-05-01: defended"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-05-16: vulnerable"></span></div>
 </div>
 <div class="rt-trend-row">
   <div class="rt-trend-id">
@@ -24962,7 +24962,7 @@ This is asking me to show *how*</div>
     <span class="rt-table-name">data exfiltration via agent tools in copilot studio</span>
     <span class="tag tag-red" style="margin-left:8px">REGRESSION</span>
   </div>
-  <div class="rt-trend-dots"><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-24: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-25: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-26: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--cyan)" title="2026-05-01: defended">&#128994;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-05-16: vulnerable">&#128308;</span></div>
+  <div class="rt-trend-dots"><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-24: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-25: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-26: vulnerable"></span><span class="rt-trend-dot" style="background:var(--cyan)" title="2026-05-01: defended"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-05-16: vulnerable"></span></div>
 </div>
 <div class="rt-trend-row">
   <div class="rt-trend-id">
@@ -24970,7 +24970,7 @@ This is asking me to show *how*</div>
     <span class="rt-table-name">prompt infiltration via public-facing application</span>
     <span class="tag tag-red" style="margin-left:8px">VULNERABLE</span>
   </div>
-  <div class="rt-trend-dots"><span class="rt-trend-dot" style="color:var(--yellow)" title="2026-04-24: error">&#9898;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-25: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-26: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-05-01: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-05-04: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-05-16: vulnerable">&#128308;</span></div>
+  <div class="rt-trend-dots"><span class="rt-trend-dot" style="background:var(--yellow)" title="2026-04-24: error"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-25: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-26: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-05-01: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-05-04: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-05-16: vulnerable"></span></div>
 </div>
 <div class="rt-trend-row">
   <div class="rt-trend-id">
@@ -24978,7 +24978,7 @@ This is asking me to show *how*</div>
     <span class="rt-table-name">data exfiltration via an mcp server used by cursor</span>
     <span class="tag tag-red" style="margin-left:8px">VULNERABLE</span>
   </div>
-  <div class="rt-trend-dots"><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-24: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-25: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-26: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-05-01: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-05-16: vulnerable">&#128308;</span></div>
+  <div class="rt-trend-dots"><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-24: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-25: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-26: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-05-01: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-05-16: vulnerable"></span></div>
 </div>
 <div class="rt-trend-row">
   <div class="rt-trend-id">
@@ -24986,7 +24986,7 @@ This is asking me to show *how*</div>
     <span class="rt-table-name">llm jailbreak</span>
     <span class="tag tag-red" style="margin-left:8px">VULNERABLE</span>
   </div>
-  <div class="rt-trend-dots"><span class="rt-trend-dot" style="color:var(--red)" title="2026-05-16: vulnerable">&#128308;</span></div>
+  <div class="rt-trend-dots"><span class="rt-trend-dot" style="background:var(--red)" title="2026-05-16: vulnerable"></span></div>
 </div>
 <div class="rt-trend-row">
   <div class="rt-trend-id">
@@ -24994,7 +24994,7 @@ This is asking me to show *how*</div>
     <span class="rt-table-name">insecure AI SDK</span>
     <span class="tag tag-cyan" style="margin-left:8px">HOLDING</span>
   </div>
-  <div class="rt-trend-dots"><span class="rt-trend-dot" style="color:var(--cyan)" title="2026-05-01: defended">&#128994;</span><span class="rt-trend-dot" style="color:var(--cyan)" title="2026-05-04: defended">&#128994;</span></div>
+  <div class="rt-trend-dots"><span class="rt-trend-dot" style="background:var(--cyan)" title="2026-05-01: defended"></span><span class="rt-trend-dot" style="background:var(--cyan)" title="2026-05-04: defended"></span></div>
 </div>
 <div class="rt-trend-row">
   <div class="rt-trend-id">
@@ -25002,7 +25002,7 @@ This is asking me to show *how*</div>
     <span class="rt-table-name">ai software</span>
     <span class="tag tag-cyan" style="margin-left:8px">HOLDING</span>
   </div>
-  <div class="rt-trend-dots"><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-24: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-25: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-26: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-05-01: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--cyan)" title="2026-05-04: defended">&#128994;</span></div>
+  <div class="rt-trend-dots"><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-24: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-25: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-26: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-05-01: vulnerable"></span><span class="rt-trend-dot" style="background:var(--cyan)" title="2026-05-04: defended"></span></div>
 </div>
 <div class="rt-trend-row">
   <div class="rt-trend-id">
@@ -25010,7 +25010,7 @@ This is asking me to show *how*</div>
     <span class="rt-table-name">generative ai</span>
     <span class="tag tag-cyan" style="margin-left:8px">HOLDING</span>
   </div>
-  <div class="rt-trend-dots"><span class="rt-trend-dot" style="color:var(--yellow)" title="2026-04-24: error">&#9898;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-25: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-26: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--cyan)" title="2026-05-01: defended">&#128994;</span><span class="rt-trend-dot" style="color:var(--cyan)" title="2026-05-04: defended">&#128994;</span></div>
+  <div class="rt-trend-dots"><span class="rt-trend-dot" style="background:var(--yellow)" title="2026-04-24: error"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-25: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-26: vulnerable"></span><span class="rt-trend-dot" style="background:var(--cyan)" title="2026-05-01: defended"></span><span class="rt-trend-dot" style="background:var(--cyan)" title="2026-05-04: defended"></span></div>
 </div>
 <div class="rt-trend-row">
   <div class="rt-trend-id">
@@ -25018,7 +25018,7 @@ This is asking me to show *how*</div>
     <span class="rt-table-name">data breach involving AI tooling</span>
     <span class="tag tag-cyan" style="margin-left:8px">HOLDING</span>
   </div>
-  <div class="rt-trend-dots"><span class="rt-trend-dot" style="color:var(--red)" title="2026-05-01: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-05-04: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--cyan)" title="2026-05-16: defended">&#128994;</span></div>
+  <div class="rt-trend-dots"><span class="rt-trend-dot" style="background:var(--red)" title="2026-05-01: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-05-04: vulnerable"></span><span class="rt-trend-dot" style="background:var(--cyan)" title="2026-05-16: defended"></span></div>
 </div>
 <div class="rt-trend-row">
   <div class="rt-trend-id">
@@ -25026,7 +25026,7 @@ This is asking me to show *how*</div>
     <span class="rt-table-name">cost harvesting</span>
     <span class="tag tag-cyan" style="margin-left:8px">HOLDING</span>
   </div>
-  <div class="rt-trend-dots"><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-24: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-25: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-26: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-05-01: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--cyan)" title="2026-05-04: defended">&#128994;</span></div>
+  <div class="rt-trend-dots"><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-24: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-25: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-26: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-05-01: vulnerable"></span><span class="rt-trend-dot" style="background:var(--cyan)" title="2026-05-04: defended"></span></div>
 </div>
 <div class="rt-trend-row">
   <div class="rt-trend-id">
@@ -25034,7 +25034,7 @@ This is asking me to show *how*</div>
     <span class="rt-table-name">agentic resource consumption</span>
     <span class="tag tag-cyan" style="margin-left:8px">HOLDING</span>
   </div>
-  <div class="rt-trend-dots"><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-24: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-25: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--red)" title="2026-04-26: vulnerable">&#128308;</span><span class="rt-trend-dot" style="color:var(--cyan)" title="2026-05-01: defended">&#128994;</span><span class="rt-trend-dot" style="color:var(--cyan)" title="2026-05-04: defended">&#128994;</span></div>
+  <div class="rt-trend-dots"><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-24: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-25: vulnerable"></span><span class="rt-trend-dot" style="background:var(--red)" title="2026-04-26: vulnerable"></span><span class="rt-trend-dot" style="background:var(--cyan)" title="2026-05-01: defended"></span><span class="rt-trend-dot" style="background:var(--cyan)" title="2026-05-04: defended"></span></div>
 </div>
   </div>
 </div>
@@ -30405,7 +30405,7 @@ This is asking me to show *how*</div>
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 30 August 2026 13:58 UTC &middot;
+  Built automatically by Vigil &middot; 30 August 2026 14:12 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
