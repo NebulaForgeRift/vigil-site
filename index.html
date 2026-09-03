@@ -355,7 +355,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 02 September 2026 10:55 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 03 September 2026 10:54 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>11 sources active</span>
   </div>
@@ -374,7 +374,7 @@
   <div class="stats">
     <div class="stat-card">
       <div class="stat-label">Days Active</div>
-      <div class="stat-value cyan">125</div>
+      <div class="stat-value cyan">126</div>
       <div class="stat-sub">and counting</div>
     </div>
     <div class="stat-card">
@@ -384,12 +384,12 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">1285</div>
+      <div class="stat-value yellow">1300</div>
       <div class="stat-sub">auto-built from 11 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">1089</div>
+      <div class="stat-value purple">1097</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -415,6 +415,111 @@
   </div>
 </div>
 <div class="day-card open">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">03 September 2026</div>
+    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    
+<div class="day-section">
+  <div class="day-sec-label">Executive summary</div>
+  <div class="day-sec-text"><p style="margin:0 0 8px 0">Active exploitation of critical flaws in JFrog Artifactory (CVE-2026-82329) and Sangoma Switchvox (CVE-2026-9586) represents the most immediate patching priority today. Google researchers have flagged a wave of vishing attacks specifically targeting private equity and financial services firms using low-tech but effective social engineering. On the AI/ML front, MITRE ATLAS case studies and Black Hat USA 2026 coverage highlight growing risks from agentic AI systems, including prompt injection via MCP servers capable of exfiltrating credentials.
+
+---</p></div>
+</div>
+    
+<div class="day-section">
+  <div class="day-sec-label">&#127981; FinServ threats</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">Vishing attacks targeting PE firms</div>
+  <div class="day-threat-body">— Google researchers report dozens of financial services firms targeted in recent months by phone-based social engineering, a reminder that human-layer defences remain critically underfunded</div>
+  <a href="https://www.finextra.com/newsarticle/48215/hackers-target-pe-firms-with-old-school-vishing-attacks---google-researchers" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Biometric fraud and dark-web identity cloning</div>
+  <div class="day-threat-body">— Dark-web marketplaces are selling fingerprints and ID documents, undermining biometric verification methods increasingly relied upon by UK financial firms for KYC</div>
+  <a href="https://www.finextra.com/videoarticle/3526/fingerprints-for-a-fee-how-fraud-is-creating-a-headache-for-verification" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA bans former SVS Securities CEO</div>
+  <div class="day-threat-body">— The FCA fined and banned Demetrios Hadjigeorgiou for failing to manage conflicts of interest and protect customer pension savings, underlining ongoing senior manager accountability expectations under SM&amp;CR</div>
+  <a href="https://www.fca.org.uk/news/press-releases/fca-fines-bans-former-svs-securities-ceo" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-82329 — JFrog Artifactory admin token forgery</div>
+  <div class="day-threat-body">— Actively exploited authentication bypass allowing attackers to create admin tokens; any firm using Artifactory in their software supply chain or CI/CD pipeline is at immediate risk</div>
+  <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-jfrog-artifactory-flaw-to-forge-admin-tokens/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA mini-bond and loan note consumer warning</div>
+  <div class="day-threat-body">— The FCA has reiterated its marketing ban on speculative illiquid securities to retail investors following the failure of Woodville Consultants Ltd, relevant for firms advising or marketing to retail clients</div>
+  <a href="https://www.fca.org.uk/news/press-releases/consumers-warned-beware-risky-mini-bonds-and-loan-notes" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#129302; AI / ML security</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS — MCP Server prompt injection leading to credential exfiltration</div>
+  <div class="day-threat-body">— A proof-of-concept demonstrated that a malicious MCP server can inject prompts into the Cursor AI coding tool, causing it to execute shell commands and exfiltrate AI agent configuration files containing credentials</div>
+  <a href="https://atlas.mitre.org/studies/AML.CS0045" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS — LLM Jailbreak technique (AML.T0054)</div>
+  <div class="day-threat-body">— Adversaries can override LLM safety guardrails via adversarial prompting or weight modification to cause data leakage or generation of harmful content, directly relevant to any firm deploying customer-facing or internal LLMs</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS — AI Agent Configuration file exposure (AML.T0002.002)</div>
+  <div class="day-threat-body">— Publicly accessible agent configuration files can expose tool credentials and system prompts, giving attackers a low-effort path to further compromise of AI-integrated systems</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0002.002" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS — Agentic Resource Consumption via prompt injection (AML.T0034.002)</div>
+  <div class="day-threat-body">— Attackers can coerce AI agents into excessive API calls or tool use, burning API budgets and potentially triggering denial-of-service conditions in automated financial workflows</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">NemoClaw — Unauthenticated LLM poisoning in Nvidia OpenClaw via Ollama API</div>
+  <div class="day-threat-body">— A networking flaw allows unauthenticated access to local Ollama model servers, enabling persistent corruption of AI agents; firms running local LLM infrastructure should review network exposure immediately</div>
+  <a href="https://www.darkreading.com/cyber-risk/nemo-claw-networking-llm-poisoning-openclaw" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#128275; Vulnerabilities</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-82329</div>
+  <div class="day-threat-body">— CVSS not stated in article; critical authentication bypass in JFrog Artifactory actively exploited to forge admin tokens, threatening software supply chain integrity</div>
+  <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-jfrog-artifactory-flaw-to-forge-admin-tokens/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-9586</div>
+  <div class="day-threat-body">— CVSS not stated; unauthenticated SQL injection in Sangoma Switchvox VoIP platform actively exploited to achieve remote code execution via reverse shells</div>
+  <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-sangoma-switchvox-flaw-to-deploy-reverse-shells/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-78408 (CVSS 7.9)</div>
+  <div class="day-threat-body">— A flaw in the `nsenter --join-cgroup` option allows unprivileged users to inherit root's ability to migrate and terminate unrelated host processes, threatening container isolation in cloud or on-premise environments</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-78408" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-78410 (CVSS 7.8)</div>
+  <div class="day-threat-body">— A util-linux flaw allows a local unprivileged user to redirect a privileged SUID bind mount to an arbitrary host directory, potentially enabling privilege escalation on Linux systems</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-78410" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">SonicWall SMA 1000 Zero-Days</div>
+  <div class="day-threat-body">— Unauthenticated remote code execution zero-days in SonicWall edge devices continue a pattern of exploitation of this vendor's products and warrant urgent review</div>
+  
+</div>
+</div>
+    
+  </div>
+</div>
+<div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">02 September 2026</div>
     <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
@@ -9612,6 +9717,125 @@
 
   <div id="tab-hot" class="tab">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">03 September 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Catalogues LLM Jailbreak as Formal Adversarial Technique — Financial AI Deployments at Risk</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK financial services firms deploying LLMs for customer-facing services, fraud detection, or internal tooling face a formally documented threat where adversaries bypass safety guardrails to extract sensitive data or generate harmful outputs. This MITRE ATLAS classification (AML.T0054) means jailbreak attacks now sit within a structured threat framework that can be mapped to your security controls and risk assessments — directly relevant to FCA expectations around AI governance. Data leakage via jailbroken models is a particular concern given FCA and UK GDPR obligations around customer data.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors directly exploit LLM safety mechanisms through adversarial prompting or model weight manipulation to circumvent guardrails, enabling data exfiltration or generation of malicious content as downstream attack steps.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Map your deployed LLM use cases against MITRE ATLAS AML.T0054 today — specifically assess whether your models have independently tested guardrail robustness and whether outputs are monitored for anomalous or policy-violating content.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Formally Documents Adversarial Acquisition of Generative AI Tools for Malware, Phishing, and Deepfake Attacks</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The formal cataloguing of generative AI acquisition (AML.T0016.002) confirms that threat actors are systematically obtaining LLMs — including open-source models run locally via Ollama or vLLM — to supercharge phishing, malware generation, and deepfake creation, all of which pose acute risks to UK financial services firms. Deepfake-enabled fraud against finance staff (e.g. CFO impersonation) and AI-generated spear-phishing targeting high-value accounts are realistic, near-term threats. The use of locally-hosted open-source models means attackers face no API-level content filtering or attribution risk.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries acquire and self-host open-source generative AI models to produce phishing lures, malicious code, and deepfake audio/video without reliance on commercial providers whose safety filters might otherwise block such content.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Brief your SOC and fraud teams this week on AI-enhanced phishing and deepfake impersonation TTPs, and review whether your email security and voice/video authentication controls are calibrated to detect AI-generated content.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">CVSS 7.8 Privilege Escalation Flaw in util-linux Allows Local Attackers to Redirect SUID Mounts and Manipulate File Ownership</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-78410" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerability</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">This util-linux vulnerability is present across a wide range of Linux distributions commonly used in UK financial services infrastructure — including servers, containerised workloads, and cloud VMs. A local unprivileged user exploiting this flaw can redirect privileged bind mounts and cause root to alter ownership or permissions on arbitrary files, creating a realistic local privilege escalation path. In environments where shared Linux systems or compromised service accounts exist, this represents a credible lateral movement or escalation vector.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Identify all Linux hosts in your estate running affected versions of util-linux, prioritise patching on any system where unprivileged user access exists (including multi-tenant or developer environments), and check for fstab entries using X-mount.owner/group/mode as an immediate interim indicator of exposure.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Warns Consumers Over Ongoing Mini-Bond and Loan Note Losses Despite 2021 Marketing Ban</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/consumers-warned-beware-risky-mini-bonds-and-loan-notes" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's renewed warning signals continued regulatory scrutiny of unregulated investment marketing, and the failure of Woodville Consultants Ltd illustrates that firms operating adjacent to regulated entities remain under close watch. For UK FinServ security and compliance teams, this is a reminder that social engineering and fraudulent investment schemes — increasingly promoted via AI-generated content and fake websites — exploit the same consumer trust that regulated firms work to maintain. Your firm may face reputational or fraud risk if customers are victimised by lookalike schemes.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable — however, AI-generated marketing content is an emerging enabler for fraudulent mini-bond promotion that security and fraud teams should be aware of.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Ensure your brand monitoring and takedown processes cover fraudulent investment schemes that may spoof your firm's identity, and verify your customer communications clearly distinguish regulated products from unregulated alternatives.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Appoints Attachés in India and UAE to Expand International Regulatory Reach</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/fca-expands-global-presence-new-attaches-india-uae" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's expanded presence in India and the UAE signals growing regulatory coordination across jurisdictions that are significant for UK financial services firms' third-party and supply chain relationships, particularly relevant given the volume of technology and outsourcing partners headquartered in these regions. Increased international regulatory cooperation may accelerate information-sharing on cross-border financial crime, fraud, and cyber threats. Security teams at UK firms with operations or suppliers in these regions should anticipate evolving compliance expectations.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      If your firm has outsourcing arrangements or data flows involving India or UAE-based entities, use this as a prompt to review third-party risk assessments and ensure those arrangements align with FCA outsourcing and operational resilience expectations.
+
+---
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">02 September 2026</span>
@@ -22576,12 +22800,12 @@
   </div>
   <div class="ta-stat ta-stat-cyan">
     <div class="ta-stat-label">Actors Tracked</div>
-    <div class="ta-stat-value" style="color:var(--cyan)">24</div>
+    <div class="ta-stat-value" style="color:var(--cyan)">25</div>
     <div class="ta-stat-sub">since first sighting</div>
   </div>
   <div class="ta-stat ta-stat-purple">
     <div class="ta-stat-label">Total Sightings</div>
-    <div class="ta-stat-value" style="color:var(--purple)">90</div>
+    <div class="ta-stat-value" style="color:var(--purple)">91</div>
     <div class="ta-stat-sub">across all digests</div>
   </div>
 </div>
@@ -24880,6 +25104,49 @@
   
 </div></div>
   </div>
+</div>
+<div class="ta-card" data-level="Medium"
+     data-actor-id="recommended-actions-for-the-junior-engineer"
+     data-search="recommended actions for the junior engineer">
+  <div class="ta-card-accent" style="background:var(--cyan)"></div>
+  <div class="ta-card-summary" onclick="taToggle(this)">
+    <div class="ta-card-left">
+      <div class="ta-card-name">Recommended Actions for the Junior Engineer</div>
+      <div class="ta-card-alias">No known aliases</div>
+      <div class="ta-card-meta">
+        <span>&#10067; Unknown</span>
+        <span>&#127758; Unknown</span>
+        <span class="ta-sighting-count">&#128065; 1 sighting</span>
+      </div>
+      <div class="ta-card-sectors"></div>
+    </div>
+    <div class="ta-card-right">
+      <span class="ta-threat-badge badge-medium">Medium</span>
+      <span class="ta-chevron">&#9660;</span>
+    </div>
+  </div>
+  <div class="ta-card-detail">
+    <div class="ta-detail-grid">
+      <div>
+        <div class="ta-detail-title">MITRE ATT&amp;CK TTPs</div>
+        <span class="ta-none">None recorded</span>
+      </div>
+      <div>
+        <div class="ta-detail-title">Tools &amp; Malware</div>
+        <span class="ta-none">None recorded</span>
+        <div class="ta-detail-title" style="margin-top:14px">CVEs</div>
+        <span class="ta-none">None recorded</span>
+      </div>
+    </div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 1 total</div>
+    <div class="ta-timeline">
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">03 September 2026</div>
+  <div class="ta-timeline-summary">Recommended Actions for the Junior Engineer mentioned in today's intel.</div>
+  
+</div></div>
+  </div>
 </div></div></div><div class="ta-split-right">
 <div class="ta-graph-panel" id="ta-graph-panel">
   <div class="ta-graph-title">
@@ -26451,7 +26718,7 @@ To be direct: this request removes the training framing entirely and asks me to 
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 1089 terms&#8230;"
+           placeholder="Search 1097 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">$</div>
@@ -27259,6 +27526,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-term">Certification Regime</div>
   <div class="glossary-def">A regulatory framework requiring financial firms to assess and formally certify that certain employees are fit and proper to perform their roles, on at least an annual basis.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Under SM&amp;CR reforms, the FCA removed the need to certify individuals holding multiple overlapping functions, reducing the total number of certification roles a UK financial firm must maintain.</div><div class="glossary-meta">First seen: 29 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Cgroup</div>
+  <div class="glossary-def">A Linux kernel feature that groups processes together so the operating system can control and limit their shared access to resources like CPU and memory.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A financial services firm running containerised workloads on Linux could be exposed if an attacker exploits a cgroup vulnerability to move host processes and disrupt critical trading or payment systems.</div><div class="glossary-meta">First seen: 03 September 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Chaos Ransomware</div>
@@ -28331,6 +28603,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The Supercharged Sandbox allows firms to trial agentic AI use cases — such as fraud detection and</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">File Descriptor Inheritance</div>
+  <div class="glossary-def">A situation where a child process or program automatically receives open file handles from its parent process, potentially including handles that carry elevated access rights.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a containerised FinServ environment, unexpected file descriptor inheritance across privilege boundaries could allow an unprivileged process to perform actions reserved for root, undermining workload isolation.</div><div class="glossary-meta">First seen: 03 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Filesystem ACL (Access Control List)</div>
   <div class="glossary-def">A set of rules attached to files or directories that defines which users or system accounts are permitted to read, write, or execute them.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Overly permissive filesystem ACLs on automation directories in financial services infrastructure can allow attackers to plant malicious scripts that execute with SYSTEM-level privileges during scheduled tasks.</div><div class="glossary-meta">First seen: 16 April 2026</div>
@@ -28866,6 +29143,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If a financial services firm uses low-code platforms like JeecgBoot to build internal tools, an SSRF vulnerability could allow attackers to reach internal systems such as payment APIs or customer databases.</div><div class="glossary-meta">First seen: 06 August 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">JFrog Artifactory</div>
+  <div class="glossary-def">A software repository manager used by development teams to store, organise, and distribute software packages and build artefacts across the software development lifecycle.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A financial services firm using Artifactory to manage internal software builds could face a total compromise of its software supply chain if an attacker forges an administrative token through an authentication bypass.</div><div class="glossary-meta">First seen: 03 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Joint Regulatory Taskforce</div>
   <div class="glossary-def">A coordinated group formed by multiple UK regulators working together to identify and act on a specific harm, such as misleading financial promotions, rather than each regulator acting independently.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA's joint regulatory taskforce on car finance advertising demonstrates how regulators are increasingly coordinating to tackle harms that span claims management, legal services, and financial promotion rules simultaneously.</div><div class="glossary-meta">First seen: 16 June 2026</div>
@@ -29301,6 +29583,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The Mills Review is the first of its kind globally from a regulator, and UK financial services firms should expect its findings to shape future FCA guidance on AI deployment in products like credit, insurance, and investment advice.</div><div class="glossary-meta">First seen: 06 July 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">MIME Type Validation</div>
+  <div class="glossary-def">A security check that verifies a file is actually the type it claims to be, based on its content signature rather than just its filename extension.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A payments platform that fails to validate MIME types on file uploads could allow an attacker to disguise a malicious script as an image, leading to server compromise and potential data exfiltration.</div><div class="glossary-meta">First seen: 03 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Mini-Bond</div>
   <div class="glossary-def">A type of investment where individuals lend money directly to a company for a fixed period in exchange for regular interest payments, but which is not regulated or protected by standard financial safeguards.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> UK financial firms must not market speculative mini-bonds or loan notes to retail customers, as the FCA permanently banned such promotions from January 2021 due to the risk of total capital loss.</div><div class="glossary-meta">First seen: 21 August 2026</div>
@@ -29426,6 +29713,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A flaw that bypasses name constraints could allow an attacker to present a fraudulent certificate for a bank's domain, enabling man-in-the-middle interception of customer transactions.</div><div class="glossary-meta">First seen: 08 May 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Namespace (Linux)</div>
+  <div class="glossary-def">A Linux kernel mechanism that isolates what a process can see and interact with, such as its own view of the filesystem, network, or user IDs, keeping it separate from other processes.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Container security in FinServ cloud deployments relies on namespaces to ensure one workload cannot see or interfere with another tenant's data or processes.</div><div class="glossary-meta">First seen: 03 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">NAT (Network Address Translation)</div>
   <div class="glossary-def">A technique used by routers to allow multiple devices on a private internal network to share a single public internet address, acting as a barrier between internal devices and the internet.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A financial firm relying on NAT as an implicit security boundary for back-office infrastructure should treat the Calix router flaw as a reminder that NAT is not a substitute for properly configured firewalls and network segmentation.</div><div class="glossary-meta">First seen: 25 August 2026</div>
@@ -29494,6 +29786,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-term">npm Supply Chain Attack</div>
   <div class="glossary-def">An attack where a malicious actor compromises or publishes a widely-used Node Package Manager software package so that any developer or system that downloads it also receives hidden malicious code.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial technology firms that build internal tools using npm packages should maintain a software bill of materials and monitor for compromised dependencies, as North Korean state actors have demonstrated the ability to embed credential-stealing code into popular open-source libraries.</div><div class="glossary-meta">First seen: 31 July 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">nsenter</div>
+  <div class="glossary-def">A Linux command-line tool that allows a user to enter the namespaces of another running process, often used by system administrators for container debugging.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a cloud-hosted banking environment, a misconfigured container orchestration setup could allow an attacker to abuse nsenter to inherit elevated privileges across host processes.</div><div class="glossary-meta">First seen: 03 September 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Nudification Tools (AI)</div>
@@ -30536,6 +30833,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Stack buffer overflows in financial trading applications could allow attackers to manipulate transaction data or bypass authentication controls by overwriting return addresses.</div><div class="glossary-meta">First seen: 13 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Sangoma Switchvox</div>
+  <div class="glossary-def">A structured security model designed to constrain what actions an AI agent is permitted to take within a network, limiting its access and behaviour to reduce risk.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A bank deploying AI agents for automated transaction monitoring should apply a framework like CUSTODY to ensure agents cannot access systems or data beyond what their specific task requires.</div><div class="glossary-meta">First seen: 03 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Sanitization Issue</div>
   <div class="glossary-def">A software vulnerability where input or output data is not properly cleaned or validated, allowing an attacker to sneak in malicious content that the application then processes as legitimate instructions.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A sanitization issue in an AI-based filesystem tool allowed prompt injection to escape the sandbox, illustrating how poor input validation in AI products can lead to full system compromise in a financial services environment.</div><div class="glossary-meta">First seen: 25 April 2026</div>
@@ -31251,6 +31553,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Advanced persistent threats against financial institutions might use secret knock patterns to avoid detection by network monitoring systems.</div><div class="glossary-meta">First seen: 09 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">TinyMCE</div>
+  <div class="glossary-def">A widely used open-source web-based text editor embedded in many content management systems, which often includes functionality for users to upload images and other media.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A financial services firm running a customer-facing web portal built on a CMS could be vulnerable if TinyMCE's upload endpoint lacks proper file validation, allowing attackers to plant malicious scripts on the server.</div><div class="glossary-meta">First seen: 03 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">TLS Certificate Validation</div>
   <div class="glossary-def">A security check that verifies a website or service's digital certificate is genuine and issued by a trusted authority before establishing an encrypted connection.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Disabling TLS certificate validation in a financial platform's AI integration (as seen in Emlog Pro CVE-2026-67598) could allow an attacker to intercept API keys sent to LLM providers, exposing a firm's AI infrastructure credentials.</div><div class="glossary-meta">First seen: 04 August 2026</div>
@@ -31907,7 +32214,7 @@ To be direct: this request removes the training framing entirely and asks me to 
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 02 September 2026 10:55 UTC &middot;
+  Built automatically by Vigil &middot; 03 September 2026 10:54 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
