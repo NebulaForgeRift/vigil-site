@@ -362,7 +362,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 08 September 2026 10:52 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 09 September 2026 10:58 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>11 sources active</span>
   </div>
@@ -381,7 +381,7 @@
   <div class="stats">
     <div class="stat-card">
       <div class="stat-label">Days Active</div>
-      <div class="stat-value cyan">131</div>
+      <div class="stat-value cyan">132</div>
       <div class="stat-sub">and counting</div>
     </div>
     <div class="stat-card">
@@ -391,12 +391,12 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">1346</div>
+      <div class="stat-value yellow">1361</div>
       <div class="stat-sub">auto-built from 11 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">1118</div>
+      <div class="stat-value purple">1126</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -422,6 +422,111 @@
   </div>
 </div>
 <div class="day-card open">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">09 September 2026</div>
+    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    
+<div class="day-section">
+  <div class="day-sec-label">Executive summary</div>
+  <div class="day-sec-text"><p style="margin:0 0 8px 0">SAP&#x27;s maximum-severity &quot;OVERPASS&quot; kernel vulnerability is the most pressing threat today, with potential for memory corruption across widely deployed enterprise systems used heavily in financial services. A critical NVIDIA OpenClaw flaw enables unauthenticated LLM poisoning via the Ollama API, directly threatening firms deploying AI agents. Multiple new CVEs also affect payment processing and authentication systems, compounding the day&#x27;s risk picture.
+
+---</p></div>
+</div>
+    
+<div class="day-section">
+  <div class="day-sec-label">&#127981; FinServ threats</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">SAP &quot;OVERPASS&quot; Kernel Vulnerability (Max Severity)</div>
+  <div class="day-threat-body">— SAP is widely deployed across UK financial institutions for ERP and core operations; this memory corruption flaw demands immediate patch prioritisation</div>
+  <a href="https://www.bleepingcomputer.com/news/security/sap-warns-of-maximum-severity-overpass-kernel-vulnerability/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-3174 (CVSS 7.5) — WordPress Event Tickets Stripe Credential Hijack</div>
+  <div class="day-threat-body">— Unauthenticated attackers can overwrite a site's Stripe merchant credentials, redirecting all payment processing to an attacker-controlled account, a direct fraud risk for any firm using this plugin</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3174" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-16025 &amp; CVE-2026-16037 (CVSS 7.5) — PayTR Virtual POS Input Manipulation &amp; Timing Oracle</div>
+  <div class="day-threat-body">— These flaws in a payment gateway module allow transaction value manipulation and black-box reverse engineering of payment logic, posing direct financial fraud risk</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-16025" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA Fines and Bans Former SVS Securities CEO</div>
+  <div class="day-threat-body">— The FCA banned and fined the former SVS CEO for failing to manage conflicts of interest and protect customer pension savings, reinforcing conduct risk expectations for senior managers under SMCR</div>
+  <a href="https://www.fca.org.uk/news/press-releases/fca-fines-bans-former-svs-securities-ceo" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA Warning on Mini-Bonds and Loan Notes</div>
+  <div class="day-threat-body">— Following the failure of Woodville Consultants Ltd, the FCA is reminding firms that marketing speculative illiquid securities to retail investors has been permanently banned since January 2021</div>
+  <a href="https://www.fca.org.uk/news/press-releases/consumers-warned-beware-risky-mini-bonds-and-loan-notes" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#129302; AI / ML security</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">ATLAS: LLM Jailbreak (AML.T0054)</div>
+  <div class="day-threat-body">— Adversaries can bypass LLM safety guardrails via adversarial prompting or model weight modification, enabling data leakage or generation of malicious content from AI systems deployed in financial services workflows</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">ATLAS Case Study: Data Exfiltration via MCP Server in Cursor (AML.CS0045)</div>
+  <div class="day-threat-body">— A proof-of-concept shows that a malicious webpage scraped by an AI coding agent can trigger indirect prompt injection, causing the agent to exfiltrate credential files — a real risk for developer teams using AI-assisted coding tools</div>
+  <a href="https://atlas.mitre.org/studies/AML.CS0045" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Finding NemoClaw: LLM Poisoning in NVIDIA OpenClaw</div>
+  <div class="day-threat-body">— A security bug allows unauthenticated access to a local Ollama model server, enabling persistent corruption of AI agents — any firm running local LLM infrastructure should treat this as an urgent patch item</div>
+  <a href="https://www.darkreading.com/cyber-risk/nemo-claw-networking-llm-poisoning-openclaw" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-73558 — vLLM Cross-User Data Leak</div>
+  <div class="day-threat-body">— A vulnerability in vLLM (fixed in 0.27.0) can expose one user's data to another, posing a confidentiality risk in multi-tenant AI inference deployments used within or alongside financial platforms</div>
+  <a href="https://osv.dev/vulnerability/GHSA-7m6h-x95x-82q5" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-73560 — vLLM SSRF and Arbitrary File Read</div>
+  <div class="day-threat-body">— An authenticated attacker can trigger server-side request forgery and read local files through vLLM's image/audio processor (fixed in 0.26.0), risking internal network pivoting from AI infrastructure</div>
+  <a href="https://osv.dev/vulnerability/GHSA-4hhp-h66f-j5j7" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#128275; Vulnerabilities</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-86733 (CVSS 7.2) — Snipe-IT OS Command Injection via Backup Restore</div>
+  <div class="day-threat-body">— An authenticated superadministrator uploading a crafted backup file can execute arbitrary OS commands, exposing database credentials and application secrets</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86733" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-86722 (CVSS 8.1) — AVideo Authentication Bypass via Stale Cache</div>
+  <div class="day-threat-body">— A valid-password holder can bypass email-based 2FA due to a cache invalidation flaw, undermining multi-factor authentication controls</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86722" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-86732 (CVSS 8.8) — Craft CMS Remote Code Execution</div>
+  <div class="day-threat-body">— Authenticated content editors can achieve RCE via a PHP gadget chain through the element-index endpoint in versions before 5.10.12</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86732" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-86738 (CVSS 8.7) — Snipe-IT CSS Injection / CSRF Token Exfiltration</div>
+  <div class="day-threat-body">— Malicious CSS payloads can be planted to steal CSRF tokens from other admin sessions, enabling account takeover</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86738" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">**CVE-2026-86729 (CVSS 7.4) — WWBN AVideo Unlimited</div>
+  <div class="day-threat-body"></div>
+  
+</div>
+</div>
+    
+  </div>
+</div>
+<div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">08 September 2026</div>
     <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
@@ -10048,6 +10153,125 @@
 
   <div id="tab-hot" class="tab">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">09 September 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Catalogues LLM Jailbreak as Formal Adversarial Technique — Financial AI Deployments at Risk</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK financial services firms increasingly deploying LLMs for customer-facing services, fraud detection, and internal tooling face a formally documented threat: adversaries deliberately circumventing model safety guardrails to extract sensitive data or generate harmful outputs. MITRE ATLAS classifying this under Defence Evasion (AML.TA0007) signals it should be treated with the same rigour as traditional TTPs in your threat model. Downstream risks include LLM data leakage of customer PII or internal system information, directly relevant to FCA data protection obligations and DORA resilience requirements.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors exploit jailbreaks via adversarial prompting or weight manipulation to force LLMs to bypass content controls, enabling generation of malicious commands, phishing content, or extraction of confidential system prompts and training data.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Map your deployed LLMs against MITRE ATLAS AML.T0054 today — implement prompt injection detection, output filtering, and red-team your models specifically for jailbreak resistance before next production deployment.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Flags Generative AI as Adversarial Force Multiplier Across the Attack Lifecycle</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The formal ATLAS cataloguing of adversary GenAI acquisition (including locally-hosted open-source models via Ollama/vLLM) confirms that threat actors no longer depend on commercial AI APIs, making detection via API abuse monitoring insufficient on its own. For UK FinServ firms, this means AI-generated spear-phishing targeting employees, AI-crafted malware evading signature controls, and deepfake-enabled fraud (e.g. voice/video CEO fraud) are all now systematically documented threats. The use of cloud-hosted adversarial LLMs also complicates attribution and takedown.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors acquire and self-host open-source LLMs to generate phishing lures, deepfakes, malware, and malicious commands entirely offline, bypassing commercial AI provider safety controls and usage monitoring.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Update your threat model and phishing awareness training to explicitly include AI-generated content — brief your SOC today that adversarial LLM use is now a baseline assumption, not an edge case.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">AVideo Authentication Bypass Exposes Live-Stream Keys and Private Schedules Without Login (CVSS 7.5)</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86728" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerability</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">If AVideo is used anywhere in your organisation for internal communications, training delivery, or executive broadcasts, this unauthenticated endpoint exposes live-stream credentials and private schedules to any external attacker via simple sequential ID enumeration. Credential leakage from media platforms can pivot to broader infrastructure access if credentials are reused — a common finding in financial services environments. The absence of authentication on the endpoint means no user interaction or privilege is required to exploit this.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Audit your software asset inventory immediately for any AVideo deployments (up to version 29.0) and either isolate them from internet exposure or take them offline pending a vendor patch.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">AVideo Undocumented Login Endpoint Allows Unlimited Password Guessing Against Admin Accounts (CVSS 7.4)</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86729" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerability</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">This rate-limit bypass via an undocumented API endpoint in AVideo (through commit e01e41ecc, no patch available) enables unrestricted brute-force attacks against any account including administrators, with a response oracle that confirms successful authentication via a users_id field — making automated credential stuffing highly efficient. The absence of a patch makes risk acceptance or immediate isolation the only viable controls. For FinServ environments, admin account compromise of any internal platform can cascade to data exfiltration or lateral movement.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      If AVideo is present in your environment, block external access to the plugin/API/API.php endpoint at the WAF or network perimeter immediately, and enforce MFA on all accounts as a compensating control while awaiting a patch.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Reissues Warning on Unregulated Mini-Bonds Following Woodville Consultants Collapse</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/consumers-warned-beware-risky-mini-bonds-and-loan-notes" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's renewed warning following Woodville Consultants' failure highlights that the retail marketing ban on speculative illiquid securities (in force since January 2021) is still being circumvented, creating regulatory and reputational risk for any authorised firm whose platforms or payment rails are used to distribute such products. Compliance and fraud teams at UK financial services firms should ensure their onboarding and product screening processes flag unregulated loan note issuers. This also signals active FCA supervisory attention in this space, meaning associated firms risk scrutiny if connected.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Review your firm's third-party and referral partner due diligence processes to confirm no unregulated mini-bond or loan note issuers are being onboarded or facilitated, in line with existing FCA marketing restrictions.
+
+---
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">08 September 2026</span>
@@ -27401,7 +27625,7 @@ To be direct: this request removes the training framing entirely and asks me to 
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 1118 terms&#8230;"
+           placeholder="Search 1126 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">$</div>
@@ -27914,6 +28138,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-term">Attestation Report</div>
   <div class="glossary-def">A cryptographic document that proves the integrity and authenticity of a system or application to another party.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial institutions rely on attestation reports to verify that trading platforms and payment systems haven't been tampered with before processing transactions.</div><div class="glossary-meta">First seen: 07 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Attribute-Selector Exfiltration</div>
+  <div class="glossary-def">A CSS-based technique where an attacker uses CSS rules that respond to specific HTML attribute values to leak sensitive data, such as tokens, to an external server without using JavaScript.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a financial services back-office application, attribute-selector exfiltration could be used to steal CSRF tokens from administrator sessions, enabling unauthorised transactions or configuration changes without the victim's knowledge.</div><div class="glossary-meta">First seen: 09 September 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">auth users directive (rsync)</div>
@@ -28651,6 +28880,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services firms deploying AI coding assistants or agentic tools, attackers can craft malicious web content that, when scraped by the agent, instructs it to exfiltrate credential files containing access keys to core banking APIs.</div><div class="glossary-meta">First seen: 21 May 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Credential Oracle</div>
+  <div class="glossary-def">A vulnerability where an application's error responses reveal whether a username or account exists, even when login attempts fail, allowing attackers to confirm valid accounts before targeting them.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services authentication systems, a credential oracle in a trading or banking portal could allow attackers to enumerate valid customer accounts, enabling targeted credential stuffing or account takeover attempts.</div><div class="glossary-meta">First seen: 09 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Credential Stuffing</div>
   <div class="glossary-def">An automated attack where stolen username and password combinations from one data breach are tried against many other websites or services, relying on people reusing the same passwords.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> UK retail banks and payment platforms are frequent targets of credential stuffing because customers often reuse passwords across banking and non-financial accounts.</div><div class="glossary-meta">First seen: 09 June 2026</div>
@@ -28749,6 +28983,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-term">Cryptomining (Unauthorised)</div>
   <div class="glossary-def">The use of someone else's computing resources, without their consent, to generate cryptocurrency for the attacker's benefit.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers exploiting vulnerabilities in developer tools used by a fintech firm could deploy cryptominers on cloud infrastructure, driving up compute costs and degrading system performance.</div><div class="glossary-meta">First seen: 30 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">CSS Injection</div>
+  <div class="glossary-def">An attack where a malicious actor inserts unauthorised CSS code into a web application, which can then be used to steal data or manipulate the appearance of pages for other users.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a financial services admin portal, CSS injection could be used to silently exfiltrate CSRF tokens from privileged users, enabling an attacker to perform actions on their behalf, such as changing account settings or authorising transfers.</div><div class="glossary-meta">First seen: 09 September 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">CTP OS</div>
@@ -28869,6 +29108,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-term">Data Silo</div>
   <div class="glossary-def">A situation where data is held and used by one part of an organisation but is not accessible to or integrated with other parts, limiting the overall picture available for decision-making.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial institutions, data silos between fraud, identity, and transaction teams prevent a complete customer risk view, weakening both fraud detection and regulatory compliance.</div><div class="glossary-meta">First seen: 18 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">DB_SANITIZE_BY_DEFAULT</div>
+  <div class="glossary-def">A company that provides capital to fund legal claims in exchange for a share of any settlement or judgment, acting as a financial intermediary in the legal process.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Retail investors in the UK have lost money investing in unregulated loan notes issued by litigation funders, highlighting the FCA's concern about high-risk, illiquid investment structures being marketed to consumers outside the regulatory perimeter.</div><div class="glossary-meta">First seen: 09 September 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">DBIR (Data Breach Investigations Report)</div>
@@ -31616,6 +31860,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms using SAP Commerce Cloud for customer-facing portals or product sales must apply critical patches promptly to protect customer data and payment flows.</div><div class="glossary-meta">First seen: 10 June 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">SAP Kernel</div>
+  <div class="glossary-def">The core runtime layer of SAP systems that handles memory management, process scheduling, and communication between SAP applications and the underlying operating system.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A memory corruption vulnerability in the SAP Kernel is particularly dangerous in financial services firms, where SAP systems often process payroll, financial reporting, and regulatory data, meaning a compromise could affect the integrity of critical financial records.</div><div class="glossary-meta">First seen: 09 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">SAP NetWeaver</div>
   <div class="glossary-def">A technology platform made by SAP that acts as the foundation for running SAP business applications and integrating different systems together.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Critical vulnerabilities in SAP NetWeaver are high-priority for financial services firms, as many banks and insurers use SAP to run core finance and compliance processes.</div><div class="glossary-meta">First seen: 10 June 2026</div>
@@ -32106,6 +32355,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Under the FCA's new crypto framework, all firms supporting crypto trading and custody must meet capital adequacy and stress testing standards, similar to requirements already placed on banks and investment firms.</div><div class="glossary-meta">First seen: 06 July 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Stripe OAuth Merchant Credentials</div>
+  <div class="glossary-def">Authentication tokens and keys that link a website's payment processing to a specific Stripe merchant account, controlling where collected payments are sent.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If an attacker overwrites a financial services firm's Stripe merchant credentials through a missing authorisation check, all customer payments could be silently redirected to a fraudulent account, constituting financial theft and potentially breaching FCA client money rules.</div><div class="glossary-meta">First seen: 09 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Stripe Payment Intent</div>
   <div class="glossary-def">A Stripe API object that tracks the lifecycle of a customer payment, including the amount to be charged, from creation through to confirmation.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If a financial services firm's payment form creates a Stripe Payment Intent using an amount supplied by the user rather than one set server-side, an attacker can trivially alter the charge amount before the transaction is processed.</div><div class="glossary-meta">First seen: 10 July 2026</div>
@@ -32476,6 +32730,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> AI-assisted development tools used by financial services engineers could be exploited via malicious repositories to execute unauthorised commands on developer workstations without meaningful user confirmation.</div><div class="glossary-meta">First seen: 11 May 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Two-Factor Authentication (2FA) Cache Bypass</div>
+  <div class="glossary-def">An attack that exploits a flaw in how an application stores or retrieves temporary authentication data, allowing an attacker to skip the second verification step during login.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a financial services platform, bypassing 2FA via a stale cache means an attacker with a stolen password could access customer accounts from unrecognised devices without ever receiving or intercepting the one-time code.</div><div class="glossary-meta">First seen: 09 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Typosquatting</div>
   <div class="glossary-def">A technique where an attacker registers a domain name or package name that is a deliberate misspelling or close variation of a legitimate one, to trick users or systems into connecting to it.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> APT41 used typosquatting to disguise command-and-control communications, a tactic that could similarly be used to intercept credentials or data from financial services cloud environments.</div><div class="glossary-meta">First seen: 18 April 2026</div>
@@ -32554,6 +32813,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-term">Uncontrolled Search Path Element</div>
   <div class="glossary-def">A vulnerability where an application searches for critical files or libraries in locations that an attacker can influence, allowing malicious code to be loaded instead of the legitimate file.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If a financial services workstation runs installer software vulnerable to uncontrolled search path exploitation, a low-privileged attacker could substitute a malicious library and execute code under the victim's account.</div><div class="glossary-meta">First seen: 16 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Undocumented Endpoint</div>
+  <div class="glossary-def">A hidden or unofficial API route within an application that is not publicly documented but can still be accessed and exploited by an attacker who discovers it.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services APIs often accumulate undocumented endpoints during development; if these bypass controls such as rate limiting, they can expose authentication systems to brute-force attacks that would normally be prevented.</div><div class="glossary-meta">First seen: 09 September 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Unified Communications Manager (Unified CM)</div>
@@ -33002,7 +33266,7 @@ To be direct: this request removes the training framing entirely and asks me to 
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 08 September 2026 10:52 UTC &middot;
+  Built automatically by Vigil &middot; 09 September 2026 10:58 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
