@@ -362,7 +362,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 09 September 2026 10:58 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 10 September 2026 10:55 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>11 sources active</span>
   </div>
@@ -381,7 +381,7 @@
   <div class="stats">
     <div class="stat-card">
       <div class="stat-label">Days Active</div>
-      <div class="stat-value cyan">132</div>
+      <div class="stat-value cyan">133</div>
       <div class="stat-sub">and counting</div>
     </div>
     <div class="stat-card">
@@ -391,12 +391,12 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">1361</div>
+      <div class="stat-value yellow">1376</div>
       <div class="stat-sub">auto-built from 11 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">1126</div>
+      <div class="stat-value purple">1134</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -422,6 +422,111 @@
   </div>
 </div>
 <div class="day-card open">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">10 September 2026</div>
+    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    
+<div class="day-section">
+  <div class="day-sec-label">Executive summary</div>
+  <div class="day-sec-text"><p style="margin:0 0 8px 0">The most pressing threats today are actively exploited critical vulnerabilities in Cisco Secure FMC and WatchGuard Firebox, with ransomware gangs confirmed leveraging both for network compromise. Multiple high-severity flaws in AI/ML infrastructure (vLLM, LangChain) also surfaced, posing direct risk to firms deploying AI pipelines. UK financial firms face additional pressure from new FCA transaction reporting rule changes requiring compliance review.
+
+---</p></div>
+</div>
+    
+<div class="day-section">
+  <div class="day-sec-label">&#127981; FinServ threats</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">WatchGuard Firebox RCE (CISA confirmed)</div>
+  <div class="day-threat-body">— Ransomware gangs are actively exploiting this critical firewall flaw, posing an immediate perimeter breach risk for any FinServ firm running WatchGuard appliances</div>
+  <a href="https://www.bleepingcomputer.com/news/security/cisa-watchguard-rce-flaw-now-exploited-in-ransomware-attacks/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Cisco CVE-2026-20079 (Secure FMC auth bypass, max severity)</div>
+  <div class="day-threat-body">— Cisco has confirmed active exploitation of this authentication bypass in its Firewall Management Center, threatening network security controls at financial firms relying on Cisco infrastructure</div>
+  <a href="https://www.bleepingcomputer.com/news/security/cisco-confirms-cve-2026-20079-secure-fmc-flaw-exploited-in-attacks/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">SAP EPP Remote Code Execution</div>
+  <div class="day-threat-body">— This kernel-level flaw is reachable from every SAP GUI and RFC connection, directly endangering core banking and ERP systems widely used across financial services</div>
+  <a href="https://www.cisecurity.org/advisory/a-vulnerability-in-sap-extended-passport-epp-processing-could-allow-for-remote-code-execution" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Biometric fraud and verification evasion</div>
+  <div class="day-threat-body">— Dark web access to fingerprints and cloned identity documents is undermining biometric verification, a risk to KYC and onboarding processes at UK financial firms</div>
+  <a href="https://www.finextra.com/videoarticle/3526/fingerprints-for-a-fee-how-fraud-is-creating-a-headache-for-verification" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA fines and bans former SVS Securities CEO</div>
+  <div class="day-threat-body">— The FCA's enforcement action against SVS Securities for misuse of customer pension funds reinforces expectations around senior manager accountability under SMCR</div>
+  <a href="https://www.fca.org.uk/news/press-releases/fca-fines-bans-former-svs-securities-ceo" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#129302; AI / ML security</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2025-9141 — vLLM RCE in Qwen3-Coder tool call parser (CVSS 8.8)</div>
+  <div class="day-threat-body">— A network-exploitable remote code execution flaw in vLLM's tool call parser could compromise AI inference infrastructure if firms are running this model-serving framework</div>
+  <a href="https://osv.dev/vulnerability/GHSA-79j6-g2m3-jgfw" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2025-62164 — vLLM deserialization RCE/DoS (CVSS 8.8)</div>
+  <div class="day-threat-body">— A deserialization vulnerability in vLLM (fixed in 0.11.1) allows authenticated remote attackers to achieve code execution or deny service on AI serving infrastructure</div>
+  <a href="https://osv.dev/vulnerability/GHSA-mrw7-hf4f-83pf" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2025-68664 — LangChain serialization injection enables secret extraction (CVSS: High, network-exploitable)</div>
+  <div class="day-threat-body">— A serialization flaw in LangChain-core's dumps/loads APIs can allow secret extraction, threatening credentials and data in any LangChain-based AI pipeline</div>
+  <a href="https://osv.dev/vulnerability/GHSA-c67j-w6g6-q2cm" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS: MCP Server data exfiltration via indirect prompt injection (Cursor case study)</div>
+  <div class="day-threat-body">— A proof-of-concept shows that a malicious MCP server can inject prompts into an AI coding agent to exfiltrate configuration files and credentials via shell commands</div>
+  <a href="https://atlas.mitre.org/studies/AML.CS0045" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS: LLM Jailbreak techniques (AML.T0054)</div>
+  <div class="day-threat-body">— Adversaries can use prompt manipulation or model weight modification to bypass safety guardrails, enabling data leakage or generation of malicious content from deployed LLMs</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#128275; Vulnerabilities</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-86770 (CVSS 8.1)</div>
+  <div class="day-threat-body">— Snipe-IT SAML authentication fails to validate username case sensitivity, allowing account takeover via federated login paths including LDAP and OAuth</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86770" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-86762 (CVSS 8.1)</div>
+  <div class="day-threat-body">— Snipe-IT deactivated user API tokens remain valid, allowing a disabled account to re-activate itself and retain full API access until token expiry</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86762" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-87815 (CVSS 8.7)</div>
+  <div class="day-threat-body">— SiYuan path traversal in the removeRiffDeck endpoint allows authenticated admins to delete arbitrary files outside the workspace, risking data destruction</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-87815" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-86775 (CVSS 8.6)</div>
+  <div class="day-threat-body">— A path traversal flaw in the knowns npm package's Document API allows unauthenticated remote attackers to read arbitrary files from the server filesystem</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86775" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-87807 (CVSS 7.5)</div>
+  <div class="day-threat-body">— SiYuan's fullTextSearchBlock endpoint is vulnerable to SQL injection via UNION SELECT, exposing all document content to authenticated attackers</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-87807" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+    
+  </div>
+</div>
+<div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">09 September 2026</div>
     <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
@@ -10153,6 +10258,125 @@
 
   <div id="tab-hot" class="tab">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">10 September 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Catalogues LLM Jailbreak as Formal Adversarial Technique — Here's What That Means for FinServ AI Deployments</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK financial services firms increasingly deploy LLMs for customer-facing applications, fraud detection, and internal tooling — all of which are potential jailbreak targets. MITRE ATLAS formalising this as technique AML.T0054 means it now has a structured taxonomy, making it easier to map to threat models and regulatory risk assessments (e.g., under FCA operational resilience requirements). A jailbroken model embedded in a FinServ workflow could leak customer data, generate fraudulent content, or bypass compliance guardrails.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors use adversarial prompting or direct model weight manipulation to override safety mechanisms, enabling the LLM to produce outputs it was specifically designed to withhold — such as sensitive system information or harmful financial content.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Map your firm's deployed LLMs against MITRE ATLAS AML.T0054 today — specifically test whether your models can be prompted to reveal system prompts, bypass compliance filters, or generate prohibited financial advice content, and document findings for your AI risk register.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Flags Generative AI as an Adversarial Acquisition Target — Threat Actors Are Weaponising LLMs Locally and in the Cloud</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Threat actors obtaining and locally hosting open-source LLMs (via Ollama, vLLM, etc.) removes dependency on commercial API guardrails, enabling uncensored generation of phishing lures, malware, and deepfakes targeting UK financial institutions and their customers. For a FinServ security engineer, this materially raises the sophistication ceiling for social engineering attacks — particularly spear-phishing against high-value staff or deepfake-based authorisation fraud. This technique underpins multiple downstream attack chains relevant to the sector.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries acquire and self-host generative AI models to produce tailored phishing content, deepfakes, and malicious commands without triggering commercial provider safety controls or leaving API audit trails.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Urgently review and update your phishing simulation and awareness training to include AI-generated content examples, and brief your fraud and payments teams on the rising risk of deepfake-assisted voice or video authorisation fraud specific to financial transactions.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">WordPress Plugin CVE-2026-26212 Enables Authenticated RCE via Arbitrary PHP File Upload — Patch Before Attackers Find Your Admin Credentials</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-26212" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerability</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Many UK financial services firms maintain WordPress-based public-facing sites (investor portals, marketing pages, blogs) that may run third-party plugins like Rara One Click Demo Import — a CVSS 7.2 flaw here allows an authenticated administrator-level attacker to achieve persistent remote code execution. Critically, the uploaded malicious PHP file persists on disk even after plugin deactivation and leaves no media library record, making detection via standard integrity checks unreliable. A compromised web server in a FinServ environment could serve as an initial foothold or be used to host credential-harvesting pages targeting customers.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Immediately audit all WordPress installations within your estate for the Rara One Click Demo Import plugin and update to version 1.3.5 or later; if patching cannot be done today, disable the plugin and conduct a retroactive scan of the uploads directory for unexpected PHP files.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Renews Warning on Unregulated Mini-Bonds and Loan Notes After Woodville Consultants Failure</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/consumers-warned-beware-risky-mini-bonds-and-loan-notes" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's renewed warning following the Woodville Consultants collapse signals continued regulatory scrutiny of unregulated investment products being marketed to retail consumers — a persistent compliance and reputational risk area for UK FinServ firms. Despite the 2021 marketing ban on speculative illiquid securities, non-compliant promotions continue to reach retail investors, raising the risk of FCA enforcement action against firms that facilitate or fail to block such promotions. Security engineers should be aware this environment is also heavily exploited by scammers using cloned firm websites and investment fraud infrastructure.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Coordinate with your compliance team to verify that your firm's digital channels (website, email, social media) cannot be used — including through compromise or spoofing — to promote unregulated investment products, and ensure your brand protection monitoring covers clone site detection.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Appoints New Attachés in India and UAE to Deepen International Financial Regulatory Cooperation</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/fca-expands-global-presence-new-attaches-india-uae" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's expanded international presence in Mumbai and Abu Dhabi reflects a strategic push to strengthen cross-border regulatory coordination, which over time will influence how UK-regulated firms operating in or with counterparties in India and the UAE must manage compliance and information-sharing obligations. For security engineers at firms with operations in these jurisdictions, increased regulatory engagement may lead to new data-sharing or incident reporting expectations between regulators. This is a lower-urgency strategic signal rather than an immediate operational threat.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Flag this development to your regulatory affairs and compliance colleagues so they can monitor for any emerging FCA guidance or bilateral agreements with Indian or UAE regulators that could introduce new cybersecurity or data residency obligations for your firm's cross-border operations.
+
+---
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">09 September 2026</span>
@@ -27625,7 +27849,7 @@ To be direct: this request removes the training framing entirely and asks me to 
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 1126 terms&#8230;"
+           placeholder="Search 1134 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">$</div>
@@ -29565,6 +29789,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The Supercharged Sandbox allows firms to trial agentic AI use cases — such as fraud detection and</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Federated Login</div>
+  <div class="glossary-def">An authentication system that allows a user to log into one application using credentials verified by a separate, trusted identity provider rather than a local username and password.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services platforms increasingly use federated login via SAML or OAuth to centralise staff authentication, but this introduces risk if the application does not strictly validate the identity assertions received from the identity provider.</div><div class="glossary-meta">First seen: 10 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">File Descriptor Inheritance</div>
   <div class="glossary-def">A situation where a child process or program automatically receives open file handles from its parent process, potentially including handles that carry elevated access rights.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a containerised FinServ environment, unexpected file descriptor inheritance across privilege boundaries could allow an unprivileged process to perform actions reserved for root, undermining workload isolation.</div><div class="glossary-meta">First seen: 03 September 2026</div>
@@ -30208,6 +30437,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-term">LangChain</div>
   <div class="glossary-def">An open-source framework used to build applications that connect large language models to external data sources, tools, and workflows.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms using LangChain to build AI-powered document analysis or customer service tools must patch promptly, as vulnerabilities in its prompt templates or file-loading functions can expose sensitive data.</div><div class="glossary-meta">First seen: 16 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">LangChain Serialization Injection</div>
+  <div class="glossary-def">An attack where malicious data is embedded into serialized objects processed by the LangChain AI framework, allowing an attacker to extract secrets or manipulate the application when those objects are loaded.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A financial services firm using LangChain to build AI-powered compliance or customer-facing tools could expose API keys, database credentials, or customer data if it processes untrusted serialized inputs without patching to a fixed version.</div><div class="glossary-meta">First seen: 10 September 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Langflow</div>
@@ -31645,6 +31879,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers exploiting the VMware vCenter vulnerability deployed a reverse SSH tool to maintain persistent access, a method that is difficult to detect because the traffic originates from inside the network and can blend with legitimate outbound traffic.</div><div class="glossary-meta">First seen: 14 August 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">RFC (Remote Function Call)</div>
+  <div class="glossary-def">A proprietary SAP communication protocol that allows one SAP system or component to call and execute functions on another SAP system remotely.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a financial services firm running SAP for core banking or finance processes, RFC connections between systems can be an attack path — a vulnerability that travels via RFC (as EPP does) could allow lateral movement between SAP instances without additional authentication.</div><div class="glossary-meta">First seen: 10 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">RFC 1918 Destinations</div>
   <div class="glossary-def">The private IP address ranges (10.x.x.x, 172.16.x.x–172.31.x.x, and</div>
   
@@ -31820,6 +32059,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Many UK financial services firms use SAML 2.0 to enable staff to log into multiple internal systems with one set of credentials, making vulnerabilities in SAML implementations particularly high-impact as a single bypass can grant access to many systems at once.</div><div class="glossary-meta">First seen: 04 August 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">SAML Case-Sensitivity Bypass</div>
+  <div class="glossary-def">An attack that exploits the failure of a system to treat usernames as case-sensitive during federated login, allowing an attacker to register a lookalike account and authenticate as a legitimate victim user.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms using SAML-based single sign-on for internal tools or client portals must ensure their identity provider and application agree on exact username matching, as a bypass here could allow impersonation of privileged staff or customers.</div><div class="glossary-meta">First seen: 10 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Sanctions Systems and Controls</div>
   <div class="glossary-def">The internal policies, processes, and technology a financial firm uses to identify, screen, and block transactions or relationships involving sanctioned parties.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA found repeated gaps in firms' sanctions systems and controls during reviews, meaning some institutions were at risk of inadvertently processing transactions that should have been blocked.</div><div class="glossary-meta">First seen: 05 June 2026</div>
@@ -31858,6 +32102,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-term">SAP Commerce Cloud</div>
   <div class="glossary-def">A cloud-based e-commerce platform made by SAP that manages online sales, customer accounts, and transactions.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms using SAP Commerce Cloud for customer-facing portals or product sales must apply critical patches promptly to protect customer data and payment flows.</div><div class="glossary-meta">First seen: 10 June 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">SAP Extended Passport (EPP)</div>
+  <div class="glossary-def">A data structure built into SAP's core software that automatically tracks and logs communication across SAP systems, travelling with each user session from client to server.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Because EPP is shared kernel code reachable by every end user, a vulnerability in EPP processing could allow an attacker who already has basic SAP access at a financial services firm to escalate to remote code execution across the entire SAP landscape, including ERP and finance systems.</div><div class="glossary-meta">First seen: 10 September 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">SAP Kernel</div>
@@ -32615,6 +32864,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Extortion groups such as ShinyHunters represent a growing threat to financial services firms, where the disclosure of customer data could trigger FCA breach notification obligations and significant reputational damage.</div><div class="glossary-meta">First seen: 27 May 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Tool Call Parser (LLM Context)</div>
+  <div class="glossary-def">The component of an LLM inference framework that interprets and executes structured requests from the model to call external tools or functions, translating the model's text output into real system actions.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A vulnerability in vLLM's tool call parser demonstrates that AI inference infrastructure used by financial services firms is not inherently safe — a malformed model response could trigger remote code execution on the server hosting</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Tool Calls</div>
   <div class="glossary-def">When an AI system invokes external functions, APIs, or services to complete a task beyond text generation.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> AI assistants in banking might make tool calls to check account balances or transfer funds, making them targets for manipulation to trigger unauthorized financial operations.</div><div class="glossary-meta">First seen: 17 April 2026</div>
@@ -32880,6 +33134,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A subscriber-level employee at a financial firm could exploit a missing authorisation check to overwrite an administrator's password and gain access to sensitive regulatory reporting systems.</div><div class="glossary-meta">First seen: 28 May 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">utf8mb4_unicode_ci (Database Collation)</div>
+  <div class="glossary-def">A MySQL/MariaDB database setting that controls how text is compared and sorted, and which treats accented characters and case variants as equivalent matches.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If a financial services platform's database uses this collation and its authentication code relies on database-level string comparison, an attacker could register a username like &quot;Ádmin&quot; to match &quot;admin&quot; and bypass account ownership checks.</div><div class="glossary-meta">First seen: 10 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">UTM Parameters</div>
   <div class="glossary-def">Tracking codes added to URLs that help identify where website traffic comes from, such as email campaigns or social media posts.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms use UTM parameters to track marketing effectiveness, but attackers can inject malicious scripts through these parameters to compromise analytics dashboards.</div><div class="glossary-meta">First seen: 17 April 2026</div>
@@ -33038,6 +33297,11 @@ To be direct: this request removes the training framing entirely and asks me to 
   <div class="glossary-term">Watchdog Timer</div>
   <div class="glossary-def">A security flaw where network traffic intended for one virtual network segment accidentally gets forwarded to another segment.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> VLAN leakage in financial institutions could allow attackers to intercept sensitive trading data or payment information by accessing packets from isolated network segments.</div><div class="glossary-meta">First seen: 26 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">WatchGuard Firebox</div>
+  <div class="glossary-def">A company that provides capital to fund legal cases in exchange for a share of any financial award, or in some cases raises money from investors to fund its own operations.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Retail investors in the UK have lost money investing in unregulated loan notes issued by litigation funders such as Woodville Consultants, which the FCA cannot easily intervene on because the firms fall outside the regulatory perimeter.</div><div class="glossary-meta">First seen: 10 September 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Wazuh</div>
@@ -33266,7 +33530,7 @@ To be direct: this request removes the training framing entirely and asks me to 
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 09 September 2026 10:58 UTC &middot;
+  Built automatically by Vigil &middot; 10 September 2026 10:55 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
