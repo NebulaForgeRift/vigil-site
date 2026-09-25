@@ -362,7 +362,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 24 September 2026 11:23 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 25 September 2026 11:26 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>11 sources active</span>
   </div>
@@ -381,7 +381,7 @@
   <div class="stats">
     <div class="stat-card">
       <div class="stat-label">Days Active</div>
-      <div class="stat-value cyan">147</div>
+      <div class="stat-value cyan">148</div>
       <div class="stat-sub">and counting</div>
     </div>
     <div class="stat-card">
@@ -391,12 +391,12 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">1527</div>
+      <div class="stat-value yellow">1541</div>
       <div class="stat-sub">auto-built from 11 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">1215</div>
+      <div class="stat-value purple">1223</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -414,18 +414,114 @@
   </div>
   <div class="pipe-stage">
     <div class="pipe-stage-name">&#128275; Vulnerabilities</div>
-    <div class="pipe-stage-count yellow">5</div>
-  </div>
-  <div class="pipe-stage">
-    <div class="pipe-stage-name">&#9878;&#65039; Regulatory & Compliance</div>
-    <div class="pipe-stage-count purple">1</div>
+    <div class="pipe-stage-count yellow">4</div>
   </div>
   <div class="pipe-stage">
     <div class="pipe-stage-name">&#128202; Total Items</div>
-    <div class="pipe-stage-count green">16</div>
+    <div class="pipe-stage-count green">14</div>
   </div>
 </div>
 <div class="day-card open">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">25 September 2026</div>
+    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">4 Vuln</span></div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    
+<div class="day-section">
+  <div class="day-sec-label">Executive summary</div>
+  <div class="day-sec-text"><p style="margin:0 0 8px 0">The most pressing threats today are the actively exploited Roundcube webmail vulnerability now being used in code injection attacks, and a maximum-severity (CVSS 10.0) GitLab path traversal flaw that puts software supply chains at serious risk. Russian nation-state actor Sandworm is actively chaining Cisco vulnerabilities to deploy upgraded Cyclops Blink botnet malware. On the AI/ML front, MITRE ATLAS has published new techniques covering LLM jailbreaks, agentic resource abuse, and AI agent configuration harvesting, highlighting the expanding adversarial AI threat surface.
+
+---</p></div>
+</div>
+    
+<div class="day-section">
+  <div class="day-sec-label">&#127981; FinServ threats</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA Illegal Crypto Trading Crackdown</div>
+  <div class="day-threat-body">— The FCA, HMRC, and Metropolitan Police targeted three London premises conducting unregistered peer-to-peer crypto trading, a reminder that unregistered crypto activity carries regulatory and AML exposure for any firm touching similar counterparties</div>
+  <a href="https://www.fca.org.uk/news/press-releases/fca-and-partners-continues-crackdown-illegal-crypto-trading" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Revolut Breach — Targeted Crypto Whale Accounts</div>
+  <div class="day-threat-body">— Attackers claim to have exfiltrated personal data on 680 high-net-worth crypto account holders, demonstrating that threat actors are deliberately targeting affluent digital asset customers for follow-on fraud or social engineering</div>
+  <a href="https://www.finextra.com/newsarticle/48413/revolut-breach-specifically-targeted-680-crypto-whales" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Fingerprints for a Fee — Biometric Fraud Risk</div>
+  <div class="day-threat-body">— Dark web access to biometric data including fingerprints is enabling fraudsters to defeat identity verification controls, posing a direct threat to KYC and onboarding processes at UK financial firms</div>
+  <a href="https://www.finextra.com/videoarticle/3526/fingerprints-for-a-fee-how-fraud-is-creating-a-headache-for-verification" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Roundcube Webmail Flaw Actively Exploited</div>
+  <div class="day-threat-body">— A now-actively-exploited high-severity Roundcube code injection vulnerability is relevant to any financial firm using this webmail platform for internal or client-facing communications</div>
+  <a href="https://www.bleepingcomputer.com/news/security/critical-roundcube-flaw-now-actively-exploited-in-code-injection-attacks/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA Financial Crime Speech — Collective Defence</div>
+  <div class="day-threat-body">— The FCA's enforcement director used the Law Society Economic Crime Conference to stress that information sharing and collective action are central to fighting financial crime, signalling continued regulatory expectation of proactive intelligence sharing</div>
+  <a href="https://www.fca.org.uk/news/speeches/financial-crime-protecting-hive" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#129302; AI / ML security</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">LLM Jailbreak (MITRE ATLAS AML.T0054)</div>
+  <div class="day-threat-body">— Adversaries can override LLM safety guardrails via adversarial prompting or weight modification to extract sensitive data or generate harmful content, a direct risk to any AI-powered customer service or compliance tool deployed by the firm</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Generative AI for Malicious Operations (MITRE ATLAS AML.T0016.002)</div>
+  <div class="day-threat-body">— Threat actors are acquiring and self-hosting open-source LLMs to generate phishing content, deepfakes, and malware, lowering the barrier for sophisticated attacks against financial sector staff and customers</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Agentic Resource Consumption (MITRE ATLAS AML.T0034.002)</div>
+  <div class="day-threat-body">— Attackers can use prompt injection to force AI agents into excessive, costly tool calls that exhaust API budgets and degrade service availability, a concern for any firm deploying agentic AI in operations or client workflows</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">AI Agent Configuration Harvesting (MITRE ATLAS AML.T0002.002)</div>
+  <div class="day-threat-body">— Publicly accessible AI agent configuration files can expose credentials, system prompts, and tool access details to adversaries, making secure configuration management of AI deployments critical</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0002.002" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Data Exfiltration via MCP Server / Cursor (MITRE ATLAS AML.CS0045)</div>
+  <div class="day-threat-body">— A proof-of-concept demonstrated that a malicious Model Context Protocol server can inject prompts into AI coding tools like Cursor to execute shell commands and exfiltrate agent credentials, a supply chain risk for developer teams using AI-assisted coding environments</div>
+  <a href="https://atlas.mitre.org/studies/AML.CS0045" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#128275; Vulnerabilities</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-85706 (CVSS 10.0)</div>
+  <div class="day-threat-body">— A maximum-severity path traversal vulnerability in both GitLab Community and Enterprise Editions puts software supply chains at risk of full compromise; any firm using GitLab for code or pipeline management should patch immediately</div>
+  <a href="https://www.darkreading.com/cyberattacks-data-breaches/maximum-severity-gitlab-flaw-supply-chains-risk" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-19804 (CVSS 8.8)</div>
+  <div class="day-threat-body">— An unauthenticated remote code execution flaw in the WordPress s2Member plugin allows arbitrary code execution via an unsanitised parameter, posing a serious risk to any firm running WordPress-based portals or client-facing sites</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19804" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-77874 (CVSS 8.6)</div>
+  <div class="day-threat-body">— SQL injection in IBM Enterprise Build of Quarkus (versions 3.27.1–3.27.5.SP1 and 3.33.1–3.33.3.SP1) allows an unauthenticated remote attacker to read, modify, or delete back-end database content</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-77874" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-93354 (CVSS 8.1)</div>
+  <div class="day-threat-body">— A missing authentication flaw in Taskview Community's OAuth 2.0 Dynamic Client Registration endpoint allows unauthenticated account takeover, relevant to any firm using this platform for task or workflow management</div>
+  
+</div>
+</div>
+    
+  </div>
+</div>
+<div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">24 September 2026</div>
     <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span><span class="day-pill pill-purple">1 Reg</span></div>
@@ -11329,6 +11425,125 @@
 
   <div id="tab-hot" class="tab">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">25 September 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Formalises LLM Jailbreak as Catalogued Adversarial Technique</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">As UK financial services firms increasingly deploy LLM-powered tools for customer service, fraud detection, and internal knowledge management, jailbreaking represents a direct threat to data confidentiality and regulatory compliance. A successfully jailbroken model embedded in a FinServ workflow could leak sensitive customer data or generate outputs that breach FCA conduct rules. MITRE's formal cataloguing of this technique (AML.T0054) means it should now be included in your AI threat modelling and red-team scope.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors use adversarial prompting techniques to bypass LLM safety guardrails, potentially forcing models to reveal system prompts, internal data, or generate malicious content — directly weaponising the AI system against its own organisation.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Map AML.T0054 into your existing threat model today and ensure any internally deployed LLM has documented jailbreak testing as part of its pre-production security assessment and ongoing red-team programme.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Documents Adversarial Acquisition of Generative AI Tools for Offensive Operations</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Threat actors leveraging locally hosted open-source LLMs (e.g., via Ollama or vLLM) face no API monitoring or abuse controls, dramatically lowering the barrier to generating targeted phishing content, deepfakes, or malware — all highly relevant attack vectors against UK financial institutions. This technique underpins a wide range of downstream attacks including spear-phishing of finance staff and synthetic fraud. Understanding how adversaries acquire and operationalise these tools informs both detection strategy and supplier risk assessments.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries obtain and self-host open-source generative AI models to produce phishing lures, malicious commands, and deepfake content entirely outside the visibility of commercial AI providers' abuse monitoring systems.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Review your phishing simulation and awareness training programme to include AI-generated, highly personalised lure content, and consider whether your email security controls are tuned to detect the elevated quality and volume of AI-assisted phishing.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">Critical SQL Injection Flaw in IBM Quarkus Allows Unauthenticated Remote Database Manipulation (CVSS 8.6)</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-77874" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerability</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">IBM Enterprise Build of Quarkus is used in enterprise Java application development and may underpin internal or vendor-supplied applications within UK financial services environments, including API backends and microservices. A CVSS 8.6 unauthenticated SQL injection vulnerability allowing full CRUD access to backend databases is a critical data integrity and confidentiality risk, with direct implications for customer data protection under UK GDPR and FCA operational resilience requirements. Exploitation requires no authentication, significantly increasing the risk of opportunistic attack.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Immediately audit your estate and software bill of materials (SBOM) for IBM Enterprise Build of Quarkus versions 3.27.1–3.27.5.SP1 and 3.33.1–3.33.3.SP1, and prioritise patching or compensating controls (e.g., WAF SQL injection rules) before end of business today.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Raids Three London Sites in Crackdown on Unregistered Crypto Trading</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/fca-and-partners-continues-crackdown-illegal-crypto-trading" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's joint operations with HMRC and the Metropolitan Police targeting unregistered peer-to-peer crypto trading signal an intensifying regulatory enforcement posture around crypto assets in the UK. For FinServ firms with any crypto-adjacent products or services, this reinforces the risk of operating without proper registration and the scrutiny the FCA is applying to the sector. Security teams should be aware that illicit crypto infrastructure is frequently associated with money laundering and fraud ecosystems that may target legitimate financial institutions.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      If your firm touches crypto assets or provides services to crypto businesses, verify that all relevant entities hold appropriate FCA registration and flag any unregistered counterparty relationships to your compliance and financial crime teams immediately.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Launches Multi-Sector Partnership to Close Protection Insurance Gap for Millions of UK Adults</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/fca-partners-help-improve-financial-security-millions" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's initiative to expand protection insurance coverage — noting that 58% of UK adults lack life or income protection insurance — signals a forthcoming increase in regulatory focus and industry activity in the retail insurance space. Security engineers at firms developing or expanding digital insurance distribution channels should anticipate increased data flows and customer onboarding activity that may attract fraud and data harvesting attacks. New cross-sector data sharing arrangements arising from this partnership may also introduce third-party data risk that warrants early assessment.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      If your firm is involved in protection insurance distribution or is likely to be drawn into this initiative, proactively review the data sharing and third-party risk controls around any new partner integrations before they go live.
+
+---
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">24 September 2026</span>
@@ -26202,7 +26417,7 @@
   </div>
   <div class="ta-stat ta-stat-purple">
     <div class="ta-stat-label">Total Sightings</div>
-    <div class="ta-stat-value" style="color:var(--purple)">107</div>
+    <div class="ta-stat-value" style="color:var(--purple)">108</div>
     <div class="ta-stat-sub">across all digests</div>
   </div>
 </div>
@@ -26500,16 +26715,16 @@
 </div>
 <div class="ta-card" data-level="Critical"
      data-actor-id="sandworm"
-     data-search="sandworm n/a *(no aliases mentioned in the articles)* n/a *(no aliases mentioned in today's articles)* n/a *(no aliases mentioned in the article)*">
+     data-search="sandworm n/a *(no aliases mentioned in the articles)* n/a *(no aliases mentioned in today's articles)* n/a *(no aliases mentioned in the article)* n/a *(no additional aliases mentioned in today's articles)*">
   <div class="ta-card-accent" style="background:var(--red)"></div>
   <div class="ta-card-summary" onclick="taToggle(this)">
     <div class="ta-card-left">
       <div class="ta-card-name">Sandworm</div>
-      <div class="ta-card-alias">N/A *(no aliases mentioned in the articles)*, N/A *(no aliases mentioned in today's articles)*, N/A *(no aliases mentioned in the article)*</div>
+      <div class="ta-card-alias">N/A *(no aliases mentioned in the articles)*, N/A *(no aliases mentioned in today's articles)*, N/A *(no aliases mentioned in the article)*, N/A *(no additional aliases mentioned in today's articles)*</div>
       <div class="ta-card-meta">
         <span>&#127988; Nation-State</span>
         <span>&#127758; Russia (explicitly described as a Russian threat group)</span>
-        <span class="ta-sighting-count">&#128065; 7 sightings</span>
+        <span class="ta-sighting-count">&#128065; 8 sightings</span>
       </div>
       <div class="ta-card-sectors"></div>
     </div>
@@ -26531,8 +26746,14 @@
         <span class="ta-none">None recorded</span>
       </div>
     </div>
-    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 7 total</div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 8 total</div>
     <div class="ta-timeline">
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">25 September 2026</div>
+  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together to achieve initial access and propagation; Deploying an upgraded variant of the **Cyclops Blink** botnet malware (previously disrupted by the FBI in 2022); Leveraging known, publicly attributed tooling in continued operations despite prior law enforcement disruption Sandworm's use of botnet infrastructure built on exploited network devices (such as Cisco equipment common in enterprise financial environments) means UK financial firms with internet-facing or perimeter Cisco assets could be at risk of compromise or becoming unwitting nodes in the botnet.</div>
+  
+</div>
 <div class="ta-timeline-item">
   <div class="ta-timeline-dot"></div>
   <div class="ta-timeline-date">24 September 2026</div>
@@ -30252,7 +30473,7 @@ I recognize what's happening</div>
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 1215 terms&#8230;"
+           placeholder="Search 1223 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">$</div>
@@ -31482,6 +31703,11 @@ I recognize what's happening</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Ransomware groups targeting critical financial infrastructure are reusing leaked Conti code, meaning firms may face well-tested, sophisticated attack tooling even from relatively new threat actors.</div><div class="glossary-meta">First seen: 13 August 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Continuous Compliance Validation</div>
+  <div class="glossary-def">The practice of directing consumers seeking free debt help towards paid fee-charging services that may be unsuitable, sometimes using pressure tactics or misleading information.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA has identified debt solution fee steering as a conduct risk, meaning financial firms and their appointed representatives face enforcement action if their referral or sales processes prioritise revenue over consumer suitability.</div><div class="glossary-meta">First seen: 25 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Continuous Penetration Testing</div>
   <div class="glossary-def">A security testing approach where systems are assessed for vulnerabilities on an ongoing basis rather than during a single scheduled engagement.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial institutions relying on annual or bi-annual pen tests may leave hundreds of days of unvalidated exposure — continuous testing helps ensure new attack surfaces introduced by cloud migrations or system changes are caught promptly.</div><div class="glossary-meta">First seen: 04 June 2026</div>
@@ -32067,6 +32293,11 @@ I recognize what's happening</div>
   
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">DOM-Based Cross-Site Scripting (DOM XSS)</div>
+  <div class="glossary-def">A type of web attack where malicious code is injected and executed entirely within the victim's browser by manipulating the page's Document Object Model, without the server ever seeing the malicious payload.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A DOM XSS vulnerability in a financial services customer portal could allow an attacker to steal session tokens or redirect users to fraudulent payment pages without triggering server-side security controls.</div><div class="glossary-meta">First seen: 25 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Domain-Joined Server</div>
   <div class="glossary-def">A server that has been connected to and registered with a central Windows Active Directory domain, meaning it shares authentication and policy controls with other machines in the organisation.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Domain-joined backup servers in a bank's environment are a high-value target because compromising one can give attackers access to credentials and trust relationships across the wider network.</div><div class="glossary-meta">First seen: 10 June 2026</div>
@@ -32080,6 +32311,11 @@ I recognize what's happening</div>
   <div class="glossary-term">Dotfile Exposure</div>
   <div class="glossary-def">A security misconfiguration where files beginning with a dot — which are normally hidden from directory listings — are stored in a publicly accessible web location without adequate access controls, making them retrievable</div>
   
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Draft Key / Access Token Exposure</div>
+  <div class="glossary-def">A security weakness where unique identifiers returned by a web application after saving a draft are insufficiently protected, allowing an attacker to construct a malicious link targeting another user.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services onboarding forms or loan applications, exposed draft keys could let attackers craft URLs that execute malicious scripts when a legitimate customer resumes their application.</div><div class="glossary-meta">First seen: 25 September 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Drupal CMS</div>
@@ -32335,6 +32571,11 @@ I recognize what's happening</div>
   <div class="glossary-term">Federated Login</div>
   <div class="glossary-def">An authentication system that allows a user to log into one application using credentials verified by a separate, trusted identity provider rather than a local username and password.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services platforms increasingly use federated login via SAML or OAuth to centralise staff authentication, but this introduces risk if the application does not strictly validate the identity assertions received from the identity provider.</div><div class="glossary-meta">First seen: 10 September 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">FedRAMP (Federal Risk and Authorization Management Program)</div>
+  <div class="glossary-def">A US government framework that sets standardised security requirements for cloud services used by federal agencies, requiring continuous monitoring and formal authorisation.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> UK financial firms with US government clients or cross-border cloud operations may need to align with FedRAMP's continuous vulnerability management requirements alongside FCA operational resilience obligations.</div><div class="glossary-meta">First seen: 25 September 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">File Descriptor Inheritance</div>
@@ -32665,6 +32906,11 @@ I recognize what's happening</div>
   <div class="glossary-term">IAS Zone Cluster (Zigbee)</div>
   <div class="glossary-def">A Zigbee smart device security feature that manages intrusion alarm system sensors, using a state table to track enrolled devices on a wireless network.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> CVE-2026-47150 shows that even IoT security protocols used in physical access control at financial services premises can contain out-of-bounds write vulnerabilities triggerable by malformed messages from already-joined devices.</div><div class="glossary-meta">First seen: 26 June 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">IBM Concert</div>
+  <div class="glossary-def">An agentic IT operations platform that consolidates data and actions across an organisation's hybrid cloud infrastructure to automate resilience tasks.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Remote code execution vulnerabilities in agentic IT platforms like IBM Concert represent a heightened risk for financial firms, as such tools typically have broad access to production systems and sensitive operational data.</div><div class="glossary-meta">First seen: 25 September 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">iCagenda / Balbooa Forms (Joomla Extensions)</div>
@@ -35427,6 +35673,11 @@ I recognize what's happening</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a financial services AI assistant, the system prompt may contain instructions restricting the model from disclosing proprietary pricing data or customer information, making it a high-value target for extraction via prompt injection attacks.</div><div class="glossary-meta">First seen: 27 May 2026</div>
 </div><div class="glossary-letter">T</div>
 <div class="glossary-item">
+  <div class="glossary-term">TACACS+ (Terminal Access Controller Access-Control System Plus)</div>
+  <div class="glossary-def">A legacy network authentication protocol used to control who can log into and manage network devices like routers and switches.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A vulnerability in TACACS+ could allow attackers to bypass authentication on network infrastructure within a financial firm, giving them administrative access to critical internal systems.</div><div class="glossary-meta">First seen: 25 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Tactics, Techniques and Procedures (TTPs)</div>
   <div class="glossary-def">A structured description of how a cyber attacker operates — their overall goals, the specific methods they use to achieve them, and the detailed steps they follow during an attack.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Understanding a ransomware group's TTPs allows a financial services firm's threat intelligence team to tune detections and controls specifically to the behaviours that group is known to use against the sector.</div><div class="glossary-meta">First seen: 14 May 2026</div>
@@ -35897,6 +36148,11 @@ I recognize what's happening</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Proposed FCA rule changes would require lenders to build systems that handle variable income data — such as freelance or gig economy earnings — creating new data validation and fraud-detection challenges for FinTech platforms.</div><div class="glossary-meta">First seen: 11 June 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">VDR (Vulnerability Disclosure Report)</div>
+  <div class="glossary-def">A structured document that records known vulnerabilities in a system, along with their severity, status, and remediation progress.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> FedRAMP's VDR requirements mean financial firms seeking US government cloud authorisation must continuously evidence how they track and remediate vulnerabilities, shifting compliance from annual snapshots to ongoing proof.</div><div class="glossary-meta">First seen: 25 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Vector Database</div>
   <div class="glossary-def">A specialised database that stores data as mathematical representations (vectors) so that AI systems can quickly search for and retrieve semantically similar information.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A retail bank using a vector database to power an AI customer assistant could face total service disruption if that database were encrypted or corrupted by ransomware like EncForge.</div><div class="glossary-meta">First seen: 21 July 2026</div>
@@ -35910,6 +36166,11 @@ I recognize what's happening</div>
   <div class="glossary-term">VeloCloud Orchestrator</div>
   <div class="glossary-def">A network management platform used to centrally control and configure SD-WAN deployments across multiple sites.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A command injection zero-day in VeloCloud Orchestrator could allow attackers to gain control of a financial firm's wide-area network infrastructure, enabling traffic interception or disruption of branch connectivity.</div><div class="glossary-meta">First seen: 28 July 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">VER (Vulnerability Exploitation Report)</div>
+  <div class="glossary-def">A document that records whether any known vulnerabilities in a system have actually been exploited in the wild.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Under FedRAMP's new requirements, financial services firms providing cloud services must maintain VERs demonstrating active monitoring for exploitation, not just the existence of a patch.</div><div class="glossary-meta">First seen: 25 September 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Verified Email Status (OAuth Context)</div>
@@ -36338,7 +36599,7 @@ I recognize what's happening</div>
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 24 September 2026 11:23 UTC &middot;
+  Built automatically by Vigil &middot; 25 September 2026 11:26 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
