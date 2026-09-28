@@ -362,7 +362,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 28 September 2026 13:10 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 28 September 2026 13:16 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>11 sources active</span>
   </div>
@@ -391,12 +391,12 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">1541</div>
+      <div class="stat-value yellow">1556</div>
       <div class="stat-sub">auto-built from 11 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">1223</div>
+      <div class="stat-value purple">1232</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -414,14 +414,119 @@
   </div>
   <div class="pipe-stage">
     <div class="pipe-stage-name">&#128275; Vulnerabilities</div>
-    <div class="pipe-stage-count yellow">4</div>
+    <div class="pipe-stage-count yellow">5</div>
   </div>
   <div class="pipe-stage">
     <div class="pipe-stage-name">&#128202; Total Items</div>
-    <div class="pipe-stage-count green">14</div>
+    <div class="pipe-stage-count green">15</div>
   </div>
 </div>
 <div class="day-card open">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">28 September 2026</div>
+    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    
+<div class="day-section">
+  <div class="day-sec-label">Executive summary</div>
+  <div class="day-sec-text"><p style="margin:0 0 8px 0">Two actively exploited Citrix NetScaler zero-days (CVE-2026-88771/88772) are the most pressing immediate threat, with both CISA and the UK NCSC issuing urgent remediation guidance. A maximum-severity GitLab path traversal flaw (CVSS 10.0) simultaneously puts software supply chains at serious risk. On the AI/ML front, multiple new MITRE ATLAS entries and real-world MCP server attack demonstrations highlight rapidly maturing adversarial techniques targeting AI agent deployments.
+
+---</p></div>
+</div>
+    
+<div class="day-section">
+  <div class="day-sec-label">&#127981; FinServ threats</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">Citrix NetScaler RCE Zero-Days (CVE-2026-88771/88772):</div>
+  <div class="day-threat-body">Actively exploited RCE flaws in NetScaler ADC and Gateway pose a direct risk to financial firms that rely on these widely deployed application delivery and VPN products</div>
+  <a href="https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">NCSC UK — Citrix NetScaler Exploitation Alert:</div>
+  <div class="day-threat-body">The NCSC is specifically urging UK organisations to patch immediately, making this a direct compliance and operational risk for UK financial services firms</div>
+  <a href="https://www.ncsc.gov.uk/news/exploitation-of-vulnerabilities-affecting-citrix-netscaler-adc-and-citrix-netscaler-gateway" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA Crackdown on Illegal Crypto Peer-to-Peer Trading:</div>
+  <div class="day-threat-body">The FCA, HMRC, and Metropolitan Police have raided premises conducting unregistered crypto trading, signalling continued aggressive enforcement in the crypto space relevant to any firm with crypto exposure</div>
+  <a href="https://www.fca.org.uk/news/press-releases/fca-and-partners-continues-crackdown-illegal-crypto-trading" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA Debt Advice Red Flags Warning:</div>
+  <div class="day-threat-body">The FCA is warning consumers about mis-selling in debt advice, indicating heightened supervisory focus on consumer duty obligations for firms operating in the credit and debt sector</div>
+  <a href="https://www.fca.org.uk/news/press-releases/debt-advice-warning-spot-red-flags" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Biometric Fraud &amp; Verification Risk (Finextra):</div>
+  <div class="day-threat-body">Dark-web access to cloned biometrics, IDs, and fingerprints is undermining identity verification, a core control for onboarding and fraud prevention at UK financial firms</div>
+  <a href="https://www.finextra.com/videoarticle/3526/fingerprints-for-a-fee-how-fraud-is-creating-a-headache-for-verification" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#129302; AI / ML security</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">ATLAS Case Study — MCP Server Data Exfiltration via Cursor:</div>
+  <div class="day-threat-body">A proof-of-concept shows that a malicious MCP server can inject prompts into an AI coding agent, executing shell commands to exfiltrate credential-containing configuration files — a direct risk for any team using AI-assisted development tools</div>
+  <a href="https://atlas.mitre.org/studies/AML.CS0045" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">ATLAS Technique — LLM Jailbreak (AML.T0054):</div>
+  <div class="day-threat-body">Adversaries can bypass LLM safety guardrails via adversarial prompting or model weight modification, enabling data leakage or harmful content generation from models deployed in financial services workflows</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">ATLAS Technique — AI Agent Configuration Harvesting (AML.T0002.002):</div>
+  <div class="day-threat-body">Attackers can access publicly exposed AI agent configuration files to steal credentials and map tool access, a risk for firms deploying autonomous AI agents against internal APIs or data sources</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0002.002" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">ATLAS Technique — Agentic Resource Consumption (AML.T0034.002):</div>
+  <div class="day-threat-body">Adversaries can abuse prompt injection to coerce AI agents into excessive, costly API calls, threatening operational availability and API budget controls for firms using agentic AI systems</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-101062 (CVSS 8.8) — Obot OAuth Token Hijacking:</div>
+  <div class="day-threat-body">An unauthenticated attacker can register an OAuth client without restrictions and hijack a logged-in victim's full access token via a crafted URL, critically relevant where Obot is used to orchestrate AI agent workflows</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-101062" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#128275; Vulnerabilities</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-88772 (CVSS 8.1):</div>
+  <div class="day-threat-body">Actively exploited Citrix NetScaler ADC and Gateway RCE/DoS vulnerability; patch to versions 14.1-73.37 or 13.1-64.23 immediately as active exploitation is confirmed</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-88772" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-85706 (CVSS 10.0):</div>
+  <div class="day-threat-body">Maximum-severity path traversal in GitLab Community and Enterprise Editions puts software supply chains at critical risk of compromise</div>
+  <a href="https://www.darkreading.com/cyberattacks-data-breaches/maximum-severity-gitlab-flaw-supply-chains-risk" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-101064 (CVSS 7.6):</div>
+  <div class="day-threat-body">Server-side request forgery in Obot's MCP server registration allows privileged users to probe internal services and cloud metadata endpoints, exposing sensitive credentials via error messages</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-101064" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-100870 (CVSS 8.8):</div>
+  <div class="day-threat-body">Sylius e-commerce platform allows unauthenticated attackers to redirect admin password-reset tokens to attacker-controlled domains via forged Host headers, enabling full admin account takeover</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-100870" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-101043 (CVSS 7.4):</div>
+  <div class="day-threat-body">Malicious pnpm workspace configuration files can cause victims' environment secrets (e.g. NPM_TOKEN, GITHUB_TOKEN) to be exfiltrated to attacker-controlled proxy hosts during routine package</div>
+  
+</div>
+</div>
+    
+  </div>
+</div>
+<div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">25 September 2026</div>
     <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">4 Vuln</span></div>
@@ -11425,6 +11530,125 @@
 
   <div id="tab-hot" class="tab">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">28 September 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Formalises LLM Jailbreak as Catalogued Adversarial Technique — Time to Map Your Controls</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK financial services firms deploying LLMs in customer-facing or internal tooling (e.g., co-pilots, chatbots, fraud triage) face a formally catalogued threat where adversaries bypass safety guardrails to extract sensitive data or generate harmful outputs. MITRE ATLAS classifying this under Defence Evasion (AML.TA0007) means it should now feature in your threat model alongside traditional ATT&amp;CK techniques. Regulatory expectations under DORA and FCA operational resilience frameworks increasingly require documented AI risk assessments — a gap here is an audit liability.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">This technique *is* the AI threat vector: adversaries craft adversarial prompts or tamper with model weights to override alignment controls, enabling data leakage or generation of malicious content directly from the compromised LLM.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Map AML.T0054 into your existing threat model today — document which internal LLM deployments lack jailbreak-resistant input validation, red-team at least one system with adversarial prompts, and ensure system prompts are treated as confidential configuration, not a security boundary.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Flags Generative AI Acquisition as a Formal Threat Technique — Malware, Deepfakes and Phishing at Scale</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Threat actors are now formally documented as acquiring open-source LLMs (via Ollama, vLLM, or cloud infrastructure) to supercharge phishing, deepfake fraud, and malware generation — all high-impact risks for UK financial services firms handling sensitive customer data and high-value transactions. Deepfake-enabled CEO fraud and AI-generated spear-phishing are already observed in the wild against FinServ targets. This ATLAS entry provides the intelligence framework needed to brief risk committees and justify investment in AI-specific detection controls.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries locally host uncensored open-source LLMs to generate phishing lures, malware code, deepfake audio/video for social engineering, and retrieval-crafted content — removing dependency on commercial API guardrails entirely.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Brief your fraud and social engineering detection teams on AI-generated content indicators today, and review whether your email filtering and call authentication controls are calibrated to detect AI-generated phishing and voice deepfakes specifically.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Raids Illegal Crypto Trading Premises in London — Enforcement Signals Tightening Regulatory Grip</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/fca-and-partners-continues-crackdown-illegal-crypto-trading" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's joint operations with HMRC and the Metropolitan Police targeting unregistered peer-to-peer crypto trading demonstrate active enforcement rather than guidance-only posture — UK FinServ firms with any crypto-adjacent products or customer flows should treat this as a signal to audit their own registration and compliance status. Financial crime controls, including transaction monitoring for P2P crypto patterns, are implicitly in scope. Firms onboarding crypto businesses as clients face heightened due diligence expectations.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Review your financial crime transaction monitoring rules today to ensure P2P crypto trading patterns are flagged for review, and confirm any crypto-related business lines or client relationships hold valid FCA registration.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">SQL Injection Vulnerability in Open-Source PHP Classroom App Publicly Disclosed — Unpatched Vendor</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-100875" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerability</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">While this specific vulnerability affects a niche open-source PHP project (CloudClassroom), the pattern is directly relevant to FinServ security engineers: a remotely exploitable SQL injection (CVSS 7.3) in a rolling-release project with no vendor response to disclosure represents the class of supply chain and open-source risk that financial firms routinely inherit through third-party or internal development dependencies. Unresponsive vendors with public exploits are a known high-risk category under FCA third-party risk expectations.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Use this as a prompt to audit your software inventory (SBOM) for rolling-release or unmaintained open-source PHP components today — particularly any that handle user-supplied input to database queries — and verify parameterised queries are enforced across internal development standards.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Partners with Industry to Close Protection Insurance Gap for Millions of UK Adults</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/fca-partners-help-improve-financial-security-millions" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's initiative to expand protection insurance coverage signals a regulatory focus on consumer vulnerability and market conduct — firms in the life, health, and income protection space should anticipate increased scrutiny of product accessibility and fair value assessments. While not a direct cybersecurity story, expanded digital outreach campaigns to previously unengaged consumers create new phishing and fraud surface area that security teams should plan for. Cross-sector data sharing as part of this partnership may also introduce new data governance obligations.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Alert your fraud operations team to monitor for opportunistic phishing campaigns mimicking FCA or partner outreach on protection insurance, particularly targeting consumers newly engaging with financial products through digital channels.
+
+---
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">25 September 2026</span>
@@ -26417,7 +26641,7 @@
   </div>
   <div class="ta-stat ta-stat-purple">
     <div class="ta-stat-label">Total Sightings</div>
-    <div class="ta-stat-value" style="color:var(--purple)">108</div>
+    <div class="ta-stat-value" style="color:var(--purple)">109</div>
     <div class="ta-stat-sub">across all digests</div>
   </div>
 </div>
@@ -26629,6 +26853,97 @@
   </div>
 </div>
 <div class="ta-card" data-level="Critical"
+     data-actor-id="sandworm"
+     data-search="sandworm n/a *(no aliases mentioned in the articles)* n/a *(no aliases mentioned in today's articles)* n/a *(no aliases mentioned in the article)* n/a *(no additional aliases mentioned in today's articles)* n/a *(no aliases explicitly stated in the articles)*">
+  <div class="ta-card-accent" style="background:var(--red)"></div>
+  <div class="ta-card-summary" onclick="taToggle(this)">
+    <div class="ta-card-left">
+      <div class="ta-card-name">Sandworm</div>
+      <div class="ta-card-alias">N/A *(no aliases mentioned in the articles)*, N/A *(no aliases mentioned in today's articles)*, N/A *(no aliases mentioned in the article)*, N/A *(no additional aliases mentioned in today's articles)*, N/A *(no aliases explicitly stated in the articles)*</div>
+      <div class="ta-card-meta">
+        <span>&#127988; Nation-State</span>
+        <span>&#127758; Russia (explicitly described as a Russian threat group)</span>
+        <span class="ta-sighting-count">&#128065; 9 sightings</span>
+      </div>
+      <div class="ta-card-sectors"></div>
+    </div>
+    <div class="ta-card-right">
+      <span class="ta-threat-badge badge-critical">Critical</span>
+      <span class="ta-chevron">&#9660;</span>
+    </div>
+  </div>
+  <div class="ta-card-detail">
+    <div class="ta-detail-grid">
+      <div>
+        <div class="ta-detail-title">MITRE ATT&amp;CK TTPs</div>
+        <span class="ta-none">None recorded</span>
+      </div>
+      <div>
+        <div class="ta-detail-title">Tools &amp; Malware</div>
+        <span class="ta-none">None recorded</span>
+        <div class="ta-detail-title" style="margin-top:14px">CVEs</div>
+        <span class="ta-none">None recorded</span>
+      </div>
+    </div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 9 total</div>
+    <div class="ta-timeline">
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">28 September 2026</div>
+  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together to gain initial access or pivot; Deploying an upgraded variant of the **Cyclops Blink** botnet malware (previously disrupted by the FBI in 2022); Use of persistent, resilient botnet infrastructure to maintain long-term access across compromised network devices Sandworm's targeting of widely-used Cisco network infrastructure poses a direct risk to UK financial firms that rely on Cisco equipment for perimeter and internal network security; a compromised edge device could provide persistent access to sensitive financial systems and data.</div>
+  
+</div>
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">25 September 2026</div>
+  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together to achieve initial access and propagation; Deploying an upgraded variant of the **Cyclops Blink** botnet malware (previously disrupted by the FBI in 2022); Leveraging known, publicly attributed tooling in continued operations despite prior law enforcement disruption Sandworm's use of botnet infrastructure built on exploited network devices (such as Cisco equipment common in enterprise financial environments) means UK financial firms with internet-facing or perimeter Cisco assets could be at risk of compromise or becoming unwitting nodes in the botnet.</div>
+  
+</div>
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">24 September 2026</div>
+  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together in a coordinated exploit chain; Deploying an upgraded variant of the Cyclops Blink botnet malware following the FBI's 2022 disruption of the original infrastructure; Leveraging botnet infrastructure to maintain persistent access across compromised networks Sandworm's demonstrated capability to chain enterprise network device vulnerabilities (Cisco) and deploy resilient botnet malware represents a credible threat to UK financial firms that rely on Cisco networking infrastructure, as successful compromise could enable network interception, lateral movement, or destructive payloads.</div>
+  
+</div>
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">23 September 2026</div>
+  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together as part of an exploitation chain; Deploying Cyclops Blink, an upgraded version of a botnet malware previously disrupted by the FBI in 2022; Spreading malware via a botnet infrastructure, suggesting ongoing persistence and resilience despite prior law enforcement action Sandworm's use of botnet malware targeting network infrastructure (including Cisco devices commonly deployed in enterprise environments) poses a direct risk to UK financial firms' network perimeters and operational continuity, particularly given the sector's heavy reliance on such equipment.</div>
+  
+</div>
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">21 September 2026</div>
+  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together in a combined exploit sequence to gain initial access or persistence; Deploying an upgraded version of the **Cyclops Blink** botnet malware across compromised infrastructure Sandworm's use of resilient, self-propagating botnet malware against network infrastructure (including Cisco devices widely deployed in financial services environments) means a UK financial firm with exposed or unpatched Cisco appliances could be at risk of silent compromise and persistent backdoor access.</div>
+  
+</div>
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">18 September 2026</div>
+  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together to achieve exploitation (vulnerability chaining as a TTP); Deploying an upgraded variant of the **Cyclops Blink** botnet malware across compromised infrastructure; Reconstituting botnet capability previously disrupted by law enforcement (FBI, 2022), indicating operational resilience and persistence Sandworm is a highly capable Russian state-linked threat actor with a track record of disruptive campaigns; UK financial institutions reliant on Cisco network infrastructure should treat the chained vulnerability exploitation as an immediate patching and detection priority, given the sector's status as a high-value target in any state-sponsored escalation scenario.</div>
+  
+</div>
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">17 September 2026</div>
+  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together as part of an exploitation chain; Deploying Cyclops Blink, an upgraded botnet malware, as a payload following initial compromise; Operating persistent botnet infrastructure, previously disrupted by the FBI in 2022 but apparently rebuilt or reactivated Sandworm's use of chained infrastructure vulnerabilities and persistent botnet malware means that UK financial firms running Cisco networking equipment should treat patching as an urgent priority, as unpatched devices could be silently recruited into Cyclops Blink's botnet and used as a foothold or for further destructive activity.</div>
+  
+</div>
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">16 September 2026</div>
+  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together to gain initial access and persistence; Deploying an upgraded version of the Cyclops Blink botnet malware across compromised devices Sandworm's use of botnet infrastructure and exploitation of widely-deployed networking equipment (Cisco) poses a risk to UK financial firms that rely on such devices at their network perimeter, potentially enabling traffic interception, disruption, or use of firm infrastructure as a botnet node.</div>
+  
+</div>
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">15 September 2026</div>
+  <div class="ta-timeline-summary">Chaining multiple Cisco product vulnerabilities together to achieve exploitation (vulnerability chaining); Deployment of Cyclops Blink botnet malware, an upgraded and persistent botnet framework; Continued operation of Cyclops Blink infrastructure following a 2022 FBI disruption, indicating resilience and rapid re-tooling Sandworm's use of compromised network edge devices (Cisco) to deploy persistent botnet malware poses a significant risk to UK financial firms reliant on Cisco networking equipment for their core infrastructure.</div>
+  
+</div></div>
+  </div>
+</div>
+<div class="ta-card" data-level="Critical"
      data-actor-id="lockbit"
      data-search="lockbit n/a *(no aliases explicitly stated in the article)* n/a *(no aliases mentioned in the articles)*">
   <div class="ta-card-accent" style="background:var(--red)"></div>
@@ -26709,91 +27024,6 @@
   <div class="ta-timeline-dot"></div>
   <div class="ta-timeline-date">28 July 2026</div>
   <div class="ta-timeline-summary">Operated as a ransomware-as-a-service (RaaS) model relying on a network of affiliates to conduct attacks; Law enforcement disruption (Operation Cronos) was accelerated by undermining trust between LockBit and its affiliate network, suggesting affiliate relationships were a core operational dependency LockBit was the most prolific ransomware group of its era and has historically targeted financial services organisations globally, making awareness of its operational model and any post-disruption reconstitution efforts directly relevant to UK financial firms.</div>
-  
-</div></div>
-  </div>
-</div>
-<div class="ta-card" data-level="Critical"
-     data-actor-id="sandworm"
-     data-search="sandworm n/a *(no aliases mentioned in the articles)* n/a *(no aliases mentioned in today's articles)* n/a *(no aliases mentioned in the article)* n/a *(no additional aliases mentioned in today's articles)*">
-  <div class="ta-card-accent" style="background:var(--red)"></div>
-  <div class="ta-card-summary" onclick="taToggle(this)">
-    <div class="ta-card-left">
-      <div class="ta-card-name">Sandworm</div>
-      <div class="ta-card-alias">N/A *(no aliases mentioned in the articles)*, N/A *(no aliases mentioned in today's articles)*, N/A *(no aliases mentioned in the article)*, N/A *(no additional aliases mentioned in today's articles)*</div>
-      <div class="ta-card-meta">
-        <span>&#127988; Nation-State</span>
-        <span>&#127758; Russia (explicitly described as a Russian threat group)</span>
-        <span class="ta-sighting-count">&#128065; 8 sightings</span>
-      </div>
-      <div class="ta-card-sectors"></div>
-    </div>
-    <div class="ta-card-right">
-      <span class="ta-threat-badge badge-critical">Critical</span>
-      <span class="ta-chevron">&#9660;</span>
-    </div>
-  </div>
-  <div class="ta-card-detail">
-    <div class="ta-detail-grid">
-      <div>
-        <div class="ta-detail-title">MITRE ATT&amp;CK TTPs</div>
-        <span class="ta-none">None recorded</span>
-      </div>
-      <div>
-        <div class="ta-detail-title">Tools &amp; Malware</div>
-        <span class="ta-none">None recorded</span>
-        <div class="ta-detail-title" style="margin-top:14px">CVEs</div>
-        <span class="ta-none">None recorded</span>
-      </div>
-    </div>
-    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 8 total</div>
-    <div class="ta-timeline">
-<div class="ta-timeline-item">
-  <div class="ta-timeline-dot"></div>
-  <div class="ta-timeline-date">25 September 2026</div>
-  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together to achieve initial access and propagation; Deploying an upgraded variant of the **Cyclops Blink** botnet malware (previously disrupted by the FBI in 2022); Leveraging known, publicly attributed tooling in continued operations despite prior law enforcement disruption Sandworm's use of botnet infrastructure built on exploited network devices (such as Cisco equipment common in enterprise financial environments) means UK financial firms with internet-facing or perimeter Cisco assets could be at risk of compromise or becoming unwitting nodes in the botnet.</div>
-  
-</div>
-<div class="ta-timeline-item">
-  <div class="ta-timeline-dot"></div>
-  <div class="ta-timeline-date">24 September 2026</div>
-  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together in a coordinated exploit chain; Deploying an upgraded variant of the Cyclops Blink botnet malware following the FBI's 2022 disruption of the original infrastructure; Leveraging botnet infrastructure to maintain persistent access across compromised networks Sandworm's demonstrated capability to chain enterprise network device vulnerabilities (Cisco) and deploy resilient botnet malware represents a credible threat to UK financial firms that rely on Cisco networking infrastructure, as successful compromise could enable network interception, lateral movement, or destructive payloads.</div>
-  
-</div>
-<div class="ta-timeline-item">
-  <div class="ta-timeline-dot"></div>
-  <div class="ta-timeline-date">23 September 2026</div>
-  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together as part of an exploitation chain; Deploying Cyclops Blink, an upgraded version of a botnet malware previously disrupted by the FBI in 2022; Spreading malware via a botnet infrastructure, suggesting ongoing persistence and resilience despite prior law enforcement action Sandworm's use of botnet malware targeting network infrastructure (including Cisco devices commonly deployed in enterprise environments) poses a direct risk to UK financial firms' network perimeters and operational continuity, particularly given the sector's heavy reliance on such equipment.</div>
-  
-</div>
-<div class="ta-timeline-item">
-  <div class="ta-timeline-dot"></div>
-  <div class="ta-timeline-date">21 September 2026</div>
-  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together in a combined exploit sequence to gain initial access or persistence; Deploying an upgraded version of the **Cyclops Blink** botnet malware across compromised infrastructure Sandworm's use of resilient, self-propagating botnet malware against network infrastructure (including Cisco devices widely deployed in financial services environments) means a UK financial firm with exposed or unpatched Cisco appliances could be at risk of silent compromise and persistent backdoor access.</div>
-  
-</div>
-<div class="ta-timeline-item">
-  <div class="ta-timeline-dot"></div>
-  <div class="ta-timeline-date">18 September 2026</div>
-  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together to achieve exploitation (vulnerability chaining as a TTP); Deploying an upgraded variant of the **Cyclops Blink** botnet malware across compromised infrastructure; Reconstituting botnet capability previously disrupted by law enforcement (FBI, 2022), indicating operational resilience and persistence Sandworm is a highly capable Russian state-linked threat actor with a track record of disruptive campaigns; UK financial institutions reliant on Cisco network infrastructure should treat the chained vulnerability exploitation as an immediate patching and detection priority, given the sector's status as a high-value target in any state-sponsored escalation scenario.</div>
-  
-</div>
-<div class="ta-timeline-item">
-  <div class="ta-timeline-dot"></div>
-  <div class="ta-timeline-date">17 September 2026</div>
-  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together as part of an exploitation chain; Deploying Cyclops Blink, an upgraded botnet malware, as a payload following initial compromise; Operating persistent botnet infrastructure, previously disrupted by the FBI in 2022 but apparently rebuilt or reactivated Sandworm's use of chained infrastructure vulnerabilities and persistent botnet malware means that UK financial firms running Cisco networking equipment should treat patching as an urgent priority, as unpatched devices could be silently recruited into Cyclops Blink's botnet and used as a foothold or for further destructive activity.</div>
-  
-</div>
-<div class="ta-timeline-item">
-  <div class="ta-timeline-dot"></div>
-  <div class="ta-timeline-date">16 September 2026</div>
-  <div class="ta-timeline-summary">Chaining multiple Cisco vulnerabilities together to gain initial access and persistence; Deploying an upgraded version of the Cyclops Blink botnet malware across compromised devices Sandworm's use of botnet infrastructure and exploitation of widely-deployed networking equipment (Cisco) poses a risk to UK financial firms that rely on such devices at their network perimeter, potentially enabling traffic interception, disruption, or use of firm infrastructure as a botnet node.</div>
-  
-</div>
-<div class="ta-timeline-item">
-  <div class="ta-timeline-dot"></div>
-  <div class="ta-timeline-date">15 September 2026</div>
-  <div class="ta-timeline-summary">Chaining multiple Cisco product vulnerabilities together to achieve exploitation (vulnerability chaining); Deployment of Cyclops Blink botnet malware, an upgraded and persistent botnet framework; Continued operation of Cyclops Blink infrastructure following a 2022 FBI disruption, indicating resilience and rapid re-tooling Sandworm's use of compromised network edge devices (Cisco) to deploy persistent botnet malware poses a significant risk to UK financial firms reliant on Cisco networking equipment for their core infrastructure.</div>
   
 </div></div>
   </div>
@@ -30549,7 +30779,7 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 1223 terms&#8230;"
+           placeholder="Search 1232 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">$</div>
@@ -32719,6 +32949,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services, any internet-facing CMS used for public websites or portals should be assessed for vulnerabilities like the Grav debugger exposure that leaks session cookies to unauthenticated attackers.</div><div class="glossary-meta">First seen: 18 September 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Fleet (endpoint management)</div>
+  <div class="glossary-def">An open-source platform used by IT and security teams to manage, monitor, and enforce configuration policies across a fleet of employee devices from a central console.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Security operations teams at financial firms use endpoint management tools like Fleet to enforce patching and compliance standards, but a supply chain compromise in script generation can turn the management tool itself into an attack vector.</div><div class="glossary-meta">First seen: 28 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Flexible PIC Concentrators (FPCs)</div>
   <div class="glossary-def">Hardware components in network routers that process and forward data packets at high speeds.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Compromised FPCs in financial networks could allow attackers to intercept or manipulate high-frequency trading communications and payment processing traffic.</div><div class="glossary-meta">First seen: 10 April 2026</div>
@@ -32949,6 +33184,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If an HMAC signing key is exposed in a publicly accessible directory — as seen in the Demi WordPress plugin CVE — an attacker can forge authenticated requests, potentially bypassing security controls in a financial firm's web portal.</div><div class="glossary-meta">First seen: 28 July 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Homebrew Cask</div>
+  <div class="glossary-def">A community-maintained package descriptor for macOS software that tells the Homebrew package manager how to download, install, and uninstall a graphical application.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A financial firm using Fleet to manage macOS endpoints could have attacker-controlled cask metadata trigger arbitrary root-level commands on employee devices if upstream Homebrew metadata is compromised.</div><div class="glossary-meta">First seen: 28 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Hook Token</div>
   <div class="glossary-def">A short-lived credential that authorises a specific automated trigger (a &quot;hook&quot;) to call back into a system and perform a defined action.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services platforms, a compromised hook token could allow an attacker to escalate privileges within an AI agent framework, as seen in CVE-2026-53814 where hook tokens granted unintended owner-level access to restricted tools.</div><div class="glossary-meta">First seen: 12 June 2026</div>
@@ -33042,6 +33282,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-term">Inc Ransomware</div>
   <div class="glossary-def">The technique of combining two or more separate, lower-severity security flaws together to achieve a much more serious attack outcome, such as full system compromise.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The SonicWall SMA attack shows that financial services firms cannot dismiss individual vulnerabilities as low-risk in isolation — security teams must assess how flaws could be combined to escalate privileges or access customer data.</div><div class="glossary-meta">First seen: 20 July 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Income Protection Insurance</div>
+  <div class="glossary-def">A type of insurance policy that pays a regular income to the policyholder if they are unable to work due to illness or injury, replacing a proportion of their lost earnings.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA's protection insurance initiative highlights that millions of UK consumers lack income protection cover, leaving them financially exposed to events that an authorised firm could help them plan for.</div><div class="glossary-meta">First seen: 28 September 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Indirect Prompt Injection</div>
@@ -33864,6 +34109,16 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Nayax's refusal to pay ransom is relevant to UK financial firms developing ransomware response policies, as the FCA expects firms to have documented incident response and recovery plans that do not rely on paying ransoms.</div><div class="glossary-meta">First seen: 20 July 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">NetScaler ADC (Application Delivery Controller)</div>
+  <div class="glossary-def">A network appliance made by Citrix that sits between users and web servers, managing and accelerating traffic while providing security functions like load balancing and SSL termination.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> UK financial services firms commonly use NetScaler ADC to secure and manage access to internet-facing banking applications, making the actively exploited RCE vulnerabilities a critical patching priority.</div><div class="glossary-meta">First seen: 28 September 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">NetScaler Gateway</div>
+  <div class="glossary-def">A Citrix product that provides secure remote access to internal applications and desktops for users connecting from outside the corporate network.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial institutions rely on NetScaler Gateway for staff and third-party remote access, so unpatched RCE vulnerabilities could allow attackers to gain a foothold inside a firm's network without any credentials.</div><div class="glossary-meta">First seen: 28 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">NetUserAdd (Windows API)</div>
   <div class="glossary-def">A Windows operating system function that programmatically creates new local user accounts, which attackers can abuse to establish persistent backdoor access to a compromised server.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If a UK bank's file server were running a vulnerable CentreStack version, an attacker could silently create a rogue administrator account using NetUserAdd without any prior authentication.</div><div class="glossary-meta">First seen: 31 July 2026</div>
@@ -33953,6 +34208,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-def">The growing queue of publicly known security vulnerabilities that have been reported but not yet analysed, scored, or published in the National Vulnerability Database.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A backlog of over 27,000 unprocessed vulnerabilities means security teams at financial firms cannot rely on NVD data alone to prioritise patching, increasing the risk of exploitable gaps remaining unaddressed.</div><div class="glossary-meta">First seen: 02 June 2026</div>
 </div><div class="glossary-letter">O</div>
+<div class="glossary-item">
+  <div class="glossary-term">OAuth Dynamic Client Registration</div>
+  <div class="glossary-def">A protocol feature that allows software clients to register themselves with an authorisation server automatically at runtime, rather than being pre-registered manually by an administrator.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> An attacker exploiting unrestricted dynamic client registration on a financial firm's AI platform could register a malicious client, trick an authenticated employee into visiting a crafted URL, and silently steal their access and refresh tokens.</div><div class="glossary-meta">First seen: 28 September 2026</div>
+</div>
 <div class="glossary-item">
   <div class="glossary-term">OAuth Sprawl</div>
   <div class="glossary-def">The accumulation of too many third-party applications connected to your systems via OAuth tokens, creating excessive and hard-to-monitor access points that increase your attack surface.</div>
@@ -34419,6 +34679,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> An MCP server using Playwright could be manipulated via prompt injection to visit internal cloud metadata endpoints, leaking credentials directly into an AI model's context window in a financial services deployment.</div><div class="glossary-meta">First seen: 22 July 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">pnpm-workspace.yaml</div>
+  <div class="glossary-def">A configuration file used by the pnpm JavaScript package manager to define how packages are fetched and which registries or proxies are used across a project.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A financial services development team cloning a poisoned repository could unknowingly leak secrets such as NPM_TOKEN or GITHUB_TOKEN into an attacker-controlled proxy server through malicious environment variable expansion in this file.</div><div class="glossary-meta">First seen: 28 September 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Policy Working Group</div>
   <div class="glossary-def">A formal sub-committee within a regulatory taskforce made up of industry and regulator representatives who develop and agree on the policy rules that will govern a particular area.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA and Bank of England's Transaction and Post-trade Reporting Harmonisation Taskforce uses a Policy Working Group to align the reporting rules across UK MiFIR, UK EMIR, and UK SFTR so that firms face consistent, non-duplicative obligations.</div><div class="glossary-meta">First seen: 11 August 2026</div>
@@ -34609,6 +34874,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial document management systems using proxy delivery could be vulnerable to memory exhaustion attacks if attackers request large files with unbounded range headers.</div><div class="glossary-meta">First seen: 24 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Proxy Hostname Injection (via environment variable expansion)</div>
+  <div class="glossary-def">An attack where malicious configuration causes a software tool to expand secret environment variables into a network address, sending those secrets to a server the attacker controls.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A developer at a financial firm running pnpm install on a malicious repository could silently exfiltrate CI/CD pipeline secrets such as API tokens to an external attacker-owned host, enabling further supply chain compromise.</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Prudential Regulation Authority (PRA)</div>
   <div class="glossary-def">The UK regulatory body, part of the Bank of England, responsible for the prudential supervision of banks, insurers, and major investment firms to ensure their financial safety and soundness.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The PRA worked alongside the FCA to reform the SM&amp;CR, aiming to reduce compliance costs for regulated financial services firms while maintaining senior manager accountability.</div><div class="glossary-meta">First seen: 29 April 2026</div>
@@ -34762,6 +35032,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-term">Recursive-Descent Parser</div>
   <div class="glossary-def">An insurance company that is wholly owned by the organisation it insures, created specifically to cover that organisation's own risks rather than selling policies to the public.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> UK financial services groups are exploring captive insurers to manage internal risks more efficiently, but the FCA is scrutinising them for potential conflicts of interest within vertically integrated structures.</div><div class="glossary-meta">First seen: 17 August 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Redirect URI Validation</div>
+  <div class="glossary-def">The practice of directing consumers seeking free debt help towards paid debt management products that generate fees for the firm, often when those products are not in the consumer's best interest.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Under Consumer Duty, FCA-authorised debt advice firms must ensure they do not steer vulnerable customers towards fee-bearing solutions when free alternatives would better meet their needs.</div><div class="glossary-meta">First seen: 28 September 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Redirect-Following Without Revalidation</div>
@@ -36675,7 +36950,7 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 28 September 2026 13:10 UTC &middot;
+  Built automatically by Vigil &middot; 28 September 2026 13:16 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
