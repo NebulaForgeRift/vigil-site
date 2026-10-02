@@ -362,7 +362,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 01 October 2026 12:43 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 02 October 2026 12:07 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>11 sources active</span>
   </div>
@@ -381,7 +381,7 @@
   <div class="stats">
     <div class="stat-card">
       <div class="stat-label">Days Active</div>
-      <div class="stat-value cyan">154</div>
+      <div class="stat-value cyan">155</div>
       <div class="stat-sub">and counting</div>
     </div>
     <div class="stat-card">
@@ -391,12 +391,12 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">1600</div>
+      <div class="stat-value yellow">1615</div>
       <div class="stat-sub">auto-built from 11 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">1258</div>
+      <div class="stat-value purple">1267</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -422,6 +422,111 @@
   </div>
 </div>
 <div class="day-card open">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">02 October 2026</div>
+    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    
+<div class="day-section">
+  <div class="day-sec-label">Executive summary</div>
+  <div class="day-sec-text"><p style="margin:0 0 8px 0">The most pressing threat today is the actively exploited zero-day in Fortinet FortiMail (CVE-2026-104286), which enables unauthorised code execution on a widely deployed email security product relevant to financial services. A Chinese APT targeting AI experts and a novel &quot;agentic threat actor&quot; (JadePuffer) conducting destructive Azure cloud attacks signal that AI/ML infrastructure is increasingly a primary attack surface. Law enforcement dismantled the KillSec ransomware gang, a minor positive, but the remaining threat landscape remains dense.
+
+---</p></div>
+</div>
+    
+<div class="day-section">
+  <div class="day-sec-label">&#127981; FinServ threats</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-104286 (FortiMail zero-day)</div>
+  <div class="day-threat-body">— Fortinet's FortiMail is commonly used for email security at financial firms; active exploitation means unpatched instances are at immediate risk of compromise</div>
+  <a href="https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">KillSec ransomware gang dismantled</div>
+  <div class="day-threat-body">— Financial sector firms that were previously targeted by KillSec should still review their exposure, as affiliates or copycat actors may continue operations despite the group's takedown</div>
+  <a href="https://www.bleepingcomputer.com/news/security/police-dismantle-killsec-ransomware-gang-allegedly-led-by-16-year-old/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Biometric fraud and dark-web identity markets</div>
+  <div class="day-threat-body">— The availability of fingerprints, IDs and full biographies on dark-web markets directly undermines biometric identity verification used by UK financial firms for onboarding and authentication</div>
+  <a href="https://www.finextra.com/videoarticle/3526/fingerprints-for-a-fee-how-fraud-is-creating-a-headache-for-verification" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA crypto crackdown</div>
+  <div class="day-threat-body">— Firms with any exposure to peer-to-peer crypto flows or unregistered crypto counterparties face elevated regulatory and financial crime risk as enforcement operations intensify</div>
+  <a href="https://www.fca.org.uk/news/press-releases/fca-and-partners-continues-crackdown-illegal-crypto-trading" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Kiteworks EPG max-severity code injection</div>
+  <div class="day-threat-body">— Financial firms using Kiteworks Email Protection Gateway for secure document exchange face a critical unauthenticated remote code execution risk requiring immediate patching</div>
+  <a href="https://www.bleepingcomputer.com/news/security/kiteworks-patches-max-severity-email-protection-gateway-code-injection-vulnerability/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#129302; AI / ML security</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">JadePuffer AI actor — destructive Azure tenant attack</div>
+  <div class="day-threat-body">— An agentic threat actor reportedly used exposed credentials to delete cloud storage, applications and databases inside an Azure tenant, demonstrating that AI-driven attackers can cause rapid, large-scale destruction</div>
+  <a href="https://www.darkreading.com/cloud-security/jadepuffer-ai-actor-azure-tenant-destructive-cloud-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS — LLM Jailbreak (AML.T0054)</div>
+  <div class="day-threat-body">— Adversaries can bypass LLM safety guardrails via adversarial prompting or weight modification, enabling data leakage or harmful content generation from AI systems deployed in financial services workflows</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS — MCP Server data exfiltration via Cursor (AML.CS0045)</div>
+  <div class="day-threat-body">— A proof-of-concept showed that a malicious Model Context Protocol server can inject prompts into an AI coding assistant to exfiltrate agent configuration files and credentials via shell commands</div>
+  <a href="https://atlas.mitre.org/studies/AML.CS0045" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-104120 — MCP server SSRF (CVSS 7.3)</div>
+  <div class="day-threat-body">— A server-side request forgery flaw in the modelcontextprotocol mcp-server-fetch tool could allow attackers to pivot through internal network resources from an AI agent deployment</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104120" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">AI agents operating as unaudited privileged users</div>
+  <div class="day-threat-body">— Autonomous AI agents in enterprises commonly hold broad access permissions equivalent to privileged accounts but are rarely subject to the same access reviews or audit logging as human users</div>
+  <a href="https://www.darkreading.com/vulnerabilities-threats/ai-agents-are-privileged-users-who-is-auditing-their-access" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#128275; Vulnerabilities</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-15897 (CVSS 8.8)</div>
+  <div class="day-threat-body">— A WordPress Super Forms plugin flaw allows any authenticated user to escalate privileges to administrator, posing a serious risk to any financial firm running WordPress-based customer portals</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-15897" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-92820 (CVSS 8.1)</div>
+  <div class="day-threat-body">— An unauthenticated arbitrary file read, write, and delete vulnerability in the Ninja Forms File Uploads WordPress plugin can lead to full remote code execution on affected web servers</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-92820" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-104051 (CVSS 8.2)</div>
+  <div class="day-threat-body">— PictShare's unauthenticated API exposes secret delete codes and uploader metadata including IP addresses, enabling unauthorised deletion of files and privacy breaches</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104051" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-15911 (CVSS 7.4)</div>
+  <div class="day-threat-body">— The Confluent Kafka Python client's HashiCorp Vault integration fails to properly validate TLS certificates, potentially exposing sensitive secrets to interception in event-driven financial data pipelines</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-15911" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-57173 — vLLM decompression-bomb DoS</div>
+  <div class="day-threat-body">— An unauthenticated attacker can crash vLLM inference servers via a malformed audio payload, making AI inference infrastructure unavailable; relevant to any firm running self-hosted LLM services</div>
+  <a href="https://osv.dev/vulnerability/GHSA-hcwq-8wjf-3gcr" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+    
+  </div>
+</div>
+<div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">01 October 2026</div>
     <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
@@ -11840,6 +11945,125 @@
 
   <div id="tab-hot" class="tab">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">02 October 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Formalises LLM Jailbreak as Catalogued Adversarial Technique</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK financial services firms deploying LLMs for customer service, fraud detection, or internal tooling face a formal, catalogued threat where adversaries bypass safety guardrails to extract sensitive data or generate harmful outputs. MITRE's classification under Defence Evasion (AML.TA0007) signals this is now treated with the same rigour as traditional TTPs, meaning regulators and auditors will increasingly expect controls mapped against it. Downstream risks include LLM data leakage of customer PII or proprietary financial data, directly relevant to FCA and UK GDPR obligations.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors directly exploit LLM safety mechanisms through adversarial prompting or weight manipulation to circumvent guardrails, enabling generation of malicious content or extraction of information the model was designed to protect.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Map your deployed LLMs against MITRE ATLAS AML.T0054 today — implement prompt injection detection, output filtering, and red-team jailbreak testing as part of your AI system's security assessment cycle.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Flags Generative AI as Active Adversarial Acquisition Technique for Malware and Phishing</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Threat actors are now formally documented as acquiring and self-hosting open-source LLMs (via Ollama, vLLM) specifically to generate phishing content, malware, and deepfakes — all high-impact attack vectors against UK financial services staff and customers. The local hosting angle means adversaries bypass commercial API safety controls entirely, lowering the barrier to sophisticated, AI-generated spear-phishing targeting finance sector employees. This has direct implications for your email security controls and fraud awareness programmes.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Adversaries obtain and locally serve uncensored open-source LLMs to generate targeted phishing lures, deepfake audio/video for authorisation fraud, and functional malware without triggering commercial provider safety filters.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Brief your SOC and fraud teams on AI-generated phishing and deepfake voice/video fraud scenarios, and review whether your email gateway and authentication controls (e.g. DMARC, caller verification) are calibrated for AI-enhanced social engineering volume and quality.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Intensifies Crackdown on Unregistered Peer-to-Peer Crypto Trading Across London</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/fca-and-partners-continues-crackdown-illegal-crypto-trading" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's joint enforcement operations with HMRC and the Metropolitan Police signal continued regulatory escalation around crypto compliance, directly relevant to any UK financial services firm with crypto-adjacent products or customer exposure. Cease-and-desist actions at multiple premises demonstrate the FCA is actively pursuing unregistered crypto activity, raising the compliance bar and potential liability for firms whose customers or counterparties interact with unregistered venues. This also highlights financial crime typologies — unregistered P2P trading is frequently linked to money laundering and sanctions evasion risks your AML controls must address.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Review your firm's AML transaction monitoring rules to ensure unregistered P2P crypto trading activity is flagged as a red-flag indicator, and confirm your crypto-asset registration and compliance status is current with the FCA register.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">CVSS 8.8 WordPress Plugin Flaw Allows Subscriber-Level Users to Escalate to Admin</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-15897" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerability</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">A privilege escalation vulnerability in the widely used Super Forms WordPress plugin (all versions up to 6.3.316) allows any authenticated user to silently overwrite administrator accounts, posing a critical risk to any financial services firm running WordPress for public-facing portals, blogs, or customer-facing tools. With no capability check on the AJAX action, exploitation requires only a subscriber-level account — a trivially low bar — making this particularly dangerous for sites with open registration. A compromised WordPress admin account could serve as an initial access point into broader infrastructure or be used to deliver malicious content to customers.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Audit your estate immediately for any WordPress deployments running Super Forms plugin at or below version 6.3.316 and apply the patch or disable the Register &amp; Login add-on until remediation is confirmed — treat any externally accessible instance as priority.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">Public SQL Injection Exploit Released for Online Reviewer Management System</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104123" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerability</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">While this vulnerability affects a niche open-source application (SourceCodester Online Reviewer Management System 1.0), the public availability of a working SQL injection exploit is a reminder that commodity web application vulnerabilities with public PoCs are rapidly weaponised and scanned for at scale. UK financial services firms running any custom or open-source PHP web applications should treat this as a prompt to verify their own SQL injection defences are current. The CVSS 7.3 score and remote exploitability make this a credible risk if similar patterns exist in internally developed applications.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Use this disclosure as a trigger to run a targeted SQL injection scan (e.g. via SQLMap or your DAST tooling) against any internally developed or open-source PHP web applications in your environment, and verify parameterised queries are enforced in your secure coding standards.
+
+---
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">01 October 2026</span>
@@ -31452,7 +31676,7 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 1258 terms&#8230;"
+           placeholder="Search 1267 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">$</div>
@@ -33077,6 +33301,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Data Leak Site</div>
+  <div class="glossary-def">A website operated by a ransomware or extortion group where stolen data from victims is published if a ransom is not paid, used as leverage to pressure organisations into paying.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial firms are particularly sensitive to data leak sites because publication of client data can trigger regulatory breach notifications, FCA enforcement action, and severe reputational damage.</div><div class="glossary-meta">First seen: 02 October 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Data Silo</div>
   <div class="glossary-def">A situation where data is held and used by one part of an organisation but is not accessible to or integrated with other parts, limiting the overall picture available for decision-making.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial institutions, data silos between fraud, identity, and transaction teams prevent a complete customer risk view, weakening both fraud detection and regulatory compliance.</div><div class="glossary-meta">First seen: 18 April 2026</div>
@@ -33185,6 +33414,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-term">Destination Buffer</div>
   <div class="glossary-def">A specific sequence of network packets or traffic patterns that triggers malware to activate or execute commands.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers could plant backdoors in financial networks that remain dormant until activated by a secret knock, allowing them to bypass monitoring systems during off-hours trading.</div><div class="glossary-meta">First seen: 07 April 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Destructive Cloud Attack</div>
+  <div class="glossary-def">A cyberattack that deliberately deletes, corrupts, or destroys cloud-hosted resources such as storage, databases, and applications, rather than simply stealing data.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The JadePuffer incident demonstrates that an agentic threat actor with access to a financial firm's Azure tenant could irreversibly destroy transaction records, application infrastructure, or client data, creating both operational and regulatory consequences.</div><div class="glossary-meta">First seen: 02 October 2</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">detailPlus Endpoint</div>
@@ -33392,6 +33626,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms running customer-facing portals or marketing sites on WordPress must maintain plugin patching programmes, as a compromised web server could be used to harvest customer data or serve</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Email Protection Gateway (EPG)</div>
+  <div class="glossary-def">A security component that sits in front of an organisation's email system and filters, inspects, or encrypts messages before they reach users.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A max-severity code injection flaw in Kiteworks' EPG could allow an attacker to compromise the secure file-sharing channel that a bank uses to exchange sensitive documents with clients or regulators.</div><div class="glossary-meta">First seen: 02 October 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">email_verified Claim</div>
   <div class="glossary-def">A field in a JSON Web Token that indicates whether the identity provider has actually confirmed the user's email address is genuine and under their control.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If a financial platform's authentication flow does not check the email_verified claim, an attacker with any valid token can impersonate a legitimate user — including administrators with access to API keys and customer data.</div><div class="glossary-meta">First seen: 29 September 2026</div>
@@ -33592,6 +33831,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> UK financial firms with US government clients or cross-border cloud operations may need to align with FedRAMP's continuous vulnerability management requirements alongside FCA operational resilience obligations.</div><div class="glossary-meta">First seen: 25 September 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Fetch Tool (MCP)</div>
+  <div class="glossary-def">A maliciously crafted compressed file or payload that expands to an enormous size when decompressed, exhausting server memory or CPU and causing a denial-of-service condition.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> An attacker submitting a decompression bomb to a financial firm's vLLM inference endpoint could crash the AI service, disrupting automated credit scoring, fraud detection, or customer-facing chatbot functionality.</div><div class="glossary-meta">First seen: 02 October 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">File Descriptor Inheritance</div>
   <div class="glossary-def">A situation where a child process or program automatically receives open file handles from its parent process, potentially including handles that carry elevated access rights.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a containerised FinServ environment, unexpected file descriptor inheritance across privilege boundaries could allow an unprivileged process to perform actions reserved for root, undermining workload isolation.</div><div class="glossary-meta">First seen: 03 September 2026</div>
@@ -33710,6 +33954,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-term">FortiClient EMS (Enterprise Management Server)</div>
   <div class="glossary-def">A centralised management platform used to deploy, monitor, and manage endpoint security software across an organisation's devices from a single console.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A vulnerability in FortiClient EMS could allow attackers to bypass authentication and gain access to endpoint controls across a financial firm's entire network, potentially exposing trading systems and customer data.</div><div class="glossary-meta">First seen: 29 May 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">FortiMail</div>
+  <div class="glossary-def">A Fortinet email security gateway product that protects organisations from email-borne threats such as spam, malware, and phishing.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A critical zero-day vulnerability in FortiMail could allow attackers to execute unauthorised code on a financial firm's email gateway, potentially exposing sensitive client communications or enabling fraud.</div><div class="glossary-meta">First seen: 02 October 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">FortiSandbox</div>
@@ -34267,6 +34516,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banking trojans may use kill-lists to shut down security software or trading applications before deploying their payload.</div><div class="glossary-meta">First seen: 24 March 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">KillSec</div>
+  <div class="glossary-def">A ransomware gang that operated a data leak site and extortion infrastructure until it was dismantled by an international law enforcement operation called Operation KillSwitch.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The takedown of KillSec illustrates how ransomware groups targeting financial institutions can be disrupted through coordinated cross-border law enforcement action, though affiliates may regroup under new brands.</div><div class="glossary-meta">First seen: 02 October 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Kimsuky</div>
   <div class="glossary-def">A North Korean state-sponsored hacking group (also called APT43) that conducts cyber espionage and financially motivated attacks, often targeting organisations through spear-phishing and software supply chain compromises.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A junior engineer at a UK financial firm should be aware that Kimsuky has previously targeted financial sector organisations and software vendors whose products may be used across the industry, representing a nation-state supply chain risk.</div><div class="glossary-meta">First seen: 23 July 2026</div>
@@ -34455,6 +34709,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-term">Loan Note</div>
   <div class="glossary-def">A debt instrument where an investor lends money to a company under a written agreement specifying repayment terms and interest, typically without the regulatory protections that apply to mainstream investments.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Unregulated loan notes issued by firms like Woodville Consultants Ltd have caused retail investors to lose their entire investment when the issuing company failed, highlighting the absence of FSCS protection.</div><div class="glossary-meta">First seen: 21 August 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Local File Inclusion (LFI)</div>
+  <div class="glossary-def">An attack technique where an attacker tricks a web application into loading and executing a file already stored on the server, including sensitive system files or attacker-uploaded scripts.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> An LFI vulnerability in a WordPress plugin used on a financial firm's public portal could allow a low-privileged attacker to execute arbitrary PHP code and access credentials or customer data stored on the server.</div><div class="glossary-meta">First seen: 02 October 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Local Privilege Escalation</div>
@@ -35945,6 +36204,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-term">RFC 6265</div>
   <div class="glossary-def">A technical standards document that defines the rules for how cookies should be set, stored, and transmitted between web clients and servers.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services developers building web applications must follow RFC 6265 correctly to prevent cookie-based session attacks that could compromise customer accounts.</div><div class="glossary-meta">First seen: 15 July 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Rich Text Editor (RTE) Field</div>
+  <div class="glossary-def">A web form input field that accepts formatted text and may render HTML or scripts, rather than treating all input as plain text.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> An RTE field in a contact form on a bank's website could be exploited to store malicious JavaScript that executes in the browser of any staff member who views the submitted entry.</div><div class="glossary-meta">First seen: 02 October 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">RLIKE-Based Boolean SQL Injection</div>
@@ -37627,6 +37891,11 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms using WordPress for customer portals or marketing sites may be vulnerable to data breaches if this function undermines SQL injection protections.</div><div class="glossary-meta">First seen: 14 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">wp_update_user()</div>
+  <div class="glossary-def">A WordPress core function that updates a user account's details in the database, including their role and permissions.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If a plugin passes an attacker-controlled user ID to wp_update_user() without checking ownership, a subscriber on a financial services firm's WordPress site could silently escalate their own account to administrator level.</div><div class="glossary-meta">First seen: 02 October 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">WRL / TIF File (Crafted File as Attack Vector)</div>
   <div class="glossary-def">A legitimate file format — in this case a 3D world or image file — that has been specially constructed by an attacker to contain malicious content that exploits a vulnerability when the file is opened by an application.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial analysts and quant teams who use specialist design or data-visualisation tools may unknowingly open crafted files received via email or shared drives, triggering code execution on their workstations.</div><div class="glossary-meta">First seen: 27 May 2026</div>
@@ -37753,7 +38022,7 @@ What you've done here is a classic jailbreak attempt—create a fictional contex
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 01 October 2026 12:43 UTC &middot;
+  Built automatically by Vigil &middot; 02 October 2026 12:07 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
