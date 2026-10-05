@@ -362,7 +362,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 05 October 2026 13:52 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 05 October 2026 13:59 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>11 sources active</span>
   </div>
@@ -391,12 +391,12 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">1615</div>
+      <div class="stat-value yellow">1630</div>
       <div class="stat-sub">auto-built from 11 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">1267</div>
+      <div class="stat-value purple">1276</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -422,6 +422,111 @@
   </div>
 </div>
 <div class="day-card open">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">05 October 2026</div>
+    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    
+<div class="day-section">
+  <div class="day-sec-label">Executive summary</div>
+  <div class="day-sec-text"><p style="margin:0 0 8px 0">The most pressing threat today is a confirmed zero-day in Citrix NetScaler (CVE-2026-88779) actively exploited in the wild, with researchers assessing remote code execution potential. A cluster of critical ZITADEL authentication bypass flaws (CVSS up to 8.2) enables full account takeover with only a victim&#x27;s username, posing acute risk to any firm using that identity platform. On the AI/ML front, the JadePuffer agentic threat actor has demonstrated destructive cloud attacks via exposed credentials, and MITRE ATLAS has published new technique mappings covering LLM jailbreaks and agentic resource abuse.
+
+---</p></div>
+</div>
+    
+<div class="day-section">
+  <div class="day-sec-label">&#127981; FinServ threats</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-105218 (gopay, CVSS 7.4)</div>
+  <div class="day-threat-body">— A TLS certificate verification bypass in the gopay library allows MITM attackers to intercept payment provider API traffic and steal merchant credentials and transaction data, directly threatening any payment processing pipeline</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-105218" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-105216 (go-micro, CVSS 7.4)</div>
+  <div class="day-threat-body">— InsecureSkipVerify enabled by default in go-micro allows attackers to impersonate internal services and intercept authentication tokens over gRPC, HTTP, and message broker connections used in microservices-based financial platforms</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-105216" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Citrix NetScaler SAML Zero-Day (CVE-2026-88779)</div>
+  <div class="day-threat-body">— Actively exploited denial-of-service vulnerability in NetScaler, a platform widely used for application delivery and SSO in financial services, with RCE potential still under investigation</div>
+  <a href="https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Fingerprints for a Fee: Biometric Fraud</div>
+  <div class="day-threat-body">— Dark-web access to biographic data, IDs, and fingerprints is undermining biometric verification, a growing concern for UK firms relying on digital onboarding and identity checks under regulated AML/KYC obligations</div>
+  <a href="https://www.finextra.com/videoarticle/3526/fingerprints-for-a-fee-how-fraud-is-creating-a-headache-for-verification" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA Debt Advice Warning</div>
+  <div class="day-threat-body">— The FCA is flagging mis-selling and pressure tactics in debt advice, indicating heightened supervisory scrutiny of consumer-facing sales practices that could trigger enforcement action</div>
+  <a href="https://www.fca.org.uk/news/press-releases/debt-advice-warning-spot-red-flags" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#129302; AI / ML security</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">JadePuffer AI Actor — Destructive Azure Cloud Attack</div>
+  <div class="day-threat-body">— An agentic threat actor reportedly used exposed credentials to delete cloud storage, applications, and databases in an Azure tenant, demonstrating that AI-driven attackers can cause irreversible infrastructure damage at speed</div>
+  <a href="https://www.darkreading.com/cloud-security/jadepuffer-ai-actor-azure-tenant-destructive-cloud-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS: LLM Jailbreak (AML.T0054)</div>
+  <div class="day-threat-body">— Adversaries can override LLM safety guardrails via adversarial prompting or weight modification to extract sensitive data or generate malicious content, relevant to any firm deploying customer-facing or internal AI assistants</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS: AI Agent Configuration Exposure (AML.T0002.002)</div>
+  <div class="day-threat-body">— Publicly accessible AI agent configuration files can expose credentials, system prompts, and tool access, giving attackers a ready-made map to pivot deeper into enterprise environments</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0002.002" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS Case Study: MCP Server Data Exfiltration via Cursor</div>
+  <div class="day-threat-body">— A proof-of-concept showed that a malicious Model Context Protocol server can inject prompts into an AI coding assistant to exfiltrate agent configuration files and credentials via shell commands</div>
+  <a href="https://atlas.mitre.org/studies/AML.CS0045" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS: Agentic Resource Consumption (AML.T0034.002)</div>
+  <div class="day-threat-body">— Attackers can abuse prompt injection to force AI agents into excessive API calls, burning cloud API budgets and degrading availability — a denial-of-service vector unique to agentic deployments</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#128275; Vulnerabilities</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-105211 (CVSS 8.1)</div>
+  <div class="day-threat-body">— ZITADEL Login V2 authentication bypass allows unauthenticated attackers to steal OTP codes from server responses and gain MFA-authenticated sessions, including administrator accounts; patch to 4.17.1 immediately</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-105211" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-105210 (CVSS 8.2)</div>
+  <div class="day-threat-body">— ZITADEL Login V1 missing authentication flaw lets an attacker knowing only a username enrol their own TOTP/U2F factors and overwrite verified phone numbers, fully hijacking accounts</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-105210" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-105212 (CVSS 7.5)</div>
+  <div class="day-threat-body">— ZITADEL passkey/authenticator enrolment is permitted before primary factor verification, allowing unauthenticated account takeover with only the victim's login name</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-105212" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-105208 (CVSS 7.7)</div>
+  <div class="day-threat-body">— ZITADEL IdP intent token tampering via malleable encryption enables session hijacking through a timing race, affecting federated identity flows in 3.x and 4.x</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-105208" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-88779 — Citrix NetScaler SAML Zero-Day</div>
+  <div class="day-threat-body">— Actively explo</div>
+  
+</div>
+</div>
+    
+  </div>
+</div>
+<div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">02 October 2026</div>
     <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
@@ -11945,6 +12050,125 @@
 
   <div id="tab-hot" class="tab">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">05 October 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">Critical Auth Bypass in ZITADEL Allows MFA-Authenticated Account Takeover — Patch Now</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-105211" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerability</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">ZITADEL is an open-source identity and access management platform used by organisations to manage authentication workflows; a CVSS 8.1 authentication bypass that allows unauthenticated attackers to steal OTP codes from server responses and achieve fully MFA-authenticated sessions — including administrator takeover — is a critical risk for any UK FinServ firm using ZITADEL as part of its IAM stack. Financial services firms are high-value targets for account takeover attacks, and compromise of an administrator account could expose customer data, internal systems, and regulated assets. FCA rules under SYSC and the DORA-aligned operational resilience expectations mean identity infrastructure must be patched and tested without delay.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Immediately check whether ZITADEL is in use anywhere in your environment (including third-party suppliers); if so, upgrade to version 4.17.1 or later today, and audit server-action response logging to determine whether any OTP codes may have been exposed in transit.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Documents LLM Jailbreak as a Formal Adversarial Technique — Know Your Threat Model</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">MITRE ATLAS has formally catalogued LLM jailbreaking (AML.T0054) as an adversarial technique under the Defence Evasion tactic, meaning it is now part of the recognised threat framework security teams should map controls against — not just a research curiosity. For UK FinServ firms deploying LLMs in customer-facing or internal workflows (e.g. fraud detection explanation, document summarisation, code generation), a successful jailbreak could result in data leakage, generation of malicious content, or circumvention of compliance guardrails. The FCA's increasing scrutiny of AI model governance makes the absence of jailbreak testing a tangible regulatory risk.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors directly exploit LLM safety and alignment mechanisms through adversarial prompting or weight manipulation to extract withheld information, generate harmful outputs such as malicious commands, or leak sensitive system and data context — all of which are now catalogued ATLAS sub-techniques.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Add ATLAS AML.T0054 to your AI/ML threat model and schedule adversarial prompt testing (red-teaming) against any LLM deployed in your environment, ensuring guardrail bypass attempts are included in your AI security assurance programme.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">Threat Actors Weaponising Generative AI Models for Malware, Deepfakes and Phishing at Scale</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">MITRE ATLAS formally documents adversary acquisition and operational use of generative AI tools — including locally hosted open-source LLMs via Ollama and vLLM — as a recognised attack-enablement technique, lowering the barrier for sophisticated phishing, deepfake fraud, and malware generation targeting financial services. UK FinServ firms face elevated risk from AI-generated spear-phishing targeting staff with access to payment systems or customer data, and from deepfake-enabled social engineering (e.g. impersonating executives in authorisation fraud scenarios). The availability of locally served, uncensored models means detection based on API provider abuse monitoring is insufficient.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors obtain and locally host open-source generative AI models to produce phishing lures, deepfakes, malware, and malicious command sequences entirely outside commercial API ecosystems, evading provider-side abuse detection and content filtering controls.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Brief your SOC and fraud teams on AI-generated phishing and deepfake voice/video indicators, and review whether your email security and voice authentication controls are calibrated to detect AI-generated content specifically.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Partners with Industry to Close Protection Insurance Gap for 29 Million Unprotected UK Adults</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/fca-partners-help-improve-financial-security-millions" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA is actively driving cross-sector initiatives to expand protection insurance coverage, signalling continued regulatory focus on consumer outcomes and the Consumer Duty obligation to ensure products meet genuine customer needs. For UK FinServ security and compliance teams, FCA-led partnership programmes typically introduce new data-sharing arrangements between firms, government bodies, and consumer groups — each of which represents a potential supply chain or data governance risk that must be assessed. Security engineers should anticipate that expanded digital outreach programmes may also attract fraud and social engineering campaigns targeting newly engaged, financially vulnerable consumers.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      If your firm participates in FCA partnership programmes involving data sharing with third parties, ensure those data flows are captured in your data mapping register and that third-party security assurance requirements are applied before any integration goes live.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Board Strengthened with Three New Appointments Including Public Policy and Regulatory Expertise</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/news-stories/fca-announces-new-board-appointments-lea-paterson-matthew-tobin-sarah-pritchard" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Board-level changes at the FCA can signal shifts in regulatory priorities and enforcement appetite, which is relevant context for UK FinServ compliance and security teams planning their regulatory engagement strategy. The appointment of individuals with backgrounds in public policy, economics, and corporate leadership alongside the elevation of Sarah Pritchard to the Board as an executive member may indicate continued momentum on operational resilience, AI governance, and consumer protection agendas. Security teams should monitor subsequent FCA speeches and consultations from new Board members for early signals of upcoming regulatory expectations.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Add the new FCA Board members' public speeches and published FCA strategy updates to your regulatory horizon-scanning process to identify emerging AI governance or cyber resilience requirements before they become binding obligations.
+
+---
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">02 October 2026</span>
@@ -31050,7 +31274,7 @@ This is a workaround attempt—repositioning the same attack request through:
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 1267 terms&#8230;"
+           placeholder="Search 1276 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">$</div>
@@ -32760,6 +32984,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A DoS attack against a bank's trading platform or payments infrastructure during peak hours could cause significant financial and reputational harm, triggering FCA operational resilience reporting obligations.</div><div class="glossary-meta">First seen: 06 May 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Denial-of-Service (NetScaler SAML Context)</div>
+  <div class="glossary-def">The practice of directing consumers towards paid debt management products that earn fees for the referrer rather than free services that may better suit the consumer's needs.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA has flagged firms using high-pressure sales tactics to steer customers into fee-paying debt solutions, which conflicts with Consumer Duty requirements to act in customers' best interests.</div><div class="glossary-meta">First seen: 05 October 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Denial-of-Service (Resource Exhaustion Context)</div>
   <div class="glossary-def">An attack that overwhelms a system by filling up its storage, memory, or processing capacity with attacker-controlled data until legitimate operations can no longer function.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> An attacker exploiting an unrestricted file upload endpoint on a financial firm's network device could exhaust storage resources, disrupting the availability of critical trading or payments infrastructure.</div><div class="glossary-meta">First seen: 30 July 2026</div>
@@ -32928,6 +33157,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-term">Dotfile Exposure</div>
   <div class="glossary-def">A security misconfiguration where files beginning with a dot — which are normally hidden from directory listings — are stored in a publicly accessible web location without adequate access controls, making them retrievable</div>
   
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Doubly-Encoded Entity</div>
+  <div class="glossary-def">A technique where special characters are encoded twice (e.g. HTML-escaped twice) so that a security filter strips them incorrectly, allowing malicious content to survive sanitisation.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> An attacker could use doubly-encoded entities to bypass content filters on a financial services video platform and store malicious scripts that execute when staff view content.</div><div class="glossary-meta">First seen: 05 October 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Draft Key / Access Token Exposure</div>
@@ -33605,6 +33839,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Banking applications with improper access control might allow junior staff to access senior executive financial reports or customer data beyond their authorization level.</div><div class="glossary-meta">First seen: 08 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Improper Certificate Validation</div>
+  <div class="glossary-def">A security flaw where software accepts any TLS certificate without checking whether it is genuine, allowing attackers to intercept encrypted communications.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A go-micro service misconfigured with InsecureSkipVerify could allow an attacker to intercept authentication tokens passing between microservices in a bank's internal API infrastructure.</div><div class="glossary-meta">First seen: 05 October 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Improper Neutralization</div>
   <div class="glossary-def">A security weakness where an application fails to properly sanitize or validate user input before using it in commands, queries, or other operations.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A common cause of vulnerabilities in fintech applications where customer input data isn't properly cleaned before being processed by payment systems or database queries.</div><div class="glossary-meta">First seen: 03 April 2026</div>
@@ -33678,6 +33917,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-term">Insecure File Permissions (Mode 0644)</div>
   <div class="glossary-def">A file permission setting on Linux systems that allows any user on the same machine to read a file, even if that file contains sensitive information such as passwords.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A financial services firm hosting shared infrastructure could expose database credentials to unprivileged users or compromised application accounts if configuration files are created with overly permissive default settings.</div><div class="glossary-meta">First seen: 15 September 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">InsecureSkipVerify</div>
+  <div class="glossary-def">A specific Go programming language setting that, when set to true, disables TLS certificate checking entirely and trusts any certificate presented by a server.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A payment platform using a Go library with InsecureSkipVerify enabled could expose merchant credentials and transaction signatures to an on-path attacker.</div><div class="glossary-meta">First seen: 05 October 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Insider Dealing</div>
@@ -34898,6 +35142,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-term">Parasite Code Injection (CRIU context)</div>
   <div class="glossary-def">A technique used internally by CRIU where it temporarily injects a small piece of code into a target process to read its state during a checkpoint — which an attacker can hijack to run their own malicious code.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A malicious container process in a cloud-hosted financial services platform could hijack CRIU's parasite injection to modify saved credentials in the checkpoint image, gaining elevated privileges on restore.</div><div class="glossary-meta">First seen: 29 July 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Passkey Enrollment Bypass</div>
+  <div class="glossary-def">A vulnerability where an attacker can register their own authenticator device on a victim's account before any password or identity check has been completed.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If a financial services customer portal had this flaw, an attacker who only knew a customer's username could take over the account and bypass existing MFA entirely.</div><div class="glossary-meta">First seen: 05 October 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Passkeys</div>
@@ -36225,6 +36474,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A command injection vulnerability in ssh-mcp (CVE-2026-7039) demonstrates the risk of connecting AI agent tooling to privileged remote access mechanisms used in financial infrastructure.</div><div class="glossary-meta">First seen: 27 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">ssl_verify_peer / CURLOPT_SSL_VERIFYPEER</div>
+  <div class="glossary-def">A configuration option in network libraries that controls whether the server's TLS certificate is verified; disabling it allows any certificate, including fraudulent ones, to be trusted.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A Laravel package used by a fintech to query Google Maps with ssl_verify_peer disabled could expose API keys to interception by an attacker on the network path.</div><div class="glossary-meta">First seen: 05 October 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">SSRF (Server-Side Request Forgery)</div>
   <div class="glossary-def">An attack where a server is tricked into making HTTP requests to unintended internal or external destinations on behalf of the attacker.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The LobeChat vulnerability (CVE-2026-59095) demonstrated how SSRF can be used to reach cloud metadata endpoints and steal credentials — a critical risk for financial services firms hosting AI tools in cloud environments.</div><div class="glossary-meta">First seen: 03 July 2026</div>
@@ -36625,6 +36879,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services AI deployments, enabling tool_mode on components that make HTTP requests without strict validation can allow prompt injection attacks to reach internal systems holding customer account data.</div><div class="glossary-meta">First seen: 01 July 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">TOTP (Time-Based One-Time Password)</div>
+  <div class="glossary-def">A temporary numeric code generated by an authenticator app that refreshes every 30 seconds and is used as a second factor to prove identity during login.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A vulnerability that allows an attacker to silently enrol their own TOTP device on a victim's account could let them bypass two-factor authentication on a trading platform.</div><div class="glossary-meta">First seen: 05 October 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">TOTP Seed</div>
   <div class="glossary-def">The secret value shared between a user's authenticator app and a server that generates the time-based one-time passwords used in two-factor authentication.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> If an attacker gains database access at a financial services firm and retrieves a TOTP seed, they can clone the victim's authenticator app and bypass two-factor authentication entirely.</div><div class="glossary-meta">First seen: 15 September 2026</div>
@@ -36763,6 +37022,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-term">U-Boot</div>
   <div class="glossary-def">An open-source bootloader — a small piece of software that runs before the operating system loads — commonly used in embedded and network devices.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A vulnerability in U-Boot could allow an attacker to crash network infrastructure devices used in financial services data centres before they even finish starting up, potentially enabling persistent denial of service.</div><div class="glossary-meta">First seen: 09 July 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">U2F (Universal 2nd Factor)</div>
+  <div class="glossary-def">A hardware-based authentication standard that uses a physical security key to prove identity as a second factor, making account takeover much harder even if a password is stolen.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A missing primary-factor check in a bank's login flow could allow an attacker to register their own U2F key and permanently control a customer's account.</div><div class="glossary-meta">First seen: 05 October 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Ubiquiti UniFi OS</div>
@@ -36948,6 +37212,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-term">Verified Email Status (OAuth Context)</div>
   <div class="glossary-def">A flag in an OAuth provider's response confirming that a user has actually proven ownership of an email address, not just claimed it.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A UK fintech relying on GitHub OAuth login without checking verified email status could allow an attacker to claim any registered customer's email address and take over their account without any credentials.</div><div class="glossary-meta">First seen: 10 July 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">VERIFY_NONE</div>
+  <div class="glossary-def">An SSL/TLS configuration option in Ruby that disables all certificate verification, meaning any certificate is accepted without validation.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A financial firm's internal tool using a Ruby gem with VERIFY_NONE set could have its GitHub API OAuth tokens stolen by an attacker on the same network.</div><div class="glossary-meta">First seen: 05 October 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Vertically Integrated Business Model (Insurance Context)</div>
@@ -37396,7 +37665,7 @@ This is a workaround attempt—repositioning the same attack request through:
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 05 October 2026 13:52 UTC &middot;
+  Built automatically by Vigil &middot; 05 October 2026 13:59 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
