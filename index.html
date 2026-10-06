@@ -362,7 +362,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 05 October 2026 13:59 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 06 October 2026 13:00 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>11 sources active</span>
   </div>
@@ -381,7 +381,7 @@
   <div class="stats">
     <div class="stat-card">
       <div class="stat-label">Days Active</div>
-      <div class="stat-value cyan">158</div>
+      <div class="stat-value cyan">159</div>
       <div class="stat-sub">and counting</div>
     </div>
     <div class="stat-card">
@@ -391,12 +391,12 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">1630</div>
+      <div class="stat-value yellow">1645</div>
       <div class="stat-sub">auto-built from 11 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">1276</div>
+      <div class="stat-value purple">1286</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -422,6 +422,111 @@
   </div>
 </div>
 <div class="day-card open">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">06 October 2026</div>
+    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    
+<div class="day-section">
+  <div class="day-sec-label">Executive summary</div>
+  <div class="day-sec-text"><p style="margin:0 0 8px 0">The most pressing threats today combine active exploitation of a critical Rejetto HFS remote code execution flaw and a destructive cloud attack by the AI-driven threat actor &quot;JadePuffer&quot; targeting Azure tenants. On the AI/ML front, multiple MITRE ATLAS techniques and new CVEs in ChromaDB and vLLM highlight growing risks from agentic AI systems deployed in financial services. UK firms should also note the FCA has opened its crypto authorisation gateway, creating immediate compliance obligations for crypto-adjacent businesses.
+
+---</p></div>
+</div>
+    
+<div class="day-section">
+  <div class="day-sec-label">&#127981; FinServ threats</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">Rejetto HFS CVE-2026-61500 Active Scanning</div>
+  <div class="day-threat-body">Attackers are actively scanning for this critical RCE flaw enabling session forgery and account takeover, posing direct risk to any FinServ infrastructure running Rejetto HFS file servers</div>
+  <a href="https://www.bleepingcomputer.com/news/security/rejetto-hfs-servers-now-actively-scanned-for-critical-rce-flaw/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Fingerprint &amp; Biometric Fraud on Verification Systems</div>
+  <div class="day-threat-body">Dark-web access to biometric data including fingerprints is undermining identity verification processes that UK financial firms rely on for onboarding and fraud prevention</div>
+  <a href="https://www.finextra.com/videoarticle/3526/fingerprints-for-a-fee-how-fraud-is-creating-a-headache-for-verification" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-77226 — Camunda Unauthorised Admin Account Creation (CVSS 8.1)</div>
+  <div class="day-threat-body">An unauthenticated attacker can create administrator accounts in Camunda workflow platforms widely used in FinServ process automation, potentially enabling unauthorised payment or process execution</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-77226" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Citrix NetScaler New Vulnerability</div>
+  <div class="day-threat-body">US and Australian authorities are warning of a newly observed issue in customer-managed NetScaler deployments, a platform heavily used by financial institutions for secure application delivery</div>
+  <a href="https://therecord.media/us-australia-warn-of-latest-citrix-vulnerability" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA Debt Advice Fraud Warning</div>
+  <div class="day-threat-body">The FCA is warning consumers about firms using high-pressure tactics and misleading information to steer vulnerable people toward unsuitable fee-paying debt solutions, representing conduct and reputational risk for firms in this space</div>
+  <a href="https://www.fca.org.uk/news/press-releases/debt-advice-warning-spot-red-flags" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#129302; AI / ML security</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">JadePuffer Agentic Threat Actor Destroys Azure Tenant</div>
+  <div class="day-threat-body">An AI-driven threat actor reportedly used exposed credentials to access and delete cloud storage, applications, and databases in a destructive Azure attack, demonstrating that autonomous AI can now act as an offensive tool at scale</div>
+  <a href="https://www.darkreading.com/cloud-security/jadepuffer-ai-actor-azure-tenant-destructive-cloud-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS — LLM Jailbreak (AML.T0054)</div>
+  <div class="day-threat-body">Adversaries can override safety controls in LLMs deployed in customer-facing financial services applications to extract sensitive data or generate harmful outputs</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">MITRE ATLAS — MCP Server Data Exfiltration Case Study</div>
+  <div class="day-threat-body">A proof-of-concept showed that a malicious Model Context Protocol server can inject prompts into AI coding tools like Cursor, causing them to exfiltrate agent configuration files and credentials — a direct risk if AI developer tooling is used in FinServ environments</div>
+  <a href="https://atlas.mitre.org/studies/AML.CS0045" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-45829 — ChromaDB Pre-Authentication Code Injection (CVSS Critical: AV:N/AC:L/PR:N)</div>
+  <div class="day-threat-body">A network-accessible, unauthenticated code injection flaw in ChromaDB, a vector database commonly used in AI/ML pipelines, could allow full system compromise of any ML infrastructure using it</div>
+  <a href="https://osv.dev/vulnerability/GHSA-f4j7-r4q5-qw2c" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">AI Agents Operating as Unaudited Privileged Users</div>
+  <div class="day-threat-body">Autonomous AI agents in enterprise environments routinely hold broad access privileges comparable to privileged human users, yet typically lack equivalent access monitoring and audit controls</div>
+  <a href="https://www.darkreading.com/vulnerabilities-threats/ai-agents-are-privileged-users-who-is-auditing-their-access" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#128275; Vulnerabilities</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-101919 (CVSS 8.8)</div>
+  <div class="day-threat-body">— A flaw in the HyperShift Kubernetes operator allows an authenticated user to achieve arbitrary code execution within the control plane by supplying a malicious kubeconfig secret, threatening any cloud-native infrastructure using HyperShift</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-101919" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-77226 (CVSS 8.1)</div>
+  <div class="day-threat-body">— An unauthenticated attacker can exploit a logic flaw in Camunda 7.24.0's setup endpoint to create a new administrator account and execute arbitrary processes as the service user</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-77226" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-105752</div>
+  <div class="day-threat-body">— vLLM (fixed in 0.30.0) drops `cache_salt` in Harmony tool continuations, restoring a cross-tenant prefix-cache membership oracle that could allow one tenant to infer information about another's queries</div>
+  <a href="https://osv.dev/vulnerability/GHSA-935w-9g4m-p28p" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-105756</div>
+  <div class="day-threat-body">— A second vLLM flaw (fixed in 0.30.0) allows a low-privileged remote attacker to crash the EngineCore via an uncaught `ValueError` in LMCache-MP deployments, enabling denial of service against AI inference infrastructure</div>
+  <a href="https://osv.dev/vulnerability/GHSA-2823-qmq8-rwvj" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Dell System Update Privilege Escalation</div>
+  <div class="day-threat-body">— A critical flaw in Dell's DSU CLI tool allows attackers to gain root privileges on affected systems; Dell has urged immediate patching</div>
+  <a href="https://www.bleepingcomputer.com/news" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+    
+  </div>
+</div>
+<div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">05 October 2026</div>
     <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
@@ -12050,6 +12155,125 @@
 
   <div id="tab-hot" class="tab">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">06 October 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Formalises LLM Jailbreak as Catalogued Adversarial Technique</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK financial services firms deploying LLMs for customer-facing or internal tooling (e.g., copilots, fraud triage, document summarisation) face a concrete, catalogued threat: adversaries can bypass safety guardrails to extract sensitive data or generate harmful outputs. MITRE ATLAS formally mapping this under Defence Evasion (AML.TA0007) means it can now be integrated into threat models and red team exercises alongside traditional ATT&amp;CK techniques. Regulators including the FCA are increasingly scrutinising AI governance, so demonstrating awareness of formalised AI threat taxonomies is both a security and compliance imperative.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">This technique is itself an AI-targeted attack — adversaries use adversarial prompting or weight manipulation to override alignment controls, enabling downstream abuses such as LLM data leakage or malicious command generation directly from the model.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Map your deployed LLMs against MITRE ATLAS AML.T0054 today — document your existing jailbreak mitigations (input filtering, output classifiers, system prompt hardening) and schedule a red team exercise specifically targeting prompt injection and jailbreak vectors.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Catalogs Adversarial Use of Generative AI Tools — Including Locally Hosted LLMs — as Formal Attack Technique</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Threat actors are now documented as actively acquiring and self-hosting open-source LLMs (via Ollama, vLLM) to conduct phishing, malware generation, and deepfake production without the content guardrails of commercial APIs — a direct escalation risk for UK financial services firms targeted by sophisticated fraud and social engineering. This removes the friction of safety filters, meaning AI-generated spear-phishing targeting FinServ employees or customers can be produced at scale. Supply chain and insider threat scenarios are also elevated, as adversaries can run these models on compromised internal infrastructure.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors directly weaponise generative AI models — hosted locally or in cloud infrastructure — to automate phishing content creation, deepfake generation, malware development, and command generation, significantly lowering the skill barrier for complex attacks.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Audit your email and communications security controls today for resilience against high-quality AI-generated phishing; specifically review whether your detection rules are tuned to catch stylistically polished, grammatically perfect lures that bypass traditional heuristics.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">Publicly Disclosed SQL Injection CVE Hits Open-Source Hospital Management System with No Vendor Response</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-105385" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerability</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">While this CVE targets a hospital management system rather than financial services software directly, the pattern it represents — a remotely exploitable, publicly disclosed SQL injection in a rolling-release open-source project with an unresponsive maintainer — is a supply chain and third-party risk scenario highly relevant to FinServ firms. UK financial institutions frequently consume open-source components and third-party SaaS with opaque update cadences; CVSS 7.3 with public exploit availability means attackers can operationalise this rapidly. This serves as a timely reminder to review your third-party and open-source software inventory for analogous transaction-handling PHP components.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Run a targeted query in your software composition analysis (SCA) tooling today for any PHP-based transaction or payment-adjacent components sourced from low-maintenance open-source projects, and verify patch status and vendor responsiveness as part of your third-party risk process.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Partners Across Industry to Close Protection Insurance Gap for Millions of UK Adults</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/press-releases/fca-partners-help-improve-financial-security-millions" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA's active cross-sector initiative signals a continued regulatory push under Consumer Duty to ensure firms proactively identify and address consumer vulnerability gaps — UK FinServ security and compliance teams should expect corresponding increases in data-sharing arrangements and digital outreach activity that will require security review. New data partnerships between insurers, government bodies, and consumer groups expand the attack surface for sensitive personal and financial data in transit. Security engineers should anticipate requests to support secure data exchange architectures as these partnerships mature.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Flag this initiative to your data protection and architecture teams now so that any new data-sharing integrations arising from FCA partnership obligations are subject to security review and Data Protection Impact Assessment (DPIA) before go-live.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Appoints Three New Board Members Including Deputy CEO Sarah Pritchard</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/news-stories/fca-announces-new-board-appointments-lea-paterson-matthew-tobin-sarah-pritchard" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Board-level changes at the FCA can signal shifts in regulatory priorities and enforcement appetite — Pritchard's elevation to the Board as an executive member alongside appointments with public policy and corporate leadership backgrounds may influence the direction of forthcoming guidance on AI governance, operational resilience, and cyber risk. UK FinServ firms should monitor for any resulting changes to FCA supervisory focus areas. This is low immediacy from an operational security standpoint but worth noting for horizon scanning.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Add FCA Board and leadership changes to your regulatory horizon-scanning tracker and review whether any upcoming FCA consultations — particularly on AI, operational resilience, or Consumer Duty — may be influenced by the new Board composition.
+
+---
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">05 October 2026</span>
@@ -31274,7 +31498,7 @@ This is a workaround attempt—repositioning the same attack request through:
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 1276 terms&#8230;"
+           placeholder="Search 1286 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">$</div>
@@ -32084,6 +32308,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Theft of a CA private key from an internal financial services PKI would allow attackers to create fraudulent certificates that browsers and internal systems would trust, enabling undetected man-in-the-middle attacks on banking APIs.</div><div class="glossary-meta">First seen: 04 September 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Cache Salt (LLM Inference Context)</div>
+  <div class="glossary-def">A unique value added to prefix cache keys in an LLM inference engine to ensure that cached computation results from one tenant cannot be seen or inferred by another tenant.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The vLLM CVEs showed that dropping or loosely validating the cache salt in a multi-tenant inference deployment could allow one financial services AI workload to probe whether another tenant had processed specific data, creating a confidentiality risk.</div><div class="glossary-meta">First seen: 06 October 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">CAI Content Credentials</div>
   <div class="glossary-def">An open standard toolkit used to attach verifiable metadata to digital content, proving its origin and whether it has been altered — increasingly used to authenticate AI-generated material.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A financial services firm using content credentials to verify the authenticity of AI-generated reports or disclosures could be exposed to unauthorised file system access if the path traversal vulnerability in CAI Content Credentials is left unpatched.</div><div class="glossary-meta">First seen: 12 August 2026</div>
@@ -32532,6 +32761,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-term">Control and Provisioning of Wireless Access Points (CAPWAP)</div>
   <div class="glossary-def">A protocol that allows wireless network controllers to manage and configure multiple wireless access points from a central location.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Bank branches using centralised wireless management through CAPWAP face denial of service risks that could disrupt mobile banking services and customer Wi-Fi access.</div><div class="glossary-meta">First seen: 25 March 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Control Plane (Kubernetes)</div>
+  <div class="glossary-def">The set of components in a Kubernetes cluster responsible for making global decisions about the cluster, such as scheduling workloads and managing configuration — effectively the brain of the cluster.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Gaining arbitrary code execution within the control plane, as demonstrated by the HyperShift CVE, gives an attacker god-mode access over all workloads running in that environment, including any financial data processing pipelines.</div><div class="glossary-meta">First seen: 06 October 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">ConvertPlus Plugin (WordPress Deserialization)</div>
@@ -33344,6 +33578,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A UK bank offering AI-powered customer services could face unexpected cost spikes or service outages if an adversary floods the system with excessive queries designed to drain API budgets.</div><div class="glossary-meta">First seen: 15 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Executable Plugin (Kubernetes Context)</div>
+  <div class="glossary-def">A binary or script that Kubernetes uses as an extension to handle authentication or other tasks when communicating with a cluster, loaded automatically from a kubeconfig file.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Attackers who can supply a malicious executable plugin via a kubeconfig — as in the HyperShift vulnerability — can achieve code execution inside privileged infrastructure, bypassing normal access controls that financial firms rely upon.</div><div class="glossary-meta">First seen: 06 October 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Exim Mail Transfer Agent (MTA)</div>
   <div class="glossary-def">A widely used open-source piece of software that handles the routing and delivery of emails between servers on the internet.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms running their own email infrastructure on Exim must patch critical vulnerabilities promptly, as an unauthenticated attacker exploiting a flaw could execute arbitrary code on systems handling sensitive client communications.</div><div class="glossary-meta">First seen: 14 May 2026</div>
@@ -33777,6 +34016,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-term">Human Vulnerability (Social Engineering Context)</div>
   <div class="glossary-def">An attack where malicious instructions are hidden inside external content that an AI agent reads, causing the agent to carry out the attacker's commands without the user's knowledge.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> An AI agent used by a bank to summarise customer documents could be hijacked if a malicious prompt is embedded in a webpage or file the agent is instructed to process.</div><div class="glossary-meta">First seen: 15 June 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">HyperShift Operator</div>
+  <div class="glossary-def">A Kubernetes component that manages hosted control planes, allowing multiple Kubernetes clusters to share underlying infrastructure while keeping each cluster's management layer separate.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A flaw in HyperShift allowed authenticated users to smuggle malicious plugins into a privileged control plane namespace via unsanitised kubeconfig secrets — a critical risk for financial firms running multi-tenant Kubernetes infrastructure for trading or data platforms.</div><div class="glossary-meta">First seen: 06 October 2026</div>
 </div><div class="glossary-letter">I</div>
 <div class="glossary-item">
   <div class="glossary-term">IAM (Identity and Access Management)</div>
@@ -34159,6 +34403,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A financial services firm running a WordPress-based customer portal should be aware that kses sanitization can be bypassed if a plugin reconstructs dangerous HTML at render time from individually permitted tags, leading to stored XSS attacks on customers.</div><div class="glossary-meta">First seen: 16 July 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Kubeconfig Secret</div>
+  <div class="glossary-def">A configuration file containing credentials, cluster addresses, and authentication details that Kubernetes tools use to connect to and communicate with a cluster.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial services environments, kubeconfig secrets with excessive permissions represent a high-value target; the HyperShift vulnerability showed that improper handling of user-supplied kubeconfigs can lead to full control plane compromise.</div><div class="glossary-meta">First seen: 06 October 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Kubernetes Secrets</div>
   <div class="glossary-def">Objects within a Kubernetes cluster used to store sensitive data such as passwords, API keys, and tokens in a structured way separate from application code.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> An SSRF vulnerability in a Kubernetes management platform could allow an attacker to exfiltrate credentials from Secrets across any namespace, potentially exposing database passwords or API keys used by financial applications.</div><div class="glossary-meta">First seen: 16 September 2026</div>
@@ -34317,6 +34566,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-term">LLM-Driven Ransomware</div>
   <div class="glossary-def">A ransomware attack where an AI language model autonomously plans and executes steps such as reconnaissance, data theft, and encryption without requiring a human operator to direct each action.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> For financial services firms, LLM-driven ransomware represents an escalating threat because it can operate at machine speed across banking infrastructure, reducing the window available for a SOC team to detect and respond before data is encrypted or exfiltrated.</div><div class="glossary-meta">First seen: 10 July 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">LMCache-MP Deployment</div>
+  <div class="glossary-def">A distributed LLM inference configuration that separates the memory and compute layers across multiple processes or nodes to</div>
+  
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Load Balancer</div>
@@ -35384,6 +35638,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Flawed validation in a prefix caching implementation — such as failing to check that block counts match across multiple prompts — can be exploited to crash an AI model server used for financial document analysis or customer query handling.</div><div class="glossary-meta">First seen: 22 September 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Prefix-Cache Membership Oracle</div>
+  <div class="glossary-def">An unintended capability that allows an attacker to determine whether a specific input was previously processed by an AI model's cache, leaking information about other users' queries.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In a shared AI inference platform used across a financial institution's business lines, a prefix-cache membership oracle could allow one team to infer whether another had queried the model with sensitive deal or client data.</div><div class="glossary-meta">First seen: 06 October 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Presigned URL</div>
   <div class="glossary-def">A time-limited web address that grants temporary access to a private cloud storage object without requiring the requester to authenticate separately, generated by signing the URL with cloud credentials.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A broken tenant ownership check on presigned URL generation in a cloud-hosted document platform could allow an attacker at one financial institution to access another firm's regulatory filing documents stored in the same shared system.</div><div class="glossary-meta">First seen: 04 September 2026</div>
@@ -36244,6 +36503,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A session fixation flaw in an identity provider like Keycloak could allow an attacker to hijack a bank employee's authenticated session, gaining access to internal financial systems without needing their password.</div><div class="glossary-meta">First seen: 20 May 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Session Forgery</div>
+  <div class="glossary-def">An attack where a threat actor creates or manipulates a valid-looking authentication session token without having legitimately authenticated, allowing them to impersonate another user.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The Rejetto HFS vulnerability enabled session forgery via a weak signing key, illustrating why financial services firms must use cryptographically strong, unpredictable keys for any session management system.</div><div class="glossary-meta">First seen: 06 October 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Session Hijacking</div>
   <div class="glossary-def">A technique where an attacker steals or forges a valid session token to impersonate an authenticated user without needing their password.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A junior engineer at a UK bank should understand that session hijacking can allow attackers to take over a customer's active online banking session, bypassing login controls entirely.</div><div class="glossary-meta">First seen: 18 June 2026</div>
@@ -36257,6 +36521,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-term">Settlement Fund (Data Breach Context)</div>
   <div class="glossary-def">A method lenders use to calculate how much someone can afford to borrow when their earnings fluctuate rather than being a fixed monthly salary.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The FCA is proposing that mortgage lenders adopt more flexible variable income affordability assessments to avoid unfairly excluding self-employed borrowers whose finances are sound but irregular.</div><div class="glossary-meta">First seen: 15 June 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">SetupResource Endpoint</div>
+  <div class="glossary-def">A first-run configuration endpoint in a web application that is intended to be accessible only before the system has been fully set up, and should be blocked once an administrator exists.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The Camunda vulnerability showed that flawed logic in a setup endpoint — counting only direct group members rather than all admins — allowed unauthenticated attackers to create administrator accounts, a risk pattern relevant to any financial workflow automation platform.</div><div class="glossary-meta">First seen: 06 October 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">SFTP Packet Fragment</div>
@@ -37389,6 +37658,11 @@ This is a workaround attempt—repositioning the same attack request through:
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms use platforms like Wazuh to monitor for suspicious activity across trading systems and cloud environments, making vulnerabilities in Wazuh itself — such as the unauthenticated denial-of-service path traversal flaw — a significant risk to their security monitoring capability.</div><div class="glossary-meta">First seen: 19 August 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Weak Signing Key</div>
+  <div class="glossary-def">A cryptographic key used to sign tokens or sessions that is too short, guessable, or improperly generated, making it possible for an attacker to forge valid signatures.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Weak signing keys in payment or authentication systems at financial institutions could allow attackers to forge transaction authorisations or bypass login controls entirely.</div><div class="glossary-meta">First seen: 06 October 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Weaver E-cology</div>
   <div class="glossary-def">An enterprise office automation and workflow management platform widely used in organisations to handle internal approvals, documents, and collaboration.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services firms using similar office automation platforms should treat active exploitation of critical vulnerabilities as an urgent patching priority, as these systems often hold sensitive internal approvals and communications.</div><div class="glossary-meta">First seen: 05 May 2026</div>
@@ -37665,7 +37939,7 @@ This is a workaround attempt—repositioning the same attack request through:
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 05 October 2026 13:59 UTC &middot;
+  Built automatically by Vigil &middot; 06 October 2026 13:00 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
