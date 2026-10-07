@@ -340,7 +340,62 @@
       nav { padding: 0 16px; }
       .header-meta span:last-child { display: none; }
     }
-    </style>
+    
+    .ait-tiles { flex-wrap: wrap; }
+    .ait-tiles .pipe-stage { flex: 1 1 150px; }
+    .ait-sensor .day-pill { white-space: nowrap; }
+    .ait-intro { color: var(--text-mid); font-size: 13px; margin: 2px 0 14px; line-height: 1.5; }
+    .ait-note { color: var(--text-dim); font-size: 12px; margin-top: 8px; line-height: 1.5; }
+    .ait-sub { color: var(--text-mid); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin: 18px 0 8px; }
+    .ait-dim { color: var(--text-dim); font-size: 12px; }
+    .ait-legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 14px; font-size: 12px; color: var(--text-mid); }
+    .ait-legend-item { display: flex; align-items: center; gap: 6px; cursor: help; }
+    .ait-swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+    .ait-chart { display: flex; align-items: flex-end; gap: 10px; overflow-x: auto; padding: 4px 2px 0; border-bottom: 1px solid var(--border); }
+    .ait-col { display: flex; flex-direction: column; align-items: center; min-width: 46px; flex: 1; }
+    .ait-col-total { font-size: 12px; color: var(--text-mid); height: 16px; }
+    .ait-col-stack { display: flex; flex-direction: column; justify-content: flex-end; width: 26px; gap: 2px; }
+    .ait-seg { width: 100%; border-radius: 4px; cursor: pointer; }
+    .ait-seg:hover, .ait-hm-cell:hover { outline: 2px solid var(--text); outline-offset: 1px; }
+    .ait-col-label { font-size: 11px; color: var(--text-dim); margin: 6px 0 4px; white-space: nowrap; }
+    .ait-hm-wrap { overflow-x: auto; }
+    .ait-hm { border-collapse: separate; border-spacing: 2px; font-size: 12px; }
+    .ait-hm th { color: var(--text-dim); font-weight: 500; padding: 4px 6px; white-space: nowrap; }
+    .ait-hm th span { font-size: 10px; }
+    .ait-hm-row { text-align: right; color: var(--text-mid) !important; }
+    .ait-hm-cell { width: 46px; height: 26px; text-align: center; border-radius: 4px; color: var(--text); font-weight: 600; cursor: pointer; }
+    .ait-hm-empty { background: var(--surface2); cursor: default; }
+    .ait-hm-tot { color: var(--text-mid); padding-left: 10px; white-space: nowrap; }
+    .ait-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .ait-chips a { text-decoration: none; }
+    .ait-actors { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+    .ait-actor { background: var(--surface2); border: 1px solid var(--border); border-left: 3px solid var(--orange); border-radius: 8px; padding: 14px; }
+    .ait-actor-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .ait-actor-name { font-weight: 700; font-size: 15px; }
+    .ait-actor-meta { color: var(--text-dim); font-size: 12px; margin: 6px 0 8px; }
+    .ait-kv { font-size: 12.5px; color: var(--text-mid); margin-top: 4px; line-height: 1.5; }
+    .ait-kv b { color: var(--text); font-weight: 600; }
+    .ait-level { color: #1b1206; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 10px; white-space: nowrap; }
+    .ait-grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .ait-stages { border-collapse: collapse; width: 100%; font-size: 13px; }
+    .ait-stages td { padding: 5px 8px; border-bottom: 1px solid var(--border); color: var(--text-mid); }
+    .ait-by { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+    .ait-by-ai { background: rgba(240,136,62,0.18); color: var(--orange); }
+    .ait-by-human { background: rgba(57,208,216,0.12); color: var(--cyan); }
+    .ait-by-unclear { background: var(--surface2); color: var(--text-dim); }
+    .ait-list { margin: 4px 0 0 18px; font-size: 13px; color: var(--text-mid); line-height: 1.6; }
+    .ait-list a { color: var(--cyan); }
+    .ait-rule { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; margin: 8px 0; padding: 8px 12px; }
+    .ait-rule summary { cursor: pointer; font-size: 13px; }
+    .ait-rule pre, .ait-sensor code { font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-mid); white-space: pre-wrap; word-break: break-word; }
+    .ait-rule pre { margin-top: 8px; }
+    .ait-sensor { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+    .ait-sensor th, .ait-sensor td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .ait-sensor a { color: var(--cyan); }
+    .ta-badge-ai { background: rgba(240,136,62,0.15); color: var(--orange); border: 1px solid rgba(240,136,62,0.3); font-size: 11px; padding: 2px 8px; border-radius: 10px; margin-left: 6px; }
+    #ait-tip { position: fixed; z-index: 999; max-width: 340px; background: var(--surface); color: var(--text); border: 1px solid var(--border);
+               border-radius: 6px; padding: 8px 10px; font-size: 12px; line-height: 1.45; pointer-events: none; display: none; box-shadow: 0 6px 20px rgba(0,0,0,.4); }
+</style>
 </head>
 <body>
 
@@ -364,7 +419,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 07 October 2026 17:29 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 07 October 2026 18:02 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>11 sources active</span>
   </div>
@@ -373,6 +428,7 @@
 <nav>
   <button class="nav-btn active" onclick="showTab('digest',this)">&#128225; Daily Digest</button>
   <button class="nav-btn" onclick="showTab('hot',this)">&#128293; Hot Topics</button>
+  <button class="nav-btn" onclick="showTab('aithreats',this)">&#129302; AI Threats</button>
   <button class="nav-btn" onclick="showTab('actors',this)">&#127919; Threat Actors</button>
   <button class="nav-btn" onclick="showTab('redteam',this)">&#128308; Red Teaming</button>
   <button class="nav-btn" onclick="showTab('glossary',this)">&#128218; Glossary</button>
@@ -28262,6 +28318,967 @@
 </div>
   </div>
 
+  <div id="tab-aithreats" class="tab">
+    <div class="pipeline-row ait-tiles">
+  <div class="pipe-stage"><div class="pipe-stage-name">&#128193; Case files</div>
+  <div class="pipe-stage-count orange" style="font-size:22px">7</div></div>
+  <div class="pipe-stage"><div class="pipe-stage-name">&#129302; Highest autonomy</div>
+  <div class="pipe-stage-count orange" style="font-size:16px">L4 Fully autonomous</div></div>
+  <div class="pipe-stage"><div class="pipe-stage-name">&#9888;&#65039; Fully autonomous</div>
+  <div class="pipe-stage-count orange" style="font-size:22px">1</div></div>
+  <div class="pipe-stage"><div class="pipe-stage-name">&#127919; AI-driven actors</div>
+  <div class="pipe-stage-count " style="font-size:22px">1</div></div>
+  <div class="pipe-stage"><div class="pipe-stage-name">&#128737;&#65039; Detection rules</div>
+  <div class="pipe-stage-count green" style="font-size:22px">20</div></div>
+  <div class="pipe-stage"><div class="pipe-stage-name">&#128065; Injection sensor (live / quoted)</div>
+  <div class="pipe-stage-count purple" style="font-size:22px">0 / 0</div></div></div>
+<div class="rt-section"><div class="rt-section-header open" onclick="rtToggle(this)">
+  <span class="rt-section-title">Autonomy over time</span></div>
+  <div class="rt-section-body" style="display:block">
+  <div class="ait-intro">Each column is a month; each block is a newly seen AI-driven attack, coloured by how autonomous the AI was. Hover a block for the incidents.</div><div class="ait-legend"><div class="ait-legend-item" data-tip="AI produced attack material (exploit, malware, phishing, tooling) but humans ran the attack."><span class="ait-swatch" style="background:#8a5229"></span>L1 AI-assisted</div><div class="ait-legend-item" data-tip="An LLM planned or directed attack steps; humans executed or approved each step."><span class="ait-swatch" style="background:#b8662d"></span>L2 AI-orchestrated</div><div class="ait-legend-item" data-tip="An AI agent executed several attack stages itself, with human checkpoints or hand-offs."><span class="ait-swatch" style="background:#e8823a"></span>L3 Semi-autonomous</div><div class="ait-legend-item" data-tip="An AI agent ran the operation end-to-end (access through to impact) with no meaningful human in the loop."><span class="ait-swatch" style="background:#ffb072"></span>L4 Fully autonomous</div></div><div class="ait-chart">
+  <div class="ait-col">
+    <div class="ait-col-total">2</div>
+    <div class="ait-col-stack" style="height:140px"><div class="ait-seg" style="height:70px;background:#e8823a" data-tip="May 26 · L3 Semi-autonomous: 1 — LatAm Threat Actors Use AI Agents to Generate Custom Hacking Tools"></div><div class="ait-seg" style="height:70px;background:#8a5229" data-tip="May 26 · L1 AI-assisted: 1 — AI-Generated Zero-Day Exploit for Web Admin Tool"></div></div>
+    <div class="ait-col-label">May 26</div>
+  </div>
+  <div class="ait-col">
+    <div class="ait-col-total"></div>
+    <div class="ait-col-stack" style="height:140px"></div>
+    <div class="ait-col-label">Jun 26</div>
+  </div>
+  <div class="ait-col">
+    <div class="ait-col-total">1</div>
+    <div class="ait-col-stack" style="height:140px"><div class="ait-seg" style="height:70px;background:#ffb072" data-tip="Jul 26 · L4 Fully autonomous: 1 — JadePuffer LLM-Driven Ransomware &amp; Azure Tenant Destruction"></div></div>
+    <div class="ait-col-label">Jul 26</div>
+  </div>
+  <div class="ait-col">
+    <div class="ait-col-total">1</div>
+    <div class="ait-col-stack" style="height:140px"><div class="ait-seg" style="height:70px;background:#8a5229" data-tip="Aug 26 · L1 AI-assisted: 1 — AI-Generated Exploit Scripts Targeting Siemens S7 PLCs in Critical Infrastructure"></div></div>
+    <div class="ait-col-label">Aug 26</div>
+  </div>
+  <div class="ait-col">
+    <div class="ait-col-total">2</div>
+    <div class="ait-col-stack" style="height:140px"><div class="ait-seg" style="height:140px;background:#e8823a" data-tip="Sep 26 · L3 Semi-autonomous: 2 — Spain AEPD First AI-Agent-Powered Data Breach Report; AI Agent Skimmer Campaign Steals 600k Credit Cards Across 100+ Sites"></div></div>
+    <div class="ait-col-label">Sep 26</div>
+  </div>
+  <div class="ait-col">
+    <div class="ait-col-total">1</div>
+    <div class="ait-col-stack" style="height:140px"><div class="ait-seg" style="height:70px;background:#e8823a" data-tip="Oct 26 · L3 Semi-autonomous: 1 — Artex AI agents breach South Korean banks exposing 68,000 customers"></div></div>
+    <div class="ait-col-label">Oct 26</div>
+  </div></div></div></div>
+<div class="rt-section"><div class="rt-section-header open" onclick="rtToggle(this)">
+  <span class="rt-section-title">Where AI sits in the attack chain</span></div>
+  <div class="rt-section-body" style="display:block">
+  <div class="ait-intro">Which ATT&amp;CK stages the AI performed itself. Watch for AI spreading into new rows over time.</div>
+<div class="ait-hm-wrap"><table class="ait-hm">
+  <thead><tr><th></th><th>May 26</th><th>Jun 26</th><th>Jul 26</th><th>Aug 26</th><th>Sep 26</th><th>Oct 26</th><th>All time<br><span>AI / Human / Unclear</span></th></tr></thead>
+  <tbody><tr><th class="ait-hm-row">Reconnaissance</th><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell" style="background:rgba(240,136,62,0.61)" data-tip="Reconnaissance · Sep 26: AI performed this stage in 1 case(s) — AI Agent Skimmer Campaign Steals 600k Credit Cards Across 100+ Sites">1</td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-tot"><b>1</b> / 1 / 0</td></tr><tr><th class="ait-hm-row">Resource Development</th><td class="ait-hm-cell" style="background:rgba(240,136,62,1.00)" data-tip="Resource Development · May 26: AI performed this stage in 2 case(s) — AI-Generated Zero-Day Exploit for Web Admin Tool; LatAm Threat Actors Use AI Agents to Generate Custom Hacking Tools">2</td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell" style="background:rgba(240,136,62,0.61)" data-tip="Resource Development · Aug 26: AI performed this stage in 1 case(s) — AI-Generated Exploit Scripts Targeting Siemens S7 PLCs in Critical Infrastructure">1</td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-tot"><b>3</b> / 1 / 2</td></tr><tr><th class="ait-hm-row">Initial Access</th><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell" style="background:rgba(240,136,62,0.61)" data-tip="Initial Access · Jul 26: AI performed this stage in 1 case(s) — JadePuffer LLM-Driven Ransomware &amp; Azure Tenant Destruction">1</td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell" style="background:rgba(240,136,62,0.61)" data-tip="Initial Access · Sep 26: AI performed this stage in 1 case(s) — AI Agent Skimmer Campaign Steals 600k Credit Cards Across 100+ Sites">1</td><td class="ait-hm-cell" style="background:rgba(240,136,62,0.61)" data-tip="Initial Access · Oct 26: AI performed this stage in 1 case(s) — Artex AI agents breach South Korean banks exposing 68,000 customers">1</td><td class="ait-hm-tot"><b>3</b> / 1 / 2</td></tr><tr><th class="ait-hm-row">Execution</th><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell" style="background:rgba(240,136,62,0.61)" data-tip="Execution · Jul 26: AI performed this stage in 1 case(s) — JadePuffer LLM-Driven Ransomware &amp; Azure Tenant Destruction">1</td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell" style="background:rgba(240,136,62,0.61)" data-tip="Execution · Sep 26: AI performed this stage in 1 case(s) — AI Agent Skimmer Campaign Steals 600k Credit Cards Across 100+ Sites">1</td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-tot"><b>2</b> / 0 / 0</td></tr><tr><th class="ait-hm-row">Persistence</th><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell" style="background:rgba(240,136,62,0.61)" data-tip="Persistence · Sep 26: AI performed this stage in 1 case(s) — AI Agent Skimmer Campaign Steals 600k Credit Cards Across 100+ Sites">1</td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-tot"><b>1</b> / 0 / 1</td></tr><tr><th class="ait-hm-row">Privilege Escalation</th><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-tot"><b>0</b> / 0 / 0</td></tr><tr><th class="ait-hm-row">Stealth</th><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell" style="background:rgba(240,136,62,0.61)" data-tip="Stealth · Aug 26: AI performed this stage in 1 case(s) — AI-Generated Exploit Scripts Targeting Siemens S7 PLCs in Critical Infrastructure">1</td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-tot"><b>1</b> / 0 / 0</td></tr><tr><th class="ait-hm-row">Defense Impairment</th><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-tot"><b>0</b> / 0 / 0</td></tr><tr><th class="ait-hm-row">Credential Access</th><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell" style="background:rgba(240,136,62,0.61)" data-tip="Credential Access · Aug 26: AI performed this stage in 1 case(s) — AI-Generated Exploit Scripts Targeting Siemens S7 PLCs in Critical Infrastructure">1</td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-tot"><b>1</b> / 0 / 0</td></tr><tr><th class="ait-hm-row">Discovery</th><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-tot"><b>0</b> / 0 / 0</td></tr><tr><th class="ait-hm-row">Lateral Movement</th><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-tot"><b>0</b> / 0 / 0</td></tr><tr><th class="ait-hm-row">Collection</th><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell" style="background:rgba(240,136,62,0.61)" data-tip="Collection · Jul 26: AI performed this stage in 1 case(s) — JadePuffer LLM-Driven Ransomware &amp; Azure Tenant Destruction">1</td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell" style="background:rgba(240,136,62,1.00)" data-tip="Collection · Sep 26: AI performed this stage in 2 case(s) — Spain AEPD First AI-Agent-Powered Data Breach Report; AI Agent Skimmer Campaign Steals 600k Credit Cards Across 100+ Sites">2</td><td class="ait-hm-cell" style="background:rgba(240,136,62,0.61)" data-tip="Collection · Oct 26: AI performed this stage in 1 case(s) — Artex AI agents breach South Korean banks exposing 68,000 customers">1</td><td class="ait-hm-tot"><b>4</b> / 0 / 1</td></tr><tr><th class="ait-hm-row">Command And Control</th><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-tot"><b>0</b> / 0 / 1</td></tr><tr><th class="ait-hm-row">Exfiltration</th><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell" style="background:rgba(240,136,62,0.61)" data-tip="Exfiltration · Jul 26: AI performed this stage in 1 case(s) — JadePuffer LLM-Driven Ransomware &amp; Azure Tenant Destruction">1</td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell" style="background:rgba(240,136,62,0.61)" data-tip="Exfiltration · Sep 26: AI performed this stage in 1 case(s) — AI Agent Skimmer Campaign Steals 600k Credit Cards Across 100+ Sites">1</td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-tot"><b>2</b> / 0 / 1</td></tr><tr><th class="ait-hm-row">Impact</th><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell" style="background:rgba(240,136,62,0.61)" data-tip="Impact · Jul 26: AI performed this stage in 1 case(s) — JadePuffer LLM-Driven Ransomware &amp; Azure Tenant Destruction">1</td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-cell ait-hm-empty"></td><td class="ait-hm-tot"><b>1</b> / 0 / 0</td></tr></tbody></table></div>
+<div class="ait-note">Cell = number of cases first seen that month where the AI itself performed the tactic. Brighter = more.</div>
+<div class="ait-sub">MITRE ATLAS techniques seen in AI-driven attacks</div>
+<div class="ait-chips"><a class="ta-tool-chip" target="_blank" href="https://atlas.mitre.org/techniques/AML.T0040">AML.T0040 ML Model Inference API Access &times;2</a><a class="ta-tool-chip" target="_blank" href="https://atlas.mitre.org/techniques/AML.T0040">AML.T0040 ML Attack Staging &times;1</a><a class="ta-tool-chip" target="_blank" href="https://atlas.mitre.org/techniques/AML.T0017">AML.T0017 Develop Cyberattack Capabilities with AI &times;1</a><a class="ta-tool-chip" target="_blank" href="https://atlas.mitre.org/techniques/AML.T0010">AML.T0010 ML Supply Chain Compromise &times;1</a><a class="ta-tool-chip" target="_blank" href="https://atlas.mitre.org/techniques/AML.T0031">AML.T0031 Erode ML Model Integrity &times;1</a><a class="ta-tool-chip" target="_blank" href="https://atlas.mitre.org/techniques/AML.T0040">AML.T0040 ML Attack Staging — using AI to generate and refine ICS exploitation scripts &times;1</a><a class="ta-tool-chip" target="_blank" href="https://atlas.mitre.org/techniques/AML.T0017">AML.T0017 Develop Capabilities with AI — using LLMs to lower the barrier to ICS exploit development &times;1</a><a class="ta-tool-chip" target="_blank" href="https://atlas.mitre.org/techniques/AML.T0000">AML.T0000 LLM-Powered Agent Exploitation (not formally catalogued; closest: AI-Enabled Attack Automation) &times;1</a><a class="ta-tool-chip" target="_blank" href="https://atlas.mitre.org/techniques/AML.T0040">AML.T0040 ML Model Inference API Access (agent frameworks abused for automated attack orchestration) &times;1</a><a class="ta-tool-chip" target="_blank" href="https://atlas.mitre.org/techniques/AML.T0017">AML.T0017 Develop Capabilities (AI-assisted malware/skimmer development) &times;1</a><a class="ta-tool-chip" target="_blank" href="https://atlas.mitre.org/techniques/AML.T0040">AML.T0040 AI-Enabled Cyberattack Tooling &times;1</a><a class="ta-tool-chip" target="_blank" href="https://atlas.mitre.org/techniques/AML.T0016">AML.T0016 Obtain Capabilities via AI &times;1</a></div></div></div>
+<div class="rt-section"><div class="rt-section-header open" onclick="rtToggle(this)">
+  <span class="rt-section-title">AI-driven actors</span></div>
+  <div class="rt-section-body" style="display:block">
+  <div class="ait-intro">Actors behind the case files, with the highest autonomy level they have shown.</div><div class="ait-actors">
+<div class="ait-actor">
+  <div class="ait-actor-top">
+    <div class="ait-actor-name">JadePuffer</div>
+    <span class="ait-level" style="background:#ffb072" data-tip="An AI agent ran the operation end-to-end (access through to impact) with no meaningful human in the loop.">L4 Fully autonomous</span>
+  </div>
+  <div class="ait-actor-meta">1 case · Unknown · first 2026-07-07 · last 2026-10-01 </div>
+  <div class="ait-kv"><b>AI performs:</b> Initial Access, Execution, Collection, Exfiltration, Impact</div>
+  <div class="ait-kv"><b>AI / frameworks:</b> Langflow, unnamed LLM</div>
+  <div class="ait-kv"><b>Targets:</b> Artificial Intelligence / ML Infrastructure, Cloud Services, Technology</div>
+</div>
+<div class="ait-actor">
+  <div class="ait-actor-top">
+    <div class="ait-actor-name">Unattributed</div>
+    <span class="ait-level" style="background:#e8823a" data-tip="An AI agent executed several attack stages itself, with human checkpoints or hand-offs.">L3 Semi-autonomous</span>
+  </div>
+  <div class="ait-actor-meta">6 cases · Unknown · first 2026-05-12 · last 2026-10-07 </div>
+  <div class="ait-kv"><b>AI performs:</b> Reconnaissance, Resource Development, Initial Access, Execution, Persistence, Stealth, Credential Access, Collection, Exfiltration</div>
+  <div class="ait-kv"><b>AI / frameworks:</b> Artex AI, unnamed AI agent framework, unnamed AI agents, unnamed LLM, unnamed LLM-powered AI agent</div>
+  <div class="ait-kv"><b>Targets:</b> Agriculture, Banking, Defense, E-Commerce, Energy, Financial Services, Manufacturing, Retail, Water and Wastewater</div>
+</div></div></div></div>
+<div class="rt-section"><div class="rt-section-header open" onclick="rtToggle(this)">
+  <span class="rt-section-title">Case files</span></div>
+  <div class="rt-section-body" style="display:block">
+  <div class="ait-intro">One structured record per real-world incident. Click to expand.</div>
+<div class="day-card ait-case">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">Artex AI agents breach South Korean banks exposing 68,000 customers</div>
+    <div class="day-card-pills">
+      <span class="ait-level" style="background:#e8823a">L3 Semi-autonomous</span>
+      <span class="day-pill pill-purple">Unattributed</span>
+      <span class="ait-dim">2026-10-07</span>
+    </div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    <div class="day-section"><div class="day-sec-text">South Korean authorities are investigating a series of breaches affecting at least seven financial institutions, including Hana Bank, KB Kookmin Bank and Shinhan Bank, in which AI agents are believed to have been used to conduct the intrusions. The personal data of at least 68,000 individuals — including borrowing history, incomes, phone numbers and names — was exposed, with Shinhan Bank alone accounting for roughly 25,000 affected customers. South Korean officials believe the Chinese cybersecurity tool Artex AI was used to execute the attacks, with 33 IP addresses identified across at least 12 countries.</div>
+      <div class="ait-note">Autonomy L3: South Korean officials state that &#x27;signs have emerged&#x27; that AI agents were deployed to execute the hacks, implying the AI carried out multiple attack stages autonomously, but the investigation is ongoing and full end-to-end autonomy without any human involvement has not been confirmed. · Confidence: Low</div></div>
+    <div class="day-section ait-grid2">
+      <div><div class="day-sec-label">What the AI did</div><div class="day-sec-text">AI agents (attributed to Artex AI) are believed to have conducted the intrusions into the banks&#x27; systems, enabling attacks without requiring specialised human skills.</div></div>
+      <div><div class="day-sec-label">What humans did</div><div class="day-sec-text">Humans are presumed to have initiated or directed the campaign; investigation ongoing and specific human roles not reported.</div></div>
+      <div><div class="day-sec-label">Initial access</div><div class="day-sec-text">Not reported</div></div>
+      <div><div class="day-sec-label">Impact</div><div class="day-sec-text">Personal data of at least 68,000 customers across at least seven South Korean banks was exposed, including borrowing history, incomes, phone numbers and names.</div></div>
+    </div>
+    <div class="day-section"><div class="day-sec-label">Attack stages (ATT&amp;CK)</div>
+      <table class="ait-stages"><tbody><tr><td>Resource Development</td><td>T1583 Acquire Infrastructure (proxy/VPN nodes across 12 countries)</td><td><span class="ait-by ait-by-unclear">Unclear</span></td></tr><tr><td>Initial Access</td><td>T1190 Exploit Public-Facing Application</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Collection</td><td>T1530 Data from Cloud Storage / Customer Database</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Command And Control</td><td>T1090 Proxy (traffic routed through 33 IPs across 12 countries)</td><td><span class="ait-by ait-by-unclear">Unclear</span></td></tr><tr><td>Exfiltration</td><td>T1041 Exfiltration Over C2 Channel</td><td><span class="ait-by ait-by-unclear">Unclear</span></td></tr></tbody></table>
+      <div class="ait-chips"><span class="ta-tool-chip">Artex AI</span><span class="ta-tool-chip">AML.T0040 AI-Enabled Cyberattack Tooling</span><span class="ta-tool-chip">AML.T0016 Obtain Capabilities via AI</span></div></div>
+    <div class="day-section"><div class="day-sec-label">Defender takeaways</div><ul class="ait-list"><li>Deploy behavioural analytics on database access patterns to detect automated, high-volume data queries characteristic of AI-agent-driven exfiltration — flag anomalous bulk reads of customer PII tables outside business hours or from unusual source IPs.</li><li>Implement strict geo-IP and IP reputation controls at the perimeter and API gateway layer; the use of 33 IPs across 12 countries in this campaign suggests that blocking or alerting on connections from high-risk or unexpected jurisdictions would have provided early warning.</li><li>Conduct an urgent review of AI-powered tooling (including third-party cybersecurity platforms such as Artex AI) that could be weaponised against your infrastructure, and ensure third-party risk assessments explicitly cover dual-use AI offensive capability.</li></ul></div>
+    <div class="day-section"><div class="day-sec-label">Detections</div><details class="ait-rule"><summary>&#128737;&#65039; Anomalous Bulk PII Database Query - Potential AI Agent Exfiltration</summary><pre>title: Anomalous Bulk PII Database Query - Potential AI Agent Exfiltration
+id: 2d217bc9-696a-56a9-a6c7-c4e950604cb3
+status: experimental
+description: Detects unusually high volumes of SELECT queries against customer PII tables within a short window, consistent with AI-agent-driven automated data harvesting as observed in the South Korean bank breaches.
+author: CTI Analyst
+date: 2026-10-07
+references:
+  - https://therecord.media/south-korean-bank-hacks-ai-agents
+logsource:
+  category: database
+  product: generic
+detection:
+  selection:
+    query|contains:
+      - &#x27;borrowing_history&#x27;
+      - &#x27;customer_income&#x27;
+      - &#x27;phone_number&#x27;
+      - &#x27;personal_data&#x27;
+    query_type: &#x27;SELECT&#x27;
+  timeframe: 5m
+  condition: selection | count() &gt; 500
+falsepositives:
+  - Legitimate batch reporting jobs; validate against scheduled job inventory
+  - ETL processes; whitelist known service accounts
+level: high
+tags:
+  - attack.collection
+  - attack.t1530
+  - attack.exfiltration
+  - attack.t1041</pre></details><details class="ait-rule"><summary>&#128737;&#65039; Multi-Country Source IP Access to Banking Application - Distributed Proxy Pattern</summary><pre>title: Multi-Country Source IP Access to Banking Application - Distributed Proxy Pattern
+id: 2cd33c50-6257-5cb7-a367-a2e17b9d6e60
+status: experimental
+description: Detects authentication or API access attempts to core banking applications originating from more than 5 distinct country geolocations within a 10-minute window, consistent with the 33-IP/12-country proxy pattern observed in the South Korean bank AI-agent attack campaign.
+author: CTI Analyst
+date: 2026-10-07
+references:
+  - https://therecord.media/south-korean-bank-hacks-ai-agents
+logsource:
+  category: webserver
+  product: generic
+detection:
+  selection:
+    http_method:
+      - &#x27;POST&#x27;
+      - &#x27;GET&#x27;
+    uri_path|contains:
+      - &#x27;/api/customer&#x27;
+      - &#x27;/api/account&#x27;
+      - &#x27;/login&#x27;
+      - &#x27;/auth&#x27;
+    status_code:
+      - 200
+      - 201
+  aggregate:
+    group_by:
+      - uri_path
+    count_distinct: src_country
+    timespan: 10m
+    condition: count_distinct &gt; 5
+falsepositives:
+  - Global CDN or legitimate international customer base; correlate with threat intel IP feeds
+  - Penetration testing activity; validate against change management records
+level: high
+tags:
+  - attack.command_and_control
+  - attack.t1090
+  - attack.initial_access
+  - attack.t1190</pre></details></div>
+    <div class="day-section"><div class="day-sec-label">Sources</div><ul class="ait-list"><li><a href="https://therecord.media/south-korean-bank-hacks-ai-agents" target="_blank">South Korean bank hacks via AI agents</a> <span class="ait-dim">therecord.media · 2026-10-07</span></li></ul></div>
+  </div>
+</div>
+<div class="day-card ait-case">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">JadePuffer LLM-Driven Ransomware &amp; Azure Tenant Destruction</div>
+    <div class="day-card-pills">
+      <span class="ait-level" style="background:#ffb072">L4 Fully autonomous</span>
+      <span class="day-pill pill-purple">JadePuffer</span>
+      <span class="ait-dim">2026-07-07</span>
+    </div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    <div class="day-section"><div class="day-sec-text">An agentic threat actor designated JadePuffer exploited a vulnerability in Langflow to conduct what has been reported as the first documented end-to-end ransomware attack orchestrated by a large language model, autonomously stealing data and encrypting systems including AI training datasets, vector databases, and model checkpoints using custom EncForge malware. In a subsequent incident reported October 2026, JadePuffer used exposed credentials to access an Azure tenant and destructively deleted cloud storage, applications, and databases. This campaign demonstrates JadePuffer&#x27;s expanding capability to execute autonomous, end-to-end destructive cloud attacks at scale.</div>
+      <div class="ait-note">Autonomy L4: Earlier reporting described an end-to-end LLM-orchestrated ransomware attack with no human in the loop; the new article confirms the AI-driven threat actor autonomously leveraged exposed credentials and carried out destructive cloud operations (deleting storage, applications, and databases) at scale with no reported human checkpoint. · Confidence: Low</div></div>
+    <div class="day-section ait-grid2">
+      <div><div class="day-sec-label">What the AI did</div><div class="day-sec-text">The AI agent exploited a Langflow vulnerability, exfiltrated data from a production database, encrypted systems end-to-end, deployed custom EncForge malware against AI assets, and in a separate operation autonomously used exposed credentials to access and destructively delete Azure cloud storage, applications, and databases.</div></div>
+      <div><div class="day-sec-label">What humans did</div><div class="day-sec-text">Not reported</div></div>
+      <div><div class="day-sec-label">Initial access</div><div class="day-sec-text">Exploitation of a Langflow vulnerability (earlier incidents); exposed/compromised credentials used to access Azure tenant (October 2026 incident)</div></div>
+      <div><div class="day-sec-label">Impact</div><div class="day-sec-text">Data was exfiltrated from a production database, general systems and AI assets (training datasets, vector databases, model checkpoints) were encrypted via EncForge malware, and in a subsequent destructive attack an entire Azure tenant&#x27;s cloud storage, applications, and databases were deleted, demonstrating AI-enabled destructive impact at cloud scale.</div></div>
+    </div>
+    <div class="day-section"><div class="day-sec-label">Attack stages (ATT&amp;CK)</div>
+      <table class="ait-stages"><tbody><tr><td>Resource Development</td><td>T1587.001 Develop Capabilities: Malware (EncForge custom ransomware)</td><td><span class="ait-by ait-by-unclear">Unclear</span></td></tr><tr><td>Initial Access</td><td>T1190 Exploit Public-Facing Application (Langflow vulnerability)</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Initial Access</td><td>T1078 Valid Accounts (exposed credentials used to access Azure tenant)</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Execution</td><td>T1203 Exploitation for Client Execution via Langflow</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Collection</td><td>T1005 Data from Local System / Production Database and AI Assets</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Exfiltration</td><td>T1041 Exfiltration of production database contents</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Impact</td><td>T1486 Data Encrypted for Impact via EncForge (AI training datasets, vector DBs, model checkpoints)</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Impact</td><td>T1485 Data Destruction (deletion of Azure cloud storage, applications, and databases)</td><td><span class="ait-by ait-by-ai">AI</span></td></tr></tbody></table>
+      <div class="ait-chips"><span class="ta-tool-chip">Langflow</span><span class="ta-tool-chip">unnamed LLM</span><span class="ta-tool-chip">AML.T0040 ML Model Inference API Access</span><span class="ta-tool-chip">AML.T0010 ML Supply Chain Compromise</span><span class="ta-tool-chip">AML.T0031 Erode ML Model Integrity</span></div></div>
+    <div class="day-section"><div class="day-sec-label">Defender takeaways</div><ul class="ait-list"><li>Immediately audit and rotate all cloud credentials (Azure service principals, managed identities, storage access keys) exposed in code repositories, CI/CD pipelines, or configuration files; enforce just-in-time access and MFA for all cloud management plane operations to deny autonomous agents the valid credentials needed to execute destructive cloud actions.</li><li>Implement Azure resource locks (CanNotDelete) on critical resources such as storage accounts, databases, and production applications, and enable soft-delete and versioning on Azure Blob Storage and Azure SQL to ensure destructive deletions by an autonomous attacker are recoverable; alert on bulk delete API calls (e.g., more than a threshold of resource deletions within a short time window).</li><li>Patch or isolate Langflow and any other agentic framework instances reachable from untrusted networks; treat ML assets (training datasets, vector databases, model checkpoints) as critical infrastructure with immutable air-gapped backups; deploy behavioural anomaly detection on cloud management plane logs (Azure Activity Log) to alert on high-velocity resource deletion, bulk database reads, or mass file rename events indicative of JadePuffer-style autonomous operations.</li></ul></div>
+    <div class="day-section"><div class="day-sec-label">Detections</div><details class="ait-rule"><summary>&#128737;&#65039; Langflow Process Spawning Suspicious Child Processes</summary><pre>title: Langflow Process Spawning Suspicious Child Processes
+id: 9a83cab4-1a91-56b7-9e6a-70c7fec6f4bd
+status: experimental
+description: Detects Langflow (or its Python runtime) spawning unexpected child processes that may indicate exploitation of a Langflow vulnerability by an autonomous agent.
+author: CTI Analyst
+date: 2026-07-07
+references:
+  - https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    ParentImage|contains:
+      - &#x27;langflow&#x27;
+      - &#x27;python&#x27;
+    Image|endswith:
+      - &#x27;\cmd.exe&#x27;
+      - &#x27;\powershell.exe&#x27;
+      - &#x27;\wscript.exe&#x27;
+      - &#x27;\cscript.exe&#x27;
+      - &#x27;\mshta.exe&#x27;
+      - &#x27;\certutil.exe&#x27;
+      - &#x27;\bitsadmin.exe&#x27;
+  filter_legitimate:
+    CommandLine|contains: &#x27;--version&#x27;
+  condition: selection and not filter_legitimate
+falsepositives:
+  - Legitimate Langflow administrative scripts invoking shell commands
+  - Developer testing of Langflow pipelines
+level: high
+tags:
+  - attack.initial_access
+  - attack.t1190
+  - attack.execution
+  - attack.t1203</pre></details><details class="ait-rule"><summary>&#128737;&#65039; High Volume File Encryption Activity Consistent with Ransomware</summary><pre>title: High Volume File Encryption Activity Consistent with Ransomware
+id: e869a86c-1826-56ac-b04a-0011dbbe650c
+status: experimental
+description: Detects a high rate of file rename or overwrite events across multiple directories within a short window, consistent with autonomous ransomware encryption behaviour as observed in JadePuffer.
+author: CTI Analyst
+date: 2026-07-07
+references:
+  - https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack
+logsource:
+  category: file_event
+  product: windows
+detection:
+  selection:
+    EventType:
+      - &#x27;RenameFile&#x27;
+      - &#x27;FileCreate&#x27;
+  filter_system:
+    TargetFilename|startswith:
+      - &#x27;C:\Windows\&#x27;
+      - &#x27;C:\Program Files\&#x27;
+  condition: selection and not filter_system | count(TargetFilename) by ProcessId &gt; 200
+timespan: 60s
+group-by:
+  - ProcessId
+falsepositives:
+  - Legitimate bulk file processing applications (backup agents, indexers)
+  - Antivirus quarantine operations
+level: critical
+tags:
+  - attack.impact
+  - attack.t1486</pre></details></div>
+    <div class="day-section"><div class="day-sec-label">Sources</div><ul class="ait-list"><li><a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank">JadePuffer: First Complete LLM-Driven Ransomware Attack</a> <span class="ait-dim">darkreading.com · 2026-07-07 · summary only</span></li><li><a href="https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/" target="_blank">JadePuffer Ransomware Targets AI Assets</a> <span class="ait-dim">bleepingcomputer.com · 2026-07-21 · summary only</span></li><li><a href="https://www.darkreading.com/cloud-security/jadepuffer-ai-actor-azure-tenant-destructive-cloud-attack" target="_blank">JadePuffer Agentic Threat Actor Destroys Azure Tenant</a> <span class="ait-dim">darkreading.com · 2026-10-01 · summary only</span></li></ul></div>
+  </div>
+</div>
+<div class="day-card ait-case">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">AI Agent Skimmer Campaign Steals 600k Credit Cards Across 100+ Sites</div>
+    <div class="day-card-pills">
+      <span class="ait-level" style="background:#e8823a">L3 Semi-autonomous</span>
+      <span class="day-pill pill-purple">Unattributed</span>
+      <span class="ait-dim">2026-09-24</span>
+    </div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    <div class="day-section"><div class="day-sec-text">Malicious AI agent frameworks were weaponised to deploy payment card skimmers at scale across more than 100 online retailers, resulting in the theft of approximately 600,000 credit card records. The campaign leveraged AI agents to automate the identification and compromise of e-commerce sites and the injection of skimming code. This represents a significant escalation in card fraud infrastructure through AI-driven automation.</div>
+      <div class="ait-note">Autonomy L3: The article describes AI agent frameworks autonomously deploying skimmers across 100+ sites at scale, implying multi-stage automated execution (discovery, compromise, skimmer injection), consistent with semi-autonomous operation with likely human-set objectives and post-exfiltration handling. · Confidence: Low</div></div>
+    <div class="day-section ait-grid2">
+      <div><div class="day-sec-label">What the AI did</div><div class="day-sec-text">AI agent frameworks were used to identify vulnerable e-commerce sites, deploy payment skimmer code at scale across 100+ sites, and exfiltrate credit card data.</div></div>
+      <div><div class="day-sec-label">What humans did</div><div class="day-sec-text">Not reported beyond weaponising the AI agent frameworks and presumably monetising the stolen card data.</div></div>
+      <div><div class="day-sec-label">Initial access</div><div class="day-sec-text">Not reported (implied automated exploitation of e-commerce site vulnerabilities)</div></div>
+      <div><div class="day-sec-label">Impact</div><div class="day-sec-text">Approximately 600,000 credit card records stolen from over 100 compromised e-commerce sites, creating direct card fraud exposure for retail banking and payments customers.</div></div>
+    </div>
+    <div class="day-section"><div class="day-sec-label">Attack stages (ATT&amp;CK)</div>
+      <table class="ait-stages"><tbody><tr><td>Reconnaissance</td><td>T1595 Active Scanning of e-commerce targets</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Resource Development</td><td>T1587 Develop payment skimmer malware/agent tooling</td><td><span class="ait-by ait-by-human">Human</span></td></tr><tr><td>Initial Access</td><td>T1190 Exploit Public-Facing Application (e-commerce sites)</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Execution</td><td>T1059 Injection of malicious skimmer script into site code</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Persistence</td><td>T1505 Server Software Component (skimmer persisting on web server)</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Collection</td><td>T1056 Input Capture via payment form skimming</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Exfiltration</td><td>T1041 Exfiltration of captured credit card data</td><td><span class="ait-by ait-by-ai">AI</span></td></tr></tbody></table>
+      <div class="ait-chips"><span class="ta-tool-chip">unnamed AI agent framework</span><span class="ta-tool-chip">AML.T0040 ML Model Inference API Access (agent frameworks abused for automated attack orchestration)</span><span class="ta-tool-chip">AML.T0017 Develop Capabilities (AI-assisted malware/skimmer development)</span></div></div>
+    <div class="day-section"><div class="day-sec-label">Defender takeaways</div><ul class="ait-list"><li>Deploy real-time payment card fraud detection rules tuned for sudden spikes in card-not-present fraud originating from specific merchant category codes or merchant IDs — AI-driven skimmer campaigns will produce correlated bursts of compromised card data from a common source.</li><li>Mandate sub-resource integrity (SRI) checks and Content Security Policy (CSP) headers on all third-party payment page integrations; monitor for unexpected script additions or modifications on e-commerce partners&#x27; checkout pages via continuous web integrity monitoring.</li><li>Enrol in card compromise threat intelligence feeds (e.g., Gemini Advisory, Recorded Future) and cross-reference compromised card batches against your issued card portfolio to enable rapid bulk reissuance before fraudulent transactions occur.</li></ul></div>
+    <div class="day-section"><div class="day-sec-label">Detections</div><details class="ait-rule"><summary>&#128737;&#65039; Payment Skimmer Mass Deployment - Rapid Multi-Site Script Injection</summary><pre>title: Payment Skimmer Mass Deployment - Rapid Multi-Site Script Injection
+id: c6833f95-e3ef-5143-9ad2-a3a39455311b
+status: experimental
+description: Detects a rapid sequence of script injection or file modification events across multiple web application virtual hosts, consistent with AI-agent-driven skimmer deployment at scale.
+author: CTI Analyst
+date: 2026-09-24
+references:
+  - https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers
+logsource:
+  category: webserver
+  product: nginx
+detection:
+  selection:
+    cs-method: &#x27;POST&#x27;
+    cs-uri-stem|contains:
+      - &#x27;/admin&#x27;
+      - &#x27;/wp-admin&#x27;
+      - &#x27;/checkout&#x27;
+      - &#x27;/payment&#x27;
+    sc-status:
+      - 200
+      - 201
+  timeframe: 5m
+  condition: selection | count() by src_ip &gt; 20
+falsepositives:
+  - Legitimate bulk CMS updates or deployment pipelines from known IPs
+  - Load testing tools
+level: high
+tags:
+  - attack.initial_access
+  - attack.t1190
+  - attack.execution
+  - attack.t1059
+  - attack.collection
+  - attack.t1056</pre></details><details class="ait-rule"><summary>&#128737;&#65039; Anomalous Cross-Site Exfiltration Beacon - Payment Skimmer C2</summary><pre>title: Anomalous Cross-Site Exfiltration Beacon - Payment Skimmer C2
+id: 43bbb388-4f32-5cb4-bf21-d9c447e1465d
+status: experimental
+description: Detects repeated outbound HTTP POST requests to an external domain from multiple distinct web server hosts within a short window, indicative of skimmer data exfiltration by an AI agent across compromised e-commerce sites.
+author: CTI Analyst
+date: 2026-09-24
+references:
+  - https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers
+logsource:
+  category: proxy
+  product: generic
+detection:
+  selection:
+    http_method: &#x27;POST&#x27;
+    http_response_code:
+      - 200
+      - 204
+    destination_domain|endswith:
+      - &#x27;.ru&#x27;
+      - &#x27;.cn&#x27;
+      - &#x27;.top&#x27;
+      - &#x27;.xyz&#x27;
+      - &#x27;.icu&#x27;
+  filter_internal:
+    destination_ip|cidr:
+      - &#x27;10.0.0.0/8&#x27;
+      - &#x27;172.16.0.0/12&#x27;
+      - &#x27;192.168.0.0/16&#x27;
+  timeframe: 10m
+  condition: selection and not filter_internal | count(source_hostname) by destination_domain &gt; 10
+falsepositives:
+  - Third-party analytics or marketing platforms posting to external endpoints
+  - CDN health-check callbacks
+level: critical
+tags:
+  - attack.exfiltration
+  - attack.t1041
+  - attack.command_and_control
+  - attack.t1071
+  - attack.collection
+  - attack.t1056</pre></details></div>
+    <div class="day-section"><div class="day-sec-label">Sources</div><ul class="ait-list"><li><a href="https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers" target="_blank">Malicious AI Agents Stealing Credit Card Data</a> <span class="ait-dim">bleepingcomputer.com · 2026-09-24 · summary only</span></li></ul></div>
+  </div>
+</div>
+<div class="day-card ait-case">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">Spain AEPD First AI-Agent-Powered Data Breach Report</div>
+    <div class="day-card-pills">
+      <span class="ait-level" style="background:#e8823a">L3 Semi-autonomous</span>
+      <span class="day-pill pill-purple">Unattributed</span>
+      <span class="ait-dim">2026-09-17</span>
+    </div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    <div class="day-section"><div class="day-sec-text">Spain&#x27;s data protection authority (AEPD) received its first reported data breach carried out by an attacker using an LLM-powered AI agent. The incident marks a noted shift from theoretical to operational AI-driven attacks. Specific details about the victim organisation, data affected, and attack methodology were not disclosed in the article.</div>
+      <div class="ait-note">Autonomy L3: The article describes an &#x27;LLM-powered AI agent&#x27; conducting the breach, implying the AI executed attack stages itself, consistent with semi-autonomous operation, though no detail on human checkpoints is reported. · Confidence: Low</div></div>
+    <div class="day-section ait-grid2">
+      <div><div class="day-sec-label">What the AI did</div><div class="day-sec-text">An LLM-powered AI agent carried out the data breach</div></div>
+      <div><div class="day-sec-label">What humans did</div><div class="day-sec-text">Not reported</div></div>
+      <div><div class="day-sec-label">Initial access</div><div class="day-sec-text">Not reported</div></div>
+      <div><div class="day-sec-label">Impact</div><div class="day-sec-text">A data breach occurred sufficient to trigger a regulatory report to Spain&#x27;s AEPD; specific data types and volume not reported.</div></div>
+    </div>
+    <div class="day-section"><div class="day-sec-label">Attack stages (ATT&amp;CK)</div>
+      <table class="ait-stages"><tbody><tr><td>Collection</td><td> Automated data collection via AI agent</td><td><span class="ait-by ait-by-ai">AI</span></td></tr></tbody></table>
+      <div class="ait-chips"><span class="ta-tool-chip">unnamed LLM-powered AI agent</span><span class="ta-tool-chip">AML.T0000 LLM-Powered Agent Exploitation (not formally catalogued; closest: AI-Enabled Attack Automation)</span></div></div>
+    <div class="day-section"><div class="day-sec-label">Defender takeaways</div><ul class="ait-list"><li>Monitor for abnormal, high-volume or systematically patterned data access requests that may indicate AI agent enumeration or collection behaviour, and implement rate-limiting and anomaly detection on data APIs and repositories.</li><li>Establish data loss prevention (DLP) controls capable of flagging bulk exfiltration patterns consistent with automated agents, including unusually rapid sequential record access across multiple data stores.</li><li>Review incident response and breach-notification procedures to account for AI-driven attacks, ensuring playbooks cover rapid containment of automated adversary activity and include GDPR/UK GDPR notification obligations within 72 hours.</li></ul></div>
+    <div class="day-section"><div class="day-sec-label">Detections</div><details class="ait-rule"><summary>&#128737;&#65039; Abnormal High-Volume Sequential Data Access Consistent with AI Agent Collection</summary><pre>title: Abnormal High-Volume Sequential Data Access Consistent with AI Agent Collection
+id: 7fa9d908-c29e-5a9f-b85d-bd615cfac299
+status: experimental
+description: Detects rapid, sequential access to multiple records or objects by a single account or service principal, which may indicate an LLM-powered AI agent performing automated data collection.
+author: CTI Analyst
+date: 2026-09-17
+references:
+  - https://www.bleepingcomputer.com/news/security/spains-data-agency-gets-first-report-of-ai-powered-data-breach/
+logsource:
+  category: application
+  product: generic
+detection:
+  selection:
+    EventType:
+      - &#x27;READ&#x27;
+      - &#x27;GET&#x27;
+      - &#x27;QUERY&#x27;
+      - &#x27;SELECT&#x27;
+  timeframe: 60s
+  condition: selection | count() by UserAccount &gt; 500
+falsepositives:
+  - Legitimate batch processing jobs
+  - ETL pipelines
+  - Authorised data migration tasks
+level: high
+tags:
+  - attack.collection
+  - attack.t1530
+  - attack.t1213</pre></details><details class="ait-rule"><summary>&#128737;&#65039; Single Principal Accessing Diverse Data Stores in Short Window</summary><pre>title: Single Principal Accessing Diverse Data Stores in Short Window
+id: 6006723b-6320-5b88-907c-05ad64ff7c53
+status: experimental
+description: Detects a single user account or service principal accessing an unusually high number of distinct data sources or tables within a short timeframe, indicative of AI agent-driven discovery and collection.
+author: CTI Analyst
+date: 2026-09-17
+references:
+  - https://www.bleepingcomputer.com/news/security/spains-data-agency-gets-first-report-of-ai-powered-data-breach/
+logsource:
+  category: application
+  product: generic
+detection:
+  selection:
+    EventType:
+      - &#x27;READ&#x27;
+      - &#x27;GET&#x27;
+      - &#x27;QUERY&#x27;
+      - &#x27;LIST&#x27;
+  timeframe: 300s
+  condition: selection | count(distinct ResourceName) by UserAccount &gt; 20
+falsepositives:
+  - Authorised data analysts running broad queries
+  - Monitoring and observability tools
+  - SIEM data connectors
+level: high
+tags:
+  - attack.discovery
+  - attack.collection
+  - attack.t1213
+  - attack.t1083</pre></details></div>
+    <div class="day-section"><div class="day-sec-label">Sources</div><ul class="ait-list"><li><a href="https://www.bleepingcomputer.com/news/security/spains-data-agency-gets-first-report-of-ai-powered-data-breach/" target="_blank">AI-Agent-Powered Data Breach (Spain AEPD)</a> <span class="ait-dim">bleepingcomputer.com · 2026-09-17 · summary only</span></li></ul></div>
+  </div>
+</div>
+<div class="day-card ait-case">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">AI-Generated Exploit Scripts Targeting Siemens S7 PLCs in Critical Infrastructure</div>
+    <div class="day-card-pills">
+      <span class="ait-level" style="background:#8a5229">L1 AI-assisted</span>
+      <span class="day-pill pill-purple">Unattributed</span>
+      <span class="ait-dim">2026-08-21</span>
+    </div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    <div class="day-section"><div class="day-sec-text">Unidentified threat actors conducted reconnaissance and capability development against U.S.-based Siemens S7 Series PLC installations using AI-generated exploitation scripts disguised as legitimate operational technology monitoring tools. The campaign targeted critical infrastructure sectors including energy, water, agriculture, and defense, using internet scanning to identify internet-exposed PLCs. Federal agencies (NSA, FBI and others) assessed the activity as an active threat likely intended as persistent reconnaissance to develop capabilities for future operational effects.</div>
+      <div class="ait-note">Autonomy L1: The article describes AI as generating exploitation scripts and helping adapt tools to defenses, but humans are conducting the reconnaissance and executing the campaign steps; no evidence of autonomous AI-directed attack orchestration is stated. · Confidence: Medium</div></div>
+    <div class="day-section ait-grid2">
+      <div><div class="day-sec-label">What the AI did</div><div class="day-sec-text">AI generated exploitation scripts targeting Siemens S7 PLCs, produced tools disguised as legitimate OT monitoring solutions, and helped attackers rapidly adapt to defensive measures.</div></div>
+      <div><div class="day-sec-label">What humans did</div><div class="day-sec-text">Humans conducted internet scanning to identify exposed PLCs, deployed AI-generated scripts, directed the campaign, and made targeting decisions.</div></div>
+      <div><div class="day-sec-label">Initial access</div><div class="day-sec-text">Exploitation of known vulnerabilities in internet-exposed Siemens S7 Series PLCs, with AI-generated scripts used to obtain credentials and other access pathways.</div></div>
+      <div><div class="day-sec-label">Impact</div><div class="day-sec-text">Active threat with potential for disruption of critical industrial processes, safety incidents, equipment damage, loss of view/control of PLCs, and cascading impacts; at time of advisory the campaign was assessed as still in reconnaissance and capability-development phase.</div></div>
+    </div>
+    <div class="day-section"><div class="day-sec-label">Attack stages (ATT&amp;CK)</div>
+      <table class="ait-stages"><tbody><tr><td>Reconnaissance</td><td>T1595 Active Scanning — internet scanning to identify internet-exposed Siemens S7 PLCs</td><td><span class="ait-by ait-by-human">Human</span></td></tr><tr><td>Resource Development</td><td>T1587 Develop Capabilities — AI-generated ICS exploitation scripts and malicious tools disguised as OT monitoring solutions</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Initial Access</td><td>T1190 Exploit Public-Facing Application — exploitation of known vulnerabilities in internet-exposed PLCs</td><td><span class="ait-by ait-by-human">Human</span></td></tr><tr><td>Persistence</td><td>T1505 Persistent Reconnaissance / Foothold in targeted OT facilities</td><td><span class="ait-by ait-by-unclear">Unclear</span></td></tr><tr><td>Stealth</td><td>T1036 Masquerading — malicious tools disguised as legitimate OT monitoring solutions</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Credential Access</td><td>T1552 Unsecured Credentials — AI-generated scripts used to access credentials on PLCs</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Collection</td><td>T1005 Data from Local System — credential and process data harvested from PLCs</td><td><span class="ait-by ait-by-unclear">Unclear</span></td></tr></tbody></table>
+      <div class="ait-chips"><span class="ta-tool-chip">unnamed LLM</span><span class="ta-tool-chip">AML.T0040 ML Attack Staging — using AI to generate and refine ICS exploitation scripts</span><span class="ta-tool-chip">AML.T0017 Develop Capabilities with AI — using LLMs to lower the barrier to ICS exploit development</span></div></div>
+    <div class="day-section"><div class="day-sec-label">Defender takeaways</div><ul class="ait-list"><li>Immediately audit all OT/ICS assets (including Siemens S7 PLCs and equivalents used in any outsourced or third-party-managed processes) to confirm they are not internet-exposed; segment PLC networks using unidirectional gateways or data diodes and enforce strict firewall rules blocking direct internet access.</li><li>Apply all available vendor patches for known Siemens S7 vulnerabilities and deploy OT-aware network monitoring (e.g., Claroty, Dragos, Nozomi) to detect anomalous scanning, unexpected credential queries, or tools masquerading as legitimate monitoring solutions—alert on any new executable appearing in PLC programming environments.</li><li>Develop and rehearse a loss-of-control incident response playbook specific to ICS/PLC scenarios, including manual fallback procedures, so that if reconnaissance matures to an effects operation the bank&#x27;s facilities (e.g., HVAC, power, physical security systems driven by PLCs) can be safely isolated without causing cascading harm.</li></ul></div>
+    <div class="day-section"><div class="day-sec-label">Detections</div><details class="ait-rule"><summary>&#128737;&#65039; Suspicious Network Scanning Targeting Industrial Control System Ports</summary><pre>title: Suspicious Network Scanning Targeting Industrial Control System Ports
+id: 2b324ffb-266b-5762-b84c-075e2dcfe487
+status: experimental
+description: Detects high-rate inbound connection attempts to common Siemens S7 and ICS protocol ports that may indicate reconnaissance scanning against PLC assets, consistent with the AI-assisted ICS targeting campaign described in the NSA/FBI advisory of August 2026.
+author: CTI Analyst
+date: 2026-08-21
+references:
+  - https://therecord.media/nsa-fbi-warns-of-hackers-using-ai-generated-tools-critical-infrastructure
+logsource:
+  category: firewall
+  product: generic
+detection:
+  selection:
+    dst_port:
+      - 102    # Siemens S7 / ISO-TSAP
+      - 502    # Modbus TCP
+      - 44818  # EtherNet/IP
+      - 20000  # DNP3
+      - 2404   # IEC 60870-5-104
+  timeframe: 60s
+  condition: selection | count(src_ip) by dst_ip &gt; 20
+falsepositives:
+  - Legitimate OT asset discovery tools run by authorised OT security teams
+  - Vendor remote monitoring solutions performing health checks
+level: high
+tags:
+  - attack.reconnaissance
+  - attack.t1595
+  - attack.t1046</pre></details><details class="ait-rule"><summary>&#128737;&#65039; New Executable Masquerading as OT Monitoring Tool on Engineering Workstation</summary><pre>title: New Executable Masquerading as OT Monitoring Tool on Engineering Workstation
+id: 0665d425-8c8c-538a-854e-bd85d9bda2cb
+status: experimental
+description: Detects execution of a newly created or unsigned executable on an OT engineering workstation with a process name or path mimicking legitimate SCADA/OT monitoring software (e.g., containing &#x27;monitor&#x27;, &#x27;diag&#x27;, &#x27;plc&#x27;, &#x27;siemens&#x27;, &#x27;HMI&#x27;), which may indicate deployment of AI-generated malicious tools disguised as legitimate OT monitoring solutions.
+author: CTI Analyst
+date: 2026-08-21
+references:
+  - https://therecord.media/nsa-fbi-warns-of-hackers-using-ai-generated-tools-critical-infrastructure
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  suspicious_name:
+    Image|contains:
+      - &#x27;monitor&#x27;
+      - &#x27;diag&#x27;
+      - &#x27;plcwatch&#x27;
+      - &#x27;siemens&#x27;
+      - &#x27;hmi&#x27;
+      - &#x27;scada&#x27;
+      - &#x27;ot_agent&#x27;
+  unsigned_or_new:
+    - Signed: &#x27;false&#x27;
+    - Description: &#x27;&#x27;
+  filter_known_good:
+    Image|startswith:
+      - &#x27;C:\Program Files\Siemens\&#x27;
+      - &#x27;C:\Program Files (x86)\Siemens\&#x27;
+      - &#x27;C:\Program Files\Rockwell Automation\&#x27;
+  condition: suspicious_name and unsigned_or_new and not filter_known_good
+falsepositives:
+  - Legitimate but unsigned in-house OT diagnostic utilities
+  - Newly installed vendor tools not yet in asset inventory
+level: high
+tags:
+  - attack.resource_development
+  - attack.t1587
+  - attack.defense_evasion
+  - attack.t1036</pre></details></div>
+    <div class="day-section"><div class="day-sec-label">Sources</div><ul class="ait-list"><li><a href="https://therecord.media/nsa-fbi-warns-of-hackers-using-ai-generated-tools-critical-infrastructure" target="_blank">NSA/FBI Warning — AI-Assisted Attacks on Critical Infrastructure</a> <span class="ait-dim">therecord.media · 2026-08-21</span></li></ul></div>
+  </div>
+</div>
+<div class="day-card ait-case">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">LatAm Threat Actors Use AI Agents to Generate Custom Hacking Tools</div>
+    <div class="day-card-pills">
+      <span class="ait-level" style="background:#e8823a">L3 Semi-autonomous</span>
+      <span class="day-pill pill-purple">Unattributed</span>
+      <span class="ait-dim">2026-05-14</span>
+    </div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    <div class="day-section"><div class="day-sec-text">Threat actors conducting campaigns targeting Mexico and Brazil have been observed leveraging AI agents to generate bespoke attack tools on the fly. The activity signals a shift toward AI-accelerated, highly targeted attacks against financial institutions. Attribution beyond a LatAm-focused criminal nexus has not been reported.</div>
+      <div class="ait-note">Autonomy L3: The article states AI agents are used to create attack tools &#x27;on the fly&#x27;, implying the AI executes the tool-generation stage itself, but the broader campaign execution by humans is implied, suggesting a semi-autonomous model with human-directed objectives. · Confidence: Low</div></div>
+    <div class="day-section ait-grid2">
+      <div><div class="day-sec-label">What the AI did</div><div class="day-sec-text">AI agents generated custom hacking tools tailored to specific targets during active campaigns.</div></div>
+      <div><div class="day-sec-label">What humans did</div><div class="day-sec-text">Humans directed the campaigns, selected targets (Mexico and Brazil), and presumably deployed the AI-generated tools.</div></div>
+      <div><div class="day-sec-label">Initial access</div><div class="day-sec-text">Not reported</div></div>
+      <div><div class="day-sec-label">Impact</div><div class="day-sec-text">Not reported beyond the capability development; article frames this as a near-term threat to financial institutions in Mexico and Brazil.</div></div>
+    </div>
+    <div class="day-section"><div class="day-sec-label">Attack stages (ATT&amp;CK)</div>
+      <table class="ait-stages"><tbody><tr><td>Resource Development</td><td>T1587 Develop Capabilities</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Resource Development</td><td>T1587.001 Malware</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Initial Access</td><td> Not reported</td><td><span class="ait-by ait-by-unclear">Unclear</span></td></tr></tbody></table>
+      <div class="ait-chips"><span class="ta-tool-chip">unnamed AI agents</span><span class="ta-tool-chip">AML.T0040 ML Model Inference API Access</span><span class="ta-tool-chip">AML.T0017 Develop Cyberattack Capabilities with AI</span></div></div>
+    <div class="day-section"><div class="day-sec-label">Defender takeaways</div><ul class="ait-list"><li>Monitor for rapid, automated generation of novel malware variants or scripts targeting your environment; deploy behavioural-based detection (e.g., sandbox detonation with ML classifiers) rather than relying solely on signature-based AV, as AI-generated tools will bypass static signatures.</li><li>Implement threat intelligence sharing with FS-ISAC and regional peers focused on LatAm-origin TTPs targeting financial institutions in Mexico and Brazil, enabling earlier warning of AI-accelerated campaign tooling.</li><li>Review and harden your software supply chain and developer tooling pipelines against injection of AI-generated malicious code components; enforce code-signing and integrity checks on all internal tooling to detect unexpected or unsigned binaries.</li></ul></div>
+    <div class="day-section"><div class="day-sec-label">Detections</div><details class="ait-rule"><summary>&#128737;&#65039; Rapid Novel Binary Creation Indicative of AI-Generated Tooling</summary><pre>title: Rapid Novel Binary Creation Indicative of AI-Generated Tooling
+id: eb1284ec-a753-5a75-aa43-85587d3f0d86
+status: experimental
+description: Detects rapid creation of multiple new executable or script files in short succession, which may indicate AI-agent-driven generation of custom attack tools.
+author: CTI Analyst
+date: 2026-05-14
+references:
+  - https://www.darkreading.com/cloud-security/ai-agents-generate-custom-hacking-tools
+logsource:
+  category: file_event
+  product: windows
+detection:
+  selection:
+    EventType: &#x27;FileCreate&#x27;
+    TargetFilename|endswith:
+      - &#x27;.exe&#x27;
+      - &#x27;.dll&#x27;
+      - &#x27;.ps1&#x27;
+      - &#x27;.bat&#x27;
+      - &#x27;.vbs&#x27;
+      - &#x27;.py&#x27;
+  condition: selection | count() by Computer &gt; 10
+  timeframe: 5m
+falsepositives:
+  - Legitimate software installers or build pipelines creating multiple binaries
+  - Developer workstations running automated build systems
+level: medium
+tags:
+  - attack.resource_development
+  - attack.t1587.001</pre></details><details class="ait-rule"><summary>&#128737;&#65039; Suspicious Outbound API Calls to LLM Endpoints from Non-Standard Processes</summary><pre>title: Suspicious Outbound API Calls to LLM Endpoints from Non-Standard Processes
+id: 8679980e-663d-5c3c-a8b4-e374a697b04c
+status: experimental
+description: Detects processes making outbound HTTPS connections to known LLM/AI API endpoints (e.g., OpenAI, Anthropic, local inference servers) from non-standard or unexpected host processes, which may indicate AI agent frameworks being abused to generate attack tooling.
+author: CTI Analyst
+date: 2026-05-14
+references:
+  - https://www.darkreading.com/cloud-security/ai-agents-generate-custom-hacking-tools
+logsource:
+  category: network_connection
+  product: windows
+detection:
+  selection:
+    Initiated: &#x27;true&#x27;
+    DestinationPort: 443
+    DestinationHostname|contains:
+      - &#x27;api.openai.com&#x27;
+      - &#x27;api.anthropic.com&#x27;
+      - &#x27;generativelanguage.googleapis.com&#x27;
+      - &#x27;inference&#x27;
+      - &#x27;llm&#x27;
+  filter_legit:
+    Image|contains:
+      - &#x27;chrome&#x27;
+      - &#x27;firefox&#x27;
+      - &#x27;msedge&#x27;
+      - &#x27;Teams&#x27;
+      - &#x27;slack&#x27;
+  condition: selection and not filter_legit
+falsepositives:
+  - Internal developer tools or approved AI-assisted coding assistants (e.g., GitHub Copilot)
+  - Security research tooling with LLM integration
+level: high
+tags:
+  - attack.resource_development
+  - attack.t1587
+  - attack.command_and_control
+  - attack.t1071.001</pre></details></div>
+    <div class="day-section"><div class="day-sec-label">Sources</div><ul class="ait-list"><li><a href="https://www.darkreading.com/cloud-security/ai-agents-generate-custom-hacking-tools" target="_blank">LatAm Threat Actors Using AI Agents to Generate Custom Hacking Tools</a> <span class="ait-dim">darkreading.com · 2026-05-14 · summary only</span></li></ul></div>
+  </div>
+</div>
+<div class="day-card ait-case">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">AI-Generated Zero-Day Exploit for Web Admin Tool</div>
+    <div class="day-card-pills">
+      <span class="ait-level" style="background:#8a5229">L1 AI-assisted</span>
+      <span class="day-pill pill-purple">Unattributed</span>
+      <span class="ait-dim">2026-05-12</span>
+    </div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    <div class="day-section"><div class="day-sec-text">Google&#x27;s threat intelligence team confirmed that adversaries used AI to generate a working zero-day exploit targeting a web administration tool. The use of AI lowered the barrier to developing sophisticated exploits that could target financial sector infrastructure. Specific attribution, targeted organisations, and full technical details were not reported in the article.</div>
+      <div class="ait-note">Autonomy L1: The article states AI was used to generate the exploit (attack material), but there is no evidence that AI planned, directed, or autonomously executed any attack stages beyond producing the exploit code. · Confidence: Low</div></div>
+    <div class="day-section ait-grid2">
+      <div><div class="day-sec-label">What the AI did</div><div class="day-sec-text">Generated a working zero-day exploit</div></div>
+      <div><div class="day-sec-label">What humans did</div><div class="day-sec-text">Not reported — presumably humans deployed or utilised the AI-generated exploit, but this is not stated in the article</div></div>
+      <div><div class="day-sec-label">Initial access</div><div class="day-sec-text">Not reported</div></div>
+      <div><div class="day-sec-label">Impact</div><div class="day-sec-text">A functional zero-day exploit was produced using AI, demonstrating a lowered barrier to sophisticated attack capability; actual exploitation impact on victims is not reported.</div></div>
+    </div>
+    <div class="day-section"><div class="day-sec-label">Attack stages (ATT&amp;CK)</div>
+      <table class="ait-stages"><tbody><tr><td>Resource Development</td><td>T1587 Develop Capabilities — Exploit Development</td><td><span class="ait-by ait-by-ai">AI</span></td></tr><tr><td>Initial Access</td><td>T1190 Exploit Public-Facing Application</td><td><span class="ait-by ait-by-unclear">Unclear</span></td></tr></tbody></table>
+      <div class="ait-chips"><span class="ta-tool-chip">AML.T0040 ML Attack Staging</span></div></div>
+    <div class="day-section"><div class="day-sec-label">Defender takeaways</div><ul class="ait-list"><li>Accelerate patch management and vulnerability scanning cycles for web administration tools, as AI-assisted exploit development compresses the window between vulnerability disclosure and weaponisation.</li><li>Deploy web application firewalls and intrusion detection signatures tuned for zero-day exploitation patterns (e.g., anomalous request structures, unexpected admin-panel interactions) to detect AI-generated exploit attempts against public-facing assets.</li><li>Integrate threat intelligence feeds from Google GTIG and equivalent sources to receive early warning of AI-assisted exploit campaigns targeting financial sector infrastructure, and pre-position incident response playbooks accordingly.</li></ul></div>
+    <div class="day-section"><div class="day-sec-label">Detections</div><details class="ait-rule"><summary>&#128737;&#65039; Suspicious Zero-Day Exploit Attempt Against Web Admin Interface</summary><pre>title: Suspicious Zero-Day Exploit Attempt Against Web Admin Interface
+id: 15dab72d-cbf5-5e5b-9271-307efed1d5fc
+status: experimental
+description: Detects anomalous HTTP request patterns against web administration endpoints that may indicate exploitation of a zero-day vulnerability, potentially AI-generated.
+references:
+  - https://www.bleepingcomputer.com/news/security/google-hackers-used-ai-to-develop-zero-day-exploit-for-web-admin-tool/
+author: CTI Analyst
+date: 2026-05-12
+tags:
+  - attack.resource_development
+  - attack.t1587
+  - attack.initial_access
+  - attack.t1190
+logsource:
+  category: webserver
+detection:
+  selection:
+    cs-uri-stem|contains:
+      - &#x27;/admin&#x27;
+      - &#x27;/manager&#x27;
+      - &#x27;/console&#x27;
+      - &#x27;/webadmin&#x27;
+      - &#x27;/phpmyadmin&#x27;
+    sc-status:
+      - 200
+      - 500
+      - 403
+  anomaly:
+    cs-method:
+      - &#x27;POST&#x27;
+      - &#x27;PUT&#x27;
+  filter_legit:
+    c-ip|cidr:
+      - &#x27;127.0.0.1/32&#x27;
+  condition: selection and anomaly and not filter_legit
+falsepositives:
+  - Legitimate administrative activity from internal teams
+  - Authorised penetration testing
+level: medium</pre></details><details class="ait-rule"><summary>&#128737;&#65039; High-Rate Requests to Admin Endpoints — Possible AI-Assisted Exploit Scanning</summary><pre>title: High-Rate Requests to Admin Endpoints — Possible AI-Assisted Exploit Scanning
+id: b99ac904-e383-5fff-a5a5-efd336b0e653
+status: experimental
+description: Detects a high volume of requests to administrative web endpoints from a single source IP within a short window, consistent with automated AI-driven exploit enumeration or fuzzing activity.
+references:
+  - https://www.bleepingcomputer.com/news/security/google-hackers-used-ai-to-develop-zero-day-exploit-for-web-admin-tool/
+author: CTI Analyst
+date: 2026-05-12
+tags:
+  - attack.reconnaissance
+  - attack.t1595
+  - attack.resource_development
+  - attack.t1587
+  - attack.initial_access
+  - attack.t1190
+logsource:
+  category: webserver
+detection:
+  selection:
+    cs-uri-stem|contains:
+      - &#x27;/admin&#x27;
+      - &#x27;/manager&#x27;
+      - &#x27;/console&#x27;
+      - &#x27;/webadmin&#x27;
+  condition: selection | count(c-ip) by c-ip &gt; 50
+timespan: 60s
+group-by:
+  - c-ip
+falsepositives:
+  - Automated monitoring or health-check tools
+  - Load balancers performing keep-alive checks
+  - Authorised vulnerability scanners
+level: high</pre></details></div>
+    <div class="day-section"><div class="day-sec-label">Sources</div><ul class="ait-list"><li><a href="https://www.bleepingcomputer.com/news/security/google-hackers-used-ai-to-develop-zero-day-exploit-for-web-admin-tool/" target="_blank">AI-Generated Zero-Day Exploit</a> <span class="ait-dim">bleepingcomputer.com · 2026-05-12 · summary only</span></li></ul></div>
+  </div>
+</div></div></div>
+<div class="rt-section"><div class="rt-section-header" onclick="rtToggle(this)">
+  <span class="rt-section-title">Detection rules for AI-driven attackers</span></div>
+  <div class="rt-section-body" style="display:none">
+  <div class="ait-intro">Experimental Sigma rules: a hand-written baseline pack for agentic-attacker behaviour (above), plus rules generated per case (inside each case file). Tune field names and PLACEHOLDER thresholds to your SIEM before use.</div>
+<details class="ait-rule"><summary>&#128737;&#65039; Machine-speed destructive operations in Azure by a single identity <span class="ait-dim">T1485 Data Destruction · T1078.004 Valid Accounts: Cloud Accounts</span></summary>
+  <div class="ait-note">JadePuffer used exposed credentials to delete storage, apps and databases across an Azure tenant. A human admin rarely issues dozens of delete operations within minutes; an agent does.</div><pre>title: Azure resource delete operation
+name: azure_resource_delete
+id: 3931c9e8-229a-5a73-a6cc-6bdbdf988ccd
+status: experimental
+description: Any successful delete operation recorded in the Azure Activity Log (base rule for the correlation below).
+logsource:
+  product: azure
+  service: activitylogs
+detection:
+  selection:
+    operationName|endswith: &#x27;/DELETE&#x27;
+    status: Succeeded
+  condition: selection
+level: informational
+---
+title: Machine-speed Azure resource deletion by one identity
+id: 57a270b1-63e7-55c7-84d5-3838a20bb8c3
+status: experimental
+description: &gt;
+  20+ delete operations from the same caller within 5 minutes. Matches the
+  destructive cloud pattern reported for the JadePuffer agentic actor.
+correlation:
+  type: event_count
+  rules:
+    - azure_resource_delete
+  group-by:
+    - Caller
+  timespan: 5m
+  condition:
+    gte: 20   # PLACEHOLDER - tune to your tenant&#x27;s normal change volume
+falsepositives:
+  - Infrastructure-as-code teardown pipelines (exclude their service principals)
+level: high
+tags:
+  - attack.impact
+  - attack.t1485</pre></details>
+<details class="ait-rule"><summary>&#128737;&#65039; Machine-speed cloud enumeration (AWS) <span class="ait-dim">T1580 Cloud Infrastructure Discovery · T1526 Cloud Service Discovery</span></summary>
+  <div class="ait-note">Agentic attackers run discovery at API speed — hundreds of List/Describe/Get calls in a couple of minutes from one identity — before choosing what to steal or destroy.</div><pre>title: AWS read-only discovery API call
+name: aws_discovery_call
+id: c2ef2875-2721-563d-ba34-cbcc9c37f0be
+status: experimental
+description: Base rule - List/Describe/Get API calls in CloudTrail.
+logsource:
+  product: aws
+  service: cloudtrail
+detection:
+  selection:
+    eventName|startswith:
+      - &#x27;List&#x27;
+      - &#x27;Describe&#x27;
+      - &#x27;Get&#x27;
+  condition: selection
+level: informational
+---
+title: Machine-speed AWS enumeration by one identity
+id: 9f8d2c26-4754-5451-8564-6866ef3cf300
+status: experimental
+description: &gt;
+  150+ discovery calls across services from a single principal in 2 minutes -
+  consistent with an LLM agent mapping an environment.
+correlation:
+  type: event_count
+  rules:
+    - aws_discovery_call
+  group-by:
+    - userIdentity.arn
+  timespan: 2m
+  condition:
+    gte: 150   # PLACEHOLDER - baseline against your security tooling first
+falsepositives:
+  - CSPM / asset inventory scanners (exclude their roles)
+level: medium
+tags:
+  - attack.discovery
+  - attack.t1580</pre></details>
+<details class="ait-rule"><summary>&#128737;&#65039; LLM API traffic from a host not approved to use AI services <span class="ait-dim">T1102 Web Service · AML.T0040 AI Model Inference API Access</span></summary>
+  <div class="ait-note">An attacker running an agent from a compromised server needs a model. Calls to LLM APIs from servers that have no business using them are a strong, cheap signal.</div><pre>title: LLM API access from non-approved host
+id: ae8c0729-afe7-5cfe-918a-7390a983ee53
+status: experimental
+description: Outbound requests to hosted LLM APIs from hosts outside the approved AI-consumer list.
+logsource:
+  category: proxy
+detection:
+  selection:
+    cs-host|endswith:
+      - &#x27;api.openai.com&#x27;
+      - &#x27;api.anthropic.com&#x27;
+      - &#x27;generativelanguage.googleapis.com&#x27;
+      - &#x27;api.mistral.ai&#x27;
+      - &#x27;api.groq.com&#x27;
+      - &#x27;openrouter.ai&#x27;
+      - &#x27;api.deepseek.com&#x27;
+      - &#x27;api.together.xyz&#x27;
+  filter_approved:
+    c-ip|cidr:
+      - &#x27;10.0.0.0/32&#x27;   # PLACEHOLDER - approved AI gateway / developer subnets
+  condition: selection and not filter_approved
+falsepositives:
+  - Shadow AI use by staff (still worth knowing about)
+level: medium
+tags:
+  - attack.command-and-control
+  - attack.t1102</pre></details>
+<details class="ait-rule"><summary>&#128737;&#65039; AI agent framework spawning a shell or network tool <span class="ait-dim">T1059.004 Unix Shell · T1190 Exploit Public-Facing Application</span></summary>
+  <div class="ait-note">JadePuffer&#x27;s initial access was a Langflow vulnerability. Agent/LLM-orchestration servers that suddenly spawn shells, curl or wget are either exploited or being driven by an agent.</div><pre>title: Shell or download tool spawned by AI agent framework
+id: 365d0f74-98ed-5682-b1e0-a866fcf7d82c
+status: experimental
+description: Process creation where the parent is an LLM orchestration / agent framework.
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection_parent:
+    ParentCommandLine|contains:
+      - &#x27;langflow&#x27;
+      - &#x27;flowise&#x27;
+      - &#x27;langchain&#x27;
+      - &#x27;autogen&#x27;
+      - &#x27;crewai&#x27;
+      - &#x27;open-interpreter&#x27;
+      - &#x27;n8n&#x27;
+  selection_child:
+    Image|endswith:
+      - &#x27;/sh&#x27;
+      - &#x27;/bash&#x27;
+      - &#x27;/dash&#x27;
+      - &#x27;/curl&#x27;
+      - &#x27;/wget&#x27;
+      - &#x27;/nc&#x27;
+      - &#x27;/ncat&#x27;
+      - &#x27;/base64&#x27;
+  condition: selection_parent and selection_child
+falsepositives:
+  - Agents legitimately given a code-execution tool (document and exclude them)
+level: high
+tags:
+  - attack.execution
+  - attack.t1059.004</pre></details>
+<details class="ait-rule"><summary>&#128737;&#65039; Langflow code-validation endpoint exploitation (CVE-2025-3248) <span class="ait-dim">T1190 Exploit Public-Facing Application</span></summary>
+  <div class="ait-note">Unauthenticated RCE in Langflow&#x27;s /api/v1/validate/code endpoint is a known way into AI orchestration servers — the class of foothold agentic attackers have used.</div><pre>title: Langflow validate/code endpoint access
+id: 08c4dfd0-3901-53d9-a8c0-546a4f83bd7f
+status: experimental
+description: POST requests to Langflow&#x27;s code-validation API, abused for unauthenticated RCE (CVE-2025-3248).
+references:
+  - https://nvd.nist.gov/vuln/detail/CVE-2025-3248
+logsource:
+  category: webserver
+detection:
+  selection:
+    cs-method: &#x27;POST&#x27;
+    cs-uri-stem|contains: &#x27;/api/v1/validate/code&#x27;
+  condition: selection
+falsepositives:
+  - Authenticated developers using the flow editor on patched versions
+level: high
+tags:
+  - attack.initial-access
+  - attack.t1190
+  - cve.2025-3248</pre></details>
+<details class="ait-rule"><summary>&#128737;&#65039; Machine-speed command burst from one interactive session <span class="ait-dim">T1059 Command and Scripting Interpreter · T1082 System Information Discovery</span></summary>
+  <div class="ait-note">Hands-on-keyboard humans type a few commands a minute. An agent driving a shell issues dozens of discovery commands back-to-back with sub-second gaps.</div><pre>title: Discovery command executed from shell
+name: shell_discovery_command
+id: 31a9200a-348c-553a-bee6-028e434a70c1
+status: experimental
+description: Base rule - common discovery binaries launched from a shell.
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    ParentImage|endswith:
+      - &#x27;/bash&#x27;
+      - &#x27;/sh&#x27;
+      - &#x27;/zsh&#x27;
+    Image|endswith:
+      - &#x27;/whoami&#x27;
+      - &#x27;/id&#x27;
+      - &#x27;/uname&#x27;
+      - &#x27;/hostname&#x27;
+      - &#x27;/ps&#x27;
+      - &#x27;/netstat&#x27;
+      - &#x27;/ss&#x27;
+      - &#x27;/ip&#x27;
+      - &#x27;/ls&#x27;
+      - &#x27;/cat&#x27;
+      - &#x27;/find&#x27;
+      - &#x27;/env&#x27;
+  condition: selection
+level: informational
+---
+title: Machine-speed discovery burst in one shell session
+id: fd19a1a5-5dcb-50da-8bb9-6ae0d4e9f62e
+status: experimental
+description: 25+ discovery commands from the same parent shell within 60 seconds.
+correlation:
+  type: event_count
+  rules:
+    - shell_discovery_command
+  group-by:
+    - ParentProcessId
+    - Computer
+  timespan: 60s
+  condition:
+    gte: 25   # PLACEHOLDER
+falsepositives:
+  - Login scripts and configuration-management runs
+level: medium
+tags:
+  - attack.discovery
+  - attack.t1082</pre></details></div></div>
+<div class="rt-section"><div class="rt-section-header" onclick="rtToggle(this)">
+  <span class="rt-section-title">Prompt-injection sensor</span></div>
+  <div class="rt-section-body" style="display:none">
+  <div class="ait-intro">Vigil feeds untrusted web content to an LLM daily, so it doubles as a sensor. Text aimed at AI models found in feeds and fetched articles is logged here. <b>Quoted</b> = a security article discussing a payload. <b>Suspected live</b> = hidden channel or an instruction outside that context.</div><p class="empty-msg">No injection attempts seen yet. Every fetched article and feed item is scanned daily — findings will appear here.</p></div></div>
+  </div>
+
   <div id="tab-actors" class="tab">
     <div class="ta-split"><div class="ta-split-left">
 <div class="ta-stats-row">
@@ -38286,7 +39303,7 @@ This is a workaround attempt—repositioning the same attack request through:
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 07 October 2026 17:29 UTC &middot;
+  Built automatically by Vigil &middot; 07 October 2026 18:02 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
@@ -38370,6 +39387,19 @@ This is a workaround attempt—repositioning the same attack request through:
         if (panel && panel.classList.contains('expanded')) toggleGraphExpand();
       }
     });
-        </script>
+    
+    (function () {
+      var tip = document.createElement('div'); tip.id = 'ait-tip'; document.body.appendChild(tip);
+      document.addEventListener('mousemove', function (e) {
+        var el = e.target.closest ? e.target.closest('[data-tip]') : null;
+        if (!el) { tip.style.display = 'none'; return; }
+        tip.textContent = el.getAttribute('data-tip'); tip.style.display = 'block';
+        var x = e.clientX + 14, y = e.clientY + 14;
+        if (x + 350 > window.innerWidth) x = e.clientX - 354;
+        tip.style.left = x + 'px'; tip.style.top = y + 'px';
+      });
+      window.addEventListener('scroll', function () { tip.style.display = 'none'; }, true);
+    })();
+    </script>
 </body>
 </html>
