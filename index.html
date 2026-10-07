@@ -9,7 +9,7 @@
       --bg:       #0d1117; --surface:  #161b22; --surface2: #1c2128;
       --border:   #30363d; --cyan:     #39d0d8; --cyan-dim: #1a4a4d;
       --green:    #3fb950; --yellow:   #d29922; --red:      #f85149;
-      --purple:   #bc8cff; --text:     #e6edf3; --text-dim: #7d8590;
+      --purple:   #bc8cff; --orange:   #f0883e; --text:     #e6edf3; --text-dim: #7d8590;
       --text-mid: #adbac7;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,7 +44,7 @@
     .stat-value { font-size: 28px; font-weight: 700; margin: 6px 0 2px; }
     .stat-sub { font-size: 12px; color: var(--text-dim); }
     .cyan { color: var(--cyan); } .green { color: var(--green); }
-    .yellow { color: var(--yellow); } .purple { color: var(--purple); }
+    .yellow { color: var(--yellow); } .purple { color: var(--purple); } .orange { color: var(--orange); }
 
     /* PIPELINE STRIP */
     .pipeline-row { display: flex; gap: 0; margin-bottom: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
@@ -69,6 +69,7 @@
     .pill-cyan   { background: rgba(57,208,216,0.12); color: var(--cyan);   border: 1px solid rgba(57,208,216,0.25);}
     .pill-yellow { background: rgba(210,153,34,0.15); color: var(--yellow); border: 1px solid rgba(210,153,34,0.25);}
     .pill-purple { background: rgba(188,140,255,0.15); color: var(--purple); border: 1px solid rgba(188,140,255,0.25);}
+    .pill-orange { background: rgba(240,136,62,0.15);  color: var(--orange); border: 1px solid rgba(240,136,62,0.25);}
     .pill-green  { background: rgba(63,185,80,0.15);   color: var(--green);  border: 1px solid rgba(63,185,80,0.25);}
     .day-card-chevron { color: var(--text-dim); font-size: 13px; transition: transform 0.2s; flex-shrink: 0; }
     .day-card.open .day-card-chevron { transform: rotate(180deg); }
@@ -92,6 +93,7 @@
     .tag-red    { background: rgba(248,81,73,0.15);  color: var(--red);    border: 1px solid rgba(248,81,73,0.3);  }
     .tag-cyan   { background: rgba(57,208,216,0.12); color: var(--cyan);   border: 1px solid rgba(57,208,216,0.25);}
     .tag-yellow { background: rgba(210,153,34,0.15); color: var(--yellow); border: 1px solid rgba(210,153,34,0.3); }
+    .tag-orange { background: rgba(240,136,62,0.15); color: var(--orange); border: 1px solid rgba(240,136,62,0.3);}
     .tag-purple { background: rgba(188,140,255,0.12);color: var(--purple); border: 1px solid rgba(188,140,255,0.3);}
     .log-text { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
 
@@ -362,7 +364,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 07 October 2026 12:55 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 07 October 2026 17:29 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>11 sources active</span>
   </div>
@@ -405,8 +407,12 @@
     
 <div class="pipeline-row">
   <div class="pipe-stage">
+    <div class="pipe-stage-name">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+    <div class="pipe-stage-count orange">1</div>
+  </div>
+  <div class="pipe-stage">
     <div class="pipe-stage-name">&#127981; FinServ threats</div>
-    <div class="pipe-stage-count red">5</div>
+    <div class="pipe-stage-count red">4</div>
   </div>
   <div class="pipe-stage">
     <div class="pipe-stage-name">&#129302; AI / ML security</div>
@@ -424,7 +430,7 @@
 <div class="day-card open">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">07 October 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">4 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -437,13 +443,17 @@
 </div>
     
 <div class="day-section">
-  <div class="day-sec-label">&#127981; FinServ threats</div>
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
   
 <div class="day-threat-item">
   <div class="day-threat-title">South Korean bank hacks via AI agents</div>
   <div class="day-threat-body">— Officials believe a Chinese cybersecurity tool using AI agents was used to breach at least seven financial institutions, exposing personal data of 68,000+ people, a direct precedent for AI-enabled attacks against UK banks</div>
   <a href="https://therecord.media/south-korean-bank-hacks-ai-agents" target="_blank" class="day-threat-link">&#128279; View source</a>
 </div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#127981; FinServ threats</div>
+  
 <div class="day-threat-item">
   <div class="day-threat-title">Fingerprint and biometric fraud on dark web</div>
   <div class="day-threat-body">— Dark-web sale of biographic data, IDs, and fingerprints is undermining biometric verification used by financial firms, with human preparedness cited as a greater gap than technology spend</div>
@@ -529,7 +539,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">06 October 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -541,6 +551,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">JadePuffer Agentic Threat Actor Destroys Azure Tenant</div>
+  <div class="day-threat-body">An AI-driven threat actor reportedly used exposed credentials to access and delete cloud storage, applications, and databases in a destructive Azure attack, demonstrating that autonomous AI can now act as an offensive tool at scale</div>
+  <a href="https://www.darkreading.com/cloud-security/jadepuffer-ai-actor-azure-tenant-destructive-cloud-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -573,11 +592,6 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
-<div class="day-threat-item">
-  <div class="day-threat-title">JadePuffer Agentic Threat Actor Destroys Azure Tenant</div>
-  <div class="day-threat-body">An AI-driven threat actor reportedly used exposed credentials to access and delete cloud storage, applications, and databases in a destructive Azure attack, demonstrating that autonomous AI can now act as an offensive tool at scale</div>
-  <a href="https://www.darkreading.com/cloud-security/jadepuffer-ai-actor-azure-tenant-destructive-cloud-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
 <div class="day-threat-item">
   <div class="day-threat-title">MITRE ATLAS — LLM Jailbreak (AML.T0054)</div>
   <div class="day-threat-body">Adversaries can override safety controls in LLMs deployed in customer-facing financial services applications to extract sensitive data or generate harmful outputs</div>
@@ -634,7 +648,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">05 October 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -646,6 +660,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">JadePuffer AI Actor — Destructive Azure Cloud Attack</div>
+  <div class="day-threat-body">— An agentic threat actor reportedly used exposed credentials to delete cloud storage, applications, and databases in an Azure tenant, demonstrating that AI-driven attackers can cause irreversible infrastructure damage at speed</div>
+  <a href="https://www.darkreading.com/cloud-security/jadepuffer-ai-actor-azure-tenant-destructive-cloud-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -678,11 +701,6 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
-<div class="day-threat-item">
-  <div class="day-threat-title">JadePuffer AI Actor — Destructive Azure Cloud Attack</div>
-  <div class="day-threat-body">— An agentic threat actor reportedly used exposed credentials to delete cloud storage, applications, and databases in an Azure tenant, demonstrating that AI-driven attackers can cause irreversible infrastructure damage at speed</div>
-  <a href="https://www.darkreading.com/cloud-security/jadepuffer-ai-actor-azure-tenant-destructive-cloud-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
 <div class="day-threat-item">
   <div class="day-threat-title">MITRE ATLAS: LLM Jailbreak (AML.T0054)</div>
   <div class="day-threat-body">— Adversaries can override LLM safety guardrails via adversarial prompting or weight modification to extract sensitive data or generate malicious content, relevant to any firm deploying customer-facing or internal AI assistants</div>
@@ -739,7 +757,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">02 October 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -751,6 +769,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">JadePuffer AI actor — destructive Azure tenant attack</div>
+  <div class="day-threat-body">— An agentic threat actor reportedly used exposed credentials to delete cloud storage, applications and databases inside an Azure tenant, demonstrating that AI-driven attackers can cause rapid, large-scale destruction</div>
+  <a href="https://www.darkreading.com/cloud-security/jadepuffer-ai-actor-azure-tenant-destructive-cloud-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -783,11 +810,6 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
-<div class="day-threat-item">
-  <div class="day-threat-title">JadePuffer AI actor — destructive Azure tenant attack</div>
-  <div class="day-threat-body">— An agentic threat actor reportedly used exposed credentials to delete cloud storage, applications and databases inside an Azure tenant, demonstrating that AI-driven attackers can cause rapid, large-scale destruction</div>
-  <a href="https://www.darkreading.com/cloud-security/jadepuffer-ai-actor-azure-tenant-destructive-cloud-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
 <div class="day-threat-item">
   <div class="day-threat-title">MITRE ATLAS — LLM Jailbreak (AML.T0054)</div>
   <div class="day-threat-body">— Adversaries can bypass LLM safety guardrails via adversarial prompting or weight modification, enabling data leakage or harmful content generation from AI systems deployed in financial services workflows</div>
@@ -844,7 +866,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">01 October 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -856,6 +878,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">JadePuffer Agentic Threat Actor — Azure Destructive Attack</div>
+  <div class="day-threat-body">An autonomous AI-driven threat actor reportedly used exposed credentials to access and destroy cloud storage, applications, and databases in an Azure tenant, demonstrating that AI agents can now act as destructive attackers at machine speed</div>
+  <a href="https://www.darkreading.com/cloud-security/jadepuffer-ai-actor-azure-tenant-destructive-cloud-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -888,11 +919,6 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
-<div class="day-threat-item">
-  <div class="day-threat-title">JadePuffer Agentic Threat Actor — Azure Destructive Attack</div>
-  <div class="day-threat-body">An autonomous AI-driven threat actor reportedly used exposed credentials to access and destroy cloud storage, applications, and databases in an Azure tenant, demonstrating that AI agents can now act as destructive attackers at machine speed</div>
-  <a href="https://www.darkreading.com/cloud-security/jadepuffer-ai-actor-azure-tenant-destructive-cloud-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
 <div class="day-threat-item">
   <div class="day-threat-title">MITRE ATLAS: LLM Jailbreak (AML.T0054)</div>
   <div class="day-threat-body">Adversaries can override LLM safety guardrails via adversarial prompting or weight modification, enabling data leakage or generation of malicious content from models deployed in customer-facing or internal financial services applications</div>
@@ -1359,7 +1385,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">24 September 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span><span class="day-pill pill-purple">1 Reg</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">2 AI-Attack</span><span class="day-pill pill-red">4 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span><span class="day-pill pill-purple">1 Reg</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -1371,6 +1397,20 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">Malicious AI Agents Stealing Credit Card Data</div>
+  <div class="day-threat-body">— AI agent frameworks are being weaponised to deploy payment skimmers at scale across online retailers, posing direct card fraud exposure for retail banking and payments teams</div>
+  <a href="https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Malicious AI Agents — Credit Card Skimming at Scale</div>
+  <div class="day-threat-body">— Threat actors are leveraging open-source AI agent frameworks to autonomously compromise hundreds of retail sites and exfiltrate payment card data, demonstrating that agentic AI is now a live financial crime tool</div>
+  <a href="https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -1390,11 +1430,6 @@
   <a href="https://www.bleepingcomputer.com/news/security/check-point-warns-of-hackers-exploiting-security-gateway-vpn-rce-flaw" target="_blank" class="day-threat-link">&#128279; View source</a>
 </div>
 <div class="day-threat-item">
-  <div class="day-threat-title">Malicious AI Agents Stealing Credit Card Data</div>
-  <div class="day-threat-body">— AI agent frameworks are being weaponised to deploy payment skimmers at scale across online retailers, posing direct card fraud exposure for retail banking and payments teams</div>
-  <a href="https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
-<div class="day-threat-item">
   <div class="day-threat-title">Network Management Systems Under Attack (InfraTrust Report)</div>
   <div class="day-threat-body">— Critical vulnerabilities in enterprise network management systems are being exploited at or before disclosure, threatening the operational infrastructure underpinning financial services networks</div>
   <a href="https://www.bleepingcomputer.com/news/security/infratrust-report-warns-network-management-systems-under-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
@@ -1403,11 +1438,6 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
-<div class="day-threat-item">
-  <div class="day-threat-title">Malicious AI Agents — Credit Card Skimming at Scale</div>
-  <div class="day-threat-body">— Threat actors are leveraging open-source AI agent frameworks to autonomously compromise hundreds of retail sites and exfiltrate payment card data, demonstrating that agentic AI is now a live financial crime tool</div>
-  <a href="https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
 <div class="day-threat-item">
   <div class="day-threat-title">MITRE ATLAS — Data Exfiltration via MCP Server (Cursor Case Study)</div>
   <div class="day-threat-body">— A proof-of-concept shows that a malicious Model Context Protocol server can inject prompts into an AI coding assistant, causing it to execute shell commands that exfiltrate agent configuration files and credentials</div>
@@ -1897,7 +1927,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">17 September 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -1909,6 +1939,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">AI-Agent-Powered Data Breach (Spain AEPD):</div>
+  <div class="day-threat-body">Spain's data protection authority received its first report of a breach carried out by an attacker using an LLM-powered AI agent, confirming that AI-driven attacks are moving from theoretical to operational</div>
+  <a href="https://www.bleepingcomputer.com/news/security/spains-data-agency-gets-first-report-of-ai-powered-data-breach/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -1941,11 +1980,6 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
-<div class="day-threat-item">
-  <div class="day-threat-title">AI-Agent-Powered Data Breach (Spain AEPD):</div>
-  <div class="day-threat-body">Spain's data protection authority received its first report of a breach carried out by an attacker using an LLM-powered AI agent, confirming that AI-driven attacks are moving from theoretical to operational</div>
-  <a href="https://www.bleepingcomputer.com/news/security/spains-data-agency-gets-first-report-of-ai-powered-data-breach/" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
 <div class="day-threat-item">
   <div class="day-threat-title">MITRE ATLAS: LLM Jailbreak (AML.T0054):</div>
   <div class="day-threat-body">Adversaries can prompt-inject or modify model weights to override safety guardrails, enabling LLMs deployed in financial workflows to leak data or generate harmful outputs</div>
@@ -3914,7 +3948,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">21 August 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">4 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -3926,6 +3960,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">NSA/FBI Warning — AI-Assisted Attacks on Critical Infrastructure:</div>
+  <div class="day-threat-body">Nation-state actors are using AI-assisted development to attack industrial control systems (Siemens S7 PLCs), a technique that could equally be turned against financial market infrastructure</div>
+  <a href="https://therecord.media/nsa-fbi-warns-of-hackers-using-ai-generated-tools-critical-infrastructure" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -3948,11 +3991,6 @@
   <div class="day-threat-title">CISA Warning — MLflow Exploitation:</div>
   <div class="day-threat-body">CISA has confirmed active exploitation of a critical vulnerability in the MLflow AI platform, which is commonly used in FinServ data science and model development pipelines, putting model artefacts and infrastructure at risk</div>
   <a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
-<div class="day-threat-item">
-  <div class="day-threat-title">NSA/FBI Warning — AI-Assisted Attacks on Critical Infrastructure:</div>
-  <div class="day-threat-body">Nation-state actors are using AI-assisted development to attack industrial control systems (Siemens S7 PLCs), a technique that could equally be turned against financial market infrastructure</div>
-  <a href="https://therecord.media/nsa-fbi-warns-of-hackers-using-ai-generated-tools-critical-infrastructure" target="_blank" class="day-threat-link">&#128279; View source</a>
 </div>
 </div>
 <div class="day-section">
@@ -6217,7 +6255,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">21 July 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -6229,6 +6267,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">JadePuffer Ransomware Targets AI Assets</div>
+  <div class="day-threat-body">— The JadePuffer autonomous agent now deploys custom malware called EncForge to encrypt AI training datasets, vector databases, and model checkpoints, representing a new class of ransomware threat aimed directly at ML infrastructure</div>
+  <a href="https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -6261,11 +6308,6 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
-<div class="day-threat-item">
-  <div class="day-threat-title">JadePuffer Ransomware Targets AI Assets</div>
-  <div class="day-threat-body">— The JadePuffer autonomous agent now deploys custom malware called EncForge to encrypt AI training datasets, vector databases, and model checkpoints, representing a new class of ransomware threat aimed directly at ML infrastructure</div>
-  <a href="https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
 <div class="day-threat-item">
   <div class="day-threat-title">AI Agent Sandbox Escapes (Cursor, Codex, Gemini CLI, Antigravity)</div>
   <div class="day-threat-body">— Researchers escaped sandboxes in four widely used AI coding tools by having the agent write files that host tools subsequently executed, enabling host-level code execution</div>
@@ -6322,7 +6364,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">20 July 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">4 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">4 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -6334,6 +6376,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">JadePuffer: First Complete LLM-Driven Ransomware Attack</div>
+  <div class="day-threat-body">— An agentic threat actor exploited a Langflow vulnerability to steal data from a production database and encrypt systems, representing the first documented end-to-end ransomware attack orchestrated by an LLM. [(Dark Reading)](https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack)</div>
+  
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -6366,11 +6417,6 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
-<div class="day-threat-item">
-  <div class="day-threat-title">JadePuffer: First Complete LLM-Driven Ransomware Attack</div>
-  <div class="day-threat-body">— An agentic threat actor exploited a Langflow vulnerability to steal data from a production database and encrypt systems, representing the first documented end-to-end ransomware attack orchestrated by an LLM. [(Dark Reading)](https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack)</div>
-  
-</div>
 <div class="day-threat-item">
   <div class="day-threat-title">MCP Server Data Exfiltration via Cursor (ATLAS AML.CS0045)</div>
   <div class="day-threat-body">— A proof-of-concept shows a malicious MCP tool can inject prompts into an AI coding agent to execute shell commands and exfiltrate AI agent configuration files containing credentials. [(MITRE ATLAS)](https://atlas.mitre.org/studies/AML.CS0045)</div>
@@ -6627,7 +6673,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">15 July 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -6639,6 +6685,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">JadePuffer — First Complete LLM-Driven Ransomware Attack</div>
+  <div class="day-threat-body">— An agentic threat actor exploited a Langflow vulnerability to autonomously steal data from a production database and encrypt other systems, demonstrating that LLM-driven ransomware is no longer theoretical</div>
+  <a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -6671,11 +6726,6 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
-<div class="day-threat-item">
-  <div class="day-threat-title">JadePuffer — First Complete LLM-Driven Ransomware Attack</div>
-  <div class="day-threat-body">— An agentic threat actor exploited a Langflow vulnerability to autonomously steal data from a production database and encrypt other systems, demonstrating that LLM-driven ransomware is no longer theoretical</div>
-  <a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
 <div class="day-threat-item">
   <div class="day-threat-title">MITRE ATLAS — Data Exfiltration via MCP Server (Cursor)</div>
   <div class="day-threat-body">— A proof-of-concept showed that a malicious Model Context Protocol (MCP) server can inject prompts into an AI coding agent, causing it to exfiltrate credential-containing configuration files via shell commands</div>
@@ -6732,7 +6782,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">14 July 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">4 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">4 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -6744,6 +6794,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">JadePuffer: First Complete LLM-Driven Ransomware Attack</div>
+  <div class="day-threat-body">— An agentic threat actor exploited a Langflow vulnerability to autonomously steal data from a production database and encrypt other systems, demonstrating end-to-end LLM-orchestrated ransomware is now a real-world threat</div>
+  <a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -6776,11 +6835,6 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
-<div class="day-threat-item">
-  <div class="day-threat-title">JadePuffer: First Complete LLM-Driven Ransomware Attack</div>
-  <div class="day-threat-body">— An agentic threat actor exploited a Langflow vulnerability to autonomously steal data from a production database and encrypt other systems, demonstrating end-to-end LLM-orchestrated ransomware is now a real-world threat</div>
-  <a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
 <div class="day-threat-item">
   <div class="day-threat-title">'Djinn' Stealer Targets Cloud and AI Credentials</div>
   <div class="day-threat-body">— An infostealer delivered via a critical authentication bypass (CVE-2026-48558) in SimpleHelp is actively harvesting credentials that link AI development and admin environments to wider enterprise systems</div>
@@ -6945,7 +6999,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">10 July 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">4 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">4 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -6957,6 +7011,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">JadePuffer — First complete LLM-driven ransomware attack</div>
+  <div class="day-threat-body">An agentic threat actor exploited a Langflow vulnerability to autonomously exfiltrate data from a production database and encrypt other systems, demonstrating that fully autonomous AI-driven ransomware is no longer theoretical</div>
+  <a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -6989,11 +7052,6 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
-<div class="day-threat-item">
-  <div class="day-threat-title">JadePuffer — First complete LLM-driven ransomware attack</div>
-  <div class="day-threat-body">An agentic threat actor exploited a Langflow vulnerability to autonomously exfiltrate data from a production database and encrypt other systems, demonstrating that fully autonomous AI-driven ransomware is no longer theoretical</div>
-  <a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
 <div class="day-threat-item">
   <div class="day-threat-title">Djinn Stealer targeting cloud and AI credentials</div>
   <div class="day-threat-body">This infostealer, delivered via a critical authentication bypass in SimpleHelp (CVE-2026-48558), specifically targets credentials for cloud and AI environments, meaning compromised AI agent service accounts could expose entire ML pipelines</div>
@@ -7045,7 +7103,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">09 July 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -7057,6 +7115,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">JadePuffer: First Complete LLM-Driven Ransomware Attack</div>
+  <div class="day-threat-body">— An agentic threat actor exploited the Langflow vulnerability to autonomously steal data from a production database and encrypt other systems, representing the first documented end-to-end LLM-orchestrated ransomware campaign</div>
+  <a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -7089,11 +7156,6 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
-<div class="day-threat-item">
-  <div class="day-threat-title">JadePuffer: First Complete LLM-Driven Ransomware Attack</div>
-  <div class="day-threat-body">— An agentic threat actor exploited the Langflow vulnerability to autonomously steal data from a production database and encrypt other systems, representing the first documented end-to-end LLM-orchestrated ransomware campaign</div>
-  <a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
 <div class="day-threat-item">
   <div class="day-threat-title">CISA Orders Patching of Langflow Auth Bypass</div>
   <div class="day-threat-body">— CISA has mandated federal agencies patch the actively exploited Langflow authentication bypass flaw by Friday, and any firm running Langflow-based AI agent pipelines should treat this as equally urgent</div>
@@ -7255,7 +7317,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">07 July 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -7267,6 +7329,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">JadePuffer — First Complete LLM-Driven Ransomware Attack</div>
+  <div class="day-threat-body">An agentic threat actor exploited a Langflow vulnerability to autonomously steal data from a production database and encrypt systems, representing the first documented end-to-end LLM-orchestrated ransomware attack</div>
+  <a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -7299,11 +7370,6 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
-<div class="day-threat-item">
-  <div class="day-threat-title">JadePuffer — First Complete LLM-Driven Ransomware Attack</div>
-  <div class="day-threat-body">An agentic threat actor exploited a Langflow vulnerability to autonomously steal data from a production database and encrypt systems, representing the first documented end-to-end LLM-orchestrated ransomware attack</div>
-  <a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
 <div class="day-threat-item">
   <div class="day-threat-title">'Djinn' Stealer Targets Cloud and AI Credentials</div>
   <div class="day-threat-body">A new infostealer delivered via CVE-2026-48558 specifically targets credentials used in cloud and AI development environments, posing a direct threat to firms building or integrating AI systems</div>
@@ -11029,7 +11095,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">18 May 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -11041,6 +11107,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">LatAm Threat Actors Using AI Agents to Generate Custom Hacking Tools</div>
+  <div class="day-threat-body">— Threat actors in campaigns targeting Mexico and Brazil are leveraging AI agents to create bespoke attack tools on the fly, signalling that AI-accelerated, highly targeted attacks against financial institutions are a near-term reality</div>
+  <a href="https://www.darkreading.com/cloud-security/ai-agents-generate-custom-hacking-tools" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -11092,11 +11167,6 @@
   <div class="day-threat-title">MITRE ATLAS: Agentic Resource Consumption (AML.T0034.002)</div>
   <div class="day-threat-body">— Attackers can use prompt injection to force agentic AI systems into excessive, costly API calls, creating both financial and availability risks for firms running AI agents in production</div>
   <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
-<div class="day-threat-item">
-  <div class="day-threat-title">LatAm Threat Actors Using AI Agents to Generate Custom Hacking Tools</div>
-  <div class="day-threat-body">— Threat actors in campaigns targeting Mexico and Brazil are leveraging AI agents to create bespoke attack tools on the fly, signalling that AI-accelerated, highly targeted attacks against financial institutions are a near-term reality</div>
-  <a href="https://www.darkreading.com/cloud-security/ai-agents-generate-custom-hacking-tools" target="_blank" class="day-threat-link">&#128279; View source</a>
 </div>
 </div>
 <div class="day-section">
@@ -11239,7 +11309,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">14 May 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -11251,6 +11321,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">LatAm Threat Actors Using AI Agents to Generate Custom Hacking Tools:</div>
+  <div class="day-threat-body">Two active threat campaigns targeting Mexico and Brazil have used AI agents to create bespoke attack tools on the fly, signalling a maturation of AI-assisted offensive operations that will likely spread to other regions</div>
+  <a href="https://www.darkreading.com/cloud-security/ai-agents-generate-custom-hacking-tools" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -11297,11 +11376,6 @@
   <div class="day-threat-title">MITRE ATLAS: Agentic Resource Consumption (AML.T0034.002):</div>
   <div class="day-threat-body">Attackers can use prompt injection to force AI agents into excessive, costly tool calls, wasting API budgets and potentially disrupting AI-driven workflows or automated processes</div>
   <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
-<div class="day-threat-item">
-  <div class="day-threat-title">LatAm Threat Actors Using AI Agents to Generate Custom Hacking Tools:</div>
-  <div class="day-threat-body">Two active threat campaigns targeting Mexico and Brazil have used AI agents to create bespoke attack tools on the fly, signalling a maturation of AI-assisted offensive operations that will likely spread to other regions</div>
-  <a href="https://www.darkreading.com/cloud-security/ai-agents-generate-custom-hacking-tools" target="_blank" class="day-threat-link">&#128279; View source</a>
 </div>
 <div class="day-threat-item">
   <div class="day-threat-title">MITRE ATLAS: AI Agent Configuration Exposure (AML.T0002.002):</div>
@@ -11449,7 +11523,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">12 May 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">2 AI-Attack</span><span class="day-pill pill-red">4 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -11462,13 +11536,22 @@
 </div>
     
 <div class="day-section">
-  <div class="day-sec-label">&#127981; FinServ threats</div>
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
   
 <div class="day-threat-item">
   <div class="day-threat-title">AI-Generated Zero-Day Exploit</div>
   <div class="day-threat-body">— Google's threat intelligence team confirmed adversaries used AI to generate a working zero-day exploit, lowering the barrier to sophisticated attacks that could target financial sector infrastructure</div>
   <a href="https://www.bleepingcomputer.com/news/security/google-hackers-used-ai-to-develop-zero-day-exploit-for-web-admin-tool/" target="_blank" class="day-threat-link">&#128279; View source</a>
 </div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Google: AI-Developed Zero-Day Exploit</div>
+  <div class="day-threat-body">— Confirmed real-world use of AI to generate a functional exploit represents a significant escalation in adversary capability, meaning attack development timelines for financial sector targets may shorten materially</div>
+  <a href="https://www.bleepingcomputer.com/news/security/google-hackers-used-ai-to-develop-zero-day-exploit-for-web-admin-tool/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#127981; FinServ threats</div>
+  
 <div class="day-threat-item">
   <div class="day-threat-title">TrickBot (MITRE S0266)</div>
   <div class="day-threat-body">— This banking trojan, originally designed to target financial institutions across North America and Europe, continues to underpin big-game ransomware campaigns relevant to the FinServ sector</div>
@@ -11493,11 +11576,6 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
-<div class="day-threat-item">
-  <div class="day-threat-title">Google: AI-Developed Zero-Day Exploit</div>
-  <div class="day-threat-body">— Confirmed real-world use of AI to generate a functional exploit represents a significant escalation in adversary capability, meaning attack development timelines for financial sector targets may shorten materially</div>
-  <a href="https://www.bleepingcomputer.com/news/security/google-hackers-used-ai-to-develop-zero-day-exploit-for-web-admin-tool/" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
 <div class="day-threat-item">
   <div class="day-threat-title">'TrustFall': Code Execution via Malicious Repositories in AI Coding Assistants</div>
   <div class="day-threat-body">— Malicious repositories can trigger code execution in Claude Code, Cursor CLI, Gemini CLI, and CoPilot CLI with minimal user interaction, posing supply chain risk for development teams at financial firms using these tools</div>
@@ -38208,7 +38286,7 @@ This is a workaround attempt—repositioning the same attack request through:
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 07 October 2026 12:55 UTC &middot;
+  Built automatically by Vigil &middot; 07 October 2026 17:29 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
