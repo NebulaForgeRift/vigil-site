@@ -399,6 +399,31 @@
     .ta-badge-ai { background: rgba(240,136,62,0.15); color: var(--orange); border: 1px solid rgba(240,136,62,0.3); font-size: 11px; padding: 2px 8px; border-radius: 10px; margin-left: 6px; }
     #ait-tip { position: fixed; z-index: 999; max-width: 340px; background: var(--surface); color: var(--text); border: 1px solid var(--border);
                border-radius: 6px; padding: 8px 10px; font-size: 12px; line-height: 1.45; pointer-events: none; display: none; box-shadow: 0 6px 20px rgba(0,0,0,.4); }
+
+    .rr-watch { border-left-color: var(--yellow); }
+    .rr-watch a, .ait-kv a { color: var(--cyan); }
+    .rr-table td { vertical-align: middle; }
+    .rr-table a { color: var(--cyan); }
+    .rr-lead { min-width: 190px; white-space: nowrap; }
+    .rr-lead span { font-size: 12px; color: var(--text-mid); margin-left: 8px; }
+    .rr-bar { display: inline-block; width: 110px; height: 8px; background: var(--surface2); border-radius: 4px; vertical-align: middle; }
+    .rr-bar span { display: block; height: 8px; border-radius: 4px; background: var(--orange); margin: 0 !important; }
+    .rr-num { text-align: center; color: var(--text-mid); }
+    .rr-filters { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 8px; }
+    .rr-chip { background: var(--surface2); color: var(--text-mid); border: 1px solid var(--border); border-radius: 12px;
+               font-size: 12px; padding: 3px 10px; cursor: pointer; }
+    .rr-chip.active, .rr-chip:hover { border-color: var(--cyan); color: var(--cyan); }
+    .rr-paper { border-top: 1px solid var(--border); padding: 12px 2px; }
+    .rr-title { color: var(--text); font-weight: 600; font-size: 14px; text-decoration: none; }
+    .rr-title:hover { color: var(--cyan); }
+    .rr-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 6px 0; }
+    .rr-dir { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+    .rr-dir-on { background: rgba(57,208,216,0.12); color: var(--cyan); }
+    .rr-dir-by { background: rgba(240,136,62,0.18); color: var(--orange); }
+    .rr-dir-def { background: rgba(63,185,80,0.15); color: var(--green); }
+    .rr-dir-bench { background: rgba(188,140,255,0.15); color: var(--purple); }
+    .rr-rel { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: var(--surface2); color: var(--text-mid); cursor: help; }
+    .rr-rel-3 { color: var(--orange); }
 </style>
 </head>
 <body>
@@ -423,7 +448,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 08 October 2026 15:04 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 08 October 2026 15:18 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>20 sources active</span>
   </div>
@@ -433,6 +458,7 @@
   <button class="nav-btn active" onclick="showTab('digest',this)">&#128225; Daily Digest</button>
   <button class="nav-btn" onclick="showTab('hot',this)">&#128293; Hot Topics</button>
   <button class="nav-btn" onclick="showTab('aithreats',this)">&#129302; AI Threats</button>
+  <button class="nav-btn" onclick="showTab('research',this)">&#128300; Research Radar</button>
   <button class="nav-btn" onclick="showTab('actors',this)">&#127919; Threat Actors</button>
   <button class="nav-btn" onclick="showTab('redteam',this)">&#128308; Red Teaming</button>
   <button class="nav-btn" onclick="showTab('glossary',this)">&#128218; Glossary</button>
@@ -28600,7 +28626,7 @@
   <div class="pipe-stage"><div class="pipe-stage-name">&#128737;&#65039; Detection rules</div>
   <div class="pipe-stage-count green" style="font-size:22px">20</div></div>
   <div class="pipe-stage"><div class="pipe-stage-name">&#128065; Injection sensor (live / quoted)</div>
-  <div class="pipe-stage-count purple" style="font-size:22px">1 / 0</div></div></div>
+  <div class="pipe-stage-count purple" style="font-size:22px">0 / 0</div></div></div>
 <div class="rt-section"><div class="rt-section-header open" onclick="rtToggle(this)">
   <span class="rt-section-title">Autonomy over time</span></div>
   <div class="rt-section-body" style="display:block">
@@ -29552,11 +29578,24 @@ tags:
 <div class="rt-section"><div class="rt-section-header" onclick="rtToggle(this)">
   <span class="rt-section-title">Prompt-injection sensor</span></div>
   <div class="rt-section-body" style="display:none">
-  <div class="ait-intro">Vigil feeds untrusted web content to an LLM daily, so it doubles as a sensor. Text aimed at AI models found in feeds and fetched articles is logged here. <b>Quoted</b> = a security article discussing a payload. <b>Suspected live</b> = hidden channel or an instruction outside that context.</div><div class="ait-hm-wrap"><table class="ait-sensor"><thead><tr><th>Date</th><th>Item</th><th>Signal</th><th>Verdict</th><th>Snippet</th></tr></thead><tbody><tr><td class="ait-dim">2026-10-08</td>
+  <div class="ait-intro">Vigil feeds untrusted web content to an LLM daily, so it doubles as a sensor. Text aimed at AI models found in feeds and fetched articles is logged here. <b>Quoted</b> = a security article discussing a payload. <b>Suspected live</b> = smuggled text, hidden HTML instructions, or an instruction outside a reporting context. <b>Hidden characters</b> = invisible characters with no instructions around them — usually a publishing-system artefact.</div><div class="ait-hm-wrap"><table class="ait-sensor"><thead><tr><th>Date</th><th>Item</th><th>Signal</th><th>Verdict</th><th>Snippet</th></tr></thead><tbody><tr><td class="ait-dim">2026-10-08</td>
 <td><a href="https://www.bleepingcomputer.com/news/security/samsung-galaxy-s26-hacked-three-more-times-at-pwn2own-ireland/" target="_blank">Samsung Galaxy S26 hacked three more times at Pwn2Own Ireland</a><div class="ait-dim">BleepingComputer</div></td>
 <td>zero_width_run<div class="ait-dim">hidden</div></td>
-<td><span class="day-pill pill-red">Suspected live</span></td>
+<td><span class="day-pill pill-yellow">Hidden characters (likely formatting)</span></td>
 <td><code>msung Galaxy S26 hacked three more times at Pwn2Own Ireland [U+200B][U+200B][U+200B]On the second day of Pwn2Own Ireland 2026, security research</code></td></tr></tbody></table></div></div></div>
+  </div>
+
+  <div id="tab-research" class="tab">
+    <div class="pipeline-row ait-tiles"><div class="pipe-stage"><div class="pipe-stage-name">&#128196; Papers tracked</div><div class="pipe-stage-count cyan" style="font-size:22px">0</div></div><div class="pipe-stage"><div class="pipe-stage-name">&#128197; New this week</div><div class="pipe-stage-count cyan" style="font-size:22px">0</div></div><div class="pipe-stage"><div class="pipe-stage-name">&#128064; Watch list families</div><div class="pipe-stage-count orange" style="font-size:22px">0</div></div><div class="pipe-stage"><div class="pipe-stage-name">&#11088; High-relevance (30d)</div><div class="pipe-stage-count orange" style="font-size:22px">0</div></div><div class="pipe-stage"><div class="pipe-stage-name">&#128336; Monitoring since</div><div class="pipe-stage-count " style="font-size:16px">2026-05-01</div></div></div>
+<div class="rt-section"><div class="rt-section-header open" onclick="rtToggle(this)">
+  <span class="rt-section-title">Watch list: researched, not yet seen in the wild</span></div>
+  <div class="rt-section-body" style="display:block"><div class="ait-intro">Technique families with Claude-verified AI-security papers in the last 90 days but no real-world sighting in Vigil's case files or digests yet. These are the techniques to get ahead of.</div><p class="empty-msg">Nothing on the watch list yet — it fills as papers are tracked.</p></div></div>
+<div class="rt-section"><div class="rt-section-header open" onclick="rtToggle(this)">
+  <span class="rt-section-title">Paper → in the wild</span></div>
+  <div class="rt-section-body" style="display:block"><div class="ait-intro">How long research led real-world use for each technique family.</div><div class="ait-hm-wrap"><table class="ait-sensor rr-table"><thead><tr><th>Technique family</th><th>First paper</th><th>First seen in the wild</th><th>Research lead</th><th>Papers (30d)</th></tr></thead><tbody><tr><td>Agent &amp; tool hijacking (MCP, tool poisoning)</td><td><span class="ait-dim">—</span></td><td><a href="https://darkwebinformer.com/mcp-cursor-exfil" target="_blank" data-tip="MCP Server Exploitation in Cursor IDE">2026-05-01</a> <span class="ait-dim">digest</span></td><td class="rr-lead"><span></span></td><td class="rr-num">0</td></tr><tr><td>Autonomous offensive agents (hacking, exploitation)</td><td><span class="ait-dim">—</span></td><td><a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" data-tip="JadePuffer LLM-Driven Ransomware &amp; Azure Tenant Destruction">2026-07-07</a> <span class="ait-dim">case file</span></td><td class="rr-lead"><span></span></td><td class="rr-num">0</td></tr><tr><td>AI-assisted vulnerability discovery &amp; exploit generation</td><td><span class="ait-dim">—</span></td><td><a href="https://www.bleepingcomputer.com/news/security/google-hackers-used-ai-to-develop-zero-day-exploit-for-web-admin-tool/" target="_blank" data-tip="AI-Generated Zero-Day Exploit for Web Admin Tool">2026-05-12</a> <span class="ait-dim">case file</span></td><td class="rr-lead"><span></span></td><td class="rr-num">0</td></tr><tr><td>AI-generated &amp; LLM-powered malware</td><td><span class="ait-dim">—</span></td><td><a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" data-tip="JadePuffer LLM-Driven Ransomware &amp; Azure Tenant Destruction">2026-07-07</a> <span class="ait-dim">case file</span></td><td class="rr-lead"><span></span></td><td class="rr-num">0</td></tr><tr><td>AI phishing, deepfakes &amp; social engineering</td><td><span class="ait-dim">—</span></td><td><a href="https://www.finextra.com/newsarticle/48254/asic-warns-of-surge-in-deepfake-scams" target="_blank" data-tip="Deepfake investment scam surge">2026-08-31</a> <span class="ait-dim">digest</span></td><td class="rr-lead"><span></span></td><td class="rr-num">0</td></tr><tr><td>Prompt injection (direct &amp; indirect)</td><td><span class="ait-dim">—</span></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">0</td></tr><tr><td>Jailbreaks (incl. multi-turn / crescendo)</td><td><span class="ait-dim">—</span></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">0</td></tr><tr><td>RAG &amp; retrieval poisoning</td><td><span class="ait-dim">—</span></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">0</td></tr><tr><td>Training-data poisoning &amp; backdoors</td><td><span class="ait-dim">—</span></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">0</td></tr><tr><td>Model extraction &amp; distillation abuse</td><td><span class="ait-dim">—</span></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">0</td></tr><tr><td>Training-data leakage &amp; membership inference</td><td><span class="ait-dim">—</span></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">0</td></tr><tr><td>AI supply chain (malicious models &amp; packages)</td><td><span class="ait-dim">—</span></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">0</td></tr><tr><td>Adversarial evasion of ML models</td><td><span class="ait-dim">—</span></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">0</td></tr></tbody></table></div><div class="ait-note">First paper = earliest arXiv paper matching the family's keywords (click to check it). First seen in the wild = earliest real-world case file or digest item Vigil has recorded — Vigil has monitored since 2026-05-01, so the true real-world date may be earlier and the research lead is at most the value shown.</div></div></div>
+<div class="rt-section"><div class="rt-section-header open" onclick="rtToggle(this)">
+  <span class="rt-section-title">Latest papers</span></div>
+  <div class="rt-section-body" style="display:block"><div class="ait-intro">New AI-security papers from arXiv (last 45 days). The most relevant are classified daily by Claude; the rest are keyword-tagged. Click a chip to filter.</div><p class="empty-msg">No papers yet — they arrive with each daily run.</p></div></div>
   </div>
 
   <div id="tab-actors" class="tab">
@@ -39672,7 +39711,7 @@ This is a workaround attempt—repositioning the same attack request through:
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 08 October 2026 15:04 UTC &middot;
+  Built automatically by Vigil &middot; 08 October 2026 15:18 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
@@ -39768,6 +39807,25 @@ This is a workaround attempt—repositioning the same attack request through:
         tip.style.left = x + 'px'; tip.style.top = y + 'px';
       });
       window.addEventListener('scroll', function () { tip.style.display = 'none'; }, true);
+    })();
+
+    (function () {
+      var fam = '', dir = '';
+      function apply() {
+        document.querySelectorAll('#rr-papers .rr-paper').forEach(function (p) {
+          var ok = (!fam || p.dataset.fam === fam) && (!dir || p.dataset.dir === dir);
+          p.style.display = ok ? '' : 'none';
+        });
+      }
+      document.addEventListener('click', function (e) {
+        var b = e.target.closest ? e.target.closest('.rr-chip') : null;
+        if (!b) return;
+        var key = b.hasAttribute('data-ffam') ? 'ffam' : 'fdir';
+        document.querySelectorAll('.rr-chip[data-' + key + ']').forEach(function (x) { x.classList.remove('active'); });
+        b.classList.add('active');
+        if (key === 'ffam') fam = b.dataset.ffam; else dir = b.dataset.fdir;
+        apply();
+      });
     })();
     </script>
 </body>
