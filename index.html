@@ -344,6 +344,10 @@
     .ait-tiles { flex-wrap: wrap; }
     .ait-tiles .pipe-stage { flex: 1 1 150px; }
     .ait-sensor .day-pill { white-space: nowrap; }
+    .ait-src { font-size: 10.5px; font-weight: 700; padding: 1px 7px; border-radius: 9px; margin-right: 6px; text-decoration: none !important; }
+    .ait-src-lab { background: rgba(240,136,62,0.18); color: var(--orange) !important; }
+    .ait-src-vendor { background: rgba(188,140,255,0.15); color: var(--purple) !important; }
+    .ait-src-aiid { background: rgba(57,208,216,0.12); color: var(--cyan) !important; }
     .ait-intro { color: var(--text-mid); font-size: 13px; margin: 2px 0 14px; line-height: 1.5; }
     .ait-note { color: var(--text-dim); font-size: 12px; margin-top: 8px; line-height: 1.5; }
     .ait-sub { color: var(--text-mid); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin: 18px 0 8px; }
@@ -419,9 +423,9 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 08 October 2026 13:03 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 08 October 2026 15:04 UTC</div>
     <span style="color:var(--border)">|</span>
-    <span>11 sources active</span>
+    <span>20 sources active</span>
   </div>
 </header>
 
@@ -450,7 +454,7 @@
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
       <div class="stat-value yellow">1680</div>
-      <div class="stat-sub">auto-built from 11 sources</div>
+      <div class="stat-sub">auto-built from 20 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
@@ -464,7 +468,7 @@
 <div class="pipeline-row">
   <div class="pipe-stage">
     <div class="pipe-stage-name">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
-    <div class="pipe-stage-count orange">2</div>
+    <div class="pipe-stage-count orange">1</div>
   </div>
   <div class="pipe-stage">
     <div class="pipe-stage-name">&#127981; FinServ threats</div>
@@ -472,7 +476,7 @@
   </div>
   <div class="pipe-stage">
     <div class="pipe-stage-name">&#129302; AI / ML security</div>
-    <div class="pipe-stage-count cyan">4</div>
+    <div class="pipe-stage-count cyan">5</div>
   </div>
   <div class="pipe-stage">
     <div class="pipe-stage-name">&#128275; Vulnerabilities</div>
@@ -490,7 +494,7 @@
 <div class="day-card open">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">08 October 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-orange">2 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span><span class="day-pill pill-purple">4 Reg</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span><span class="day-pill pill-purple">4 Reg</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -509,11 +513,6 @@
   <div class="day-threat-title">JadePuffer:</div>
   <div class="day-threat-body">This agentic threat actor autonomously used exposed credentials to access an Azure tenant and destructively deleted cloud storage, applications, and databases — a direct risk to UK financial firms running critical workloads in Azure without robust cloud access controls and anomaly detection</div>
   <a href="https://www.darkreading.com/cloud-security/jadepuffer-ai-actor-azure-tenant-destructive-cloud-attack" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
-<div class="day-threat-item">
-  <div class="day-threat-title">GenAI and Agentic AI Exploit Roundup Q3 2026 (OWASP):</div>
-  <div class="day-threat-body">OWASP's Q3 2026 roundup documents major real-world AI security incidents mapped to the LLM and Agentic Application Top 10, providing a structured threat picture for firms deploying AI in financial services</div>
-  <a href="https://genai.owasp.org/2026/10/08/genai-and-agentic-ai-exploit-roundup-q3-2026/" target="_blank" class="day-threat-link">&#128279; View source</a>
 </div>
 </div>
 <div class="day-section">
@@ -548,6 +547,11 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
+<div class="day-threat-item">
+  <div class="day-threat-title">GenAI and Agentic AI Exploit Roundup Q3 2026 (OWASP):</div>
+  <div class="day-threat-body">OWASP's Q3 2026 roundup documents major real-world AI security incidents mapped to the LLM and Agentic Application Top 10, providing a structured threat picture for firms deploying AI in financial services</div>
+  <a href="https://genai.owasp.org/2026/10/08/genai-and-agentic-ai-exploit-roundup-q3-2026/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
 <div class="day-threat-item">
   <div class="day-threat-title">ATLAS Case Study — MCP Server Data Exfiltration via Cursor:</div>
   <div class="day-threat-body">A proof-of-concept showed that a malicious MCP server can inject prompts into an AI coding agent (Cursor), causing it to exfiltrate credentials and agent configuration files via shell commands — directly relevant if developers at UK firms use AI-assisted coding tools</div>
@@ -5648,7 +5652,7 @@
 <div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">31 July 2026</div>
-    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">4 Vuln</span></div>
+    <div class="day-card-pills"><span class="day-pill pill-orange">1 AI-Attack</span><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">4 AI/ML</span><span class="day-pill pill-yellow">4 Vuln</span></div>
     <span class="day-card-chevron">&#9660;</span>
   </div>
   <div class="day-card-body">
@@ -5660,6 +5664,15 @@
 ---</p></div>
 </div>
     
+<div class="day-section">
+  <div class="day-sec-label">&#129302;&#9876;&#65039; AI-Driven Attacks</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">Patch-Resistant 'RufRoot' Flaw Enables Malicious AI Agent Swarms</div>
+  <div class="day-threat-body">— A vulnerability in AI hosting platform Ruflo allows unauthenticated attackers to take over the system and corrupt memory in a way that persists after patching, meaning deployed AI agents could remain compromised even after remediation attempts</div>
+  <a href="https://www.darkreading.com/cyber-risk/patch-resistant-rufroot-flaw-malicious-ai-agent-swarms" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
 <div class="day-section">
   <div class="day-sec-label">&#127981; FinServ threats</div>
   
@@ -5692,11 +5705,6 @@
 <div class="day-section">
   <div class="day-sec-label">&#129302; AI / ML security</div>
   
-<div class="day-threat-item">
-  <div class="day-threat-title">Patch-Resistant 'RufRoot' Flaw Enables Malicious AI Agent Swarms</div>
-  <div class="day-threat-body">— A vulnerability in AI hosting platform Ruflo allows unauthenticated attackers to take over the system and corrupt memory in a way that persists after patching, meaning deployed AI agents could remain compromised even after remediation attempts</div>
-  <a href="https://www.darkreading.com/cyber-risk/patch-resistant-rufroot-flaw-malicious-ai-agent-swarms" target="_blank" class="day-threat-link">&#128279; View source</a>
-</div>
 <div class="day-threat-item">
   <div class="day-threat-title">MITRE ATLAS Case Study: MCP Server Used to Exfiltrate AI Agent Credentials via Cursor</div>
   <div class="day-threat-body">— A proof-of-concept attack showed that a malicious MCP server can inject prompts into the Cursor AI coding assistant, causing it to execute shell commands and exfiltrate agent configuration files containing credentials</div>
@@ -28671,6 +28679,7 @@
     <div class="day-card-pills">
       <span class="ait-level" style="background:#e8823a">L3 Semi-autonomous</span>
       <span class="day-pill pill-purple">Unattributed</span>
+      
       <span class="ait-dim">2026-10-07</span>
     </div>
     <span class="day-card-chevron">&#9660;</span>
@@ -28765,6 +28774,7 @@ tags:
     <div class="day-card-pills">
       <span class="ait-level" style="background:#ffb072">L4 Fully autonomous</span>
       <span class="day-pill pill-purple">JadePuffer</span>
+      
       <span class="ait-dim">2026-07-07</span>
     </div>
     <span class="day-card-chevron">&#9660;</span>
@@ -28857,6 +28867,7 @@ tags:
     <div class="day-card-pills">
       <span class="ait-level" style="background:#e8823a">L3 Semi-autonomous</span>
       <span class="day-pill pill-purple">Unattributed</span>
+      
       <span class="ait-dim">2026-09-24</span>
     </div>
     <span class="day-card-chevron">&#9660;</span>
@@ -28958,6 +28969,7 @@ tags:
     <div class="day-card-pills">
       <span class="ait-level" style="background:#e8823a">L3 Semi-autonomous</span>
       <span class="day-pill pill-purple">Unattributed</span>
+      
       <span class="ait-dim">2026-09-17</span>
     </div>
     <span class="day-card-chevron">&#9660;</span>
@@ -29042,6 +29054,7 @@ tags:
     <div class="day-card-pills">
       <span class="ait-level" style="background:#8a5229">L1 AI-assisted</span>
       <span class="day-pill pill-purple">Unattributed</span>
+      
       <span class="ait-dim">2026-08-21</span>
     </div>
     <span class="day-card-chevron">&#9660;</span>
@@ -29135,6 +29148,7 @@ tags:
     <div class="day-card-pills">
       <span class="ait-level" style="background:#e8823a">L3 Semi-autonomous</span>
       <span class="day-pill pill-purple">Unattributed</span>
+      
       <span class="ait-dim">2026-05-14</span>
     </div>
     <span class="day-card-chevron">&#9660;</span>
@@ -29228,6 +29242,7 @@ tags:
     <div class="day-card-pills">
       <span class="ait-level" style="background:#8a5229">L1 AI-assisted</span>
       <span class="day-pill pill-purple">Unattributed</span>
+      
       <span class="ait-dim">2026-05-12</span>
     </div>
     <span class="day-card-chevron">&#9660;</span>
@@ -39657,7 +39672,7 @@ This is a workaround attempt—repositioning the same attack request through:
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 08 October 2026 13:03 UTC &middot;
+  Built automatically by Vigil &middot; 08 October 2026 15:04 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
