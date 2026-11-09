@@ -448,7 +448,7 @@
     </div>
   </a>
   <div class="header-meta">
-    <div class="pulse"><div class="pulse-dot"></div>Updated: 09 November 2026 15:30 UTC</div>
+    <div class="pulse"><div class="pulse-dot"></div>Updated: 09 November 2026 15:34 UTC</div>
     <span style="color:var(--border)">|</span>
     <span>20 sources active</span>
   </div>
@@ -479,12 +479,12 @@
     </div>
     <div class="stat-card">
       <div class="stat-label">Intel Entries</div>
-      <div class="stat-value yellow">2073</div>
+      <div class="stat-value yellow">2092</div>
       <div class="stat-sub">auto-built from 20 sources</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Glossary Terms</div>
-      <div class="stat-value purple">1483</div>
+      <div class="stat-value purple">1491</div>
       <div class="stat-sub">auto-built from intel</div>
     </div>
   </div>
@@ -506,7 +506,11 @@
   </div>
   <div class="pipe-stage">
     <div class="pipe-stage-name">&#9878;&#65039; Regulatory & Compliance</div>
-    <div class="pipe-stage-count purple">4</div>
+    <div class="pipe-stage-count purple">2</div>
+  </div>
+  <div class="pipe-stage">
+    <div class="pipe-stage-name">&#127760; Nation-State & Geopolitical</div>
+    <div class="pipe-stage-count">2</div>
   </div>
   <div class="pipe-stage">
     <div class="pipe-stage-name">&#128202; Total Items</div>
@@ -514,6 +518,147 @@
   </div>
 </div>
 <div class="day-card open">
+  <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="day-card-date">09 November 2026</div>
+    <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span><span class="day-pill pill-purple">2 Reg</span><span class="day-pill pill-green">2 Geo</span></div>
+    <span class="day-card-chevron">&#9660;</span>
+  </div>
+  <div class="day-card-body">
+    
+<div class="day-section">
+  <div class="day-sec-label">Executive summary</div>
+  <div class="day-sec-text"><p style="margin:0 0 8px 0">APT29 is actively conducting watering-hole attacks against mobile users at scale, representing the most pressing threat for UK financial services staff accessing sites from corporate or personal devices. On the AI/ML front, MITRE ATLAS has published a case study demonstrating how a malicious MCP server can silently exfiltrate AI agent credentials via prompt injection in Cursor. Several high-severity IBM product vulnerabilities with public exploits also demand immediate patching attention.
+
+---</p></div>
+</div>
+    
+<div class="day-section">
+  <div class="day-sec-label">&#127981; FinServ threats</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA Consumer Contracts Fairness</div>
+  <div class="day-threat-body">— The FCA is actively challenging firms whose consumer contract terms fail the Consumer Rights Act 2015, with direct intervention powers that could result in enforcement action against UK FinServ firms</div>
+  <a href="https://www.fca.org.uk/news/blogs/not-so-fine-print-making-consumer-contracts-fair" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Fingerprint &amp; Biometric Fraud</div>
+  <div class="day-threat-body">— Dark-web availability of cloned fingerprints and identity documents is undermining biometric verification, a growing concern for UK firms relying on these controls for onboarding</div>
+  <a href="https://www.finextra.com/videoarticle/3526/fingerprints-for-a-fee-how-fraud-is-creating-a-headache-for-verification" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Verus Financial Services FSCS Claims</div>
+  <div class="day-threat-body">— The FCA is directing former Verus customers to the FSCS, a reminder that adviser firm failures carry residual compensation liability risk for the broader sector</div>
+  <a href="https://www.fca.org.uk/news/news-stories/fca-encourages-former-verus-financial-services-limited-customers-check-if-they-can-claim-fscs" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Disguised Remuneration Loan Demands</div>
+  <div class="day-threat-body">— The FCA has flagged loan repayment demands linked to historic disguised remuneration schemes, posing reputational and regulatory risk for any firm involved in such arrangements</div>
+  <a href="https://www.fca.org.uk/news/statements/demands-disguised-remuneration-scheme-loan-repayments" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">TrickBot (MITRE ATT&amp;CK S0266)</div>
+  <div class="day-threat-body">— TrickBot, originally built to target banking sites across Europe and North America, remains a reference threat for financial sector defenders given its ongoing use in ransomware pre-positioning</div>
+  <a href="https://attack.mitre.org/software/S0266" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#129302; AI / ML security</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">ATLAS Case Study: Data Exfiltration via MCP Server in Cursor</div>
+  <div class="day-threat-body">— A proof-of-concept shows a malicious MCP server can inject prompts into Cursor that cause it to execute shell commands and exfiltrate AI agent configuration files containing credentials, a direct risk for any developer using agentic coding tools</div>
+  <a href="https://atlas.mitre.org/studies/AML.CS0045" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">ATLAS: LLM Jailbreak (AML.T0054)</div>
+  <div class="day-threat-body">— Adversaries can override LLM safety guardrails via adversarial prompting or weight modification to extract sensitive data or generate harmful content, relevant for UK firms deploying customer-facing or internal LLMs</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">ATLAS: AI Agent Configuration Exposure (AML.T0002.002)</div>
+  <div class="day-threat-body">— Publicly accessible AI agent configuration files can expose tool credentials and system prompts, giving attackers a foothold into enterprise AI deployments</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0002.002" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">ATLAS: Agentic Resource Consumption (AML.T0034.002)</div>
+  <div class="day-threat-body">— Attackers can abuse prompt injection to coerce AI agents into excessive API calls, draining budgets and degrading service availability, a risk for firms with metered AI tooling</div>
+  <a href="https://atlas.mitre.org/techniques/AML.T0034.002" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">GHSA-hf3c-wxg2-49q9: vLLM Denial of Service via xgrammar Cache Abuse</div>
+  <div class="day-threat-body">— An authenticated attacker can crash vLLM inference servers by abusing the xgrammar cache, threatening availability of any AI inference infrastructure running unfixed versions below 0.8.4</div>
+  <a href="https://osv.dev/vulnerability/GHSA-hf3c-wxg2-49q9" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#128275; Vulnerabilities</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-117545 (CVSS 8.8)</div>
+  <div class="day-threat-body">— IBM webMethods Integration Server 12.1 allows a remote authenticated attacker to bypass security restrictions due to improper authentication, critical for firms using this middleware for financial data flows</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-117545" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-97677 (CVSS 8.1)</div>
+  <div class="day-threat-body">— IBM Langflow OSS 1.0.0–1.12.2 allows an authenticated flow author to write arbitrary files and read secrets including credentials and database files, a serious risk for teams using Langflow to build AI workflows</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-97677" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-19133 (CVSS 8.1)</div>
+  <div class="day-threat-body">— IBM Storage TS4500 Library allows a remote authenticated attacker to perform account takeover due to improper authorisation, relevant for firms using tape storage in backup or archival environments</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19133" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-118904 (CVSS 8.1)</div>
+  <div class="day-threat-body">— A second IBM webMethods Integration Server 12.1 flaw allows remote authenticated attackers to bypass security restrictions, compounding the risk noted in CVE-2026-117545</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118904" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">CVE-2026-18893 (CVSS 7.1)</div>
+  <div class="day-threat-body">— IBM CockroachDB PostgreSQL for IBM VPC is vulnerable to privilege escalation via user-defined functions, posing a risk to data integrity in cloud database deployments</div>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-18893" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#9878;&#65039; Regulatory & Compliance</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA (Market Integrity in a Digital Age)</div>
+  <div class="day-threat-body">— FCA CEO Nikhil Rathi's Mansion House speech signals continued regulatory focus on digital market integrity, putting firms on notice that technology-driven market practices face heightened scrutiny</div>
+  <a href="https://www.fca.org.uk/news/speeches/market-integrity-digital-age" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">FCA (Defence SME Banking Access)</div>
+  <div class="day-threat-body">— The FCA is examining barriers to banking services for defence-sector SMEs, which may translate into new guidance or expectations for UK banks serving this segment</div>
+  <a href="https://www.fca.org.uk/news/blogs/defence-smes-need-banking-services-work" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+<div class="day-section">
+  <div class="day-sec-label">&#127760; Nation-State & Geopolitical</div>
+  
+<div class="day-threat-item">
+  <div class="day-threat-title">APT29 (Cozy Bear)</div>
+  <div class="day-threat-body">— The Russian state-sponsored group is compromising websites to fingerprint and selectively harvest data from mobile users, with a focus on European targets including politicians and law enforcement, raising the risk of collateral compromise for UK financial sector staff browsing affected sites</div>
+  <a href="https://www.darkreading.com/mobile-security/apt29-watering-holes-target-mobile-users" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+<div class="day-threat-item">
+  <div class="day-threat-title">Pro-Kremlin Hacktivists</div>
+  <div class="day-threat-body">— Pro-Kremlin actors are doxing EU politicians and law enforcement personnel, a campaign that may expand to target financial sector figures or firms seen as supporting sanctions enforcement</div>
+  <a href="https://risky.biz/RBNEWS631/" target="_blank" class="day-threat-link">&#128279; View source</a>
+</div>
+</div>
+    
+<div class="day-section">
+  <div class="analyst-note-box">
+    <div class="analyst-note-label">&#9889; Analyst note</div>
+    <div class="analyst-note-text"><p style="margin:0 0 8px 0">APT29&#x27;s active watering-hole campaign targeting mobile browsers means your staff are potentially one visit to a compromised site away from device fingerprinting and credential harvesting. Today, push an urgent reminder to your user base to ensure mobile browsers are fully patched and to avoid accessing sensitive firm resources from personal mobile devices where MDM controls are absent; additionally, review whether your IBM webMethods Integration Server 12.1 instances are exposed and prioritise patching CVE-2026-117545 and CVE-2026-118904 given their CVSS 8.
+
+---</p></div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="day-card">
   <div class="day-card-header" onclick="this.parentElement.classList.toggle('open')">
     <div class="day-card-date">06 November 2026</div>
     <div class="day-card-pills"><span class="day-pill pill-red">5 FinServ</span><span class="day-pill pill-cyan">5 AI/ML</span><span class="day-pill pill-yellow">5 Vuln</span><span class="day-pill pill-purple">4 Reg</span></div>
@@ -15284,6 +15429,125 @@
 
   <div id="tab-hot" class="tab">
     
+<div class="ht-day-group">
+  <div class="ht-day-header">
+    <span class="ht-day-date">09 November 2026</span>
+    <span class="ht-day-count">5 stories</span>
+  </div>
+  
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--red)">#1</div>
+    <div class="ht-body">
+      <div class="ht-headline">MITRE ATLAS Formalises LLM Jailbreak as Catalogued Adversarial Technique</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0054" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-purple">AI/ML Security</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">UK financial services firms deploying LLM-based tools (chatbots, document summarisation, fraud detection assistants) face a concrete, catalogued threat: adversaries deliberately bypassing safety guardrails to extract sensitive data or generate harmful outputs. The MITRE ATLAS formalisation means this is no longer a theoretical risk — it has a technique ID (AML.T0054) and mapped tactics, making it assessable within existing threat modelling frameworks. Regulators such as the FCA increasingly expect firms to demonstrate AI risk governance, and an unmitigated jailbreak pathway in a customer-facing LLM could constitute a control failure under the Consumer Duty or operational resilience requirements.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors use adversarial prompting or direct model weight manipulation to override alignment and safety mechanisms, then exploit the jailbroken model to leak system prompts, exfiltrate data, or generate malicious content — all from within what appears to be a legitimate AI interaction.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Map your deployed LLMs against AML.T0054 today: implement prompt injection detection, enforce output filtering at the API layer, and add jailbreak simulation to your red-team test plan before next quarter's AI risk review.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--yellow)">#2</div>
+    <div class="ht-body">
+      <div class="ht-headline">Threat Actors Leveraging Open-Source and Commercial LLMs as Operational Attack Tools</div>
+      <div class="ht-meta">
+        <a href="https://atlas.mitre.org/techniques/AML.T0016.002" target="_blank" class="ht-source-link">&#128279; MITRE ATLAS</a>
+        <span class="tag tag-orange">AI-Driven Attack</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">Adversaries are actively acquiring and self-hosting generative AI models (via Ollama, vLLM, or cloud infrastructure) to industrialise phishing, malware generation, and deepfake creation — all high-relevance attack vectors for UK financial services. Locally-hosted open-source models remove API logging and content-moderation safety nets, lowering the barrier to producing highly convincing fraud lures targeting retail banking customers or staff. This directly elevates the threat to Business Email Compromise (BEC) and authorised push payment (APP) fraud, areas already under intense FCA and PSR scrutiny.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Threat actors obtain open-source LLMs and serve them locally or via cloud infrastructure, using them without vendor-imposed guardrails to generate phishing content, craft malicious commands, produce deepfakes, and develop malware — operationalising AI across the full attack chain.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Update your phishing simulation programme to include AI-generated lures and brief your SOC on indicators that BEC attempts may be LLM-crafted (unusual linguistic polish, high personalisation volume); also review your APP fraud controls in light of AI-enhanced social engineering.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--cyan)">#3</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA Signals Aggressive Use of Consumer Rights Powers to Police Financial Contract Fairness</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/blogs/not-so-fine-print-making-consumer-contracts-fair" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">The FCA is explicitly invoking Consumer Rights Act 2015 powers — beyond its usual financial services toolkit — to challenge unfair or opaque contract terms, signalling a broader regulatory reach that compliance and legal teams must account for. For security engineers, this is relevant where product terms govern data handling, AI-driven decisioning disclosures, or automated processing consents, all of which may face FCA scrutiny if deemed unclear. Firms whose AI or ML systems make customer-impacting decisions must ensure those processes are accurately and fairly described in consumer-facing documentation.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Review any consumer-facing terms that describe automated or AI-driven processes (e.g., credit decisioning, fraud flagging, personalisation) to ensure they meet CRA 2015 transparency standards before the FCA's Consumer Contracts team identifies them as a target.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--purple)">#4</div>
+    <div class="ht-body">
+      <div class="ht-headline">FCA CEO Sets Out Market Integrity Expectations in the Digital Age at Mansion House</div>
+      <div class="ht-meta">
+        <a href="https://www.fca.org.uk/news/speeches/market-integrity-digital-age" target="_blank" class="ht-source-link">&#128279; FCA News</a>
+        <span class="tag tag-cyan">Financial Services</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">A Mansion House speech by the FCA CEO signals near-term regulatory direction and is closely watched by compliance and risk functions across UK financial services. References to digital-age market integrity indicate the FCA is actively developing its thinking on how technology — including AI — intersects with market conduct obligations. Security and AI risk teams should treat this as an early indicator of forthcoming guidance or supervisory focus areas, particularly around algorithmic trading, AI-assisted advice, and digital asset markets.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Review the full speech text and flag to your CISO and Chief Compliance Officer any digital or AI-related themes that may presage new FCA guidance, so your AI governance programme can be positioned ahead of regulatory expectations.
+    </div>
+    </div>
+  </div>
+</div>
+<div class="ht-card">
+  <div class="ht-card-inner">
+    <div class="ht-rank" style="color:var(--green)">#5</div>
+    <div class="ht-body">
+      <div class="ht-headline">Publicly Disclosed SQL Injection CVE Affects Airline Reservation System — Limited Direct FinServ Relevance</div>
+      <div class="ht-meta">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124581" target="_blank" class="ht-source-link">&#128279; NVD / NIST</a>
+        <span class="tag tag-yellow">Vulnerability</span>
+      </div>
+      <div class="ht-section-title">WHY IT MATTERS</div>
+      <p class="ht-text">This CVSS 7.3 SQL injection vulnerability in itsourcecode Airline Reservation System 1.0 affects a niche open-source application and is unlikely to be directly deployed in UK financial services infrastructure. However, the public exploit disclosure is a reminder that SQL injection remains a prevalent and exploitable class of vulnerability, relevant wherever legacy or third-party web applications are present in a firm's supply chain or vendor estate. Security teams should verify no analogous open-source or low-governance components exist in internal tooling or partner integrations.</p>
+      
+    <div class="ht-section-title">&#129302; AI / ML THREAT ACTOR USE</div>
+    <p class="ht-ai-text">Not applicable.</p>
+      
+    <div class="ht-takeaway">
+      <span class="ht-takeaway-label">KEY TAKEAWAY</span>
+      Run a targeted query in your asset inventory and SBOM (Software Bill of Materials) to confirm no itsourcecode components or similarly ungoverned open-source web applications are present in your environment or third-party supplier stack.
+
+---
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="ht-day-group">
   <div class="ht-day-header">
     <span class="ht-day-date">06 November 2026</span>
@@ -35665,7 +35929,7 @@ tags:
   </div>
 
   <div id="tab-research" class="tab">
-    <div class="pipeline-row ait-tiles"><div class="pipe-stage"><div class="pipe-stage-name">&#128196; Papers tracked</div><div class="pipe-stage-count cyan" style="font-size:22px">209</div></div><div class="pipe-stage"><div class="pipe-stage-name">&#128197; New this week</div><div class="pipe-stage-count cyan" style="font-size:22px">34</div></div><div class="pipe-stage"><div class="pipe-stage-name">&#128064; Watch list families</div><div class="pipe-stage-count orange" style="font-size:22px">7</div></div><div class="pipe-stage"><div class="pipe-stage-name">&#11088; High-relevance (30d)</div><div class="pipe-stage-count orange" style="font-size:22px">60</div></div><div class="pipe-stage"><div class="pipe-stage-name">&#128336; Monitoring since</div><div class="pipe-stage-count " style="font-size:16px">2026-05-04</div></div></div>
+    <div class="pipeline-row ait-tiles"><div class="pipe-stage"><div class="pipe-stage-name">&#128196; Papers tracked</div><div class="pipe-stage-count cyan" style="font-size:22px">211</div></div><div class="pipe-stage"><div class="pipe-stage-name">&#128197; New this week</div><div class="pipe-stage-count cyan" style="font-size:22px">36</div></div><div class="pipe-stage"><div class="pipe-stage-name">&#128064; Watch list families</div><div class="pipe-stage-count orange" style="font-size:22px">7</div></div><div class="pipe-stage"><div class="pipe-stage-name">&#11088; High-relevance (30d)</div><div class="pipe-stage-count orange" style="font-size:22px">60</div></div><div class="pipe-stage"><div class="pipe-stage-name">&#128336; Monitoring since</div><div class="pipe-stage-count " style="font-size:16px">2026-05-04</div></div></div>
 <div class="rt-section"><div class="rt-section-header open" onclick="rtToggle(this)">
   <span class="rt-section-title">Watch list: researched, not yet seen in the wild</span></div>
   <div class="rt-section-body" style="display:block"><div class="ait-intro">Technique families with Claude-verified AI-security papers in the last 90 days but no real-world sighting in Vigil's case files or digests yet. These are the techniques to get ahead of.</div><div class="ait-actors">
@@ -35713,10 +35977,16 @@ tags:
 </div></div></div></div>
 <div class="rt-section"><div class="rt-section-header open" onclick="rtToggle(this)">
   <span class="rt-section-title">Paper → in the wild</span></div>
-  <div class="rt-section-body" style="display:block"><div class="ait-intro">How long research led real-world use for each technique family.</div><div class="ait-hm-wrap"><table class="ait-sensor rr-table"><thead><tr><th>Technique family</th><th>First paper</th><th>First seen in the wild</th><th>Research lead</th><th>Papers (30d)</th></tr></thead><tbody><tr><td>AI-generated &amp; LLM-powered malware</td><td><a href="https://arxiv.org/abs/1803.04967" target="_blank" data-tip="Recurrent Neural Network Attention Mechanisms for Interpretable System Log Anomaly Detection">2018-03-13</a></td><td><a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" data-tip="JadePuffer LLM-Driven Ransomware &amp; Azure Tenant Destruction">2026-07-07</a> <span class="ait-dim">case file</span></td><td class="rr-lead"><div class="rr-bar" data-tip="Research came first by at most 3038 days"><span style="width:100%"></span></div><span>≤ 8y 4m</span></td><td class="rr-num">0</td></tr><tr><td>AI phishing, deepfakes &amp; social engineering</td><td><a href="https://arxiv.org/abs/2106.05256" target="_blank" data-tip="URLTran: Improving Phishing URL Detection Using Transformers">2021-06-09</a></td><td><a href="https://www.finextra.com/newsarticle/48254/asic-warns-of-surge-in-deepfake-scams" target="_blank" data-tip="Deepfake investment scam surge">2026-08-31</a> <span class="ait-dim">digest</span></td><td class="rr-lead"><div class="rr-bar" data-tip="Research came first by at most 1909 days"><span style="width:63%"></span></div><span>≤ 5y 3m</span></td><td class="rr-num">7</td></tr><tr><td>AI-assisted vulnerability discovery &amp; exploit generation</td><td><a href="https://arxiv.org/abs/2110.08395" target="_blank" data-tip="DS-TOD: Efficient Domain Specialization for Task Oriented Dialog">2021-10-15</a></td><td><a href="https://www.bleepingcomputer.com/news/security/google-hackers-used-ai-to-develop-zero-day-exploit-for-web-admin-tool/" target="_blank" data-tip="AI-Generated Zero-Day Exploit for Web Admin Tool">2026-05-12</a> <span class="ait-dim">case file</span></td><td class="rr-lead"><div class="rr-bar" data-tip="Research came first by at most 1670 days"><span style="width:55%"></span></div><span>≤ 4y 7m</span></td><td class="rr-num">15</td></tr><tr><td>Jailbreaks (incl. multi-turn / crescendo)</td><td><a href="https://arxiv.org/abs/2304.11082" target="_blank" data-tip="Fundamental Limitations of Alignment in Large Language Models">2023-04-19</a></td><td><a href="https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack" target="_blank" data-tip="Chinese state-sponsored AI-orchestrated cyber espionage via Claude Code">2026-10-09</a> <span class="ait-dim">case file</span></td><td class="rr-lead"><div class="rr-bar" data-tip="Research came first by at most 1269 days"><span style="width:42%"></span></div><span>≤ 3y 6m</span></td><td class="rr-num">32</td></tr><tr><td>Agent &amp; tool hijacking (MCP, tool poisoning)</td><td><a href="https://arxiv.org/abs/2306.02781" target="_blank" data-tip="An Automated Survey of Generative Artificial Intelligence: Large Language Models, Architectures, Protocols, and Applications">2023-06-05</a></td><td><a href="https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack" target="_blank" data-tip="Chinese state-sponsored AI-orchestrated cyber espionage via Claude Code">2026-10-09</a> <span class="ait-dim">case file</span></td><td class="rr-lead"><div class="rr-bar" data-tip="Research came first by at most 1222 days"><span style="width:40%"></span></div><span>≤ 3y 4m</span></td><td class="rr-num">15</td></tr><tr><td>Autonomous offensive agents (hacking, exploitation)</td><td><a href="https://arxiv.org/abs/2310.11409" target="_blank" data-tip="LLMs as Hackers: Autonomous Linux Privilege Escalation Attacks">2023-10-17</a></td><td><a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" data-tip="JadePuffer LLM-Driven Ransomware &amp; Azure Tenant Destruction">2026-07-07</a> <span class="ait-dim">case file</span></td><td class="rr-lead"><div class="rr-bar" data-tip="Research came first by at most 994 days"><span style="width:33%"></span></div><span>≤ 2y 9m</span></td><td class="rr-num">3</td></tr><tr><td>Prompt injection (direct &amp; indirect)</td><td><a href="https://arxiv.org/abs/1709.10475" target="_blank" data-tip="Hydrogen-rich supernovae beyond the neutrino-driven core-collapse paradigm">2017-09-29</a></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">45</td></tr><tr><td>RAG &amp; retrieval poisoning</td><td><a href="https://arxiv.org/abs/2402.08416" target="_blank" data-tip="Pandora: Jailbreak GPTs by Retrieval Augmented Generation Poisoning">2024-02-13</a></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">6</td></tr><tr><td>Training-data poisoning &amp; backdoors</td><td><a href="https://arxiv.org/abs/2001.04935" target="_blank" data-tip="Humpty Dumpty: Controlling Word Meanings via Corpus Poisoning">2020-01-14</a></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">22</td></tr><tr><td>Model extraction &amp; distillation abuse</td><td><a href="https://arxiv.org/abs/1801.06271" target="_blank" data-tip="Mining Android App Usages for Generating Actionable GUI-based Execution Scenarios">2018-01-19</a></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">0</td></tr><tr><td>Training-data leakage &amp; membership inference</td><td><a href="https://arxiv.org/abs/2104.08305" target="_blank" data-tip="Membership Inference Attack Susceptibility of Clinical Language Models">2021-04-16</a></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">8</td></tr><tr><td>AI supply chain (malicious models &amp; packages)</td><td><a href="https://arxiv.org/abs/1806.05768" target="_blank" data-tip="Hardware Trojan Attacks on Neural Networks">2018-06-14</a></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">4</td></tr><tr><td>Adversarial evasion of ML models</td><td><a href="https://arxiv.org/abs/1906.02896" target="_blank" data-tip="Adversarial Explanations for Understanding Image Classification Decisions and Improved Neural Network Robustness">2019-06-07</a></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">12</td></tr></tbody></table></div><div class="ait-note">First paper = earliest arXiv paper matching the family's keywords (click to check it). First seen in the wild = earliest real-world case file or digest item Vigil has recorded — Vigil has monitored since 2026-05-04, so the true real-world date may be earlier and the research lead is at most the value shown.</div></div></div>
+  <div class="rt-section-body" style="display:block"><div class="ait-intro">How long research led real-world use for each technique family.</div><div class="ait-hm-wrap"><table class="ait-sensor rr-table"><thead><tr><th>Technique family</th><th>First paper</th><th>First seen in the wild</th><th>Research lead</th><th>Papers (30d)</th></tr></thead><tbody><tr><td>AI-generated &amp; LLM-powered malware</td><td><a href="https://arxiv.org/abs/1803.04967" target="_blank" data-tip="Recurrent Neural Network Attention Mechanisms for Interpretable System Log Anomaly Detection">2018-03-13</a></td><td><a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" data-tip="JadePuffer LLM-Driven Ransomware &amp; Azure Tenant Destruction">2026-07-07</a> <span class="ait-dim">case file</span></td><td class="rr-lead"><div class="rr-bar" data-tip="Research came first by at most 3038 days"><span style="width:100%"></span></div><span>≤ 8y 4m</span></td><td class="rr-num">0</td></tr><tr><td>AI phishing, deepfakes &amp; social engineering</td><td><a href="https://arxiv.org/abs/2106.05256" target="_blank" data-tip="URLTran: Improving Phishing URL Detection Using Transformers">2021-06-09</a></td><td><a href="https://www.finextra.com/newsarticle/48254/asic-warns-of-surge-in-deepfake-scams" target="_blank" data-tip="Deepfake investment scam surge">2026-08-31</a> <span class="ait-dim">digest</span></td><td class="rr-lead"><div class="rr-bar" data-tip="Research came first by at most 1909 days"><span style="width:63%"></span></div><span>≤ 5y 3m</span></td><td class="rr-num">7</td></tr><tr><td>AI-assisted vulnerability discovery &amp; exploit generation</td><td><a href="https://arxiv.org/abs/2110.08395" target="_blank" data-tip="DS-TOD: Efficient Domain Specialization for Task Oriented Dialog">2021-10-15</a></td><td><a href="https://www.bleepingcomputer.com/news/security/google-hackers-used-ai-to-develop-zero-day-exploit-for-web-admin-tool/" target="_blank" data-tip="AI-Generated Zero-Day Exploit for Web Admin Tool">2026-05-12</a> <span class="ait-dim">case file</span></td><td class="rr-lead"><div class="rr-bar" data-tip="Research came first by at most 1670 days"><span style="width:55%"></span></div><span>≤ 4y 7m</span></td><td class="rr-num">15</td></tr><tr><td>Jailbreaks (incl. multi-turn / crescendo)</td><td><a href="https://arxiv.org/abs/2304.11082" target="_blank" data-tip="Fundamental Limitations of Alignment in Large Language Models">2023-04-19</a></td><td><a href="https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack" target="_blank" data-tip="Chinese state-sponsored AI-orchestrated cyber espionage via Claude Code">2026-10-09</a> <span class="ait-dim">case file</span></td><td class="rr-lead"><div class="rr-bar" data-tip="Research came first by at most 1269 days"><span style="width:42%"></span></div><span>≤ 3y 6m</span></td><td class="rr-num">33</td></tr><tr><td>Agent &amp; tool hijacking (MCP, tool poisoning)</td><td><a href="https://arxiv.org/abs/2306.02781" target="_blank" data-tip="An Automated Survey of Generative Artificial Intelligence: Large Language Models, Architectures, Protocols, and Applications">2023-06-05</a></td><td><a href="https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack" target="_blank" data-tip="Chinese state-sponsored AI-orchestrated cyber espionage via Claude Code">2026-10-09</a> <span class="ait-dim">case file</span></td><td class="rr-lead"><div class="rr-bar" data-tip="Research came first by at most 1222 days"><span style="width:40%"></span></div><span>≤ 3y 4m</span></td><td class="rr-num">15</td></tr><tr><td>Autonomous offensive agents (hacking, exploitation)</td><td><a href="https://arxiv.org/abs/2310.11409" target="_blank" data-tip="LLMs as Hackers: Autonomous Linux Privilege Escalation Attacks">2023-10-17</a></td><td><a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack" target="_blank" data-tip="JadePuffer LLM-Driven Ransomware &amp; Azure Tenant Destruction">2026-07-07</a> <span class="ait-dim">case file</span></td><td class="rr-lead"><div class="rr-bar" data-tip="Research came first by at most 994 days"><span style="width:33%"></span></div><span>≤ 2y 9m</span></td><td class="rr-num">3</td></tr><tr><td>Prompt injection (direct &amp; indirect)</td><td><a href="https://arxiv.org/abs/1709.10475" target="_blank" data-tip="Hydrogen-rich supernovae beyond the neutrino-driven core-collapse paradigm">2017-09-29</a></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">45</td></tr><tr><td>RAG &amp; retrieval poisoning</td><td><a href="https://arxiv.org/abs/2402.08416" target="_blank" data-tip="Pandora: Jailbreak GPTs by Retrieval Augmented Generation Poisoning">2024-02-13</a></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">6</td></tr><tr><td>Training-data poisoning &amp; backdoors</td><td><a href="https://arxiv.org/abs/2001.04935" target="_blank" data-tip="Humpty Dumpty: Controlling Word Meanings via Corpus Poisoning">2020-01-14</a></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">22</td></tr><tr><td>Model extraction &amp; distillation abuse</td><td><a href="https://arxiv.org/abs/1801.06271" target="_blank" data-tip="Mining Android App Usages for Generating Actionable GUI-based Execution Scenarios">2018-01-19</a></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">0</td></tr><tr><td>Training-data leakage &amp; membership inference</td><td><a href="https://arxiv.org/abs/2104.08305" target="_blank" data-tip="Membership Inference Attack Susceptibility of Clinical Language Models">2021-04-16</a></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">8</td></tr><tr><td>AI supply chain (malicious models &amp; packages)</td><td><a href="https://arxiv.org/abs/1806.05768" target="_blank" data-tip="Hardware Trojan Attacks on Neural Networks">2018-06-14</a></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">4</td></tr><tr><td>Adversarial evasion of ML models</td><td><a href="https://arxiv.org/abs/1906.02896" target="_blank" data-tip="Adversarial Explanations for Understanding Image Classification Decisions and Improved Neural Network Robustness">2019-06-07</a></td><td><span class="day-pill pill-yellow">Not yet seen</span></td><td class="rr-lead"><span></span></td><td class="rr-num">12</td></tr></tbody></table></div><div class="ait-note">First paper = earliest arXiv paper matching the family's keywords (click to check it). First seen in the wild = earliest real-world case file or digest item Vigil has recorded — Vigil has monitored since 2026-05-04, so the true real-world date may be earlier and the research lead is at most the value shown.</div></div></div>
 <div class="rt-section"><div class="rt-section-header open" onclick="rtToggle(this)">
   <span class="rt-section-title">Latest papers</span></div>
   <div class="rt-section-body" style="display:block"><div class="ait-intro">New AI-security papers from arXiv (last 45 days). The most relevant are classified daily by Claude; the rest are keyword-tagged. Click a chip to filter.</div><div class="rr-filters"><span class="ait-dim">Family:</span> <button class="rr-chip active" data-ffam="">All</button><button class="rr-chip" data-ffam="social-engineering">AI phishing, deepfakes &amp; social engineering</button><button class="rr-chip" data-ffam="ai-supply-chain">AI supply chain (malicious models &amp; packages)</button><button class="rr-chip" data-ffam="ai-exploit-dev">AI-assisted vulnerability discovery &amp; exploit generation</button><button class="rr-chip" data-ffam="adversarial-evasion">Adversarial evasion of ML models</button><button class="rr-chip" data-ffam="agent-tool-hijack">Agent &amp; tool hijacking (MCP, tool poisoning)</button><button class="rr-chip" data-ffam="autonomous-offence">Autonomous offensive agents (hacking, exploitation)</button><button class="rr-chip" data-ffam="jailbreak">Jailbreaks (incl. multi-turn / crescendo)</button><button class="rr-chip" data-ffam="prompt-injection">Prompt injection (direct &amp; indirect)</button><button class="rr-chip" data-ffam="rag-poisoning">RAG &amp; retrieval poisoning</button><button class="rr-chip" data-ffam="privacy-leakage">Training-data leakage &amp; membership inference</button><button class="rr-chip" data-ffam="data-poisoning-backdoor">Training-data poisoning &amp; backdoors</button></div><div class="rr-filters"><span class="ait-dim">Direction:</span> <button class="rr-chip active" data-fdir="">All</button><button class="rr-chip" data-fdir="attack_on_ai">Attack on AI</button><button class="rr-chip" data-fdir="ai_as_attacker">AI as attacker</button><button class="rr-chip" data-fdir="defence">Defence</button><button class="rr-chip" data-fdir="benchmark">Benchmark</button></div><div id="rr-papers">
+<div class="rr-paper" data-fam="jailbreak" data-dir="defence">
+  <div class="rr-paper-top"><a href="https://arxiv.org/abs/2611.09734" target="_blank" class="rr-title">GuardrailAgent: An Agentic Framework for Jailbreak Defense</a></div>
+  <div class="rr-meta"><span class="day-pill pill-purple">Jailbreaks (incl. multi-turn / crescendo)</span><span class="rr-dir rr-dir-def">Defence</span><span class="rr-rel rr-rel-2" data-tip="Banks deploying LLMs need robust jailbreak defences; this adaptive approach is directly applicable but requires evaluation before adoption.">●●○ Medium</span>
+    <span class="ait-dim">2026-11-06 · cs.CR · Tianze Chang, Junjie Chu, Yixin Wu et al.</span></div>
+  <div class="day-sec-text">GuardrailAgent proposes a multi-agent adaptive framework that continuously updates a knowledge base of jailbreak characteristics to achieve ~94% detection of both known and unseen jailbreak attacks.</div><div class="ait-dim">Why it matters: Banks deploying LLMs need robust jailbreak defences; this adaptive approach is directly applicable but requires evaluation before adoption.</div><div class="ait-chips"><a class="ta-tool-chip" target="_blank" href="https://atlas.mitre.org/techniques/AML.T0054">AML.T0054</a></div>
+</div>
 <div class="rr-paper" data-fam="social-engineering" data-dir="defence">
   <div class="rr-paper-top"><a href="https://arxiv.org/abs/2611.08170" target="_blank" class="rr-title">The Promise of Strategic Agentic Scambaiting</a></div>
   <div class="rr-meta"><span class="day-pill pill-purple">AI phishing, deepfakes &amp; social engineering</span><span class="rr-dir rr-dir-def">Defence</span><span class="rr-rel rr-rel-3" data-tip="AI-powered scams targeting bank customers and mule accounts are a direct operational threat; agentic scambaiting could become a defensive tool for UK banks.">●●● High</span>
@@ -36610,12 +36880,6 @@ tags:
   <div class="rr-meta"><span class="day-pill pill-purple">Prompt injection (direct &amp; indirect)</span><span class="rr-dir rr-dir-def">Defence</span><span class="rr-rel rr-rel-3" data-tip="Computer-use agents interacting with banking applications and screens are highly exposed to indirect prompt injection; this architecture directly addresses that gap.">●●● High</span>
     <span class="ait-dim">2026-10-13 · cs.CR · Dominik Seip, Bartol Markovinović, Matthias Hein</span></div>
   <div class="day-sec-text">SA-CUA is a dual-LLM framework for computer-use agents that derives a trust boundary from the accessibility tree to separate trusted and untrusted screen regions and mitigate indirect prompt injection.</div><div class="ait-dim">Why it matters: Computer-use agents interacting with banking applications and screens are highly exposed to indirect prompt injection; this architecture directly addresses that gap.</div><div class="ait-chips"><a class="ta-tool-chip" target="_blank" href="https://atlas.mitre.org/techniques/AML.T0051.000">AML.T0051.000</a></div>
-</div>
-<div class="rr-paper" data-fam="prompt-injection" data-dir="defence">
-  <div class="rr-paper-top"><a href="https://arxiv.org/abs/2610.18408" target="_blank" class="rr-title">Prompt-Injection Probes Learn the Conversation, Not Just the Injection</a></div>
-  <div class="rr-meta"><span class="day-pill pill-purple">Prompt injection (direct &amp; indirect)</span><span class="rr-dir rr-dir-def">Defence</span><span class="rr-rel rr-rel-3" data-tip="Banks using linear probe monitors on LLM agent pipelines should update training data following this finding to avoid excessive false alarms or missed injections.">●●● High</span>
-    <span class="ait-dim">2026-10-13 · cs.CL · Kaan Kale, Sriram Vishwanath</span></div>
-  <div class="day-sec-text">Shows that standard linear probe detectors for indirect prompt injection learn spurious conversation-position features rather than injection content, and fixes this by adding matched negatives to training, cutting false alarms from up to 80% to 27% while retaining 95% attack detection.</div><div class="ait-dim">Why it matters: Banks using linear probe monitors on LLM agent pipelines should update training data following this finding to avoid excessive false alarms or missed injections.</div><div class="ait-chips"><a class="ta-tool-chip" target="_blank" href="https://atlas.mitre.org/techniques/AML.T0051.000">AML.T0051.000</a></div>
 </div></div></div></div>
   </div>
 
@@ -36639,7 +36903,7 @@ tags:
   </div>
   <div class="ta-stat ta-stat-purple">
     <div class="ta-stat-label">Total Sightings</div>
-    <div class="ta-stat-value" style="color:var(--purple)">98</div>
+    <div class="ta-stat-value" style="color:var(--purple)">100</div>
     <div class="ta-stat-sub">across all digests</div>
   </div>
 </div>
@@ -37333,7 +37597,7 @@ tags:
       <div class="ta-card-meta">
         <span>&#128176; Criminal</span>
         <span>&#127758; Unknown (not specified in articles)</span>
-        <span class="ta-sighting-count">&#128065; 29 sightings</span>
+        <span class="ta-sighting-count">&#128065; 30 sightings</span>
       </div>
       <div class="ta-card-sectors"><span class="ta-sector-tag">Critical Infrastructure</span><span class="ta-sector-tag">Energy</span><span class="ta-sector-tag">Financial Services</span><span class="ta-cve-chip">CVE-2014-7169</span><span class="ta-cve-chip">CVE-2016-6662</span><span class="ta-cve-chip">CVE-2017-0176</span></div>
     </div>
@@ -37435,8 +37699,14 @@ tags:
         <span class="ta-cve-chip">CVE-2014-7169</span><span class="ta-cve-chip">CVE-2016-6662</span><span class="ta-cve-chip">CVE-2017-0176</span>
       </div>
     </div>
-    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 29 total</div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 30 total</div>
     <div class="ta-timeline">
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">09 November 2026</div>
+  <div class="ta-timeline-summary">Developed and deployed TrickBot, a C++ Trojan spyware program, initially targeting banking institutions; Conducted &quot;big game hunting&quot; ransomware campaigns across multiple sectors globally; Used TrickBot as a tool for broad, opportunistic targeting beyond its original financial sector focus Wizard Spider directly targeted banking sites across Europe, North America, and Australia with TrickBot, making them a historically significant and ongoing threat to UK financial services firms.</div>
+  
+</div>
 <div class="ta-timeline-item">
   <div class="ta-timeline-dot"></div>
   <div class="ta-timeline-date">09 October 2026</div>
@@ -38215,6 +38485,135 @@ tags:
   </div>
 </div>
 <div class="ta-card" data-level="High"
+     data-actor-id="apt29"
+     data-search="apt29 cozy bear midnight blizzard iron ritual iron hemlock noblebaron dark halo nobelium unc2452 yttrium the dukes cozyduke solarstorm blue kitsune unc3524 aadinternals adfind bloodhound boombox cloudduke cobalt strike cosmicduke cozycar envyscout fatduke foggyweb geminiduke goldfinder goldmax hammertoss cve-2014-7169 cve-2016-6662 cve-2017-0199 cve-2017-0199 t1078.004 cloud accounts t1078 valid accounts t1528 steal application access token t1548.002 bypass user account control t1550.003 pass the ticket t1649 steal or forge authentication certificates t1068 exploitation for privilege escalation t1078.003 local accounts t1098.005 device registration t1566.001 spearphishing attachment t1566.002 spearphishing link t1133 external remote services t1556.007 hybrid identity t1586.003 cloud accounts t1005 data from local system t1021.007 cloud services t1037 boot or logon initialization scripts t1098.002 additional email delegate permissions t1105 ingress tool transfer t1114.002 remote email collection">
+  <div class="ta-card-accent" style="background:var(--yellow)"></div>
+  <div class="ta-card-summary" onclick="taToggle(this)">
+    <div class="ta-card-left">
+      <div class="ta-card-name">APT29</div>
+      <div class="ta-card-alias">Cozy Bear, Midnight Blizzard, IRON RITUAL, IRON HEMLOCK, NobleBaron, Dark Halo, NOBELIUM, UNC2452, YTTRIUM, The Dukes, CozyDuke, SolarStorm, Blue Kitsune, UNC3524</div>
+      <div class="ta-card-meta">
+        <span>&#127988; Nation-State</span>
+        <span>&#127758; Russia</span>
+        <span class="ta-sighting-count">&#128065; 2 sightings</span>
+      </div>
+      <div class="ta-card-sectors"><span class="ta-cve-chip">CVE-2014-7169</span><span class="ta-cve-chip">CVE-2016-6662</span><span class="ta-cve-chip">CVE-2017-0199</span></div>
+    </div>
+    <div class="ta-card-right">
+      <span class="ta-threat-badge badge-high">High</span>
+      <span class="ta-chevron">&#9660;</span>
+    </div>
+  </div>
+  <div class="ta-card-detail">
+    <div class="ta-detail-grid">
+      <div>
+        <div class="ta-detail-title">MITRE ATT&amp;CK TTPs</div>
+        
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1078/004" target="_blank">T1078.004</a>
+  <span class="ta-ttp-name">Cloud Accounts</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1078" target="_blank">T1078</a>
+  <span class="ta-ttp-name">Valid Accounts</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1528" target="_blank">T1528</a>
+  <span class="ta-ttp-name">Steal Application Access Token</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1548/002" target="_blank">T1548.002</a>
+  <span class="ta-ttp-name">Bypass User Account Control</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1550/003" target="_blank">T1550.003</a>
+  <span class="ta-ttp-name">Pass the Ticket</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1649" target="_blank">T1649</a>
+  <span class="ta-ttp-name">Steal or Forge Authentication Certificates</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1068" target="_blank">T1068</a>
+  <span class="ta-ttp-name">Exploitation for Privilege Escalation</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1078/003" target="_blank">T1078.003</a>
+  <span class="ta-ttp-name">Local Accounts</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1098/005" target="_blank">T1098.005</a>
+  <span class="ta-ttp-name">Device Registration</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1566/001" target="_blank">T1566.001</a>
+  <span class="ta-ttp-name">Spearphishing Attachment</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1566/002" target="_blank">T1566.002</a>
+  <span class="ta-ttp-name">Spearphishing Link</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1133" target="_blank">T1133</a>
+  <span class="ta-ttp-name">External Remote Services</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1556/007" target="_blank">T1556.007</a>
+  <span class="ta-ttp-name">Hybrid Identity</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1586/003" target="_blank">T1586.003</a>
+  <span class="ta-ttp-name">Cloud Accounts</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1005" target="_blank">T1005</a>
+  <span class="ta-ttp-name">Data from Local System</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1021/007" target="_blank">T1021.007</a>
+  <span class="ta-ttp-name">Cloud Services</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1037" target="_blank">T1037</a>
+  <span class="ta-ttp-name">Boot or Logon Initialization Scripts</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1098/002" target="_blank">T1098.002</a>
+  <span class="ta-ttp-name">Additional Email Delegate Permissions</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1105" target="_blank">T1105</a>
+  <span class="ta-ttp-name">Ingress Tool Transfer</span>
+</div>
+<div class="ta-ttp-item">
+  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1114/002" target="_blank">T1114.002</a>
+  <span class="ta-ttp-name">Remote Email Collection</span>
+</div>
+      </div>
+      <div>
+        <div class="ta-detail-title">Tools &amp; Malware</div>
+        <span class="ta-tool-chip">AADInternals</span><span class="ta-tool-chip">AdFind</span><span class="ta-tool-chip">BloodHound</span><span class="ta-tool-chip">BoomBox</span><span class="ta-tool-chip">CloudDuke</span><span class="ta-tool-chip">Cobalt Strike</span><span class="ta-tool-chip">CosmicDuke</span><span class="ta-tool-chip">CozyCar</span><span class="ta-tool-chip">EnvyScout</span><span class="ta-tool-chip">FatDuke</span><span class="ta-tool-chip">FoggyWeb</span><span class="ta-tool-chip">GeminiDuke</span><span class="ta-tool-chip">GoldFinder</span><span class="ta-tool-chip">GoldMax</span><span class="ta-tool-chip">HAMMERTOSS</span>
+        <div class="ta-detail-title" style="margin-top:14px">CVEs</div>
+        <span class="ta-cve-chip">CVE-2014-7169</span><span class="ta-cve-chip">CVE-2016-6662</span><span class="ta-cve-chip">CVE-2017-0199</span><span class="ta-cve-chip">cve-2017-0199</span>
+      </div>
+    </div>
+    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 2 total</div>
+    <div class="ta-timeline">
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">09 November 2026</div>
+  <div class="ta-timeline-summary">Compromised legitimate websites to conduct watering hole attacks targeting mobile users; Fingerprinted website visitors to identify and select high-value victims; Harvested information selectively from victims deemed of interest APT29's use of watering hole attacks and selective victim profiling poses a risk to UK financial services employees and customers who may visit compromised websites as part of routine activity.</div>
+  
+</div>
+<div class="ta-timeline-item">
+  <div class="ta-timeline-dot"></div>
+  <div class="ta-timeline-date">06 November 2026</div>
+  <div class="ta-timeline-summary">Watering hole attacks involving the compromise of legitimate websites to target visitors; Fingerprinting of victims to identify and select high-value targets before proceeding; Selective information harvesting focused on victims deemed of interest APT29's use of watering hole attacks and victim fingerprinting poses a risk to UK financial services staff who may visit compromised industry or government websites, potentially exposing credentials or device information to Russian state-sponsored collection.</div>
+  
+</div></div>
+  </div>
+</div>
+<div class="ta-card" data-level="High"
      data-actor-id="cl0p"
      data-search="cl0p clop hive0065 spandex tempest chimborazo adfind amadey azorult bloodhound clop cobalt strike dridex flawedammyy flawedgrace get2 mimikatz net powersploit sdbbot servhelper t1112 modify registry t1078.002 domain accounts t1486 data encrypted for impact t1566.001 spearphishing attachment t1566.002 spearphishing link t1583.001 domains t1059.005 visual basic t1105 ingress tool transfer t1204.001 malicious link t1204.002 malicious file t1055.001 dynamic-link library injection t1218.007 msiexec t1552.001 credentials in files t1555.003 credentials from web browsers t1568.001 fast flux dns t1685 disable or modify tools t1027.010 command obfuscation t1027.013 encrypted/encoded file t1059.001 powershell t1059.003 windows command shell">
   <div class="ta-card-accent" style="background:var(--yellow)"></div>
@@ -38665,129 +39064,6 @@ tags:
   <div class="ta-timeline-dot"></div>
   <div class="ta-timeline-date">04 August 2026</div>
   <div class="ta-timeline-summary">Targeting hotel/hospitality Wi-Fi networks as an infection vector to reach guests' devices; Deploying custom malware to compromise Microsoft 365 accounts; Operating a broad, geographically distributed campaign Business travellers from UK financial firms — including executives and client-facing staff — routinely use hotel Wi-Fi and access Microsoft 365, making them plausible victims of this credential-harvesting campaign; a compromised M365 account could expose sensitive client data, deal information, or internal communications.</div>
-  
-</div></div>
-  </div>
-</div>
-<div class="ta-card" data-level="High"
-     data-actor-id="apt29"
-     data-search="apt29 cozy bear midnight blizzard iron ritual iron hemlock noblebaron dark halo nobelium unc2452 yttrium the dukes cozyduke solarstorm blue kitsune unc3524 aadinternals adfind bloodhound boombox cloudduke cobalt strike cosmicduke cozycar envyscout fatduke foggyweb geminiduke goldfinder goldmax hammertoss cve-2014-7169 cve-2016-6662 cve-2017-0199 cve-2017-0199 t1078.004 cloud accounts t1078 valid accounts t1528 steal application access token t1548.002 bypass user account control t1550.003 pass the ticket t1649 steal or forge authentication certificates t1068 exploitation for privilege escalation t1078.003 local accounts t1098.005 device registration t1566.001 spearphishing attachment t1566.002 spearphishing link t1133 external remote services t1556.007 hybrid identity t1586.003 cloud accounts t1005 data from local system t1021.007 cloud services t1037 boot or logon initialization scripts t1098.002 additional email delegate permissions t1105 ingress tool transfer t1114.002 remote email collection">
-  <div class="ta-card-accent" style="background:var(--yellow)"></div>
-  <div class="ta-card-summary" onclick="taToggle(this)">
-    <div class="ta-card-left">
-      <div class="ta-card-name">APT29</div>
-      <div class="ta-card-alias">Cozy Bear, Midnight Blizzard, IRON RITUAL, IRON HEMLOCK, NobleBaron, Dark Halo, NOBELIUM, UNC2452, YTTRIUM, The Dukes, CozyDuke, SolarStorm, Blue Kitsune, UNC3524</div>
-      <div class="ta-card-meta">
-        <span>&#127988; Nation-State</span>
-        <span>&#127758; Russia</span>
-        <span class="ta-sighting-count">&#128065; 1 sighting</span>
-      </div>
-      <div class="ta-card-sectors"><span class="ta-cve-chip">CVE-2014-7169</span><span class="ta-cve-chip">CVE-2016-6662</span><span class="ta-cve-chip">CVE-2017-0199</span></div>
-    </div>
-    <div class="ta-card-right">
-      <span class="ta-threat-badge badge-high">High</span>
-      <span class="ta-chevron">&#9660;</span>
-    </div>
-  </div>
-  <div class="ta-card-detail">
-    <div class="ta-detail-grid">
-      <div>
-        <div class="ta-detail-title">MITRE ATT&amp;CK TTPs</div>
-        
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1078/004" target="_blank">T1078.004</a>
-  <span class="ta-ttp-name">Cloud Accounts</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1078" target="_blank">T1078</a>
-  <span class="ta-ttp-name">Valid Accounts</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1528" target="_blank">T1528</a>
-  <span class="ta-ttp-name">Steal Application Access Token</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1548/002" target="_blank">T1548.002</a>
-  <span class="ta-ttp-name">Bypass User Account Control</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1550/003" target="_blank">T1550.003</a>
-  <span class="ta-ttp-name">Pass the Ticket</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1649" target="_blank">T1649</a>
-  <span class="ta-ttp-name">Steal or Forge Authentication Certificates</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1068" target="_blank">T1068</a>
-  <span class="ta-ttp-name">Exploitation for Privilege Escalation</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1078/003" target="_blank">T1078.003</a>
-  <span class="ta-ttp-name">Local Accounts</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1098/005" target="_blank">T1098.005</a>
-  <span class="ta-ttp-name">Device Registration</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1566/001" target="_blank">T1566.001</a>
-  <span class="ta-ttp-name">Spearphishing Attachment</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1566/002" target="_blank">T1566.002</a>
-  <span class="ta-ttp-name">Spearphishing Link</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1133" target="_blank">T1133</a>
-  <span class="ta-ttp-name">External Remote Services</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1556/007" target="_blank">T1556.007</a>
-  <span class="ta-ttp-name">Hybrid Identity</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1586/003" target="_blank">T1586.003</a>
-  <span class="ta-ttp-name">Cloud Accounts</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1005" target="_blank">T1005</a>
-  <span class="ta-ttp-name">Data from Local System</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1021/007" target="_blank">T1021.007</a>
-  <span class="ta-ttp-name">Cloud Services</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1037" target="_blank">T1037</a>
-  <span class="ta-ttp-name">Boot or Logon Initialization Scripts</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1098/002" target="_blank">T1098.002</a>
-  <span class="ta-ttp-name">Additional Email Delegate Permissions</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1105" target="_blank">T1105</a>
-  <span class="ta-ttp-name">Ingress Tool Transfer</span>
-</div>
-<div class="ta-ttp-item">
-  <a class="ta-ttp-id" href="https://attack.mitre.org/techniques/T1114/002" target="_blank">T1114.002</a>
-  <span class="ta-ttp-name">Remote Email Collection</span>
-</div>
-      </div>
-      <div>
-        <div class="ta-detail-title">Tools &amp; Malware</div>
-        <span class="ta-tool-chip">AADInternals</span><span class="ta-tool-chip">AdFind</span><span class="ta-tool-chip">BloodHound</span><span class="ta-tool-chip">BoomBox</span><span class="ta-tool-chip">CloudDuke</span><span class="ta-tool-chip">Cobalt Strike</span><span class="ta-tool-chip">CosmicDuke</span><span class="ta-tool-chip">CozyCar</span><span class="ta-tool-chip">EnvyScout</span><span class="ta-tool-chip">FatDuke</span><span class="ta-tool-chip">FoggyWeb</span><span class="ta-tool-chip">GeminiDuke</span><span class="ta-tool-chip">GoldFinder</span><span class="ta-tool-chip">GoldMax</span><span class="ta-tool-chip">HAMMERTOSS</span>
-        <div class="ta-detail-title" style="margin-top:14px">CVEs</div>
-        <span class="ta-cve-chip">CVE-2014-7169</span><span class="ta-cve-chip">CVE-2016-6662</span><span class="ta-cve-chip">CVE-2017-0199</span><span class="ta-cve-chip">cve-2017-0199</span>
-      </div>
-    </div>
-    <div class="ta-detail-title" style="margin-top:16px">Sightings Timeline &middot; 1 total</div>
-    <div class="ta-timeline">
-<div class="ta-timeline-item">
-  <div class="ta-timeline-dot"></div>
-  <div class="ta-timeline-date">06 November 2026</div>
-  <div class="ta-timeline-summary">Watering hole attacks involving the compromise of legitimate websites to target visitors; Fingerprinting of victims to identify and select high-value targets before proceeding; Selective information harvesting focused on victims deemed of interest APT29's use of watering hole attacks and victim fingerprinting poses a risk to UK financial services staff who may visit compromised industry or government websites, potentially exposing credentials or device information to Russian state-sponsored collection.</div>
   
 </div></div>
   </div>
@@ -40982,7 +41258,7 @@ I need to </div>
 
   <div id="tab-glossary" class="tab">
     <input class="glossary-search" type="text"
-           placeholder="Search 1483 terms&#8230;"
+           placeholder="Search 1491 terms&#8230;"
            oninput="searchGlossary(this.value)"/>
     <div id="glossary-content">
       <div class="glossary-letter">$</div>
@@ -41140,6 +41416,11 @@ I need to </div>
   <div class="glossary-term">Agent Enrolment (Security Monitoring Context)</div>
   <div class="glossary-def">The process by which a monitored device or endpoint registers itself with a central security platform so that its logs and events can be collected and analysed.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A flaw in the agent enrolment process of a security monitoring tool used by a bank could allow an unauthenticated attacker to send a specially crafted enrolment request that corrupts the monitoring system's file structure, disabling security alerting across the firm's infrastructure.</div><div class="glossary-meta">First seen: 19 August 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Agent Governance</div>
+  <div class="glossary-def">The set of policies, controls, and oversight mechanisms that determine how AI agents are permitted to act, what decisions they can make autonomously, and how their behaviour is monitored.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> As AI agents take on compliance and risk tasks in UK financial firms, agent governance becomes a regulatory expectation — ensuring agents do not take consequential actions without appropriate human authorisation.</div><div class="glossary-meta">First seen: 09 November 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Agent Intent</div>
@@ -42882,6 +43163,11 @@ I need to </div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial firms are particularly sensitive to data leak sites because publication of client data can trigger regulatory breach notifications, FCA enforcement action, and severe reputational damage.</div><div class="glossary-meta">First seen: 02 October 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Data Literacy</div>
+  <div class="glossary-def">The ability to read, understand, interpret, and critically evaluate data and the outputs produced by data-driven or AI systems.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> GRC professionals in financial services need data literacy to validate AI-generated risk assessments and compliance reports, rather than accepting outputs uncritically.</div><div class="glossary-meta">First seen: 09 November 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Data Silo</div>
   <div class="glossary-def">A situation where data is held and used by one part of an organisation but is not accessible to or integrated with other parts, limiting the overall picture available for decision-making.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> In financial institutions, data silos between fraud, identity, and transaction teams prevent a complete customer risk view, weakening both fraud detection and regulatory compliance.</div><div class="glossary-meta">First seen: 18 April 2026</div>
@@ -43170,6 +43456,11 @@ I need to </div>
   <div class="glossary-term">Doubly-Encoded Entity</div>
   <div class="glossary-def">A technique where special characters are encoded twice (e.g. HTML-escaped twice) so that a security filter strips them incorrectly, allowing malicious content to survive sanitisation.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> An attacker could use doubly-encoded entities to bypass content filters on a financial services video platform and store malicious scripts that execute when staff view content.</div><div class="glossary-meta">First seen: 05 October 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Doxing</div>
+  <div class="glossary-def">The act of publicly exposing a private individual's personal information — such as home address, identity documents, or contact details — without their consent, typically as a form of harassment or intimidation.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Pro-Kremlin hacktivist groups have targeted EU politicians and law enforcement personnel with doxing campaigns, a technique increasingly used to intimidate regulators and public officials involved in financial crime enforcement.</div><div class="glossary-meta">First seen: 09 November 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Draft Key / Access Token Exposure</div>
@@ -43780,6 +44071,11 @@ I need to </div>
   <div class="glossary-term">GrayRabbit Backdoor</div>
   <div class="glossary-def">A piece of malicious software that secretly opens a persistent access channel into a compromised system, attributed to a China-aligned cyber espionage group and delivered by exploiting a vulnerability in a widely used Windows input application.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> For UK financial services firms with global operations, nation-state backdoors like GrayRabbit represent a persistent threat to intellectual property, client data, and trading systems, particularly where employees use third-party productivity software.</div><div class="glossary-meta">First seen: 14 September 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">GRC (Governance, Risk and Compliance)</div>
+  <div class="glossary-def">A structured framework that aligns an organisation's governance processes, risk management practices, and regulatory compliance activities into a coordinated approach.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> AI agents are increasingly automating routine GRC tasks in financial services firms, such as control testing and policy monitoring, raising questions about human oversight and accountability under SM&amp;CR.</div><div class="glossary-meta">First seen: 09 November 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Groovy Evaluator</div>
@@ -45457,6 +45753,11 @@ I need to </div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A CVSS 7.5 flaw in the User Interface allowed unauthenticated network access via HTTP, meaning an attacker could read transaction filtering data without any credentials — a serious compliance and data-protection risk.</div><div class="glossary-meta">First seen: 22 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Oracle FLEXCUBE</div>
+  <div class="glossary-def">A core banking software platform developed by Oracle that handles transactions, accounts, and financial operations for banks and financial institutions.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Abay Bank's integration of Oracle FLEXCUBE with an OFSAA financial crime compliance platform illustrates how core banking systems are being connected to AML screening tools to meet regulatory requirements.</div><div class="glossary-meta">First seen: 09 November 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Oracle PeopleSoft Zero-Day</div>
   <div class="glossary-def">A widely referenced list published by the Open</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Many large financial institutions and regulators use PeopleSoft for HR and finance management, meaning a zero-day in this platform could expose sensitive employee records, payroll data, or internal financial systems to extortion groups like ShinyHunters.</div><div class="glossary-meta">First seen: 23 September 2026</div>
@@ -46155,6 +46456,11 @@ I need to </div>
   <div class="glossary-term">RAG (Retrieval-Augmented Generation)</div>
   <div class="glossary-def">A class of vulnerability where an attacker corrupts a program's memory in a way that survives or re-establishes itself even after a software patch has been applied.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> The RufRoot flaw in AI hosting platform Ruflo demonstrates that persistent memory corruption could allow malicious AI agent swarms to continue operating in a financial services environment even after a firm believes it has remediated the vulnerability.</div><div class="glossary-meta">First seen: 05 August 2026</div>
+</div>
+<div class="glossary-item">
+  <div class="glossary-term">Rails Active Storage</div>
+  <div class="glossary-def">A built-in Ruby on Rails feature that handles file uploads and attachments within web applications, linking them to cloud or local storage services.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A critical vulnerability in the Rails Active Storage ImageMagick integration allows arbitrary file writes and sensitive file reads, posing a lateral movement risk for any financial services web application built on Rails.</div><div class="glossary-meta">First seen: 09 November 2026</div>
 </div>
 <div class="glossary-item">
   <div class="glossary-term">Range header</div>
@@ -47092,6 +47398,11 @@ I need to </div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A command injection vulnerability in ssh-mcp (CVE-2026-7039) demonstrates the risk of connecting AI agent tooling to privileged remote access mechanisms used in financial infrastructure.</div><div class="glossary-meta">First seen: 27 April 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">SSHole</div>
+  <div class="glossary-def">A known vulnerability or misconfiguration in SSH (Secure Shell) services that allows attackers to gain unauthorised remote access to servers.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Active exploitation of SSHole in the wild highlights the risk to financial services infrastructure where SSH is commonly used for administrative access to core banking systems.</div><div class="glossary-meta">First seen: 09 November 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">ssl_verify_peer / CURLOPT_SSL_VERIFYPEER</div>
   <div class="glossary-def">A configuration option in network libraries that controls whether the server's TLS certificate is verified; disabling it allows any certificate, including fraudulent ones, to be trusted.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A Laravel package used by a fintech to query Google Maps with ssl_verify_peer disabled could expose API keys to interception by an attacker on the network path.</div><div class="glossary-meta">First seen: 05 October 2026</div>
@@ -47767,6 +48078,11 @@ I need to </div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Financial services APIs often accumulate undocumented endpoints during development; if these bypass controls such as rate limiting, they can expose authentication systems to brute-force attacks that would normally be prevented.</div><div class="glossary-meta">First seen: 09 September 2026</div>
 </div>
 <div class="glossary-item">
+  <div class="glossary-term">Unfair Contract Term</div>
+  <div class="glossary-def">A clause in a customer-facing contract that creates a significant imbalance between the rights of the firm and the consumer, in a way that is not transparent or legally enforceable.</div>
+  <div class="glossary-context"><span class="ctx-label">FinServ context:</span> Under the Consumer Rights Act 2015, UK financial firms must ensure all terms in products like loans, insurance policies, and crypto wallets are fair and transparent, or face regulatory challenge from the FCA.</div><div class="glossary-meta">First seen: 09 November 2026</div>
+</div>
+<div class="glossary-item">
   <div class="glossary-term">Unified Communications Manager (Unified CM)</div>
   <div class="glossary-def">A Cisco platform that manages voice, video, and messaging services across an organisation's network infrastructure.</div>
   <div class="glossary-context"><span class="ctx-label">FinServ context:</span> A critical vulnerability in Cisco Unified CM with a publicly available proof-of-concept exploit poses a serious patching priority for financial institutions that use the platform for internal communications.</div><div class="glossary-meta">First seen: 05 June 2026</div>
@@ -48408,7 +48724,7 @@ I need to </div>
 </main>
 
 <footer>
-  Built automatically by Vigil &middot; 09 November 2026 15:30 UTC &middot;
+  Built automatically by Vigil &middot; 09 November 2026 15:34 UTC &middot;
   <a href="https://github.com/NebulaForgeRift/cti-digest">cti-digest</a>
 </footer>
 
